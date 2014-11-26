@@ -2,17 +2,29 @@
   Drupal.behaviors.da_vinciTheme = {
     attach: function (context) {
 
-      if ($("body").hasClass('node-type-article')) {
-        $('.prettyprint').snippet("html", {style: "acid"});
-      }
+      // Detectar si es Movil
+      var isMobile = {
+        Android: function () {
+          return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+          return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+          return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+          return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+          return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+      };
 
-      $('.snippet-container pre .sh_preproc').each(function () {
-        var $this = $(this);
-        var t = $this.text();
-        $this.html(t.replace('&lt', '<').replace('&gt', '>').replace('&', '').replace('lt', '<').replace('gt', '>').replace(';', '').replace('amp', '&'));
-      });
-
-      $('.js-menu-trigger', context).once('menuCategories', function () {
+      $('.js-menu-trigger', context).once('mainMenu', function () {
         $(this).click(function () {
           $('.js-menu').toggleClass('is-visible');
           $('.js-menu-screen').toggleClass('is-visible');
@@ -23,12 +35,6 @@
           $('.js-menu').toggleClass('is-visible');
           $('.js-menu-screen').toggleClass('is-visible');
         });
-      });
-
-      $('.not-logged-in.page-user #edit-submit-google').appendTo('#edit-actions');
-
-      $('.messages').on('click', function () {
-        $(this).addClass('hide');
       });
     }
   }
