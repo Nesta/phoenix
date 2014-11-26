@@ -1,0 +1,38 @@
+﻿// Este es un esqueleto estructural. NO editar. crear un sass dentro del directorio de componentes y poner los style alli
+.resp-tabs-wrp {
+  .resp-tabs-list {
+    display: none;
+
+    @include breakpoint($tablet) {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      > * {
+      }
+    }
+  }
+
+  .resp-tabs-container {
+    .resp-accordion {
+      @include breakpoint($tablet) {
+        display: none;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+
+      .resp-arrow {
+        float: right;
+      }
+
+    }
+    .resp-tab-content {
+      display: none;
+    }
+  }
+
+}

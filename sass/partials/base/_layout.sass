@@ -1,0 +1,123 @@
+//Defines the initial layout of the regions in page.tpl.php
+
+//TESTSTYLES for easier initial setup - delete once not needed anymore
+.user-bar
+  background: $blue
+  color: #fff
+  padding: .5em 0
+
+#site-logo img
+  max-width: 100%
+#site-title a
+  color: #fff
+
+.region-preface
+  color: #fff
+  padding: .5em 0
+  background: $turquoise
+  min-height: 10em
+
+#main-content
+  padding: 2em 0
+  background: #fff
+
+.site-footer
+  background: #222
+  color: #fff
+  padding: 2em 0
+//END: TESTSTYLES
+
+
+.container
+  +container(96%)
+  +clearfix
+
+.region-user-bar,
+.region-footer
+  @extend .container
+
+//Test Styles
+.sub-container-7
+  +container(7)
+  li
+    +span(1 of 7)
+  li.last
+    +last
+
+
+.sub-container-9
+  +container(9 inside)
+  li
+    +span(1 of 9)
+    font-size: small
+  li.last
+    +last
+//END: Test Styles
+
+
++breakpoint($tablet)
+  .container
+    +container(90%)
+  .header-left
+    +span(6 first)
+  .header-right
+    +span(6 last)
+  .one-sidebar.sidebar-first
+    #content
+      +span(isolate 9 at 4 last)
+      clear: both
+    #sidebar-first
+      +span(3 first)
+      padding-right: 15px
+  .one-sidebar.sidebar-second
+    #content
+      +span(9 first)
+      clear: both
+    #sidebar-second
+      +span(3 last)
+
+  .two-sidebars
+    #content
+      +span(9 last)
+      clear: both
+    #sidebar-first
+      +span(3 first)
+    #sidebar-second
+      +span(full)
+  .hx
+    +span(isolate 9 at 4 last)
+
++breakpoint($desk)
+  .container
+    +container(1200px)
+
+  .one-sidebar.sidebar-first
+    #content
+      +span(isolate 10 at 3 last)
+      clear: both
+    #sidebar-first
+      +span(2 first)
+      top: -30px
+      position: relative
+  .one-sidebar.sidebar-second
+    #content
+      +span(10 first)
+      clear: both
+    #sidebar-second
+      +span(2 last)
+
+  .two-sidebars
+    #content
+      +span(isolate 7 at 3)
+      clear: both
+    #sidebar-first
+      +span(2 first)
+      top: -30px
+      position: relative
+    #sidebar-second
+      +span(3 last)
+  .hx
+    +span(isolate 10 at 3 last)
+  .one-sidebar.sidebar-first.page-drupal
+    #sidebar-first
+      top: 15px

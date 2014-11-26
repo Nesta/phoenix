@@ -1,0 +1,94 @@
+.cifras-container 
+  .subtitle
+    font-size: 18px
+    color: $drupal-blue
+    line-height: 1em
+    text-align: center
+    width: 100%
+    margin: 0 auto
+    font-weight: normal
+    margin-bottom: 10px
+    +breakpoint($large-width)
+      font-size: 20px
+      width: 50%
+      margin-bottom: 40px
+  .justified-list
+    width: 100%
+    margin: 0 auto
+    > div
+      padding-top: 0
+      +breakpoint($tablet)
+        width: 16%
+  // Aplica a todas las cifras
+  > div
+    .number
+      font-size: 70px
+      font-weight: bold
+      color: $number-blue
+      position: relative
+      +breakpoint($max-width)
+        font-size: 102px
+    .sign
+      font-size: 52px
+      color: $dark-blue
+      position: absolute
+      left: -24px
+      top: 9px
+    .text
+      color: $data-blue
+      font-size: 16px
+      font-weight: bold
+      line-height: 1em
+      text-align: center
+      margin: 0 auto
+      +breakpoint($max-width)
+        font-size: 21px
+        width: 48%
+      span
+        color: $info-blue
+  .druplicon
+    width: 216px
+    margin-right: 10%
+    height: auto
+    padding-top: 10px
+    position: relative
+    +breakpoint($max-width)
+      height: 230px
+  .years
+    text-align: center
+    +breakpoint($max-width)
+      width: 20%
+  .contributed
+    text-align: center
+  .hours
+    text-align: center
+    margin-top: 18px
+    +breakpoint($max-width)
+      margin-top: 27px
+    .number
+      font-size: 51px
+      line-height: 0.7em
+      +breakpoint($max-width)
+        font-size: 70px
+    // This class only appears in English template
+    .thousand
+      font-size: 19px
+      display: block
+      color: $number-blue
+      font-weight: bold
+      text-transform: uppercase
+      +breakpoint($max-width)
+        font-size: 22px
+    .text
+      margin-top: 5px
+      +breakpoint($max-width)
+        margin-top: 18px
+  .professional
+    text-align: center
+  .ademas
+    text-align: center
+    font-size: 20px
+    color: $plus-blue
+    margin-top: 35px
+    +breakpoint($max-width)
+      font-size: 26px

@@ -1,0 +1,166 @@
+// Comments Count
+.comments-count
+  background: image-url('comments.png') 0 center no-repeat
+  padding-left: 28px
+  color: $blue-blog
+  font-size: 12px
+
+// Add new comment button
+.new-comment
+  margin-bottom: 10px
+  clear: both
+  a
+    @extend .blue-button
+    &:hover
+      color: $white
+
+// Button for back home
+.back-home
+  background: $yellow image-url('taza.png') 10px center no-repeat
+  color: $gray-4
+  display: block
+  margin-right: 10%
+  max-width: 170px
+  padding: 4px
+  padding-left: 50px
+  &:hover
+    background: $yellow image-url('taza-hover.png') 10px center no-repeat
+    color: $white
+    text-decoration: none
+  +breakpoint(max-width $tablet)
+    background-size: 50%
+    font-size: 0
+    height: 40px
+    margin-right: 10px
+    width: 40px
+    padding: 0
+
+
+// User Title
+.hx
+  text-align: center
+  margin-bottom: -5px
+  position: relative
+  h1.page-title
+    color: $gray-9
+    background: $beige
+    display: inline-block
+    padding: 0 15px
+    font-weight: normal
+    position: relative
+    &:hover
+      text-decoration: none
+      color: $gray-9
+  &:before
+    position: absolute
+    font-weight: bold
+    width: 100%
+    height: 40px
+    border-top: 2px dashed $bg-dark-gray
+    display: block
+    content: ''
+    top: 23px
+// Not logged and new article -> title width 100%
+.page-node-add
+  .hx
+    width: 100%
+    margin: 0
+    float: none
+
+// For new comments
+.new
+  float: right
+  background: $red
+  opacity: 0.8
+  color: white
+  +border-radius(2px)
+  padding: 0px 5px
+  margin-left: 10px
+
+// User Picture
+.user-picture
+  img
+    +border-radius(25px)
+
+// Service Links
+.service-links
+  float: right
+  .service-label
+    font-size: 15px
+    color: $gray-7
+  ul
+    li
+      display: inline-block
+      margin-right: 10px
+      cursor: pointer
+      &:hover
+        img
+          height: 38px
+          width: 39px
+        &.service-links-twitter a
+          content: image-url('twitter-hover.png')
+        &.service-links-facebook a
+          content: image-url('facebook-hover.png')
+        &.service-links-google-plus a
+          content: image-url('google_plus-hover.png')
+
+// Principal Claim
+.blog-claim
+  max-width: 155px
+  margin-bottom: 17px
+  img
+    margin-left: 5px
+  .claim
+    color: $blue-logo
+    font-size: 15px
+    font-weight: 300
+    margin-left: 8px
+
+// Snippet
+.snippet-container
+  margin-bottom: 15px
+  clear: both
+  .snippet-wrap
+    pre.sh_sourceCode
+      background: $beige
+      box-shadow: none
+      border: none
+      +border-radius (0px)
+      line-height: 1.6em
+      padding: 0px
+      // Números laterales
+      .snippet-num
+        color: $gray-6
+      // Comentarios
+      .com
+        color: $gray-a
+      // Literales, keywords y clases
+      .lit,
+      .kwd,
+      .atv
+        color: $orange
+      // Attributes
+      .atn
+        color: $dark-red
+      // Plain, arrows and dot
+      .pln,
+      .pun
+        color: $gray-3
+      // Arrows, tags
+      .tag,
+      .sh_preproc,
+        color: $gray-6
+    .sh_sourceCode
+      // Buttons
+      .typ,
+      .sh_url
+        color: $hover-blue-blog
+
+//PCP
+#block-pcp-pcp-profile-percent-complete
+  h2
+    margin-bottom: 0
+    font-size: 15px
+    color: $red
+  .pcp-percent-bar
+    background-color: $blue

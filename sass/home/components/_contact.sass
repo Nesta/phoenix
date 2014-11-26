@@ -1,0 +1,214 @@
+#contactar-contents
+  +container
+  display: table
+  color: $white
+  height: 100%
+  +breakpoint($tablet)
+    margin-top: 0
+    max-width: 66%
+  .contactar-wrapper
+    display: table-cell
+    vertical-align: middle
+    position: relative
+  .title
+    display: block
+    font-weight: normal
+    font-size: 20px
+    line-height: 1em
+    margin: 10px 0
+    text-align: center
+    +breakpoint($tablet)
+      margin: 20px 0
+      font-size: 30px
+    +breakpoint($large-width)
+      font-size: 40px
+  .subtitle
+    @extend .hidden-tablet
+    font-size: 14px
+    display: block
+    font-weight: bold
+    +breakpoint($tablet)
+      font-size: 17px
+      margin: 20px 0
+    +breakpoint($desk)
+      font-size: 20px
+    +breakpoint($monster)
+      font-size: 30px
+    text-align: center
+  .contact-email
+    white-space: nowrap
+    margin-top: 20px
+    text-align: center
+    +breakpoint($tablet)
+      margin-top: 40px
+    a
+      color: $white
+      text-transform: uppercase
+      font-size: 14px
+      font-weight: bold
+      background-color: $yellow
+      +box-shadow(2px 2px 0 $shadow-yellow)
+      +border-radius(5px)
+      padding: 10px 40px
+      text-decoration: none
+      font-weight: bold
+      &:hover
+        background-color: $shadow-yellow
+
+  //Contact form - left columns
+  .form-contact
+    display: none
+    // @todo susy no deberia aplicar border-box solito?
+    box-sizing: border-box
+    background: $data-blue
+    +breakpoint($tablet)
+      +span(8 of 12)
+      padding: 28px
+      display: block
+      height: 351px
+      max-height: 351px
+    +breakpoint($monster)
+      min-height: 380px
+    .contact-form-contents
+      display: table
+      height: 100%
+      width: 100%
+      .message-status
+        display: table-cell
+    // General style
+    label
+      display: block
+      color: $dark-blue
+      font-size: 16px
+      margin-bottom: 15px
+      +breakpoint($max-width)
+        font-size: 20px
+        margin-bottom: 5px
+      +breakpoint($monster)
+        font-size: 26px
+        margin-bottom: 0
+      span
+        font-size: 12px
+    // Message
+    .form-item-message
+      margin-top: 28px
+    // Box style
+    .form-text,
+    .form-textarea
+      border: none
+      padding: 10px
+      width: 100%
+      box-sizing: border-box
+    .form-textarea
+      overflow: hidden
+      resize: none
+    // Submit
+    .form-actions
+      text-align: right
+      margin-top: 20px
+      .form-submit
+        border: none
+        +box-shadow(2px 2px 0 $shadow-yellow)
+        +border-radius(5px)
+        background: $yellow
+        color: $white
+        text-transform: uppercase
+        font-weight: bold
+        cursor: pointer
+        font-size: 15px
+        padding: 10px 40px
+        margin-left: 5px
+        &:hover
+          background: $shadow-yellow
+        +breakpoint($monster)
+          padding: 15px 57px
+          font-size: 18px
+
+  // Contact info - Right column
+  .contact-info
+    +span(12 of 12)
+    text-align: center
+    // @todo susy no deberia aplicar border-box solito?
+    box-sizing: border-box
+    background: rgba($data-blue, 0.2)
+    padding: 20px
+    +breakpoint($tablet)
+      padding: 25px
+      +span(4 of 12 last)
+        min-height: 351px
+        text-align: left
+    +breakpoint($monster)
+      min-height: 380px
+    & > div:nth-child(2)
+      border-bottom: 1px solid rgba($data-blue, 0.6)
+      border-top: 1px solid rgba($data-blue, 0.6)
+      padding: 8px 0 20px 0
+      margin: 20px 0 8px 0
+    .location
+      font-size: 16px
+      font-weight: bold
+      color: $lightest-gray
+      text-transform: uppercase
+      margin-bottom: 5%
+      margin-top: 3%
+      a
+        color: $lightest-gray
+        +breakpoint($tablet)
+          margin-bottom: 13px
+          margin-top: 0
+          text-decoration: none
+    .location-contact
+      font-size: 14px
+      font-style: italic
+      +breakpoint($tablet)
+        font-size: 16px
+      a
+        color: $white
+        +breakpoint($tablet)
+          text-decoration: none
+    .social
+      margin-top: 10px
+      +breakpoint($tablet)
+        margin-top: 15px
+      +breakpoint($desk)
+        margin-top: 20px
+      +breakpoint($monster)
+        margin-top: 35px
+      a
+        font-size: 15px
+        color: white
+        font-style: italic
+        text-decoration: none
+        i
+          height: 32px
+          width: 32px
+          position: relative
+          top: 10px
+          margin-right: 10px
+
+// Landscape orientation to mobile resolution
+@media (max-width: 704px) and (orientation: landscape)
+  #contactar-contents
+    max-width: 100%
+    width: 100%
+    .title
+      margin: 0
+    #footing-info
+      font-size: 13px
+    .contact-info
+      padding: 15px
+      & > div
+        width: 33%
+        float: left
+        border: 0
+        padding: 0
+        margin: 0
+      & > div:nth-child(2)
+        margin: 0
+        padding: 0
+        border: 0
+      & > div.social
+        width: 100%
+        clear: both
+      a
+        font-size: 13px

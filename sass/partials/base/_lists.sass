@@ -1,0 +1,17 @@
+ul,
+ol,
+ul.hide-bullets,
+ol.hide-bullets
+  +hide_bullets()
+
+ol.show-bullets
+  +show_bullets()
+  li
+    list-style-type: decimal
+
+ul.show-bullets
+  +show_bullets()
+
+.item-list
+  ul
+    +show_bullets()

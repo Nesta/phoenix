@@ -1,0 +1,75 @@
+@import compass
+@import susy
+@import breakpoint
+@import 'bourbon/bourbon'
+@import ../partials/utilities/variables
+@import ../partials/utilities/mixins
+@import ../partials/utilities/extends
+@import ../partials/browser/*
+
+// Font
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
+
+body
+  margin: 0
+  padding: 0
+  font-family: $font-lato
+  background-color: $bg-light-gray
+  @import abstractions/*
+  @import components/*
+  @import contents/*
+  @import sections/*
+  .image-preload
+    width: 1px
+    height: 1px
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 99999
+  img
+    vertical-align: top
+  .logo-home
+    width: 70%
+    +breakpoint($mobile)
+      width: auto
+  .parallax-content
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    +breakpoint($tablet)
+      transform: translateZ(1px)
+  .container
+    max-width: 1200px
+    margin: 0 auto
+    height: 100%
+    position: relative
+    padding: 0 15px
+  .align-middle
+    +vertical-multi-line
+    width: 100%
+  .pull-left
+    float: left
+  .pull-right
+    float: right
+  .hidden
+    display: none
+  .hover-info
+    +hover-info($hover-blue, 1)
+  // Nos aseguramos de que toda la maquetacion se mantenga incluso
+  // si parallax no se activa (por ejemplo en mobile)
+  .img-holder
+    position: relative
+  .justified-list
+    //@todo poner aqui el tamaño de fuente que tenga el body. No lo pongo
+    // porque seguro que tiramos de una variable que ahora no encuentero.
+    +justified-list(14px, left)
+
+
+.chrome35,
+.chrome36,
+.chrome37
+  body
+    .parallax-content
+      +breakpoint($tablet)
+        transform: translateZ(0px)

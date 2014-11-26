@@ -1,0 +1,137 @@
+#comments
+  background: transparent
+  margin: 0
+  line-height: inherit
+  .title
+    color: $gray-3
+    font-size: 22px
+    float: left
+    margin-right: 5%
+    margin-top: 10px
+    &:hover                                                                                                                                         
+      text-decoration: none
+  .title.comment-form
+    text-transform: uppercase
+    font-weight: normal
+    font-size: 16px
+    padding-bottom: .5em
+    border-bottom: 1px dotted $dark-gray
+  .comments-count                                                                                                                                   
+    float: left
+    margin-top: 15px
+  .new-comment                                                                                                                                      
+    clear: none
+    a
+      float: right
+
+  //Styles for the filter option below a textarea field
+  .filter-wrapper.form-wrapper
+    .form-item,
+    .filter-help,
+    .filter-guidelines
+      float: none
+      padding: 0
+    .filter-help
+      text-align: right
+      a
+        padding-left: 0
+  .comments-hidden-link
+    display: block
+    text-align: center
+    padding: .2em 0
+    margin-top: 5px
+    margin-bottom: 1em
+    background-color: $beige
+
+//Formulario de nuevo comentario
+form.comment-form
+  position: relative
+  background: $header-gray
+  padding: 1em
+  border-top: none
+  > div
+    padding-left: 50px
+    display: block
+    > *
+      vertical-align: top
+      display: block
+  .user-picture
+    position: absolute
+    top: 1.5em
+    left: 1em
+  .form-actions
+    vertical-align: bottom
+    text-align: right
+    > *
+      margin: 5px
+      display: inline-block
+  .field-name-comment-body
+    padding-left: 0
+    label
+      display: none
+    .form-item
+      margin-top: 0
+    .grippie
+      display: none
+    .form-textarea-wrapper
+      position: relative
+      //margin-left: 10px
+      border: 1px solid $dark-gray
+      &:before
+        background-color: white
+        content: "\00a0"
+        display: block
+        height: 10px
+        width: 10px
+        position: absolute
+        top: 20px
+        left: -6px
+        transform: rotate(-45deg)
+        -moz-transform: rotate(-45deg)
+        -ms-transform: rotate(-45deg)
+        -o-transform: rotate(-45deg)
+        -webkit-transform: rotate(-45deg)
+        border-top: 1px solid $light-gray
+        border-left: 1px solid $light-gray
+      textarea
+        border-color: transparent
+        &:focus
+          outline: 1px solid transparent
+
+// Comentario
+.comment
+  clear: both
+  color: $gray-6
+  .attribution
+    border-top: 1px solid $light-gray
+    padding:  5px
+    margin-top: 5px
+    margin-bottom: 5px
+    overflow: hidden
+    .user-picture
+      float: left
+      margin-right: 1em
+    .comment-submitted
+      overflow: hidden
+      margin-top: 8px
+      p
+        margin: 0
+        color: $gray-9
+        font-size: 15px
+      .commenter-name
+        float: left
+        .username
+          color: $blue-blog
+        a.username:hover
+          color: $hover-blue-blog
+      .comment-time
+        text-align: right
+        font-size: 14px
+  .comment-text
+    padding: 5px 10px
+    ul.links
+      text-align: right
+      float: right
+      border-top: 1px dotted $light-gray
+      width: 60%
+      padding: 10px 0 25px
