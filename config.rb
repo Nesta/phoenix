@@ -30,7 +30,7 @@ css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"
 
-#add_import_path 'sass/home'
+add_import_path 'sass/home'
 
 # Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
 # included with a module by uncommenting and modifying one of the lines below:

@@ -1,13 +1,6 @@
 <?php
 
 /**
- * Implementation of hook_theme()
- */
-function da_vinci_theme($vars) {
-  
-}
-
-/**
  * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
