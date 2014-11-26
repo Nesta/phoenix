@@ -1,0 +1,17 @@
+.magic-line-menu {
+    list-style: none;
+    position: relative;
+}
+
+.magic-line-menu li {
+    display: inline-block;
+}
+
+.magic-line-menu .magic-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: #fe4902;
+}
+

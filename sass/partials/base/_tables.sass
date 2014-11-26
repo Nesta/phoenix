@@ -1,0 +1,80 @@
+//Overwrite styles from Drupal, mainly system.theme.css
+table
+  border-collapse: collapse
+  width: 100%
+
+  //Let code wrap in tables to avoid tables above 100% width
+  code
+    white-space: normal
+    background-color: transparent
+th
+  border-bottom: none
+  padding: 0.1em 0.6em
+  text-align: left
+
+td
+  padding: 0.2em 0.6em
+
+tbody
+  border-top: none
+
+tr.even,
+tr.odd
+  background-color: $white
+  border-bottom: none
+  padding: 0
+
+th.active img
+  display: inline
+
+td.active
+  background-color: $gray-d
+
+table.tabledrag-processed
+  border-collapse: separate
+  border-spacing: 0 1em
+
+tr.draggable td
+  border: 1px solid $dark-gray
+  padding: 0.5em
+
+tr.drag
+  background-color: $drag-color
+
+tr.drag-previous
+  background-color: $header-gray-hover
+
+.tabledrag-toggle-weight
+  font-size: 0.9em
+
+body div.tabledrag-changed-warning
+  margin-bottom: 0.5em
+
+form .field-multiple-table td.field-multiple-drag
+  padding-right: 0
+  width: 50px
+
+tr.selected td
+  background: $trselected-color
+
+td.checkbox,
+th.checkbox
+  text-align: center
+
+.draggable a.tabledrag-handle
+  cursor: move
+  float: left
+  height: 1.7em
+  margin-left: 0
+  overflow: hidden
+  text-decoration: none
+
+a.tabledrag-handle .handle
+  background: url(../images/move.png) no-repeat 0 0
+  height: 15px
+  margin: 0
+  padding: 0
+  width: 15px
+
+a.tabledrag-handle-hover .handle
+  background: url(../images/move.png) no-repeat 0 -20px

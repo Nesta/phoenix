@@ -1,0 +1,158 @@
+.view-drupalera-blog
+  .view-content
+    +hide_bullets()
+// Blog View
+.views-row
+  article.node-article.node-teaser
+    background: $white
+    padding: 0 10px 20px 10px
+    position: relative
+    margin: 0 15px 15px 0
+    +box-shadow(7px 0px 10px -8px $dark-gray)
+    .close
+      position: absolute
+      width: 20px
+      height: 20px
+      right: 0px
+      background: $title-gray image-url('close-post.png') center no-repeat
+      +transition-timing-function(ease-in-out)
+      text-align: center
+      text-indent: -9999px
+      z-index: 1
+      cursor: pointer
+      display: none
+    .field
+      padding: 0 8px
+    .field-type-image
+      padding: 0
+      margin: 0
+      img
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+        +filter(grayscale(100%))
+        +transition-duration(0.8s)
+    .field-name-field-category
+      margin-bottom: 10px
+      ul
+        +hide-bullets()
+        li
+          display: inline-block
+          margin: 0
+          font-size: 12px
+          &.first
+            text-transform: uppercase
+            font-size: 15px
+            a
+              color: $gray-6
+    .submitted-info
+      margin-top: 15px
+      padding-top: 10px
+      border-top: 1px dotted $light-gray
+      .comments-count
+        float: right
+        height: 20px
+      .user-picture
+        float: left
+        margin-right: 10px
+      .submitted-author-date
+        float: left
+        span
+          display: block
+        .username
+          color: $blue-blog
+          font-weight: 700
+        .submitted-date
+          text-transform: uppercase
+          color: $gray-6
+          font-size: 12px
+    .readmore-button
+      @extend .blue-button
+      text-transform: uppercase
+      width: 94%
+      display: block
+      margin: 0 auto
+    .field-name-field-tags
+      background: image-url('tags.png') 0 center no-repeat
+      clear: both
+      padding-left: 35px
+      margin-left: 8px
+      .field-item
+        display: inline-block
+        margin-right: 5px
+        a
+          font-size: 12px
+  & .post-parent-category-1 .content
+    border-top: 5px solid $community
+  & .post-parent-category-2 .content
+    border-top: 5px solid $development
+  & .post-parent-category-3 .content
+    border-top: 5px solid $consultory
+  &:hover
+    article.node-article.node-teaser
+      .close
+        display: block
+      img
+        filter: none
+        +filter(grayscale(0%))
+
+// Set the margin-top for the second sidebar.
+.page-drupal
+  #sidebar-second
+    margin-top: 18px
+
+// Messages
+.messages
+  position: absolute
+  top: 91px
+  left: 0
+  right: 0
+  margin: 0 auto
+  padding: 15px
+  color: $white
+  cursor: pointer
+  opacity: 0.8
+  text-align: center
+  border: none
+  width: 100%
+  z-index: 88
+  //general style message
+  &.error,
+  &.status,
+  &.warning
+    h2
+      margin: 15px 20px
+      font-size: 20px
+    ul
+      +hide_bullets()
+      font-size: 15px
+    a
+      text-decoration: underline
+      color: $white
+      font-weight: bold
+  //Specific style message color
+  &.error
+    background: $red-error
+    color: $white
+  &.status,
+  &.warning
+    color: $white
+    background: $green
+
+// Page cookies
+.page-node-42
+  .page-cookies
+    margin-top: 15px
+    font-size: 14px
+    strong
+      font-size: 15px
+    ul
+      margin: 10px 0
+      padding-left: 17px
+      li
+        list-style-type: disc
+        margin: 5px 0
+  // Not logged in title style
+  &.not-logged-in
+    .hx
+      width: 100%
+      margin: 0
+      float: none

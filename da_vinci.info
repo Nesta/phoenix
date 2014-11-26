@@ -1,0 +1,53 @@
+name = Da Vinci Theme
+description = Da Vinci Theme - Drupal 7 Full theme with the best Sass's components. Developed by Nesta, Enno, Keilovecraft, Capynet & Nicobot.
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = css/plugins/chosen.css
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/main.css
+
+scripts[] = js/plugins/chosen/chosen.jquery.min.js
+scripts[] = js/plugins/chosen/chosen.js
+scripts[] = js/plugins/jquery.konami.min.js
+scripts[] = js/plugins/jquery.snippet.js
+scripts[] = js/obfuscator.js
+
+scripts[] = js/cheats/cheats.js
+scripts[] = js/custom.js
+scripts[] = js/css_browser.js
+
+; Panels layouts.
+plugins[panels][layouts] = plugins/layouts
+plugins[panels][styles] = plugins/styles
+
+regions[user_bar]       = User Bar
+regions[top_bar]        = Top Bar
+regions[info_bar]       = Info Bar
+regions[header]         = Header
+regions[preface]        = Preface
+regions[sidebar_first]  = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[content_top]    = Content Top
+regions[help]           = Help
+regions[content]        = Content
+regions[footer]         = Footer
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+settings[breadcrumbs]  = 1
+;settings[css_exclude][]  = ''
+settings[js_exclude][]  = 'misc/tableheader.js'
+
+breakpoints[mobile] = (min-width: 0px)
+breakpoints[narrow] = (min-width: 560px)
+breakpoints[wide] = (min-width: 704px)
+breakpoints[tv] = only screen and (min-width: 3456px)
+multipliers[mobile][] = 1.5x
+multipliers[mobile][] = 2x

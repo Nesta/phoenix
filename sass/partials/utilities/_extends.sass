@@ -1,0 +1,81 @@
+.hide-accessible
+  position: absolute
+  white-space: nowrap
+  left: -9999px
+
+.hide-modern
+  font-size: 0!important
+  color: transparent!important
+  line-height: 0
+
+.hide
+  display: none
+
+.hidden-tablet
+  display: none
+  +breakpoint($tablet)
+    display: block
+.show-tablet
+  display: block
+  +breakpoint($tablet)
+    display: none
+
+.chosen-container.error a
+  border: 2px solid red
+
+// Blog extends
+.yellow-button
+  background: $yellow
+  +box-shadow(7px 7px 5px $gray-3)
+  color: $white
+  font-size: 17px
+  font-weight: 700
+  min-width: 170px
+  padding: 10px
+  text-align: center
+  text-transform: uppercase
+
+.blue-button
+  background: $blue-blog
+  border: none
+  +border-radius(0px)
+  color: $white
+  cursor: pointer
+  font-size: 14px
+  font-weight: 400
+  padding: 10px 15px
+  text-align: center
+  &:hover
+    background: $hover-blue-blog
+    color: $white
+    text-decoration: none
+
+// See this URL for explanation: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+%vertical-align
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+
+//Let's Have an extend for tables with some basic styles
+%table-style-1
+  table
+    border: 1px solid $dark-gray
+    margin: 1em 0
+  tr.odd
+    background: $white
+  tr.even
+    background: $beige
+  th
+    text-transform: uppercase
+    font-weight: normal
+    color: $blue
+    background: $beige
+    border: 1px solid $dark-gray
+    padding: .3em .5em
+  td
+    font-size: .9em
+    padding: 1em .5em
+    vertical-align: top

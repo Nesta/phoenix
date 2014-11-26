@@ -1,0 +1,87 @@
+form
+  label
+    font-weight: normal
+    margin-bottom: 0
+    //color: $red
+  input,
+  select,
+  textarea
+    max-width: 100%
+    padding: 4px 10px
+    background-color: $white
+    font-size: 15px
+    line-height: 19px
+    border: 1px solid $gray-8
+    +border-radius(5px)
+    color: $gray-4
+  .description
+    color: $gray-3
+    font-size: 0.85em
+    line-height: 1.5em
+input[type="file"]
+  font-size: 13px
+  line-height: 1
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+  border-right: 0px
+input[name="field_image_und_0_upload_button"]
+  padding: 6px 15px
+  border-top-right-radius: 5px
+  border-bottom-right-radius: 5px
+
+
+html.js input.form-autocomplete
+  //background-image: image-url("throbber_3.gif")
+  background-position: 100% 8px
+html.js input.throbbing
+  background-position: 100% -17px
+  //background-image: image-url("throbber_3.gif")
+
+//Overwrite the Drupal modules/field/theme/field.css
+form .field-multiple-table
+  margin: 0
+form .field-multiple-table th.field-label
+  //No side-padding for labels as there are no borders
+  padding-left: 0
+  padding-right: 0
+form .field-multiple-table td.field-multiple-drag
+  width: 30px
+  padding-right: 0
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle
+  padding-right: .5em
+form .field-add-more-submit
+  margin: .5em 0 0
+//END: Overwrite the Drupal modules/field/theme/field.css
+
+//Overwrite Bootstrap styñe
+input[type="radio"],
+input[type="checkbox"]
+  margin: 0 0
+  margin-top: 1px \9
+  /* IE8-9 */ line-height: normal
+
+//Hierarchical Select style corrections
+tr.odd .form-item.shs-wrapper-processed,
+tr.even .form-item.shs-wrapper-processed
+  white-space: normal
+  .shs-select
+    margin-right: 1em
+    margin-bottom: 1em
+
+//Overwrite file.css styles for file/image upload
+.form-managed-file .form-file,
+.form-managed-file .form-submit
+  display: inline-block
+  margin: 0 1em 0 0
+
+.confirmation
+  #edit-cancel
+    +button($orange)
+    float: right
+    padding: 12px
+    font-weight: bold
+    font-size: 15px
+    &:hover
+      background: $dark_orange
+  #edit-submit
+    +no-icon(10px)

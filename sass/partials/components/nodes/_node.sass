@@ -1,0 +1,195 @@
+
+//General styles for editing all nodes
+.node-form,
+#user-profile-form,
+#user-login,
+#user-register-form,
+#user-pass,
+.page-messages-new
+  //Styles for textfields
+  .form-item.form-type-textfield
+    +clearfix()
+    padding-bottom: .5em
+    > label
+      +special-label
+    > input
+      +special-input
+    > input ~ .description
+      +special-description()
+  //Styles for passwords
+  .form-item.form-type-password,
+  .form-item.form-type-password-confirm
+    +clearfix()
+    > label
+      +special-label
+    > input
+      +special-input
+    > input ~ .description
+      +special-description()
+    //Overwrite user.css styles
+    .password-strength
+      +clearfix()
+      margin-bottom: .5em
+      width: auto
+      float: none
+      margin-top: 0
+    div.password-confirm
+      float: none
+      margin-top: 0
+      visibility: hidden
+      width: auto
+    .confirm-parent,
+    .password-parent
+      clear: left
+      margin: 0
+      width: 100%
+    div.password-suggestions
+      padding: 0.2em 0.5em
+      margin: 0
+      margin-bottom: 0.5em
+      width: 100%
+      border: 1px solid $dark-gray
+  //Styles for textareas
+  .text-format-wrapper
+    +clearfix()
+    padding-bottom: .5em
+  .form-item.form-type-textarea
+    +clearfix()
+    padding-bottom: .5em
+    > label
+      +special-label
+    > .form-textarea-wrapper
+      +special-input
+    > .form-textarea-wrapper ~ .description
+      +special-description()
+    ~ .ckeditor_links
+      +special-description()
+      display: block
+  //Styles for select fields - will be influenced by chosen.css
+  .form-item.form-type-select
+    +clearfix()
+    padding-bottom: .5em
+    > label
+      +special-label
+    > select
+      +special-input
+      //Overwrite the pixel width from Chosen.js
+      ~ .chosen-container
+        //+breakpoint($tablet-min)
+          width: $input-width !important
+          float: left
+    > select ~ .description
+      +special-description()
+  //Styles for upload file fields
+  .form-item.form-type-managed-file
+    +clearfix()
+    padding-bottom: .5em
+    > label
+      +special-label
+    > .form-managed-file
+      +special-input
+    > .form-managed-file ~ .description
+      +special-description()
+  //Styles for link fields
+  .form-type-link-field > label
+    +label-header()
+  //Styles for radio options and checkboxes
+  .form-type-radios,
+  .form-type-checkboxes
+    +clearfix()
+    padding-bottom: .5em
+    > label
+      +special-label
+    > .form-radios,
+    > .form-checkboxes
+      +special-input
+      .form-type-radio,
+      .form-type-checkbox
+        margin: 0.5em 1em 0.5em 0
+        display: inline-block
+    > .form-radios ~ .description,
+    > .form-checkboxes ~ .description
+      +special-description()
+  //Styles for the filter option below a textarea field
+  .filter-wrapper.form-wrapper
+    .form-item,
+    .filter-help,
+    .filter-guidelines
+      float: none
+      padding: 0
+    .filter-help a
+      padding-left: 0
+  //Styles for draggable multiple-table fields
+  .field-multiple-table
+    thead label
+      +label-header()
+  //Style corrections for Link fields to overwrite the module css
+  .link-field-column
+    float: none
+    width: auto
+  //Style corrections for date fields
+  .container-inline-date .form-item input.date-clear
+    margin-right: 0
+    clear: right
+  .container-inline-date .date-padding
+    padding: 0
+    float: none
+  .container-inline-date .form-item .form-item
+    float: none
+  .date-no-float
+    clear: both
+    float: none
+    width: 100%
+  .container-inline-date > .form-item
+    margin-right: 0
+    margin-bottom: 0
+    vertical-align: top
+    display: block
+
+
+.node-teaser
+  h2
+    margin-top: 0
+  .submitted
+    border: 1px dotted  $dark-gray
+    border-left: 0
+    border-right: 0
+    padding-top: 8px
+    padding-bottom: 5px
+    margin-bottom: 20px
+    font-size: 13px
+    li
+      &.published
+        margin-bottom: 5px
+    .user-picture
+      float: left
+      margin-right: 10px
+      max-width: 52px
+    .posted
+      line-height: 1.2em
+      strong
+        float: left
+        margin-right: 2px
+        height: 33px
+  .service-links
+    float: left
+
+  .content
+    overflow: hidden
+    margin-top: 0
+    .field-type-image
+      float: left
+      margin-right: 15px
+  footer
+    +clearfix()
+  #comments
+    h2
+      display: none
+
+.node-full .user-picture
+  max-width: 100px
+
+#edit-picture
+  .user-picture
+    max-width: 150px
+    border: 10px solid $beige
