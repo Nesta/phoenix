@@ -7,12 +7,7 @@
       $("#edit-ckeditor-lang").chosen({
         width: "14em"
       });
-      $("#views-exposed-form-agrega2-favourites-panel-pane-1 #edit-field-categories-tid").chosen({
-        width: "100%"
-      });
-      $("#views-exposed-form-agrega2-favourites-panel-pane-1 #edit-type").chosen({
-        width: "100%"
-      });
+
       //General settings for all selects
       $("select").not(exclude_elements.join(',')).chosen({
         disable_search_threshold: 10
