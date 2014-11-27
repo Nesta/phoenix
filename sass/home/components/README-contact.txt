@@ -1,2 +1,0 @@
-El contenido de la sección de contacto es tan extenso que supera la altura establecida en el parallax.
-En el fichero _contact.scss se incluyen de manera COMENTADA los estilos correspondientes que solucionan el corte de altura a resoluciones bajas a la espera de decidir que hacer con la altura de cada sección o de definir los breakpoints oportunos.
