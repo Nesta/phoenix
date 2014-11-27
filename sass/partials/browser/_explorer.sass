@@ -5,58 +5,13 @@
       max-width: 450px
       max-height: 95px
     //Ckeditor img width 100%
-    .node-type-article
-      article.node-article
-        a
-          img
-            width: 100%
+    article
+      a
+        img
+          width: 100%
 // IE 9
 .ie9
-  #step-home i
-    margin-top: 19px
-  // border none to partner logo
-  #comunidad
-    .justified-list
-      img
-        border: none
 
 // IE 11
-// Text-align: justify not working in IE11 - Community section
+// Text-align: justify not working in IE11
 .ie11
-  .section-marcas-content
-    .cifras-container
-      .justified-list
-        overflow: hidden
-        width: 100%
-        margin: 0 auto
-        .druplicon
-          float: left
-          width: 20%
-          margin-right: 5%
-          box-sizing: border-box
-          height: 170px
-          +breakpoint($max-width)
-            height: 230px
-        .years,
-        .contributed,
-        .hours,
-        .professional
-          float: left
-          width: 16%
-          margin-right: 2%
-          box-sizing: border-box
-        .ademas
-          clear: both
-          width: 100%
-          text-align: right
-    .partners-container
-      .justified-list
-        margin: 0 auto
-        width: 100%
-        > div
-          width: 25%
-          img
-            margin: 0 auto
-            width: 50%
-            +breakpoint($desk)
-              width: auto
