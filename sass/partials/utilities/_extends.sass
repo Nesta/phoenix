@@ -20,14 +20,17 @@
   +breakpoint($tablet)
     display: none
 
+.clearfix
+  +clearfix()
+
 .chosen-container.error a
   border: 2px solid red
 
 // Blog extends
-.yellow-button
-  background: $yellow
-  +box-shadow(7px 7px 5px $gray-3)
-  color: $white
+.green-button
+  background: $light-green
+  +box-shadow(7px 7px 5px $black)
+  color: $black
   font-size: 17px
   font-weight: 700
   min-width: 170px
@@ -35,8 +38,8 @@
   text-align: center
   text-transform: uppercase
 
-.blue-button
-  background: $blue-blog
+.dark-button
+  background: $turquoise
   border: none
   +border-radius(0px)
   color: $white
@@ -46,7 +49,7 @@
   padding: 10px 15px
   text-align: center
   &:hover
-    background: $hover-blue-blog
+    background: $dark-turquoise
     color: $white
     text-decoration: none
 
@@ -62,7 +65,7 @@
 //Let's Have an extend for tables with some basic styles
 %table-style-1
   table
-    border: 1px solid $dark-gray
+    border: 1px solid $black
     margin: 1em 0
   tr.odd
     background: $white
@@ -71,9 +74,9 @@
   th
     text-transform: uppercase
     font-weight: normal
-    color: $blue
+    color: $dark-turquoise
     background: $beige
-    border: 1px solid $dark-gray
+    border: 1px solid $gray
     padding: .3em .5em
   td
     font-size: .9em

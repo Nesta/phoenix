@@ -1,8 +1,6 @@
 /*------------------
   Mixins
-  @todo doc all mixins please.
   ------------------*/
-
 =clearfix()
   &:after
     content: "."
@@ -10,9 +8,6 @@
     visibility: hidden
     height: 0
     clear: both
-
-.clearfix
-  +clearfix()
 
 =hide_bullets()
   margin: 0
@@ -32,92 +27,78 @@
     margin-bottom: .5em
     list-style-type: disc
 
-
-
-=ttags()
-  font-size: 12px
-  color: $blue
-  text-transform: uppercase
-  padding: 11px 8px 7px 8px
-  white-space: nowrap
-  height: auto
-
-=tag()
-  background-color: $light-gray
-  @include filter-gradient($light-gray, $light-blue, vertical)
-  @include background-image(linear-gradient(left,  $light-gray 80%,$light-blue 100%))
-  border: 1px solid $light-blue
-  border-left: 0
-  color: $blue
-  font-size: 14px
-  line-height: 1.2em
-  padding: 0px 8px 0px 8px
-  padding-left: 5px
-  margin-right: 15px
-  margin-left: 10px
-  margin-top: 3px
-  position: relative
-  float: left
+=tags()
+  background: $lightest-green
+  +border-radius(8px)
+  border: 1px solid $beige
+  color: $black
   display: block
-
+  float: left
+  font-size: 12px
+  height: auto
+  margin: 0px 5px
+  padding: 8px 10px
+  position: relative
+  text-transform: uppercase
+  white-space: nowrap
   &.active
-    color: $blue
+    background: $green
+    color: $white
+    font-weight: 700
     &:hover
-      color: $white
+      color: $gray
   &:last-child
     margin-right: 0
   &:before
-    position: absolute
-    left: -10px
-    top: -1px
-    content: ''
     //background: image-url("pico-tag.png") 0 0 no-repeat
-    width: 12px
+    content: ''
     height: 31px
+    left: -10px
+    position: absolute
+    top: -1px
+    width: 12px
   &:hover
-    background-color: $turquoise
-    @include filter-gradient($turquoise, $dark-turquoise, vertical)
-    @include background-image(linear-gradient(left,  $turquoise 80%,$dark-turquoise 100%))
-    border: 1px solid $dark-turquoise
+    background-color: $light-green
+    border: 1px solid $green
     border-left: 0
     color: $white
     text-decoration: none
-    &:before
-      //background: image-url("pico-tag.png") 0px -35px no-repeat
 
-=button($bgcolor)
-  border: 0
+=button($bgcolor: $light-green)
   background-color: $bgcolor
-  font-size: 14px
-  padding: 10px
+  border: 0
   color: $white
+  font-size: 14px
   font-weight: normal
+  padding: 10px
   width: auto
   &:hover
     text-decoration: none
 
 =no-icon($padding)
-  padding: $padding
   background-image: none
+  padding: $padding
 
-=button-icon($bgcolor, $icon)
+=button-icon($bgcolor: $light-green, $icon)
   +button($bgcolor)
-  padding-left: 38px
   background-image: url($icon)
   background-repeat: no-repeat
   background-position: 10px center
+  color: $beige
+  padding-left: 38px
 
-=label-grey()
+=label-gray()
   background-color: $beige
-  color: $gray-3
+  color: $gray
   border: 1px solid $beige
   font-size: 13px
   font-weight: 700
   line-height: 19px
 
 =div-nextto-label-grey()
-  border-top: 1px solid $white
-  border-bottom: 1px dotted $dark-gray
+  border-top: 1px solid $beige
+  border-bottom: 1px dotted $beige
+  color: $gray
   padding: 4px 10px
   font-size: 13px
   font-weight: 400
@@ -125,51 +106,12 @@
 
 =label-small()
   background-color: transparent
-  color: $gray-dark
-  padding: 0
   border: none
+  color: $beige
   font-size: 12px
   line-height: 1
+  padding: 0
   text-transform: none
-
-=label-header()
-  display: block
-  margin: 0
-  padding: 1em 0 0.3em 0
-  font-size: 18px
-  color: $blue
-  border-bottom: 1px dotted $dark-gray
-  text-transform: uppercase
-
-/* It prepares an element to display an image based on its attributes */
-=bg-build($img, $repeat: no-repeat, $scroll: scroll, $x: 0, $y: 0, $color: transparent)
-  //background: image-url($img) $repeat $scroll $x $y $color
-  width: image-width($img)
-  height: image-height($img)
-
-//Form Label and Input styles
-=special-label()
-  +label-grey()
-  display: block
-  margin-bottom: 0.5em
-  //+breakpoint($tablet-min)
-    width: $label-width
-    margin-right: $label-margin
-    margin-bottom: 0
-    float: left
-    vertical-align: top
-
-=special-input()
-  display: block
-  //+breakpoint($tablet-min)
-    width: $input-width
-    float: left
-
-=special-description()
-  //+breakpoint($tablet-min)
-    float: left
-    width: $input-width
-    margin-left: $label-width + $label-margin
 
 // Adds an icon in front of an element
 =icon-aware($icon, $margin: 5px)
@@ -183,127 +125,17 @@
 
 // Solución para textos que pueden ser de una linea o mas, pero necesitan siempre estar centrados verticalmente.
 // El lugar donde se incluya debe tener si o si establecido un height determinado.
-// Uso: +vertical-multi-line()
 =vertical-multi-line
   display: table
   height: 100%
-
   > *
     display: table-cell
     vertical-align: middle
-
-
-
-// Genera un triangulo sobre cualquier otro elemento.
-// Se puede definir su color, largo y alto, la posicion, orientación, que sea hacia adentro o hacia afuera y que sea "after" o "before".
-
-=triangle($triangle-width: 10px, $triangle-height: 20px, $triangle-color: #ff0000, $posx: 50%, $orientation: bottom, $set: outset, $pseudo: "after")
-  position: relative
-  &:#{$pseudo}
-    content: ""
-    position: absolute
-    visibility: visible
-    @if $set == inset
-      @if $orientation == right
-        right: 0
-        top: $posx
-        //margin-top: -($w / 2)
-        margin-top: -$triangle-width
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-height solid $triangle-color
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-      @else if $orientation == left
-        left: 0
-        top: $posx
-        margin-top: -$triangle-width
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-height solid $triangle-color
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-      @else if $orientation == top
-        top: 0
-        left: $posx
-        margin-left: -$triangle-width
-        border-top: $triangle-height solid $triangle-color
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-      @else
-        bottom: 0
-        left: $posx
-        margin-left: -$triangle-width
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-height solid $triangle-color
-    @else
-      @if $orientation == right
-        right: 0
-        top: $posx
-        //margin-top: -($w / 2)
-        margin-top: -$triangle-width
-        margin-right: -($triangle-height * 2)
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-height solid $triangle-color
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-      @else if $orientation == left
-        left: 0
-        top: $posx
-        margin-top: -$triangle-width
-        margin-left: -($triangle-height * 2)
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-height solid $triangle-color
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-      @else if $orientation == top
-        top: 0
-        left: $posx
-        margin-left: -$triangle-width
-        margin-top: -($triangle-height * 2)
-        border-top: $triangle-width solid rgba($triangle-color, 0)
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-height solid $triangle-color
-      @else
-        bottom: 0
-        left: $posx
-        margin-left: -$triangle-width
-        margin-bottom: -($triangle-height * 2)
-        border-top: $triangle-height solid $triangle-color
-        border-left: $triangle-width solid rgba($triangle-color, 0)
-        border-right: $triangle-width solid rgba($triangle-color, 0)
-        border-bottom: $triangle-width solid rgba($triangle-color, 0)
-
-// @todo nico cuando veas esto comentame por favor que no se muy bien que hace :S
-// Triangle not rectangular used for adding an arrow
-=triangle_dialog($triangular-color: #FFF, $background-color: #F3F3F3, $left: 30px, $orientation: "bottom", $direction: "left-right")
-  $width: 16px
-  +triangle($width, $width, $triangular-color, $left, $orientation, outset, before)
-  $left-2: $left + 1.5 * $width
-  @if $direction == "right-left"
-    $left-2: $left - $width
-  +triangle($width, $width, $background-color, $left-2, $orientation)
-  @if $direction == "left-right"
-    &:before
-      border-left-width: $width * 2
-      border-right-width: 0
-    &:after
-      border-left-width: $width / 2
-  @else
-    &:before
-      border-right-width: $width * 2
-      border-left-width: 0
-    &:after
-      border-right-width: $width / 2
-
 
 // "Justifica" una lista de elementos.
 // hay un helper necesario: justified-list.js
 // @see http://code.jelmerdemaat.nl/2012/perfectly-justified-css-grid-technique-using-inline-block/
 // Para usar este mixin solo hace falta cumplir con una estructura <contenedor><elemento></elemento><elemento></elemento></contenedor>
-//Usage: contenedor{ +justified-list() }
 =justified-list($font-size: 12px, $text-align: center, $vertical-align: top)
   width: 100%
   text-align: justify
