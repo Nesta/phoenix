@@ -50,5 +50,14 @@ a
     color: $dark_turquoise
     text-decoration: underline
 
+// Ul
+ul
+  +hide_bullets()
 
+ol.show-bullets
+  +show_bullets()
+  li
+    list-style-type: decimal
 
+ul.show-bullets
+  +show_bullets()

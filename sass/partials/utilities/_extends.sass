@@ -1,3 +1,6 @@
+// EXTENDS
+
+// Different ways to hide an element
 .hide-accessible
   position: absolute
   white-space: nowrap
@@ -15,14 +18,18 @@
   display: none
   +breakpoint($tablet)
     display: block
+
 .show-tablet
   display: block
   +breakpoint($tablet)
     display: none
 
-.clearfix
-  +clearfix()
+// First level children aligned
+.inline
+  > *
+    display: inline-block
 
+// General style button
 .button
   background: $turquoise
   border: none
@@ -37,6 +44,21 @@
     background: $dark-turquoise
     color: $white
     text-decoration: none
+
+// Not allowed select an item
+.unselectable
+  // Chrome all / Safari all / Firefox all / IE 10+
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
+.clearfix
+  +clearfix()
+
+
+// PLACEHOLDER
 
 // See this URL for explanation: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 %vertical-align
@@ -67,11 +89,3 @@
     font-size: .9em
     padding: 1em .5em
     vertical-align: top
-
-.unselectable
-  // Chrome all / Safari all / Firefox all / IE 10+
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  -o-user-select: none
-  user-select: none

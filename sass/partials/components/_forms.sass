@@ -14,6 +14,8 @@ form
     border: 1px solid $light-green
     +border-radius(5px)
     color: $black
+    &.error
+      border: 2px solid $red-error
   .description
     color: $dark-beige
     font-size: 0.85em
@@ -85,3 +87,21 @@ tr.even .form-item.shs-wrapper-processed
       background: $light-green
   #edit-submit
     +no-icon(10px)
+
+// Loading Icon
+.loading-layer
+  .form-actions
+    &:before
+      content: ""
+      //background: image-url('home/misc/progress.gif') 0 0 no-repeat
+      width: 16px
+      height: 16px
+      display: inline-block
+      position: relative
+      top: 2px
+    .form-submit
+      opacity: 0.2
+      cursor: default
+      &:hover
+        background: $light-green
+        cursor: default

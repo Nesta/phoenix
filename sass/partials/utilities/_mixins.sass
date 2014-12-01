@@ -185,4 +185,51 @@
   .show-info
     background-color: rgba($proyect-blue, $opacity)
     visibility: visible
-    
+
+// Media object
+=media-object($float: left, $right: 10px, $left: 0px, $align: left)
+  overflow: hidden
+  > .body
+    overflow: hidden
+  &.left .body
+    text-align: $align
+  > .img
+    float: $float
+    margin-right: $right
+    margin-left: $left
+    img
+      display: block
+
+// Using media object mixin
+.media-object
+  +media-object()
+  +clearfix
+
+// Message
+%message
+  position: fixed
+  left: 0
+  right: 0
+  top: 10%
+  margin: 0 auto
+  color: $white
+  cursor: pointer
+  opacity: 0.9
+  padding: 15px
+  text-align: center
+  width: 100%
+  z-index: 99
+  h2
+    margin: 15px 20px
+    font-size: 20px
+  ul
+    font-size: 15px
+  a
+    text-decoration: underline
+    color: $white
+    font-weight: bold
+
+// Using message placeholder
+=message($color: $yellow)
+  @extend .message
+  background-color: $color
