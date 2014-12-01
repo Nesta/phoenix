@@ -11,9 +11,6 @@
   z-index: 10
   top: 0px
   right: 0px
-  // 1px less than $tablet for avoid problems.
-  +breakpoint(705px)
-    display: none
   img
     height: 1.3em
 
@@ -23,7 +20,7 @@
     +size(160px 100%)
     +transform(translateX(-220px))
     +transition(all 0.25s linear)
-    background: $light-gray
+    background: $gray
     z-index: 999999
     opacity: 0.95
     padding-top: 20px
@@ -33,7 +30,7 @@
 .menu-screen
   +position(fixed, 0px 0px 0px 0px)
   +transition
-  background: $dark-gray
+  background: $turquoise
   opacity: 0
   visibility: hidden
   z-index: 9

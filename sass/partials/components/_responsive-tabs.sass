@@ -11,7 +11,7 @@
     +breakpoint($tablet)
       display: block
       padding: 10px 20px
-      background: $bg-gray
+      background: $gray
       height: 200px
       box-sizing: border-box
     +breakpoint($large-width)
@@ -28,7 +28,7 @@
         p
           white-space: nowrap
           font-size: 16px
-          color: $gray-4
+          color: $black
           margin: 10px 0
           @extend .hidden-tablet
           +breakpoint($desk)
@@ -58,7 +58,7 @@
           position: relative
           // triangulo aqui
           &:before
-            background: image-url('home/misc/triangle.png') 0 0 no-repeat
+            //background: image-url('home/misc/triangle.png') 0 0 no-repeat
             position: absolute
             top: 0
             content: ""
@@ -80,7 +80,7 @@
           &:hover
             cursor: default
             .ico-title
-              color: $light-blue
+              color: $light-green
             i
               background-position: center 0
         .more
@@ -94,7 +94,7 @@
             height: 20px
             font-size: 20px
             position: relative
-            background-color: $yellow
+            background-color: $lightest-green
             float: right
             color: $white
             line-height: 0.9em
@@ -103,12 +103,12 @@
           font-weight: bold
           font-size: 14px
           text-transform: uppercase
-          color: $light-blue
+          color: $green
           line-height: 1.2em
           +breakpoint($tablet $desk)
             font-size: 12px
         .ico-servicios-consultoria
-          background: image-url('home/misc/ico-servicios-consultoria.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-consultoria.png') center 0 no-repeat
           height: 113px
           width: 101px
           display: inline-block
@@ -116,7 +116,7 @@
             background-size: 80%
             height: 89px
         .ico-servicios-ux-ui
-          background: image-url('home/misc/ico-servicios-ux-ui.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-ux-ui.png') center 0 no-repeat
           height: 67px
           width: 108px
           display: inline-block
@@ -124,7 +124,7 @@
             background-size: 80%
             height: 53px
         .ico-servicios-migraciones
-          background: image-url("home/misc/ico-servicios-migraciones.png") center 0 no-repeat
+          //background: image-url("home/misc/ico-servicios-migraciones.png") center 0 no-repeat
           height: 107px
           width: 113px
           display: inline-block
@@ -132,7 +132,7 @@
             background-size: 80%
             height: 85px
         .ico-servicios-pantallas
-          background: image-url('home/misc/ico-servicios-pantallas.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-pantallas.png') center 0 no-repeat
           height: 67px
           width: 124px
           display: inline-block
@@ -140,7 +140,7 @@
             background-size: 80%
             height: 54px
         .ico-servicios-integracion
-          background: image-url('home/misc/ico-servicios-integracion.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-integracion.png') center 0 no-repeat
           height: 77px
           width: 73px
           display: inline-block
@@ -148,7 +148,7 @@
             background-size: 80%
             height: 61px
         .ico-servicios-estadisticas
-          background: image-url('home/misc/ico-servicios-estadisticas.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-estadisticas.png') center 0 no-repeat
           height: 78px
           width: 62px
           display: inline-block
@@ -156,7 +156,7 @@
             background-size: 80%
             height: 62px
         .ico-servicios-mantenimiento
-          background: image-url('home/misc/ico-servicios-mantenimiento.png') center 0 no-repeat
+          //background: image-url('home/misc/ico-servicios-mantenimiento.png') center 0 no-repeat
           height: 76px
           width: 66px
           display: inline-block
@@ -165,7 +165,7 @@
             height: 60px
         &:hover
           .ico-title
-            color: $yellow
+            color: $lightest-green
           .ico-servicios-consultoria,
           .ico-servicios-ux-ui,
           .ico-servicios-migraciones,
@@ -183,14 +183,14 @@
               background-position: center -106px
 
   .resp-tabs-container
-    background: $bg-gray
+    background: $gray
     width: 100%
     +breakpoint($tablet)
       position: absolute
       top: 0
       left: 0
     .resp-accordion
-      background: $light-blue
+      background: $light-green
       padding: 14px 25px
       margin: 0
       cursor: pointer
@@ -250,14 +250,14 @@
             font-size: 14px
             font-weight: bold
             text-transform: uppercase
-            color: $dark-blue
+            color: $turquoise
             opacity: 0.5
             +breakpoint($tablet)
               font-size: 16px
           ul
             list-style: none
             font-size: 14px
-            color: $dark-blue
+            color: $green
             line-height: 1.2em
             list-style-type: none
             padding-left: 0
@@ -279,7 +279,7 @@
         cursor: pointer
         @extend .hidden-tablet
         // init Placeholder
-        background: image-url("home/misc/little-close.png") 0 0 no-repeat
+        //background: image-url("home/misc/little-close.png") 0 0 no-repeat
         display: block
         width: 16px
         height: 16px
