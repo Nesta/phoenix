@@ -8,13 +8,13 @@
     padding: 0 10px 20px 10px
     position: relative
     margin: 0 15px 15px 0
-    +box-shadow(7px 0px 10px -8px $dark-gray)
+    +box-shadow(7px 0px 10px -8px $black)
     .close
       position: absolute
       width: 20px
       height: 20px
       right: 0px
-      background: $title-gray image-url('close-post.png') center no-repeat
+      //background: $title-gray image-url('close-post.png') center no-repeat
       +transition-timing-function(ease-in-out)
       text-align: center
       text-indent: -9999px
@@ -42,11 +42,11 @@
             text-transform: uppercase
             font-size: 15px
             a
-              color: $gray-6
+              color: $black
     .submitted-info
       margin-top: 15px
       padding-top: 10px
-      border-top: 1px dotted $light-gray
+      border-top: 1px dotted $light-beige
       .comments-count
         float: right
         height: 20px
@@ -58,20 +58,20 @@
         span
           display: block
         .username
-          color: $blue-blog
+          color: $green
           font-weight: 700
         .submitted-date
           text-transform: uppercase
-          color: $gray-6
+          color: $beige
           font-size: 12px
     .readmore-button
-      @extend .blue-button
+      @extend .button
       text-transform: uppercase
       width: 94%
       display: block
       margin: 0 auto
     .field-name-field-tags
-      background: image-url('tags.png') 0 center no-repeat
+      //background: image-url('tags.png') 0 center no-repeat
       clear: both
       padding-left: 35px
       margin-left: 8px
@@ -80,12 +80,8 @@
         margin-right: 5px
         a
           font-size: 12px
-  & .post-parent-category-1 .content
-    border-top: 5px solid $community
-  & .post-parent-category-2 .content
-    border-top: 5px solid $development
-  & .post-parent-category-3 .content
-    border-top: 5px solid $consultory
+  .content
+    border-top: 5px solid $beige
   &:hover
     article.node-article.node-teaser
       .close

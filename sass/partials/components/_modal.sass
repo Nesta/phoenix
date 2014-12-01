@@ -2,15 +2,15 @@
 .modal-content
   width: 30em
   padding: 2em
-  background-color: white
+  background-color: $white
   border-radius: 10px
   position: absolute
   left: -99999px
   p
-    color: $dark-blue
+    color: $black
     font-size: 16px
   .close
-    background: image-url('home/misc/little-close.png') 0 0 no-repeat 
+    //background: image-url('home/misc/little-close.png') 0 0 no-repeat 
     display: block
     width: 16px
     height: 16px
@@ -28,7 +28,7 @@
   &.form-contact
     padding: 2em 2em 1.5em 2em
     width: 35em
-    background-color: $data-blue
+    background-color: $gray
     // Mail
     .form-item-mail
       margin-bottom: 15px
@@ -54,14 +54,14 @@
     label
       font-size: 25px
       margin-bottom: 5px
-      color: $dark-blue
+      color: $green
       width: 100%
       span
         &:first-child
           font-size: 12px
     .contact-form
       margin: 0 auto
-      color: $dark-blue
+      color: $dark-beige
       .form-errors
         margin: 10px 0
         color: $white
@@ -71,11 +71,11 @@
         text-align: right
         .form-submit
           margin-left: 10px
-          background-color: $yellow
+          background-color: $green
           padding: 10px 15px
           color: $white
           border: none
-          +box-shadow(2px 2px 0 $shadow-yellow)
+          +box-shadow(2px 2px 0 $black)
           +border-radius(5px)
           text-transform: uppercase
           font-weight: bold
@@ -84,7 +84,7 @@
           cursor: pointer
 
     .close
-      background: image-url('home/misc/white-close.png') 0 0 no-repeat
+      //background: image-url('home/misc/white-close.png') 0 0 no-repeat
       display: block
       width: 16px
       height: 16px
@@ -104,7 +104,7 @@
       span
         font-size: 22px
         font-weight: bold
-        color: $dark-blue
+        color: $dark-beige
         display: block
         margin-top: 0
         margin-bottom: 13px
@@ -118,7 +118,7 @@
           font-size: 14px
           padding-left: 10px
           line-height: 1.4em
-          color: $dark-blue
+          color: $green
           &:after
             content: "-"
             position: absolute
@@ -139,7 +139,6 @@
         padding: 0 20px
         display: block
         float: left
-        box-sizing: border-box
       .oriented-solutions
         padding: 20px 20px 10px 20px
         ul
@@ -150,7 +149,7 @@
         padding-top: 20px
         a
           display: inline-block
-          background-color: $yellow
+          background-color: $green
           padding: 10px 20px
           color: $white
           text-decoration: none
@@ -158,10 +157,8 @@
           margin-top: 15px
           text-transform: uppercase
           font-weight: bold
-          +box-shadow(2px 2px 0 $shadow-yellow)
+          +box-shadow(2px 2px 0 $black)
   // Marcas
   .marcas-container
     .modal-content
       width: 70%
-      +breakpoint($max-width)
-        max-width: 50%

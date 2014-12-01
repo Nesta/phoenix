@@ -1,0 +1,49 @@
+// Provide a general way of getting/using the project icons
+.gecko a
+  outline: 0
+
+.ico
+  display: inline-block
+  =ico($img, $display: inline-block)
+    +bg-build($img)
+    display: $display
+  /*
+   *&.ico-descargar {
+   *  @include ico('ico-descargar.png');
+   *}
+   *&.ico-favorito {
+   *  @include ico('ico-favorito.png');
+   *}
+   *&.ico-comentar {
+   *  @include ico('ico-comentar.png');
+   *}
+   *&.ico-mas {
+   *  @include ico('ico-mas.png');
+   *}
+   *&.ico-maximize {
+   *  @include ico('ico-maximize.png');
+   *}
+   *&.ico-menos {
+   *  @include ico('ico-menos.png');
+   *}
+   *&.ico-minimize {
+   *  @include ico('ico-minimize.png');
+   *}
+   *&.ico-fullscreen {
+   *  @include ico('ico-fullscreen.png');
+   *}
+   *&.ico-navegacion {
+   *  @include ico('ico-navegacion.png');
+   *}
+   *&.ico-insertar {
+   *  @include ico('ico-insertar.png');
+   *}
+   *&.ico-x {
+   *  @include ico('ico-x.png');
+   *}
+   *&.ico-x-green {
+   *  @include ico('ico-x-green.png');
+   *}
+   *&.ico-likes {
+   *  @include ico('ico-likes.png');
+   *}
