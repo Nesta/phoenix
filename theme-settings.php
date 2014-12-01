@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @file
+ * Theme setting callbacks for the da_vinci theme.
+ */
+
 /**
  * Implements hook_form_FORM_ID_alter().
  *
@@ -19,7 +25,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['da_vinci_settings']['breadcrumbs'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show breadcrumbs in a page'),
-    '#default_value' => theme_get_setting('breadcrumbs','da_vinci'),
+    '#default_value' => theme_get_setting('breadcrumbs', 'da_vinci'),
     '#description'   => t("Check this option to show breadcrumbs in page. Uncheck to hide."),
   );
 

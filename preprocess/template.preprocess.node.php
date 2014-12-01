@@ -1,15 +1,12 @@
 <?php
-
-/*function autoDetectLanguage(){
-  $languages = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-  if ($languages[0] == 'es' || $languages[0] == 'es-ES'){
-    $lang = 'es'; 
-  }else{ 
-    $lang = 'en';
-  }
-  return $lang;
-}
+/**
+ * @file
+ * The theme system, which controls the output of Drupal.
+ *
+ * The theme system allows for nearly all output of the Drupal system to be
+ * customized by user themes.
  */
+
 /**
  * Implements template_preprocess_node().
  */
