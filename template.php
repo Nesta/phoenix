@@ -1,4 +1,11 @@
 <?php
+/**
+ * @file
+ * The theme system, which controls the output of Drupal.
+ *
+ * The theme system allows for nearly all output of the Drupal system to be
+ * customized by user themes.
+ */
 
 /**
  * Implements hook_html_head_alter().
@@ -116,19 +123,6 @@ function da_vinci_page_alter($page) {
     )
   );
   drupal_add_html_head($viewport, 'viewport');
-}
-
-/**
- * Overwrite theme_links of locale module to display a custom title
- * instead of original title.
- */
-function da_vinci_links__locale_block(&$vars) {
-  foreach ($vars['links'] as $language => $langInfo) {
-    $vars['links'][$language]['title'] = t('Welcome', array(), array('langcode' => $language));
-  }
-
-  $content = theme_links($vars);
-  return $content;
 }
 
 //Preprocess 

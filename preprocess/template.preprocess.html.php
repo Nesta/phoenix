@@ -1,5 +1,13 @@
 <?php
 /**
+ * @file
+ * The theme system, which controls the output of Drupal.
+ *
+ * The theme system allows for nearly all output of the Drupal system to be
+ * customized by user themes.
+ */
+
+/**
  * Implements template_preprocess_html().
  */
 function da_vinci_preprocess_html(&$vars) {
@@ -74,7 +82,7 @@ function da_vinci_preprocess_html(&$vars) {
     array_push($vars['classes_array'], 'page-user-view');
   }
 
-  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'article'){
+  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'article') {
     $theme_path = drupal_get_path('theme', 'da_vinci');
     drupal_add_js($theme_path . '/js/plugins/intro.js');
     drupal_add_js($theme_path . '/js/demo.js');
