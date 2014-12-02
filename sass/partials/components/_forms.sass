@@ -88,6 +88,65 @@ tr.even .form-item.shs-wrapper-processed
   #edit-submit
     +no-icon(10px)
 
+// Form-contact
+  .form-contact
+    padding: 2em 2em 1.5em 2em
+    width: 35em
+    background-color: $gray
+    // Mail
+    .form-item-mail
+      margin-bottom: 15px
+    p
+      margin: 0
+    // Spam info
+    ul
+      +hide-bullets
+      margin-top: 10px
+      li
+        line-height: 1.3em
+        &:before
+          content: "-"
+          position: relative
+          left: -4px
+          padding-left: 5px
+    input
+      border: none
+      padding: 10px
+      width: 100%
+      box-sizing: border-box
+      margin: 5px 0 20px 0
+    label
+      font-size: 25px
+      margin-bottom: 5px
+      color: $green
+      width: 100%
+      span
+        &:first-child
+          font-size: 12px
+    .contact-form
+      margin: 0 auto
+      color: $dark-beige
+      .form-errors
+        margin: 10px 0
+        color: $white
+        text-align: center
+      .form-actions
+        margin-top: 20px
+        text-align: right
+        .form-submit
+          margin-left: 10px
+          background-color: $green
+          padding: 10px 15px
+          color: $white
+          border: none
+          +box-shadow(2px 2px 0 $black)
+          +border-radius(5px)
+          text-transform: uppercase
+          font-weight: bold
+          width: auto
+          margin: 0
+          cursor: pointer
+
 // Loading Icon
 .loading-layer
   .form-actions
