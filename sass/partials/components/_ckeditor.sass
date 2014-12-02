@@ -9,3 +9,49 @@
     background: transparent
     padding: 0
     border: 0
+
+// Form: new comment - ckeditor wrapper
+form.comment-form
+  position: relative
+  background: $light-beige
+  padding: 1em
+  border-top: none
+  > div
+    padding-left: 50px
+    display: block
+    > *
+      vertical-align: top
+      display: block
+  .form-actions
+    vertical-align: bottom
+    text-align: right
+    > *
+      margin: 5px
+      display: inline-block
+  .field-name-comment-body
+    padding-left: 0
+    label
+      display: none
+    .form-item
+      margin-top: 0
+    .grippie
+      display: none
+    .form-textarea-wrapper
+      position: relative
+      border: 1px solid $dark-beige
+      &:before
+        background-color: $white
+        content: "\00a0"
+        display: block
+        height: 10px
+        width: 10px
+        position: absolute
+        top: 20px
+        left: -6px
+        +transform(rotate(-45deg))
+        border-top: 1px solid $light-beige
+        border-left: 1px solid $light-beige
+      textarea
+        border-color: transparent
+        &:focus
+          outline: 1px solid transparent
