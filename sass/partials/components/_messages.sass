@@ -1,6 +1,37 @@
+// Message
 .messages
   &.error,
-  &.warning
-    +message($red-error)
+  &.warning,
   &.status
-    +message($green)
+    position: fixed
+    left: 0
+    right: 0
+    top: 10%
+    margin: 0 auto
+    color: $white
+    cursor: pointer
+    opacity: 0.9
+    border-width: 1px
+    padding: 15px
+    text-align: center
+    width: 100%
+    z-index: 99
+    h2
+      margin: 15px 20px
+      font-size: 20px
+      color: $white
+    ul
+      font-size: 15px
+    a
+      text-decoration: underline
+      color: $white
+      font-weight: bold
+  &.error
+    background-color: $red-error
+    border-color: darken($red-error, 10%)
+  &.warning
+    background-color: $red-error
+    border-color: darken($red-error, 10%)
+  &.status
+    background-color: $green
+    border-color: darken($green, 10)

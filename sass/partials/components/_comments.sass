@@ -111,3 +111,31 @@
 .user-picture
   img
     +border-radius(25px)
+
+// Desde blog-detail
+#comment-form
+    background: $white
+    padding: 15px 25px 25px 25px
+    +box-shadow(7px 0 10px -8ppx $black)
+    > div
+      padding: 0
+      & > div:first-child
+        margin-bottom: 1.2em
+        label
+          font-size: 19px
+          color: $green
+          font-weight: bold
+          display: block
+          float: left
+          margin-right: 5px
+          &:after
+            content: ":"
+            position: relative
+            left: -2px
+        a
+          text-decoration: none
+          color: $dark-turquoise
+          font-weight: bold
+          font-size: 16px
+          position: relative
+          top: 3px    
