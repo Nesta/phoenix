@@ -41,8 +41,7 @@ h4
     color: $green
     background: $white
     display: inline-block
-    padding: 0 15px
-    font-weight: 700
+    padding: 0 1em
     position: relative
   &:before
     position: absolute
@@ -73,3 +72,16 @@ ol.show-bullets
 
 ul.show-bullets
   +show_bullets()
+
+.backtotop
+  background: $green
+  +border-radius(8px)
+  padding: 1em
+  display: block
+  position: fixed
+  right: 1em
+  bottom: 1em
+  a
+    color: $white
+  &:hover
+    background: $dark-green
