@@ -6,6 +6,9 @@
   color: $white
   padding: .5em 0
 
+.site-header
+  background: $dark-beige
+
 #site-logo img
   max-width: 100%
 #site-title a
@@ -22,8 +25,8 @@
   background: $white
 
 .site-footer
-  background: #222
-  color: $white
+  background: $black
+  color: $gray
   padding: 2em 0
 //END: TESTSTYLES
 
@@ -36,56 +39,34 @@
 .region-footer
   @extend .container
 
-//Test Styles
-.sub-container-7
-  +container(7)
-  li
-    +span(1 of 7)
-  li.last
-    +last
-
-
-.sub-container-9
-  +container(9 inside)
-  li
-    +span(1 of 9)
-    font-size: small
-  li.last
-    +last
-//END: Test Styles
-
-
 +breakpoint($tablet)
   .container
     +container(90%)
   .header-left
-    +span(6 first)
+    +span(6 of 12 first)
   .header-right
-    +span(6 last)
+    +span(6 of 12 last)
   .one-sidebar.sidebar-first
     #content
-      +span(isolate 9 at 4 last)
-      clear: both
+      +span(9 of 12 last)
     #sidebar-first
-      +span(3 first)
-      padding-right: 15px
+      +span(3 of 12 first)
   .one-sidebar.sidebar-second
     #content
-      +span(9 first)
-      clear: both
+      +span(9 of 12 first)
     #sidebar-second
-      +span(3 last)
+      +span(3 of 12 last)
 
   .two-sidebars
     #content
-      +span(9 last)
-      clear: both
+      +span(isolate 6 at 4 of 12)
     #sidebar-first
-      +span(3 first)
+      +span(3 of 12 first)
     #sidebar-second
-      +span(full)
+      +span(3 of 12 last)
   .hx
-    +span(isolate 9 at 4 last)
+    +full
+    float: none
 
 +breakpoint($desk)
   .container
@@ -93,31 +74,19 @@
 
   .one-sidebar.sidebar-first
     #content
-      +span(isolate 10 at 3 last)
-      clear: both
+      //+span(isolate 10 at 3 last)
     #sidebar-first
-      +span(2 first)
-      top: -30px
-      position: relative
+      //+span(2 first)
   .one-sidebar.sidebar-second
     #content
-      +span(10 first)
-      clear: both
+      //+span(9 of 12 first)
     #sidebar-second
-      +span(2 last)
+      //+span(3 of 12 last)
 
   .two-sidebars
     #content
-      +span(isolate 7 at 3)
-      clear: both
+      //+span(isolate 6 at 4 of 12)
     #sidebar-first
-      +span(2 first)
-      top: -30px
-      position: relative
+      //+span(3 of 12 first)
     #sidebar-second
-      +span(3 last)
-  .hx
-    +span(isolate 10 at 3 last)
-  .one-sidebar.sidebar-first.page-drupal
-    #sidebar-first
-      top: 15px
+      //+span(3 of 12 last)
