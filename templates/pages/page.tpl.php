@@ -141,6 +141,10 @@
     <?php endif; ?>
   </div>
 
+<div class="backtotop">
+  <?php print l(t('Come up'), '#top', array('external' => TRUE)); ?>
+</div>
+
   <?php if($page['footer']) : ?>
     <footer class="site-footer">
       <?php print render($page['footer']); ?>
