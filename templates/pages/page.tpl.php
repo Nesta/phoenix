@@ -88,7 +88,7 @@
         <div id="logo" class="site-branding vmiddle">
           <?php if ($logo): ?>
             <div id="site-logo">
-              <a href="<?php print $base_url; ?>/" title="<?php print $site_name . ' - ' . $site_slogan; ?>"><img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" /></a>
+              <a href="<?php print $base_url; ?>/" title="<?php print $site_name . ' - ' . $site_slogan; ?>"><img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" /><?php print $site_name; ?></a>
             </div>
           <?php endif; ?>
         </div>
