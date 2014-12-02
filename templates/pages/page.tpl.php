@@ -74,28 +74,29 @@
 ?>
 <?php global $base_url; ?>
 <section id="page">
-  <?php if($page['user_bar']): ?>
-    <nav class="user-bar" role="navigation">
-      <?php print render ($page['user_bar']); ?>
+  <?php if($page['top_bar']): ?>
+    <nav class="top-bar" role="navigation">
+      <?php print render ($page['top_bar']); ?>
     </nav>
   <?php endif; ?>
 
   <header id="masthead" class="site-header" role="banner">
     <div class="header-wrapper container">
-
-      <?php print render ($page['top_bar']); ?>
-      <div class="logo header-left">
-        <div id="logo" class="site-branding vmiddle">
+      <div class="header-left">
+        <div id="logo" class="site-branding">
           <?php if ($logo): ?>
-            <div id="site-logo">
-              <a href="<?php print $base_url; ?>/" title="<?php print $site_name . ' - ' . $site_slogan; ?>"><img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" /></a>
+            <div class="site-logo">
+              <img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" />
             </div>
           <?php endif; ?>
         </div>
       </div>
-      <div class="logo-blog">
-        <div id="claim-blog" class="claim">
-          <div class="text">
+      <div class="header-right">
+        <div id="name-slogan">
+          <div class="site-name">
+              <h1><a href="<?php print $base_url; ?>/" title="<?php print $site_name . ' - ' . $site_slogan; ?>"><?php print $site_name; ?></a></h1>
+          </div>
+          <div class="site-slogan">
               <?php print $site_slogan; ?>
           </div>
         </div>
@@ -104,7 +105,9 @@
   </header>
 
   <?php if($page['preface']) : ?>
+  <div id="preface">
     <?php print render ($page['preface']); ?>
+  </div>
   <?php endif; ?>
 
   <div id="main-content" class="main-content container">
