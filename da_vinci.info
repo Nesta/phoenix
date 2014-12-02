@@ -16,14 +16,12 @@ scripts[] = js/custom.js
 ;plugins[panels][layouts] = plugins/layouts
 ;plugins[panels][styles] = plugins/styles
 
-regions[user_bar]       = User Bar
 regions[top_bar]        = Top Bar
-regions[info_bar]       = Info Bar
 regions[header]         = Header
 regions[preface]        = Preface
+regions[content_top]    = Content Top
 regions[sidebar_first]  = First Sidebar
 regions[sidebar_second] = Second Sidebar
-regions[content_top]    = Content Top
 regions[help]           = Help
 regions[content]        = Content
 regions[footer]         = Footer
