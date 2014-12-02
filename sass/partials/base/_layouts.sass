@@ -8,26 +8,38 @@
 
 .site-header
   background: $dark-beige
+  min-height: 75px
+  #name-slogan
+    position: absolute
+    bottom: 10px
+    .site-name
+      h1
+        margin: 0
+        font-family: 'Over the Rainbow'
+      a
+        color: $light-beige
+    .site-slogan
+      color: $dark-green
 
 #site-logo img
   max-width: 100%
-#site-title a
-  color: $white
 
-.region-preface
-  color: $white
-  padding: .5em 0
+.top-bar
+  overflow: hidden
   background: $turquoise
-  min-height: 10em
+
+#preface
+  color: $white
+  background: $light-beige
+  min-height: 8em
 
 #main-content
-  padding: 2em 0
   background: $white
 
 .site-footer
   background: $black
-  color: $gray
   padding: 2em 0
+  color: $gray
 //END: TESTSTYLES
 
 
@@ -35,17 +47,24 @@
   +container(96%)
   +clearfix
 
-.region-user-bar,
+.region-top-bar,
+.region-preface,
 .region-footer
   @extend .container
+
+.site-header
+  position: relative
+  .header-left
+    +span(2 of 12 first)
+  .header-right
+    +span(10 of 12 last)
+.hx
+  +full
+  float: none
 
 +breakpoint($tablet)
   .container
     +container(90%)
-  .header-left
-    +span(6 of 12 first)
-  .header-right
-    +span(6 of 12 last)
   .one-sidebar.sidebar-first
     #content
       +span(9 of 12 last)
@@ -64,14 +83,10 @@
       +span(3 of 12 first)
     #sidebar-second
       +span(3 of 12 last)
-  .hx
-    +full
-    float: none
 
 +breakpoint($desk)
   .container
     +container(1200px)
-
   .one-sidebar.sidebar-first
     #content
       //+span(isolate 10 at 3 last)
