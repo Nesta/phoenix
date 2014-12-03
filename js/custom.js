@@ -52,11 +52,11 @@
 
       // Show back to top button
       $(window).scroll(function() {
-        if ($(this).scrollTop()) {
-          $('.backtotop').fadeIn();
-          } else {
-          $('.backtotop').fadeOut();
-          }
+        if ($(window).scrollTop() < $(window).height()*2) {
+          $('.backtotop').removeClass('active');
+        } else {
+          $('.backtotop').addClass('active');
+        }
       });
 
       // Back to top click event
