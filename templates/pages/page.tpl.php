@@ -86,7 +86,7 @@
         <div id="logo" class="site-branding">
           <?php if ($logo): ?>
             <div class="site-logo">
-              <img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" />
+              <a href="<?php print $base_url; ?>/" title="<?php print $site_name; ?>"><img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" /></a>
             </div>
           <?php endif; ?>
         </div>
