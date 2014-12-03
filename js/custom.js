@@ -49,6 +49,23 @@
       $('.messages').click(function() {
         $(this).addClass('hide');
       });
+
+      // Show back to top button
+      $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+          $('.backtotop').fadeIn();
+          } else {
+          $('.backtotop').fadeOut();
+          }
+      });
+
+      // Back to top click event
+      $(".backtotop").click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+        scrollTop: $('body').offset().top
+        }, 500);
+      });
     }
   }
 })(jQuery);
