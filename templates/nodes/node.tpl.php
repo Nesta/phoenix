@@ -90,16 +90,9 @@
     <?php print render($title_suffix); ?>
 
     <?php if($display_submitted): ?>
-      <ul class="meta clearfix">
-        <li>
-          <strong><?php print t('Posted on:'); ?></strong>
-          <?php print $date; ?>
-        </li>
-        <li>
-          <strong><?php print t('By:'); ?></strong>
-          <?php print $name; ?>
-        </li>
-      </ul>
+      <div class="submitted clearfix">
+        <p><?php print t('Posted on '); ?><strong><?php print $date; ?></strong><?php print t(' by '); ?><strong><?php print $name; ?></strong></p>
+      </div>
     <?php endif; ?>
   <?php if(!$page): ?>
     </header>

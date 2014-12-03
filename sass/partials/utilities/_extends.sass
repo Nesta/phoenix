@@ -24,6 +24,11 @@
   +breakpoint($tablet)
     display: none
 
+// Using media object mixin
+.media-object
+  +media-object()
+  +clearfix
+
 // First level children aligned
 .inline
   > *
@@ -58,7 +63,7 @@
   +clearfix()
 
 
-// PLACEHOLDER
+// Placeholders
 
 // See this URL for explanation: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 %vertical-align
