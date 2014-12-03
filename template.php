@@ -80,6 +80,7 @@ function da_vinci_breadcrumb($vars) {
   }
 }
 
+     
 
 /**
  * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
@@ -131,6 +132,7 @@ require_once "preprocess/template.preprocess.page.php";
 require_once "preprocess/template.preprocess.node.php";
 require_once "preprocess/template.preprocess.view.php";
 require_once "preprocess/template.preprocess.block.php";
+require_once "preprocess/template.preprocess.comment.php";
 require_once "preprocess/template.preprocess.region.php";
 require_once "preprocess/template.preprocess.user-profile.php";
 
