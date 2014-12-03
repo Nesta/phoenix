@@ -86,7 +86,7 @@
         <div id="logo" class="site-branding">
           <?php if ($logo): ?>
             <div class="site-logo">
-              <a href="<?php print $base_url; ?>/" title="<?php print $site_name; ?>"><img src="<?php print $logo; ?>" alt="<?php print $site_name . ' - ' . $site_slogan; ?>" /></a>
+              <?php print l("<img src='$logo' alt='$site_name - $site_slogan' />", $base_url, array('html' => true, 'attributes' => array('title' => $site_name . ' - ' . $site_slogan))); ?>
             </div>
           <?php endif; ?>
         </div>
