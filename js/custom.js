@@ -44,6 +44,11 @@
           $('.js-menu-screen').toggleClass('is-visible');
         });
       });
+
+      // On click: add class 'hide' to hide message wrapper
+      $('.messages').click(function() {
+        $(this).addClass('hide');
+      });
     }
   }
 })(jQuery);
