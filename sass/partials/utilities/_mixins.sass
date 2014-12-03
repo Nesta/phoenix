@@ -64,6 +64,21 @@
     color: $white
     text-decoration: none
 
+.button
+  background: $turquoise
+  border: none
+  +border-radius(5px)
+  color: $white
+  cursor: pointer
+  font-size: 13px
+  padding: 10px 15px
+  text-align: center
+  a
+    color: $white
+  &:hover
+    background: $dark-turquoise
+    text-decoration: none
+
 =button($bgcolor: $light-green)
   background-color: $bgcolor
   border: 0
@@ -79,39 +94,14 @@
   background-image: none
   padding: $padding
 
-=button-icon($bgcolor: $light-green, $icon: 'close-on.png')
+=button-icon($bgcolor: $light-green, $icon: 'close.png')
   +button($bgcolor)
   background-image: image-url($icon)
   background-repeat: no-repeat
   background-position: 10px center
-  color: $beige
   padding-left: 38px
-
-=label-gray()
-  background-color: $beige
-  color: $gray
-  border: 1px solid $beige
-  font-size: 13px
-  font-weight: 700
-  line-height: 19px
-
-=div-nextto-label-grey()
-  border-top: 1px solid $beige
-  border-bottom: 1px dotted $beige
-  color: $gray
-  padding: 4px 10px
-  font-size: 13px
-  font-weight: 400
-  line-height: 19px
-
-=label-small()
-  background-color: transparent
-  border: none
-  color: $beige
-  font-size: 12px
-  line-height: 1
-  padding: 0
-  text-transform: none
+  a
+    color: $white
 
 // Adds an icon in front of an element
 =icon-aware($icon, $margin: 5px)
