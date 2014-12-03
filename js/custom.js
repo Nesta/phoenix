@@ -32,16 +32,9 @@
         }
       };
 
-      $('.js-menu-trigger', context).once('mainMenu', function () {
+      $('.js-menu-trigger,.js-menu-screen', context).once('mainMenu', function () {
         $(this).click(function () {
-          $('.js-menu').toggleClass('is-visible');
-          $('.js-menu-screen').toggleClass('is-visible');
-        });
-      });
-      $('.js-menu-screen', context).once('menuCategoriesON', function () {
-        $(this).click(function () {
-          $('.js-menu').toggleClass('is-visible');
-          $('.js-menu-screen').toggleClass('is-visible');
+          $('.js-menu,.js-menu-screen').toggleClass('is-visible');
         });
       });
 
@@ -58,13 +51,13 @@
           $('.backtotop').addClass('active');
         }
       });
-
       // Back to top click event
       $(".backtotop").click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-        scrollTop: $('body').offset().top
+        $('body').animate({
+          scrollTop: $('body').offset().top
         }, 500);
+        return false;
       });
     }
   }
