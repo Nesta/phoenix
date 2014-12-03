@@ -141,9 +141,9 @@
     <?php endif; ?>
   </div>
 
-<div class="backtotop">
- <a href="#"><?php print t('Come up');?></a>
-</div>
+  <div class="backtotop">
+  <?php print l(t('Come up'), '#');?>
+  </div>
 
   <?php if($page['footer']) : ?>
     <footer class="site-footer">
