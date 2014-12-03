@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
 @import url(http://fonts.googleapis.com/css?family=Over+the+Rainbow)
 
+// Structure
 html
   font-size: 1em
 
@@ -14,6 +15,7 @@ body
 .main-content
   margin-top: 1em
 
+// Headings & typography
 h1,
 h2,
 h3,
@@ -22,7 +24,6 @@ h5,
 h6
   font-weight: 700
   color: $dark-beige
-  margin-bottom: .5em
 
 h1
   font-size: 2.074em
@@ -35,6 +36,16 @@ h4
 
 .small
   font-size: 0.833em
+
+p
+  margin-bottom: 1em
+
+a
+  color: $turquoise
+  text-decoration: none
+  &:hover
+    color: $dark-turquoise
+    text-decoration: none
 
 // User Title
 .hx
@@ -55,16 +66,6 @@ h4
     content: ''
     top: 23px
 
-p
-  margin-bottom: 1em
-
-a
-  color: $dark_turquoise
-  text-decoration: none
-  &:hover
-    color: $turquoise
-    text-decoration: none
-
 // Lists
 ul
   +hide_bullets()
@@ -77,15 +78,26 @@ ol.show-bullets
 ul.show-bullets
   +show_bullets()
 
-.backtotop
-  background: $green
-  +border-radius(8px)
-  padding: 1em
-  display: block
-  position: fixed
-  right: 1em
-  bottom: 1em
-  a
-    color: $white
-  &:hover
-    background: $dark-green
+// Forms
+input,
+select,
+textarea
+  +border-radius(5px)
+  background: $white
+  border: 1px solid $green
+  font-size: 0.9em
+  max-width: 100%
+  padding: 0.4em 0.8em
+  &.error
+    border: 1px solid $red-error
+
+label
+  color: $dark-beige
+  font-size: 0.9em
+  font-weight: normal
+  margin-bottom: 0.2em
+
+.form-item .description
+  color: $beige
+  font-size: 0.8em
+  margin-top: 0.2em

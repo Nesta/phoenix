@@ -1,40 +1,25 @@
 .tabs.primary,
 .nav-tabs.nav
-  clear: both
   border-bottom: 1px solid $beige
-  border-collapse: collapse
-  height: auto
-  line-height: normal
-  list-style: none
-  margin: 0
-  padding: 0 0 0 1em
-  white-space: nowrap
-  overflow: visible
   li
     display: inline-block
-    float: none
-    margin-bottom: 0
     a
-      display: block
+      +border-radius(4px 4px 0 0)
       background-color: $light-beige
-      color: $turquoise
       border: none
-      height: auto
-      padding: .5em 1em
-      text-decoration: none
-      text-transform: uppercase
-      font-size: 13px
-      margin-right: 1em
+      color: $green
+      display: block
+      font-size: .8em
       margin-bottom: -1px
-      border-radius: 4px 4px 0 0
+      padding: .5em 1em
+      text-transform: uppercase
       &:hover
-        opacity: 0.8
-        background: transparent
+        background: $beige
+        color: $gray
   li.active
     a
+      background: $green
       border: 1px solid $beige
-      background: transparent
-      color: $dark-turquoise
+      color: $white
       &:hover
-        opacity: 1
-        cursor: default
+        background: $dark-green
