@@ -1,52 +1,19 @@
 // Comments wrapper
 #comments
-  background: transparent
-  margin: 0
-  line-height: inherit
+  margin-top: +gutter(2)
   .title
-    color: $dark-beige
-    font-size: 22px
-    float: left
-    margin-right: 5%
-    margin-top: 10px
-    &:hover
-      text-decoration: none
-  .title.comment-form
-    text-transform: uppercase
+    color: $green
+    display: inline-block
     font-weight: normal
-    font-size: 16px
-    padding-bottom: .5em
-    border-bottom: 1px dotted $dark-beige
-  .comments-count
-    float: left
-    margin-top: 15px
-  .new-comment
-    clear: none
-    a
-      float: right
-  //Styles for the filter option below a textarea field
-  .filter-wrapper.form-wrapper
-    .form-item,
-    .filter-help,
-    .filter-guidelines
-      float: none
-      padding: 0
-    .filter-help
-      text-align: right
-      a
-        padding-left: 0
-  .comments-hidden-link
-    display: block
-    text-align: center
-    padding: .2em 0
-    margin-top: 5px
-    margin-bottom: 1em
-    background-color: $light-beige
+
+// Comments Count
+.comments-count
+  //background: image-url('comments.png') 0 center no-repeat
+  color: $dark-beige
+  font-size: 0.7em
 
 // Each comment
 .comment
-  clear: both
-  color: $dark-beige
   .attribution
     border-top: 1px solid $light-beige
     padding:  5px
@@ -57,58 +24,38 @@
       float: left
       margin-right: 1em
     .comment-submitted
-      overflow: hidden
-      margin-top: 8px
       p
-        margin: 0
-        color: $beige
-        font-size: 15px
+        color: $dark-beige
+        font-size: 0.9em
       .commenter-name
         float: left
-        .username
-          color: $turquoise
-        a.username:hover
-          color: $green
       .comment-time
         text-align: right
-        font-size: 14px
+  // Settings for edit/delete the comment
   .comment-text
-    padding: 5px 10px
     ul.links
       text-align: right
       float: right
-      border-top: 1px dotted $light-beige
+      border-top: 1px dotted $green
       width: 60%
-      padding: 10px 0 25px
+
+  // Icon of a new comment
+  .new
+    +border-radius(5px)
+    background: $green
+    color: $gray
+    float: right
+    font-size: 0.8em
+    margin-left: 0.5em
+    padding: 0.2em 0.5em
+    text-transform: uppercase
 
 // Button: add new comment
 .new-comment
-  margin-bottom: 10px
-  clear: both
+  display: inline-block
+  float: right
   a
     @extend .button
     &:hover
       color: $white
-
-// Comments Count
-.comments-count
-  //background: image-url('comments.png') 0 center no-repeat
-  padding-left: 28px
-  color: $dark-turquoise
-  font-size: 12px
-
-// For new comments
-.new
-  float: right
-  background: $dark-turquoise
-  opacity: 0.8
-  color: $white
-  +border-radius(2px)
-  padding: 0px 5px
-  margin-left: 10px
-
-// User Picture
-.user-picture
-  img
-    +border-radius(25px)
 
