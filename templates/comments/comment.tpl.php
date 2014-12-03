@@ -73,7 +73,7 @@
       <?php endif; ?>
 
       <p class="comment-time">
-        <?php print t('@created ago', array('@created' => $created)); ?>
+        <?php print $created; ?>
       </p>
       <?php if (isset($show_permalink)): ?>
       <p class="comment-permalink">
@@ -85,7 +85,6 @@
 
   <div class="comment-text">
     <div class="comment-arrow"></div>
-
 
     <?php if (isset($show_title)): ?>
     <?php print render($title_prefix); ?>
