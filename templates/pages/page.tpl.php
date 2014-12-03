@@ -142,7 +142,7 @@
   </div>
 
   <div class="backtotop">
-  <?php print l(t('Come up'), '#');?>
+   <?php print l(t('Come up'), '#', array('external' => TRUE));?>
   </div>
 
   <?php if($page['footer']) : ?>
