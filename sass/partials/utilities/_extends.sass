@@ -41,14 +41,13 @@
   cursor: pointer
   font-size: 13px
   text-align: center
-  a
-    +border-radius(5px)
-    padding: 10px 15px
-    background: $turquoise
-    color: $white
-    &:hover
-      background: $dark-turquoise
-      text-decoration: none
+  +transition(all 0.2s ease-in-out)
+  +border-radius(5px)
+  padding: 10px 15px
+  background: $turquoise
+  &:hover
+    background: $dark-turquoise
+    text-decoration: none
 
 // Not allowed select an item
 .unselectable
