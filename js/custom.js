@@ -39,8 +39,7 @@
       });
 
       // On click: add class 'hide' to hide message wrapper
-      $('.messages').click(function() {
-        $(this).addClass('hide');
+      $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');
       });
 
       // Show back to top button
