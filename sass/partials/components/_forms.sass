@@ -22,13 +22,6 @@ form .field-add-more-submit
   margin: .5em 0 0
 //END: Overwrite the Drupal modules/field/theme/field.css
 
-//Overwrite Bootstrap styñe
-input[type="radio"],
-input[type="checkbox"]
-  margin: 0 0
-  margin-top: 1px \9
-  /* IE8-9 */ line-height: normal
-
 //Hierarchical Select style corrections
 tr.odd .form-item.shs-wrapper-processed,
 tr.even .form-item.shs-wrapper-processed
@@ -45,9 +38,8 @@ tr.even .form-item.shs-wrapper-processed
 
 .confirmation
   #edit-cancel
-    +button($green)
+    @extend .button
     float: right
-    padding: 12px
     font-weight: bold
     font-size: 15px
     &:hover

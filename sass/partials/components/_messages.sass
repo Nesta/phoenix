@@ -16,23 +16,7 @@
     text-align: center
     width: 100%
     z-index: 99
-    .close
-      background: image-url('close.png') 0 0 no-repeat
-      display: block
-      width: 16px
-      height: 16px
-      position: absolute
-      top: 15px
-      right: 20px
-      font-size: 0
-      line-height: 0
-      color: transparent
-      &:active, &:focus
-        outline: none
-    h2
-      margin: 15px 20px
-      font-size: 20px
-      color: $white
+    opacity: 0.7
     ul
       font-size: 15px
     a
@@ -40,11 +24,11 @@
       color: $white
       font-weight: bold
   &.error
-    background-color: $red-error
+    background: image-url('ico-error.png') 5% 50% no-repeat $red-error
     border-color: darken($red-error, 10%)
   &.warning
-    background-color: $red-error
-    border-color: darken($red-error, 10%)
+    background: image-url('ico-info.png') 5% 50% no-repeat $warning
+    border-color: darken($warning, 10%)
   &.status
-    background-color: $green
+    background: image-url('ico-success.png') 5% 50% no-repeat $green
     border-color: darken($green, 10)

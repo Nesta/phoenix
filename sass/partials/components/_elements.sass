@@ -1,18 +1,18 @@
 // Go to the top of page
 .backtotop
-  a
-    background: $green
-    +border-radius(8px)
-    padding: 1em
-    display: block
-    position: fixed
-    right: -8em
-    bottom: 1em
-    color: $white
-    +transition(right 1s ease-in-out 0)
-    &:hover
-      background: $dark-green
+  position: fixed
+  right: -8em
+  bottom: 1em
+  +transition(right 1s ease-in-out 0)
   &.active
-    a
-      right: 1em
-      +transition(right 1s ease-in-out 0)
+    right: 1em
+    +transition(right 1s ease-in-out 0)
+  a
+    background: image-url('backtotop.png') center center no-repeat $green
+    display: block
+    padding: 21px 27px
+    color: $white
+    +border-radius(8px)
+    @extend .hide-modern
+    &:hover
+      background-color: $dark-green
