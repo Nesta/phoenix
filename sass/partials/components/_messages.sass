@@ -1,4 +1,12 @@
 // Message
+// Style for module styleguide
+.page-admin-appearance-styleguide
+  .messages
+    &.error,
+    &.warning,
+    &.status
+      position: static
+
 .messages
   &.error,
   &.warning,
@@ -17,8 +25,8 @@
     width: 100%
     z-index: 99
     opacity: 0.7
-    ul
-      font-size: 15px
+    li
+      list-style: none
     a
       text-decoration: underline
       color: $white
