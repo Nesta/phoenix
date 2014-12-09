@@ -58,5 +58,4 @@ function da_vinci_preprocess_page(&$vars) {
       $last_node->classes_array = array('last');
     }
   }
-
 }

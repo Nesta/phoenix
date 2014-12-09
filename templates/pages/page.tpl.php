@@ -117,6 +117,11 @@
       </div></div> <!-- /.section, /#navigation -->
   <?php endif; ?>
   <div id="main-content" class="main-content container">
+    <?php if (theme_get_setting('styleguide')): ?>
+      <div>
+        <a class="style-guide-modal-fire" href="#">Style Guide</a>
+      </div>
+    <?php endif; ?>
     <?php if (theme_get_setting('breadcrumbs')): ?>
       <?php if ($breadcrumb): ?>
         <div id="breadcrumbs" class="clearfix"><?php print $breadcrumb; ?></div>
