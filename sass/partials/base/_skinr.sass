@@ -2,6 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Over+the+Rainbow)
 
 // Structure
+html,
+body
+  height: 100%
+
 html
   font-size: 1em
 
@@ -12,8 +16,11 @@ body
   line-height: 1.2
 #page
   background: $gray
+  min-height: 100%
+  position: relative
 .main-content
   margin-top: 1em
+  padding-bottom: 9em
 
 // Headings & typography
 h1,
