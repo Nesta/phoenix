@@ -20,39 +20,7 @@ function da_vinci_preprocess_page(&$vars) {
   if (isset($vars['node']->type)) {
     $vars['theme_hook_suggestions'][] = 'page__node__' . $vars['node']->type;
   }
-
-  if (isset($vars['main_menu'])) {
-    $vars['main_menu'] = theme('links__system_main_menu', array(
-      'links' => $vars['main_menu'],
-      'attributes' => array(
-        'class' => array('links', 'main-menu', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => t('Main menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      )
-    ));
-  }
-  else {
-    $vars['main_menu'] = FALSE;
-  }
-  if (isset($vars['secondary_menu'])) {
-    $vars['secondary_menu'] = theme('links__system_secondary_menu', array(
-      'links' => $vars['secondary_menu'],
-      'attributes' => array(
-        'class' => array('links', 'secondary-menu', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => t('Secondary menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      )
-    ));
-  }
-  else {
-    $vars['secondary_menu'] = FALSE;
-  }
+  
   // Adding classes wether #navigation is here or not
   if (!empty($vars['main_menu']) or !empty($vars['sub_menu'])) {
     $vars['classes_array'][] = 'with-navigation';
@@ -90,5 +58,4 @@ function da_vinci_preprocess_page(&$vars) {
       $last_node->classes_array = array('last');
     }
   }
-
 }

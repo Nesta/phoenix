@@ -22,6 +22,17 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#collapsed' => FALSE,
   );
 
+  $form['da_vinci_settings']['styleguide'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Style Guide Icon'),
+    '#default_value' => theme_get_setting('styleguide', 'da_vinci'),
+    '#description'   => t("Check this option to show Style Guide Button in page. Uncheck to hide."),
+  );
+  
+  if (!(module_exists('styleguide')||module_exists('jquery_update'))) {
+    $form['da_vinci_settings']['styleguide']['#disabled'] = true;
+  }
+
   $form['da_vinci_settings']['breadcrumbs'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show breadcrumbs in a page'),
