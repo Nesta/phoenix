@@ -1,11 +1,27 @@
 // Message
 // Style for module styleguide
-.page-admin-appearance-styleguide
+.page-admin-appearance-styleguide,
+#style-guide-modal
   .messages
     &.error,
     &.warning,
     &.status
       position: static
+      text-indent: 10%
+
+#style-guide-modal
+  .styleguide-palette
+    text-align: center
+    .styleguide-palette-swatch-color
+      border: 1px solid #f1f1f1
+      height: 100px
+      margin: 0 auto
+      width: 100px
+    .styleguide-palette-swatch
+      display: inline-block
+      margin: 0.5em
+      vertical-align: top
+      width: 12em
 
 .messages
   &.error,
@@ -16,27 +32,34 @@
     right: 0
     top: 10%
     margin: 0 auto
-    color: $white
-    cursor: pointer
-    opacity: 0.9
-    border-width: 1px
-    padding: 15px
-    text-align: center
-    width: 100%
-    z-index: 99
+    padding: 0
     opacity: 0.7
-    li
-      list-style: none
-    a
-      text-decoration: underline
+    .container
       color: $white
-      font-weight: bold
+      cursor: pointer
+      border-width: 1px
+      padding: 15px
+      text-align: left
+      width: 100%
+      z-index: 99
+      li
+        list-style: none
+      a
+        text-decoration: underline
+        color: $white
+        font-weight: bold
   &.error
-    background: image-url('ico-error.png') 5% 50% no-repeat $red-error
+    background: $red-error
     border-color: darken($red-error, 10%)
+    .container
+      background: image-url('ico-error.png') 0% 50% no-repeat
   &.warning
-    background: image-url('ico-info.png') 5% 50% no-repeat $warning
+    background: $warning
     border-color: darken($warning, 10%)
+    .container
+      background: image-url('ico-info.png') 0% 50% no-repeat $warning
   &.status
-    background: image-url('ico-success.png') 5% 50% no-repeat $green
+    background: $green
     border-color: darken($green, 10)
+    .container
+      background: image-url('ico-success.png') 0% 50% no-repeat $green

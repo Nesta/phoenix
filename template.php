@@ -19,6 +19,40 @@ function da_vinci_html_head_alter(&$head_elements) {
 }
 
 /**
+ * Implements hook_status_messages().
+ */
+function da_vinci_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"messages $type\">\n";
+    $output .= "<div class=\"container\">\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= '<span>' . $messages[0] . '</span>';
+    }
+    $output .= "</div>\n";
+    $output .= "</div>\n";
+  }
+  return $output;
+}
+
+/**
  * Implements hook_css_alter().
  */
 function da_vinci_css_alter(&$css) {
@@ -68,8 +102,8 @@ function da_vinci_js_alter(&$js) {
 /**
  * Insert themed breadcrumb page navigation at top of the node content.
  */
-function da_vinci_breadcrumb($vars) {
-  $breadcrumb = $vars['breadcrumb'];
+function da_vinci_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     // Use CSS to hide titile .element-invisible.
     //$output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
@@ -85,26 +119,26 @@ function da_vinci_breadcrumb($vars) {
 /**
  * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
  */
-function da_vinci_menu_local_tasks(&$vars) {
+function da_vinci_menu_local_tasks(&$variables) {
   $output = '';
 
-  if (!empty($vars['primary'])) {
-    $vars['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $vars['primary']['#prefix'] .= '<ul class="tabs primary clearfix">';
-    $vars['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($vars['primary']);
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<ul class="tabs primary clearfix">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
   }
-  if (!empty($vars['secondary'])) {
-    $vars['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
     if (arg(0) == 'user') {
-      $vars['secondary'][0]['#link']['title'] = t('My account');
-      $vars['secondary']['#prefix'] .= '<ul class="nav nav-tabs">';
+      $variables['secondary'][0]['#link']['title'] = t('My account');
+      $variables['secondary']['#prefix'] .= '<ul class="nav nav-tabs">';
     }
     else {
-      $vars['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
+      $variables['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
     }
-    $vars['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($vars['secondary']);
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
   }
   return $output;
 }
