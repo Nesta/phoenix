@@ -1,4 +1,5 @@
 // Message
+
 // Style for module styleguide
 .page-admin-appearance-styleguide,
 #style-guide-modal
@@ -7,9 +8,14 @@
     &.warning,
     &.status
       position: static
-      text-indent: 10%
-
-#style-guide-modal
+      text-indent: 5%
+      padding: 1em
+    &.error
+      background: image-url('ico-error.png') 1% 50% no-repeat $red-error
+    &.warning
+      background: image-url('ico-info.png') 1% 50% no-repeat $warning
+    &.status
+      background: image-url('ico-success.png') 1% 50% no-repeat $green
   .styleguide-palette
     text-align: center
     .styleguide-palette-swatch-color
@@ -22,7 +28,16 @@
       margin: 0.5em
       vertical-align: top
       width: 12em
+#style-guide-modal
+  .content
+    > div
+      margin-bottom: 1.4em
+    > h2
+      margin-bottom: 0.1em
 
+
+// Style for theme
+// General style
 .messages
   &.error,
   &.warning,
@@ -32,27 +47,30 @@
     right: 0
     top: 10%
     margin: 0 auto
-    padding: 0
     opacity: 0.7
+    padding: 0
+    cursor: pointer
+    color: $white
+    border-width: 1px
+    z-index: 99
     .container
-      color: $white
-      cursor: pointer
-      border-width: 1px
-      padding: 15px
       text-align: left
+      padding: 1em 1em 1em 4em
       width: 100%
-      z-index: 99
-      li
-        list-style: none
+      ul
+        +hide_bullets()
+        li
+          list-style: none
       a
         text-decoration: underline
         color: $white
         font-weight: bold
+  // Specific style
   &.error
     background: $red-error
     border-color: darken($red-error, 10%)
     .container
-      background: image-url('ico-error.png') 0% 50% no-repeat
+      background: image-url('ico-error.png') 0% 50% no-repeat $red-error
   &.warning
     background: $warning
     border-color: darken($warning, 10%)
