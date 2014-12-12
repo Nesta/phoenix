@@ -1,0 +1,57 @@
+// Style for module/modal styleguide
+// Open modal styleguide button
+.style-guide-modal-fire
+  z-index: 99
+  position: fixed
+  top: 50%
+  display: block
+  width: 0
+  height: 32px
+  padding: 8px 0 0 32px
+  background: image-url('brocha.png') no-repeat
+  background-position: left 5px center
+  background-color: $green
+  font-size: 14px
+  overflow: hidden
+  +border-radius(4px)
+  white-space: nowrap
+  color: $white
+  +transition(all 0.7s ease-in-out .5s)
+  &:hover
+    +transition(all 0.7s ease-in-out)
+    width: 110px
+    color: white
+    background-color: $dark-green
+.page-admin-appearance-styleguide,
+#style-guide-modal
+  .messages
+    &.error,
+    &.warning,
+    &.status
+      position: static
+      text-indent: 5%
+      padding: 1em
+    &.error
+      background: image-url('ico-error.png') 1% 50% no-repeat $red-error
+    &.warning
+      background: image-url('ico-info.png') 1% 50% no-repeat $warning
+    &.status
+      background: image-url('ico-success.png') 1% 50% no-repeat $green
+  .styleguide-palette
+    text-align: center
+    .styleguide-palette-swatch-color
+      border: 1px solid #f1f1f1
+      height: 100px
+      margin: 0 auto
+      width: 100px
+    .styleguide-palette-swatch
+      display: inline-block
+      margin: 0.5em
+      vertical-align: top
+      width: 12em
+#style-guide-modal
+  .content
+    > div
+      margin-bottom: 1.4em
+    > h2
+      margin-bottom: 0.1em
