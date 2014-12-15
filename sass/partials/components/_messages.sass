@@ -1,4 +1,6 @@
 // Message
+
+// General style
 .messages
   &.error,
   &.warning,
@@ -8,43 +10,37 @@
     right: 0
     top: 10%
     margin: 0 auto
-    color: $white
+    opacity: 0.7
+    padding: 0
     cursor: pointer
-    opacity: 0.9
+    color: $white
     border-width: 1px
-    padding: 15px
-    text-align: center
-    width: 100%
     z-index: 99
-    .close
-      background: image-url('close.png') 0 0 no-repeat
-      display: block
-      width: 16px
-      height: 16px
-      position: absolute
-      top: 15px
-      right: 20px
-      font-size: 0
-      line-height: 0
-      color: transparent
-      &:active, &:focus
-        outline: none
-    h2
-      margin: 15px 20px
-      font-size: 20px
-      color: $white
-    ul
-      font-size: 15px
-    a
-      text-decoration: underline
-      color: $white
-      font-weight: bold
+    .container
+      text-align: left
+      padding: 1em 1em 1em 4em
+      width: 100%
+      ul
+        +hide_bullets()
+        li
+          list-style: none
+      a
+        text-decoration: underline
+        color: $white
+        font-weight: bold
+  // Specific style
   &.error
-    background-color: $red-error
+    background: $red-error
     border-color: darken($red-error, 10%)
+    .container
+      background: image-url('ico-error.png') 0% 50% no-repeat
   &.warning
-    background-color: $red-error
-    border-color: darken($red-error, 10%)
+    background: $warning
+    border-color: darken($warning, 10%)
+    .container
+      background: image-url('ico-info.png') 0% 50% no-repeat
   &.status
-    background-color: $green
+    background: $green
     border-color: darken($green, 10)
+    .container
+      background: image-url('ico-success.png') 0% 50% no-repeat

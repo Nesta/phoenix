@@ -11,7 +11,6 @@
  * Implements template_preprocess_html().
  */
 function da_vinci_preprocess_html(&$vars) {
-
   if (isset($vars['node'])) {
     // For full nodes.
     $vars['classes_array'][] = ($vars['node']) ? 'full-node' : '';
@@ -24,6 +23,12 @@ function da_vinci_preprocess_html(&$vars) {
   }
   if (module_exists('panels') && function_exists('panels_get_current_page_display')) {
     $vars['classes_array'][] = (panels_get_current_page_display()) ? 'panels' : '';
+  }
+  if (theme_get_setting('styleguide')){
+    $theme_path = drupal_get_path('theme', 'da_vinci');
+    drupal_add_js($theme_path . '/js/plugins/jquery.actual.min.js');  
+    drupal_add_js($theme_path . '/js/plugins/jquery.easyModal.js');  
+    drupal_add_js($theme_path . '/js/modales.js');  
   }
 
   // Since menu is rendered in preprocess_page we need to detect it here to add body classes
@@ -81,11 +86,5 @@ function da_vinci_preprocess_html(&$vars) {
   if (arg(0) == 'user' || arg(0) == 'users') {
     array_push($vars['classes_array'], 'page-user-view');
   }
-
-  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'article') {
-    $theme_path = drupal_get_path('theme', 'da_vinci');
-    drupal_add_js($theme_path . '/js/plugins/intro.js');
-    drupal_add_js($theme_path . '/js/demo.js');
-    drupal_add_css($theme_path . '/css/blog/introjs.css');
-  }
+  
 }

@@ -1,27 +1,28 @@
 .tabs.primary,
 .nav-tabs.nav
-  margin: 0
+  margin: 0 0 1px 0
   border-width: 0
   li
     display: inline-block
     margin-bottom: 0
     a
       +border-radius(4px 4px 0 0)
-      background-color: $light-beige
-      border: none
-      color: $green
+      border-color: $green
+      color: $white
+      background-color: $green
       display: block
       font-size: .8em
       margin-bottom: -1px
       padding: .5em 1em
       text-transform: uppercase
       &:hover
-        background: $beige
-        color: $gray
+        color: $green
+        background-color: $white
+        border-color: $green
   li.active
     a
-      background: $green
-      border: 1px solid $beige
-      color: $white
-      &:hover
-        background: $dark-green
+      color: $green
+      background-color: $white
+      border-style: solid solid none solid
+      border-color: $green
+      cursor: default

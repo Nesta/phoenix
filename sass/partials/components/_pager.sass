@@ -1,33 +1,16 @@
-.pagination
-  $pagination-border-color: $green
-  $pagination-border: 1px solid $pagination-border-color
-  $pagination-background: lighten($pagination-border-color, 10)
-  $pagination-hover-background: lighten($pagination-background, 5)
-  $pagination-color: $dark-beige
-  text-align: center
-  ul
-    display: inline
-    text-align: center
+.item-list
+  .pager
     li
-      display: inline
-    ul li
-      display: none
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3)
-        display: inline
-      +breakpoint($tablet)
-        display: inline
-    li a
-      +transition(all 0.2s ease-in-out)
-      background: $pagination-background
-      border-radius: 5px
-      border: $pagination-border
-      color: $pagination-color
-      padding: 5px
-      &:hover,
-      &:focus
-        background: $pagination-hover-background
-        color: red
-      &:active
-        background: $pagination-background
+      padding: 0
+      &.pager-current
+        color: $black
+      &.pager-first,
+      &.pager-last
+        a
+          +transition(all 0.2s ease-in-out)
+          padding: 5px 10px
+          background-color: $green
+          color: $white
+          +border-radius(5px)
+          &:hover
+            background-color: $dark-green
