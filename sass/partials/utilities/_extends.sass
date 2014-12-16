@@ -93,3 +93,23 @@
     font-size: .9em
     padding: 1em .5em
     vertical-align: top
+
+// Placeholder for right icon fixed: styleguide and grid
+%grow-width
+  z-index: 99
+  display: block
+  position: fixed
+  right: 0
+  width: 0
+  height: 32px
+  font-size: 14px
+  letter-spacing: .8px
+  font-weight: bold
+  white-space: nowrap
+  color: $gray
+  background-color: $green
+  overflow: hidden
+  +border-radius(4px 0 0 4px)
+  &:hover
+    color: white
+    background-color: $dark-green
