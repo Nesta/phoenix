@@ -1,29 +1,16 @@
 // Style for module/modal styleguide
 // Open modal styleguide button
 .style-guide-modal-fire
-  z-index: 99
-  position: fixed
   top: 50%
-  right: 0
-  display: block
-  width: 0
-  height: 32px
   padding: 8px 0 0 32px
-  background: image-url('brocha.png') no-repeat
+  background-image: image-url("brocha.png")
+  background-repeat: no-repeat
   background-position: left 5px center
-  background-color: $green
-  font-size: 14px
-  overflow: hidden
-  +border-top-left-radius(4px)
-  +border-bottom-left-radius(4px)
-  white-space: nowrap
-  color: $white
-  +transition(all 0.7s ease-in-out .5s)
+  +transition(all 0.6s ease-in-out .4s)
+  @extend %grow-width
   &:hover
-    +transition(all 0.6s ease-in-out)
-    width: 110px
-    color: white
-    background-color: $dark-green
+    width: 118px
+    +transition(all 0.5s ease-in-out)
 .page-admin-appearance-styleguide,
 #style-guide-modal
   .messages
