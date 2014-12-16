@@ -8,6 +8,10 @@
 
 (function ($) {
   $(document).ready(function () {
+      // Se ha capturado el contenido del modulo styleguide y se ha convertido en una ventana modal,
+      // a la cual podemos acceder mediante el icono "brush" situado de manera fija en el lateral
+      // derecho del portal, sin embargo, es posible acceder a la pagina como tal que nos facilita el
+      // modulo desde la apariencia del tema.
       $('body').append('<div id="style-guide-modal" class="generic-modal"><div class="modal-content"></div></div>');
       $('#style-guide-modal .modal-content').easyModal();      
       $('.style-guide-modal-fire').on('click',function(e){
