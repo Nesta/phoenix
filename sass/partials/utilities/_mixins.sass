@@ -174,3 +174,13 @@
     margin-left: $left
     img
       display: block
+
+// Degrading backgorund colors
+=degrading($color:black,$n:5)
+  @for $i from 1 through $n
+    &:nth-child(#{$i})
+      background-color: lighten($color, $i*10)
+      &>a
+        color: adjust-lightness(desaturate(lighten($color, $i*10), 10),1/$i*70)
+      &:hover
+        background-color: lighten($color, $i*15)

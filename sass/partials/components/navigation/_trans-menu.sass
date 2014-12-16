@@ -1,0 +1,43 @@
+#block-system-navigation
+  position: fixed
+  left: 0
+  top: 20%
+  z-index: 99999
+  width: 300px
+  .block__title
+    @extend .hide-accessible
+  li
+    +degrading(darken($turquoise,50),6)
+    display: block
+    padding: 0
+    margin: 0
+    width: 60px
+    height: 60px
+    +transition(all 1s ease-in-out .5s)
+    a
+      display: block
+      overflow: hidden
+      width: 100%
+      text-indent: 15px
+      font-size: 45px
+      letter-spacing: 100px
+      text-shadow: 0px -1px 0px rgba(0,0,0,.5)
+      white-space: nowrap
+      +transition(all 1s ease-in-out .5s)
+    &:hover
+      width: 100%
+      +transition(all 1s ease-in-out .1s)
+      +box-shadow(0 0 8px #777)
+      a,a:hover
+        +transition(all 1s ease-in-out .1s)
+        letter-spacing: normal
+
+
+
+
+  
+
+
+
+      
+
