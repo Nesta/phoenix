@@ -30,6 +30,9 @@ function da_vinci_preprocess_html(&$vars) {
     drupal_add_js($theme_path . '/js/plugins/jquery.easyModal.js');  
     drupal_add_js($theme_path . '/js/modales.js');  
   }
+  if (theme_get_setting('debug')){
+    $vars['html_classes'][] = 'debug';
+  }
 
   // Since menu is rendered in preprocess_page we need to detect it here to add body classes
   $has_main_menu = theme_get_setting('toggle_main_menu');
