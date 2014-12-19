@@ -3,21 +3,82 @@
 	|
 	| Partials:
 	===========
-	 Contiene las hojas de estilos con extension 'sass', cualquier cambio en los estilos del portal, así como la creación de nuevas hojas de estilos se hará en este directorio.
+   Contain the stylesheets with 'sass' extension. Any change in the styles of the website and the creation of new stylesheets, can make in this directoy.
 
 	 		|
 	 		| Base:
 	 		=======
-	 		Configuración base del tema: estilos comunes y configuracíon de susy
+      Base configuration for the theme: common styles and Susy settings.
 
 	 		|
 	 		| Components:
 	 		=============
-	 		Contiene los estilos para los diferentes elementos del tema: botones, mensajes de error, modales, breadcrumbs...
+      Contain the styles for the different elements of the theme: buttons, error messages, modals, breadcrumbs...
 	 		  |
 	 			| Navigation:
 	 			=============
-	 			Estilos para el menú principal
+        Styles for the main menu.
+
+	 		|
+	 		| Content:
+	 		==========
+      Here, we define the specific stylesheets for our content: nodes, views, browser styles, blocks, pages...
+
+	 		|
+	 		|	Lib:
+	 		======
+      Chosen's styles.
+
+	 		|
+	 		| Regions:
+	 		==========
+      Contain the styles for each region. If we create a new region, here, its styles will be define. If, otherwise, we are going to give styles to a content inside a region, we should use the 'Content' directory.
+
+	 		|
+	 		| Utilities: 
+	 		============
+      This directory contain the variables, extends, mixins... that can be of utility when we'll going to personalize our styles.
+
+	====================================================================================================
+
+	|
+	| Main.sass:
+	============
+  All the previous styles will compile in a single file called 'main.sass'. This file will be converted in the final file: 'main.css'.
+  We won't modify any style in this file, only can make refference to those needy dependencies and also to each file created in 'partials'.
+
+	|
+	| Chosen.sass:
+	==============
+	DON'T TOUCH !!!
+	Compile all the Chosen's styles.
+
+
+
+============
+  ESPAÑOL
+============
+
+	Sass :
+========
+	|
+	| Partials:
+	===========
+	 Contiene las hojas de estilos con extension 'sass', cualquier cambio en los estilos del portal, así como la creación de nuevas hojas de estilos, se hará en este directorio.
+
+	 		|
+	 		| Base:
+	 		=======
+	 		Configuración base del tema: estilos comunes y configuración de Susy.
+
+	 		|
+	 		| Components:
+	 		=============
+	 		Contiene los estilos para los diferentes elementos del tema: botones, mensajes de error, ventanas modales, migas de pan...
+	 		  |
+	 			| Navigation:
+	 			=============
+	 			Estilos para el menú principal.
 
 	 		|
 	 		| Content:
@@ -27,28 +88,28 @@
 	 		|
 	 		|	Lib:
 	 		======
-	 		Estilos del chosen
+	 		Estilos del chosen.
 
 	 		|
 	 		| Regions:
 	 		==========
-	 		Contiene los estilos para cada región, si creamos una nueva región se definirán aquí sus estilos, si por el contrario vamos a darle estilos a un contenido dentro de una región usaremos el directorio 'Content'
+	 		Contiene los estilos para cada región. Si creamos una nueva región, aquí se definirán sus estilos; si por el contrario, vamos a darle estilos a un contenido dentro de una región, usaremos el directorio 'Content'.
 
 	 		|
 	 		| Utilities: 
 	 		============
-	 		Este directorio contiene las variables, extends, mixin... de los que nos ayudaremos a la hora de estilizar.
+	 		Este directorio contiene las variables, extends, mixins... que nos serán de utilidad a la hora de personalizar nuestros estilos.
 
 	====================================================================================================
 
 	|
 	| Main.sass:
 	============
-	¡¡¡ DON'T TOUCH ME !!!	 		
-	Todos los estilos anteriores se compilan en un único archivo llamado main.sass, este archivo será transformado posteriormente al archivo final main.css, no cambiaremos ningun estilo en este archivo. En este fichero haremos referencia a aquellas dependencias necesarias así como a cada archivo creado en 'partials'.
+	Todos los estilos anteriores se compilan en un único archivo llamado 'main.sass'. Este archivo será transformado posteriormente al archivo final: 'main.css'.
+  No modificaremos ningún estilo en este archivo, solo haremos referencia a aquellas dependencias necesarias, así como a cada archivo creado en 'partials'.
 
 	|
 	| Chosen.sass:
 	==============
-	¡¡¡ DON'T TOUCH ME !!!
+	¡¡¡ NO MODIFICAR !!!
 	Compila los estilos del chosen.
