@@ -2,5 +2,14 @@ html
   head:before
     display: none
   &.debug
-    head:before
-      display: block
+    head
+      &:before
+        content: "|||| Grid"
+        top: 56%
+        padding: 9px 24px 0 8px
+        cursor: pointer
+        +transition(all 0.3s ease-in-out .3s)
+        @extend %grow-width
+      &:hover:before
+        +transition(all 0.3s ease-in-out)
+        width: 75px

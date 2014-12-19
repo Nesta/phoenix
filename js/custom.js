@@ -59,6 +59,19 @@
         }, 500);
         return false;
       });
+      // Add anchor element to article
+      $('.view-infinite-list .views-row').append('<span class="close">close</a>');
+      
+      /*var $container = $('.view-infinite-list').masonry({
+          itemSelector: '.views-row',
+          columnWidth: '.views-row'
+          }).imagesLoaded( function() {
+            $container.masonry();
+          });
+        $container.find('.views-row .close').click (function(){
+          $(this).parent('.views-row').remove();
+          $container.masonry();
+        });*/
     }
   }
 })(jQuery);
