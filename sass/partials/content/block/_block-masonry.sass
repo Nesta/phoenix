@@ -1,46 +1,59 @@
-.page-infinite-list
+// View masonry
+.page-masonry
   .region-content
     background: none
     border: none
-  .view-infinite-list
-    .views-row
-      margin: 0 15px 15px 0
-      padding: 0 15px 20px 15px
-      width: 30%
-      background-color: $white
-      cursor: pointer
-      +box-shadow(7px 0px 10px -8px $black)
-      // Close icon
-      .close
-        display: none
-      &:hover
-        .close
-          opacity: 1
-          display: block
-          position: absolute
-          top: 0
-          right: 0
-          background: image-url('close.png') center no-repeat
-          background-color: $green
-          width: 16px
-          height: 16px
-          padding: 11px
-          cursor: pointer
-          @extend .hide-modern
-          +transition(all .3s)
-          &:hover
-            background-color: $dark-green
-            +transition(all .3s)
-      // Image
-      .views-field-field-image
+    padding: 0
+  .view-masonry
+    ul
+      overflow: hidden
+      li.views-row
+        margin: 0
         width: 100%
-      // More
-      .views-field-view-node
-        span
-          text-align: center
-          a
-            @extend .button
-            display: block
-            padding: 10px
-            color: $gray
-            text-transform: uppercase
+        cursor: pointer
+        +breakpoint($mobile)
+          width: 50%
+        +breakpoint($desk)
+          width: 33%
+        // Each article
+        .node-article
+          background-color: $white
+          +box-shadow(7px 0px 10px -8px $black)
+          padding: 5px 10px 20px 10px
+          margin: 0 15px 25px 0
+          position: relative
+          // Title
+          .title
+            margin-bottom: 5px
+          // Close icon
+          .close
+            display: none
+          &:hover
+            .close
+              opacity: 1
+              display: block
+              position: absolute
+              top: 0
+              right: 0
+              background: image-url('close.png') center no-repeat
+              background-color: $green
+              width: 16px
+              height: 16px
+              padding: 11px
+              cursor: pointer
+              @extend .hide-modern
+              +transition(all .3s)
+              &:hover
+                background-color: $dark-green
+                +transition(all .3s)
+          // Image
+          .field-type-image
+            float: none
+            text-align: center
+          // Read more and new comment button
+          .links
+            li
+              margin: 4px 0
+              display: block
+              a
+                display: block
