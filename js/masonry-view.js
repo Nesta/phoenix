@@ -38,7 +38,7 @@
     // integrar 'Masonry' con "infinite scroll"
 
     /*
-      var $container = $('.view-infinite-list').masonry({
+      var $container = $('.view-masonry').masonry({
           itemSelector: '.views-row',
           columnWidth: '.views-row'
           }).imagesLoaded( function() {
