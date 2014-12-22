@@ -60,7 +60,7 @@
         return false;
       });
       // Add anchor element to article
-      $('.view-infinite-list .views-row').append('<span class="close">close</a>');
+      $('.view-masonry .node-article').append('<span class="close">close</a>');
       
       /*var $container = $('.view-infinite-list').masonry({
           itemSelector: '.views-row',
