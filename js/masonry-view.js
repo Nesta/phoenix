@@ -3,7 +3,7 @@
   attach: function (context) {
     // Funciones 'Masonry remove' con sintaxis javascript
     // Capturamos en una variable la capa donde aplicaremos Masonry.
-    var container = document.querySelector('.view-infinite-list');
+    var container = document.querySelector('.view-masonry');
     var msnry = new Masonry(container, {
       // Definimos que elementos dentro de la vista van a ser eliminados.
       itemSelector: '.views-row',
@@ -26,7 +26,7 @@
       return;
     }
     // Eliminamos ese elemento
-    msnry.remove($(event.target).closest('.views-row'));
+    msnry.remove($(event.target).closest('li'));
     // Y volvemos a recalcular su colocacion dentro de la vista, de manera que los contenidos
     // irán ocupando el lugar de aquellos que hayan sido eliminados.
     msnry.layout();

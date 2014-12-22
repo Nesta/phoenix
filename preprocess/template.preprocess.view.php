@@ -13,7 +13,7 @@
 // Creamos una función donde definimos la vista a la que le aplicaremos el plugin Masonry
 function da_vinci_preprocess_views_view(&$vars) {
   // Definimos el nombre de la vista
-  if ($vars['view']->name == 'infinite_list'){
+  if ($vars['view']->name == 'masonry'){
 
       // Definimos la ruta a los plugins necesarios a cargar ¡SOLO! en esta vista.
       $theme_path = drupal_get_path('theme', 'da_vinci');
