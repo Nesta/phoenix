@@ -17,8 +17,9 @@
           width: 33%
         // Each article
         .node-article
+          border-bottom: 3px solid $beige
           background-color: $white
-          +box-shadow(7px 0px 10px -8px $black)
+          +box-shadow(5px 0px 16px -9px $black)
           padding: 5px 10px 20px 10px
           margin: 0 15px 25px 0
           position: relative
@@ -55,5 +56,11 @@
             li
               margin: 4px 0
               display: block
-              a
+              &.comment_forbidden
+                font-size: 14px
+                margin-top: 15px
+                text-align: center
+                border-top: 1px solid $green
+                padding-top: 5px
+              > a
                 display: block
