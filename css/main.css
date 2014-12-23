@@ -66,12 +66,12 @@ html {
 }
 
 /* line 17, ../sass/partials/utilities/_extends.sass */
-.hidden-tablet {
+.hidden-tablet, #navigation ul#main-menu, #navigation ul#secondary-menu {
   display: none;
 }
 @media (min-width: 44em) {
   /* line 17, ../sass/partials/utilities/_extends.sass */
-  .hidden-tablet {
+  .hidden-tablet, #navigation ul#main-menu, #navigation ul#secondary-menu {
     display: block;
   }
 }
@@ -140,14 +140,14 @@ ul.inline .comment-comments a, .new-comment a, .confirmation #edit-cancel {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 15px;
-  background: #87bdb1;
+  background: #aaccb1;
 }
 /* line 48, ../sass/partials/utilities/_extends.sass */
 .button:hover, .form-submit:hover,
 button:hover, ul.inline .comment-add a:hover,
 ul.inline .node-readmore a:hover,
 ul.inline .comment-comments a:hover, .new-comment a:hover, .confirmation #edit-cancel:hover {
-  background: #68b3af;
+  background: #80a18d;
   text-decoration: none;
 }
 
@@ -1026,12 +1026,12 @@ p {
 
 /* line 47, ../sass/partials/base/_skinr.sass */
 a {
-  color: #87bdb1;
+  color: #80a18d;
   text-decoration: none;
 }
 /* line 50, ../sass/partials/base/_skinr.sass */
 a:hover {
-  color: #68b3af;
+  color: #aaccb1;
   text-decoration: none;
 }
 
@@ -1044,7 +1044,7 @@ a:hover {
 /* line 59, ../sass/partials/base/_skinr.sass */
 .hx .page-title {
   background: #f8f8f1;
-  color: #aaccb1;
+  color: #80a18d;
   display: inline-block;
   padding: 0 1em;
   position: relative;
@@ -1878,13 +1878,24 @@ a.tabledrag-handle .handle {
   margin: 0 0 1px 0;
   border-width: 0;
 }
-/* line 5, ../sass/partials/components/_tabs.sass */
+@media (min-width: 44em) {
+  /* line 1, ../sass/partials/components/_tabs.sass */
+  .tabs.primary,
+  .nav-tabs.nav {
+    width: 74.57627%;
+    float: left;
+    margin-left: 25.42373%;
+    margin-right: -100%;
+    float: none;
+  }
+}
+/* line 8, ../sass/partials/components/_tabs.sass */
 .tabs.primary li,
 .nav-tabs.nav li {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 8, ../sass/partials/components/_tabs.sass */
+/* line 11, ../sass/partials/components/_tabs.sass */
 .tabs.primary li a,
 .nav-tabs.nav li a {
   -moz-border-radius: 4px 4px 0 0;
@@ -1899,14 +1910,14 @@ a.tabledrag-handle .handle {
   padding: 0.5em 1em;
   text-transform: uppercase;
 }
-/* line 18, ../sass/partials/components/_tabs.sass */
+/* line 21, ../sass/partials/components/_tabs.sass */
 .tabs.primary li a:hover,
 .nav-tabs.nav li a:hover {
   color: #aaccb1;
   background-color: white;
   border-color: #aaccb1;
 }
-/* line 23, ../sass/partials/components/_tabs.sass */
+/* line 26, ../sass/partials/components/_tabs.sass */
 .tabs.primary li.active a,
 .nav-tabs.nav li.active a {
   color: #aaccb1;
@@ -2058,7 +2069,7 @@ a.tabledrag-handle .handle {
 }
 /* line 8, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li {
-  height: 35px;
+  height: 32px;
   float: left;
   margin-right: 0.6em;
 }
@@ -2074,37 +2085,38 @@ a.tabledrag-handle .handle {
   height: 35px;
   border-bottom: 0 solid #f8f8f1;
   line-height: 2.2em;
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   -webkit-transition: color 0.4s, border-bottom 0.4s 0.1s;
   -moz-transition: color 0.4s, border-bottom 0.4s 0.1s;
   transition: color 0.4s, border-bottom 0.4s 0.1s;
 }
-/* line 24, ../sass/partials/components/navigation/_main-menu.sass */
+/* line 23, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li a:hover {
   border-bottom: 35px solid #f8f8f1;
-  color: #87bdb1;
+  color: #aaccb1;
   -webkit-transition: color 0.4s 0.2s, border-bottom 0.4s;
   -moz-transition: color 0.4s 0.2s, border-bottom 0.4s;
   transition: color 0.4s 0.2s, border-bottom 0.4s;
 }
-/* line 28, ../sass/partials/components/navigation/_main-menu.sass */
+/* line 27, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li a.active {
   border-bottom: 35px solid #f8f8f1;
-  color: #87bdb1;
+  color: #aaccb1;
 }
-/* line 31, ../sass/partials/components/navigation/_main-menu.sass */
+@media (min-width: 44em) {
+  /* line 30, ../sass/partials/components/navigation/_main-menu.sass */
+  #navigation ul#main-menu, #navigation ul#secondary-menu {
+    display: inline-block;
+  }
+}
+/* line 35, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul#main-menu {
-  display: inline-block;
   float: left;
 }
-/* line 34, ../sass/partials/components/navigation/_main-menu.sass */
+/* line 37, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul#secondary-menu {
-  display: inline-block;
   float: right;
 }
 
@@ -2170,7 +2182,7 @@ a.tabledrag-handle .handle {
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  background: #87bdb1;
+  background: #aaccb1;
   opacity: 0;
   visibility: hidden;
   z-index: 9;
@@ -2208,7 +2220,7 @@ a.tabledrag-handle .handle {
 /* line 1, ../sass/partials/regions/_header.sass */
 .top-bar {
   overflow: hidden;
-  background: #87bdb1;
+  background: #aaccb1;
 }
 
 /* line 5, ../sass/partials/regions/_header.sass */
@@ -2277,23 +2289,24 @@ a.tabledrag-handle .handle {
 }
 /* line 19, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article {
+  border-bottom: 3px solid #dbcfb7;
   background-color: white;
-  -moz-box-shadow: 7px 0px 10px -8px #42312c;
-  -webkit-box-shadow: 7px 0px 10px -8px #42312c;
-  box-shadow: 7px 0px 10px -8px #42312c;
+  -moz-box-shadow: 5px 0px 16px -9px #42312c;
+  -webkit-box-shadow: 5px 0px 16px -9px #42312c;
+  box-shadow: 5px 0px 16px -9px #42312c;
   padding: 5px 10px 20px 10px;
   margin: 0 15px 25px 0;
   position: relative;
 }
-/* line 26, ../sass/partials/content/block/_block-masonry.sass */
+/* line 27, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article .title {
   margin-bottom: 5px;
 }
-/* line 29, ../sass/partials/content/block/_block-masonry.sass */
+/* line 30, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article .close {
   display: none;
 }
-/* line 32, ../sass/partials/content/block/_block-masonry.sass */
+/* line 33, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article:hover .close {
   opacity: 1;
   display: block;
@@ -2310,25 +2323,33 @@ a.tabledrag-handle .handle {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 46, ../sass/partials/content/block/_block-masonry.sass */
+/* line 47, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article:hover .close:hover {
   background-color: #80a18d;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 50, ../sass/partials/content/block/_block-masonry.sass */
+/* line 51, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article .field-type-image {
   float: none;
   text-align: center;
 }
-/* line 55, ../sass/partials/content/block/_block-masonry.sass */
+/* line 56, ../sass/partials/content/block/_block-masonry.sass */
 .page-masonry .view-masonry ul li.views-row .node-article .links li {
   margin: 4px 0;
   display: block;
 }
-/* line 58, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .links li a {
+/* line 59, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry ul li.views-row .node-article .links li.comment_forbidden {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+  border-top: 1px solid #aaccb1;
+  padding-top: 5px;
+}
+/* line 65, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry ul li.views-row .node-article .links li > a {
   display: block;
 }
 
