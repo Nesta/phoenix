@@ -1,16 +1,19 @@
 // Style for module/modal styleguide
-// Open modal styleguide button
+// Open modal styleguide button: Show only admin user
 .style-guide-modal-fire
-  top: 50%
-  padding: 8px 0 0 32px
-  background-image: image-url("brocha.png")
-  background-repeat: no-repeat
-  background-position: left 5px center
-  +transition(all 0.3s ease-in-out .4s)
-  @extend %grow-width
-  &:hover
-    width: 118px
-    +transition(all 0.3s ease-in-out)
+  @extend .hide
+.admin
+  .style-guide-modal-fire
+    top: 50%
+    padding: 8px 0 0 32px
+    background-image: image-url("brocha.png")
+    background-repeat: no-repeat
+    background-position: left 5px center
+    +transition(all 0.3s ease-in-out .4s)
+    @extend %grow-width
+    &:hover
+      width: 118px
+      +transition(all 0.3s ease-in-out)
 .page-admin-appearance-styleguide,
 #style-guide-modal
   .messages
