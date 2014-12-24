@@ -8,7 +8,7 @@
  */
 
 /**
- * Implements template_preprocess_user_profile().
+ * Implement template_preprocess_user_profile().
  */
 function da_vinci_preprocess_user_profile(&$vars) {
   if (!empty ($vars['elements']['#view_mode'])) {

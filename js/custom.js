@@ -10,7 +10,6 @@
   Drupal.behaviors.da_vinciTheme = {
     attach: function (context) {
 
-      // Detectar si es Movil
       var isMobile = {
         Android: function () {
           return navigator.userAgent.match(/Android/i);
