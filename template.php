@@ -8,7 +8,7 @@
  */
 
 /**
- * Implements hook_html_head_alter().
+ * Implement hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
 function da_vinci_html_head_alter(&$head_elements) {
@@ -19,7 +19,7 @@ function da_vinci_html_head_alter(&$head_elements) {
 }
 
 /**
- * Implements hook_status_messages().
+ * Implement hook_status_messages().
  */
 function da_vinci_status_messages($variables) {
   $display = $variables['display'];
@@ -53,7 +53,7 @@ function da_vinci_status_messages($variables) {
 }
 
 /**
- * Implements hook_css_alter().
+ * Implement hook_css_alter().
  */
 function da_vinci_css_alter(&$css) {
   $data = array();
@@ -76,7 +76,7 @@ function da_vinci_css_alter(&$css) {
 }
 
 /**
- * Implements hook_js_alter().
+ * Implement hook_js_alter().
  */
 function da_vinci_js_alter(&$js) {
   $data = array();

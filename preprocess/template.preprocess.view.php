@@ -5,17 +5,18 @@
  *
  * The theme system allows for nearly all output of the Drupal system to be
  * customized by user themes.
+ *
+ * In this file, we create a function where we define the view to apply Masonry.
  */
 
 /**
  * Implements template_preprocess_views_view().
  */
-// Creamos una función donde definimos la vista a la que le aplicaremos el plugin Masonry
 function da_vinci_preprocess_views_view(&$vars) {
-  // Definimos el nombre de la vista
+  // Define the name of our view
   if ($vars['view']->name == 'masonry'){
 
-      // Definimos la ruta a los plugins necesarios a cargar ¡SOLO! en esta vista.
+      // Define the path to the needy plugins to load ONLY in this view.
       $theme_path = drupal_get_path('theme', 'da_vinci');
 
         // Plugin masonry: http://masonry.desandro.com/masonry.pkgd.min.js

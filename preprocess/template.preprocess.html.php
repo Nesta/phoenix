@@ -38,8 +38,7 @@ function da_vinci_preprocess_html(&$vars) {
   $has_main_menu = theme_get_setting('toggle_main_menu');
   $has_secondary_menu = theme_get_setting('toggle_secondary_menu');
 
-  /* Add extra classes to body for more flexible theming */
-
+  // Add extra classes to body for more flexible theming
   if ($has_main_menu or $has_secondary_menu) {
     $vars['classes_array'][] = 'with-navigation';
   }
@@ -67,7 +66,7 @@ function da_vinci_preprocess_html(&$vars) {
   $page_name = array_shift($temp);
 
 
-  // add template suggestions
+  // Add template suggestions
   $vars['theme_hook_suggestions'][] = "page__section__" . $section;
   $vars['theme_hook_suggestions'][] = "page__" . $page_name;
 

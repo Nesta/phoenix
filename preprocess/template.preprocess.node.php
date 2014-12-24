@@ -19,7 +19,7 @@ function da_vinci_preprocess_node(&$vars) {
 
   $vars['date'] = t('!datetime', array('!datetime' => date('j F Y', $vars['created'])));
 
-  // Proporcionamos template suggestions para los nodos por view mode.
+  // Providing templates suggestions for the nodes for view mode.
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__' . $vars['view_mode'];
 

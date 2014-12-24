@@ -8,7 +8,7 @@
  */
 
 /**
- * Implements template_preprocess_block().
+ * Implement template_preprocess_block().
  */
 function da_vinci_preprocess_region(&$vars) {
   /* EXAMPLE
