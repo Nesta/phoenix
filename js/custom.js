@@ -58,7 +58,7 @@
         }, 500);
         return false;
       });
-      // Add anchor element to article
+      // Add Close element to "Masonry" article
       $('.view-masonry .node-article').append('<span class="close">close</a>');
     }
   }
