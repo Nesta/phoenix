@@ -23,35 +23,31 @@
  *         $container.masonry();
  *       });
  */
-
 (function ($) {
   Drupal.behaviors.da_vinciThemeMasonry = {
-  attach: function (context) {
-    // Functions 'Masonry remove' with javascript syntax
-    var container = document.querySelector('.view-masonry');
-    var msnry = new Masonry(container, {
-      // We define which elements inside the view are going to be deleted.
-      itemSelector: '.views-row',
-      // And the width
-      columnWidth: '.views-row'
-    });
+    attach: function (context) {
+      // Functions 'Masonry remove' with javascript syntax
+      var container = document.querySelector('.view-masonry');
+      var msnry = new Masonry(container, {
+        // We define which elements inside the view are going to be deleted.
+        itemSelector: '.views-row',
+        // And the width
+        columnWidth: '.views-row'
+      });
 
-    imagesLoaded(container, function () {
-      msnry.layout();
-    });
+      imagesLoaded(container, function(){msnry.layout();}); 
 
-    eventie.bind(container, 'click', function (event) {
-    // Insert in 'custom.js' a 'close' element that act like a close of an element.
-    // don't proceed if views-row was not clicked on
-    if (!classie.has(event.target, 'close')) {
-      return;
+      eventie.bind(container, 'click', function (event) {
+        // Insert in 'custom.js' a 'close' element that act like a close of an element.
+        // don't proceed if views-row was not clicked on
+        if (!classie.has(event.target, 'close')) {
+          return;
+        }
+        // Delete this element
+        msnry.remove($(event.target).closest('.views-row'));
+        // And recalculate its position inside the view. 
+        msnry.layout();
+      });
     }
-    // Delete this element
-    msnry.remove($(event.target).closest('li'));
-    // And recalculate its position inside the view. 
-    msnry.layout();
-    });
-
-  }
   }
 })(jQuery);
