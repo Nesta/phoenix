@@ -51,7 +51,7 @@ html {
 }
 
 /* line 9, ../sass/partials/utilities/_extends.sass */
-.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #navigation h2, .page-masonry .view-masonry ul li.views-row .node-article:hover .close, #block-search-form .form-actions .form-submit,
+.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #navigation h2, .page-masonry .view-masonry .view-content .views-row .node-article:hover .close, #block-search-form .form-actions .form-submit,
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
@@ -129,7 +129,7 @@ button, ul.inline .comment-add a,
 ul.inline .node-readmore a,
 ul.inline .comment-comments a, .new-comment a, .confirmation #edit-cancel {
   border: none;
-  color: #FFFFFF;
+  color: white;
   cursor: pointer;
   font-size: 13px;
   text-align: center;
@@ -140,14 +140,14 @@ ul.inline .comment-comments a, .new-comment a, .confirmation #edit-cancel {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 15px;
-  background: #AACCB1;
+  background: #aaccb1;
 }
 /* line 48, ../sass/partials/utilities/_extends.sass */
 .button:hover, .form-submit:hover,
 button:hover, ul.inline .comment-add a:hover,
 ul.inline .node-readmore a:hover,
 ul.inline .comment-comments a:hover, .new-comment a:hover, .confirmation #edit-cancel:hover {
-  background: #80A18D;
+  background: #80a18d;
   text-decoration: none;
 }
 
@@ -184,8 +184,8 @@ html.debug head:before, .admin .style-guide-modal-fire {
   letter-spacing: 0.8px;
   font-weight: bold;
   white-space: nowrap;
-  color: #F8F8F1;
-  background-color: #AACCB1;
+  color: #f8f8f1;
+  background-color: #aaccb1;
   overflow: hidden;
   -moz-border-radius: 4px 0 0 4px;
   -webkit-border-radius: 4px;
@@ -193,8 +193,8 @@ html.debug head:before, .admin .style-guide-modal-fire {
 }
 /* line 115, ../sass/partials/utilities/_extends.sass */
 html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
-  color: #F8F8F1;
-  background-color: #80A18D;
+  color: #f8f8f1;
+  background-color: #80a18d;
 }
 
 /* @group Base */
@@ -224,9 +224,9 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   left: -9999px;
   z-index: 1010;
   width: 100%;
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-top: 0;
-  background: #fff;
+  background: white;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
 }
 /* line 29, ../sass/partials/lib/_chosen.sass */
@@ -247,9 +247,9 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   overflow: hidden;
   padding: 0 0 0 8px;
   height: 25px;
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: white;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIvPjxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZWVlZWVlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjRmNGY0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
   background: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
@@ -257,14 +257,14 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   background: linear-gradient(to bottom, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
   background-clip: padding-box;
   box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
-  color: #444;
+  color: #444444;
   text-decoration: none;
   white-space: nowrap;
   line-height: 24px;
 }
 /* line 54, ../sass/partials/lib/_chosen.sass */
 .chosen-container-single .chosen-default {
-  color: #999;
+  color: #999999;
 }
 /* line 56, ../sass/partials/lib/_chosen.sass */
 .chosen-container-single .chosen-single span {
@@ -286,7 +286,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   width: 12px;
   height: 12px;
-  background: url('../images/chosen/chosen-sprite.png?1417427952') -42px 1px no-repeat;
+  background: url('../images/chosen/chosen-sprite.png?1417533903') -42px 1px no-repeat;
   font-size: 1px;
 }
 /* line 73, ../sass/partials/lib/_chosen.sass */
@@ -311,7 +311,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   width: 100%;
   height: 100%;
-  background: url('../images/chosen/chosen-sprite.png?1417427952') no-repeat 0px 2px;
+  background: url('../images/chosen/chosen-sprite.png?1417533903') no-repeat 0px 2px;
 }
 /* line 89, ../sass/partials/lib/_chosen.sass */
 .chosen-container-single .chosen-search {
@@ -328,9 +328,9 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   width: 100%;
   height: auto;
   outline: 0;
-  border: 1px solid #aaa;
-  background: white url('../images/chosen/chosen-sprite.png?1417427952') no-repeat 100% -20px;
-  background: url('../images/chosen/chosen-sprite.png?1417427952') no-repeat 100% -20px;
+  border: 1px solid #aaaaaa;
+  background: white url('../images/chosen/chosen-sprite.png?1417533903') no-repeat 100% -20px;
+  background: url('../images/chosen/chosen-sprite.png?1417533903') no-repeat 100% -20px;
   font-size: 1em;
   font-family: sans-serif;
   line-height: normal;
@@ -352,7 +352,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 /* @group Results */
 /* line 119, ../sass/partials/lib/_chosen.sass */
 .chosen-container .chosen-results {
-  color: #444;
+  color: #444444;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -379,7 +379,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 /* line 139, ../sass/partials/lib/_chosen.sass */
 .chosen-container .chosen-results li.disabled-result {
   display: list-item;
-  color: #ccc;
+  color: #cccccc;
   cursor: default;
 }
 /* line 143, ../sass/partials/lib/_chosen.sass */
@@ -391,11 +391,11 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   background-image: -moz-linear-gradient(#3875d7 20%, #2a62bc 90%);
   background-image: -webkit-linear-gradient(#3875d7 20%, #2a62bc 90%);
   background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
-  color: #fff;
+  color: white;
 }
 /* line 147, ../sass/partials/lib/_chosen.sass */
 .chosen-container .chosen-results li.no-results {
-  color: #777;
+  color: #777777;
   display: list-item;
   background: #f4f4f4;
 }
@@ -426,8 +426,8 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   width: 100%;
   height: auto !important;
   height: 1%;
-  border: 1px solid #aaa;
-  background-color: #fff;
+  border: 1px solid #aaaaaa;
+  background-color: white;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
@@ -456,7 +456,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   border: 0 !important;
   background: transparent !important;
   box-shadow: none;
-  color: #999;
+  color: #999999;
   font-size: 100%;
   font-family: sans-serif;
   line-height: normal;
@@ -467,7 +467,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   position: relative;
   margin: 3px 5px 3px 0;
   padding: 3px 20px 3px 5px;
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   max-width: 100%;
   border-radius: 3px;
   background-color: #eeeeee;
@@ -481,7 +481,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   background-repeat: repeat-x;
   background-clip: padding-box;
   box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
-  color: #333;
+  color: #333333;
   line-height: 13px;
   cursor: default;
 }
@@ -497,7 +497,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   width: 12px;
   height: 12px;
-  background: url('../images/chosen/chosen-sprite.png?1417427952') -42px 1px no-repeat;
+  background: url('../images/chosen/chosen-sprite.png?1417533903') -42px 1px no-repeat;
   font-size: 1px;
 }
 /* line 224, ../sass/partials/lib/_chosen.sass */
@@ -507,7 +507,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 /* line 226, ../sass/partials/lib/_chosen.sass */
 .chosen-container-multi .chosen-choices li.search-choice-disabled {
   padding-right: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   background-color: #e4e4e4;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiNmNGY0ZjQiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIvPjxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZThlOGU4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWVlZWVlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
@@ -515,7 +515,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: linear-gradient(to bottom, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  color: #666;
+  color: #666666;
 }
 /* line 232, ../sass/partials/lib/_chosen.sass */
 .chosen-container-multi .chosen-choices li.search-choice-focus {
@@ -533,7 +533,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 /* line 239, ../sass/partials/lib/_chosen.sass */
 .chosen-container-multi .chosen-drop .result-selected {
   display: list-item;
-  color: #ccc;
+  color: #cccccc;
   cursor: default;
 }
 
@@ -546,7 +546,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 }
 /* line 252, ../sass/partials/lib/_chosen.sass */
 .chosen-container-active.chosen-with-drop .chosen-single {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   -moz-border-radius-bottomright: 0;
   border-bottom-right-radius: 0;
   -moz-border-radius-bottomleft: 0;
@@ -557,7 +557,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   background-image: -moz-linear-gradient(#eeeeee 20%, #ffffff 80%);
   background-image: -webkit-linear-gradient(#eeeeee 20%, #ffffff 80%);
   background-image: linear-gradient(#eeeeee 20%, #ffffff 80%);
-  box-shadow: 0 1px 0 #fff inset;
+  box-shadow: 0 1px 0 white inset;
 }
 /* line 260, ../sass/partials/lib/_chosen.sass */
 .chosen-container-active.chosen-with-drop .chosen-single div {
@@ -575,7 +575,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 }
 /* line 268, ../sass/partials/lib/_chosen.sass */
 .chosen-container-active .chosen-choices li.search-field input[type="text"] {
-  color: #222 !important;
+  color: #222222 !important;
 }
 
 /* @end */
@@ -665,8 +665,8 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
 /* line 323, ../sass/partials/lib/_chosen.sass */
 .chosen-rtl .chosen-search input[type="text"] {
   padding: 4px 5px 4px 20px;
-  background: white url('../images/chosen/chosen-sprite.png?1417427952') no-repeat -30px -20px;
-  background: url('../images/chosen/chosen-sprite.png?1417427952') no-repeat -30px -20px;
+  background: white url('../images/chosen/chosen-sprite.png?1417533903') no-repeat -30px -20px;
+  background: url('../images/chosen/chosen-sprite.png?1417533903') no-repeat -30px -20px;
   direction: rtl;
 }
 /* line 329, ../sass/partials/lib/_chosen.sass */
@@ -689,7 +689,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
   .chosen-container .chosen-results-scroll-down span,
   .chosen-container .chosen-results-scroll-up span {
-    background-image: url('../images/chosen/chosen-sprite@2x.png?1417427952') !important;
+    background-image: url('../images/chosen/chosen-sprite@2x.png?1417533903') !important;
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important;
   }
@@ -703,7 +703,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .container:after, .region-top-bar:after,
 .region-preface:after,
 .region-footer:after {
@@ -711,7 +711,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   clear: both;
 }
-/* line 65, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+/* line 61, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head {
   display: block;
   position: fixed;
@@ -721,7 +721,7 @@ head {
   color: #333;
   background: rgba(255, 255, 255, 0.25);
 }
-/* line 66, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+/* line 62, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:before {
   content: "|||";
   display: block;
@@ -730,12 +730,12 @@ head:before {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 67, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+/* line 63, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover {
   background: rgba(255, 255, 255, 0.5);
   color: red;
 }
-/* line 71, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container, head:hover ~ .region-top-bar,
 head:hover ~ .region-preface,
 head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -743,7 +743,7 @@ head:hover ~ body .region-preface,
 head:hover ~ body .region-footer {
   position: relative;
 }
-/* line 74, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
 head:hover ~ .region-preface:before,
 head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -816,7 +816,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -824,7 +824,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 71, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -832,7 +832,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 74, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -918,7 +918,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -926,7 +926,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 71, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -934,7 +934,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 74, ../../../../../../../../../usr/local/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../../../../.rvm/gems/ruby-2.0.0-p576/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -980,7 +980,7 @@ body {
 
 /* line 17, ../sass/partials/base/_skinr.sass */
 #page {
-  background: #F8F8F1;
+  background: #f8f8f1;
   min-height: 100%;
   position: relative;
 }
@@ -998,7 +998,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #CAB595;
+  color: #cab595;
   font-weight: 700;
 }
 
@@ -1029,12 +1029,12 @@ p {
 
 /* line 47, ../sass/partials/base/_skinr.sass */
 a {
-  color: #80A18D;
+  color: #80a18d;
   text-decoration: none;
 }
 /* line 50, ../sass/partials/base/_skinr.sass */
 a:hover {
-  color: #AACCB1;
+  color: #aaccb1;
   text-decoration: none;
 }
 
@@ -1046,15 +1046,15 @@ a:hover {
 }
 /* line 59, ../sass/partials/base/_skinr.sass */
 .hx .page-title {
-  background: #F8F8F1;
-  color: #80A18D;
+  background: #f8f8f1;
+  color: #80a18d;
   display: inline-block;
   padding: 0 1em;
   position: relative;
 }
 /* line 65, ../sass/partials/base/_skinr.sass */
 .hx:before {
-  border-top: 2px dashed #DBCFB7;
+  border-top: 2px dashed #dbcfb7;
   content: "";
   display: block;
   top: 23px;
@@ -1112,8 +1112,8 @@ textarea {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #FFFFFF;
-  border: 1px solid #AACCB1;
+  background: white;
+  border: 1px solid #aaccb1;
   font-size: 0.9em;
   max-width: 100%;
   padding: 0.4em 0.8em;
@@ -1122,12 +1122,12 @@ textarea {
 input.error,
 select.error,
 textarea.error {
-  border: 1px solid #A33737;
+  border: 1px solid #a33737;
 }
 
 /* line 98, ../sass/partials/base/_skinr.sass */
 label {
-  color: #CAB595;
+  color: #cab595;
   font-size: 0.9em;
   font-weight: normal;
   margin-bottom: 0.2em;
@@ -1135,7 +1135,7 @@ label {
 
 /* line 104, ../sass/partials/base/_skinr.sass */
 .form-item .description {
-  color: #DBCFB7;
+  color: #dbcfb7;
   font-size: 0.8em;
   margin-top: 0.2em;
 }
@@ -1152,7 +1152,7 @@ label {
 }
 /* line 8, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1418383909') 0 0 no-repeat;
+  background: url('../images/home.png?1418143169') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -1186,7 +1186,7 @@ ul.inline .comment-comments {
 }
 /* line 4, ../sass/partials/components/_comments.sass */
 #comments .title {
-  color: #AACCB1;
+  color: #aaccb1;
   display: inline-block;
   font-weight: normal;
 }
@@ -1198,16 +1198,16 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1417691905') 0 0 no-repeat;
+  background: url('../images/comments.png?1418143169') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
-  color: #FFFFFF;
+  color: white;
 }
 
 /* line 25, ../sass/partials/components/_comments.sass */
 .comment .attribution {
-  border-top: 1px solid #EEEADD;
+  border-top: 1px solid #eeeadd;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1220,7 +1220,7 @@ ul.inline .comment-comments {
 }
 /* line 35, ../sass/partials/components/_comments.sass */
 .comment .attribution .comment-submitted p {
-  color: #CAB595;
+  color: #cab595;
   font-size: 0.9em;
 }
 /* line 38, ../sass/partials/components/_comments.sass */
@@ -1235,7 +1235,7 @@ ul.inline .comment-comments {
 .comment .comment-text ul.links {
   text-align: right;
   float: right;
-  border-top: 1px dotted #AACCB1;
+  border-top: 1px dotted #aaccb1;
   width: 60%;
 }
 /* line 51, ../sass/partials/components/_comments.sass */
@@ -1243,8 +1243,8 @@ ul.inline .comment-comments {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #AACCB1;
-  color: #F8F8F1;
+  background: #aaccb1;
+  color: #f8f8f1;
   float: right;
   font-size: 0.8em;
   margin-left: 0.5em;
@@ -1259,7 +1259,7 @@ ul.inline .comment-comments {
 }
 /* line 67, ../sass/partials/components/_comments.sass */
 .new-comment a:hover {
-  color: #FFFFFF;
+  color: white;
 }
 
 /* line 2, ../sass/partials/components/_debug-grid.sass */
@@ -1303,17 +1303,17 @@ html.debug head:hover:before {
 }
 /* line 11, ../sass/partials/components/_elements.sass */
 .backtotop a {
-  background: url('../images/backtotop.png?1418383909') center center no-repeat #AACCB1;
+  background: url('../images/backtotop.png?1418143169') center center no-repeat #aaccb1;
   display: block;
   padding: 18px 20px;
-  color: #FFFFFF;
+  color: white;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 /* line 18, ../sass/partials/components/_elements.sass */
 .backtotop a:hover {
-  background-color: #80A18D;
+  background-color: #80a18d;
 }
 
 /* line 1, ../sass/partials/components/_fieldsets.sass */
@@ -1397,7 +1397,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 }
 /* line 45, ../sass/partials/components/_forms.sass */
 .confirmation #edit-cancel:hover {
-  background: #C3DBB4;
+  background: #c3dbb4;
 }
 /* line 47, ../sass/partials/components/_forms.sass */
 .confirmation #edit-submit {
@@ -1432,7 +1432,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 }
 /* line 73, ../sass/partials/components/_forms.sass */
 .loading-layer .form-actions .form-submit:hover {
-  background: #C3DBB4;
+  background: #c3dbb4;
   cursor: default;
 }
 
@@ -1500,7 +1500,7 @@ img {
   opacity: 0.7;
   padding: 0;
   cursor: pointer;
-  color: #FFFFFF;
+  color: white;
   border-width: 1px;
   z-index: 99;
 }
@@ -1559,41 +1559,41 @@ img {
 .messages.status .region-preface a,
 .messages.status .region-footer a {
   text-decoration: underline;
-  color: #FFFFFF;
+  color: white;
   font-weight: bold;
 }
 /* line 32, ../sass/partials/components/_messages.sass */
 .messages.error {
-  background: #A33737;
+  background: #a33737;
   border-color: #7d2a2a;
 }
 /* line 35, ../sass/partials/components/_messages.sass */
 .messages.error .container, .messages.error .region-top-bar,
 .messages.error .region-preface,
 .messages.error .region-footer {
-  background: url('../images/ico-error.png?1417687603') 0% 50% no-repeat;
+  background: url('../images/ico-error.png?1418143169') 0% 50% no-repeat;
 }
 /* line 37, ../sass/partials/components/_messages.sass */
 .messages.warning {
-  background: #E4844A;
+  background: #e4844a;
   border-color: #da6721;
 }
 /* line 40, ../sass/partials/components/_messages.sass */
 .messages.warning .container, .messages.warning .region-top-bar,
 .messages.warning .region-preface,
 .messages.warning .region-footer {
-  background: url('../images/ico-info.png?1417687542') 0% 50% no-repeat;
+  background: url('../images/ico-info.png?1418143169') 0% 50% no-repeat;
 }
 /* line 42, ../sass/partials/components/_messages.sass */
 .messages.status {
-  background: #AACCB1;
+  background: #aaccb1;
   border-color: #8ab994;
 }
 /* line 45, ../sass/partials/components/_messages.sass */
 .messages.status .container, .messages.status .region-top-bar,
 .messages.status .region-preface,
 .messages.status .region-footer {
-  background: url('../images/ico-success.png?1417687571') 0% 50% no-repeat;
+  background: url('../images/ico-success.png?1418143169') 0% 50% no-repeat;
 }
 
 /* line 2, ../sass/partials/components/_modal.sass */
@@ -1601,7 +1601,7 @@ img {
   width: 60%;
   height: 80%;
   padding: 2em;
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 10px;
   position: absolute;
   left: -99999px;
@@ -1609,12 +1609,12 @@ img {
 }
 /* line 11, ../sass/partials/components/_modal.sass */
 .modal-content p {
-  color: #42312C;
+  color: #42312c;
   font-size: 16px;
 }
 /* line 14, ../sass/partials/components/_modal.sass */
 .modal-content .close {
-  background: url('../images/close-on.png?1417427952') 0 0 no-repeat;
+  background: url('../images/close-on.png?1417533903') 0 0 no-repeat;
   display: block;
   width: 16px;
   height: 16px;
@@ -1636,7 +1636,7 @@ img {
 }
 /* line 5, ../sass/partials/components/_pager.sass */
 .item-list .pager li.pager-current {
-  color: #42312C;
+  color: #42312c;
 }
 /* line 9, ../sass/partials/components/_pager.sass */
 .item-list .pager li.pager-first a, .item-list .pager li.pager-last a {
@@ -1644,15 +1644,15 @@ img {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   padding: 5px 10px;
-  background-color: #AACCB1;
-  color: #FFFFFF;
+  background-color: #aaccb1;
+  color: white;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 /* line 15, ../sass/partials/components/_pager.sass */
 .item-list .pager li.pager-first a:hover, .item-list .pager li.pager-last a:hover {
-  background-color: #80A18D;
+  background-color: #80a18d;
 }
 
 /* General styles for Panels */
@@ -1669,7 +1669,7 @@ img {
 /* line 11, ../sass/partials/components/_sprite.sass */
 .service-links .service-label {
   font-size: 15px;
-  color: #AACCB1;
+  color: #aaccb1;
 }
 /* line 15, ../sass/partials/components/_sprite.sass */
 .service-links ul li {
@@ -1687,7 +1687,7 @@ img {
 .admin .style-guide-modal-fire {
   top: 50%;
   padding: 8px 0 0 32px;
-  background-image: url('../images/brocha.png?1418383909');
+  background-image: url('../images/brocha.png?1418655757');
   background-repeat: no-repeat;
   background-position: left 5px center;
   -webkit-transition: all 0.3s ease-in-out 0.4s;
@@ -1714,17 +1714,17 @@ img {
 /* line 26, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.error,
 #style-guide-modal .messages.error {
-  background: url('../images/ico-error.png?1417687603') 1% 50% no-repeat #A33737;
+  background: url('../images/ico-error.png?1418143169') 1% 50% no-repeat #a33737;
 }
 /* line 28, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.warning,
 #style-guide-modal .messages.warning {
-  background: url('../images/ico-info.png?1417687542') 1% 50% no-repeat #E4844A;
+  background: url('../images/ico-info.png?1418143169') 1% 50% no-repeat #e4844a;
 }
 /* line 30, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.status,
 #style-guide-modal .messages.status {
-  background: url('../images/ico-success.png?1417687571') 1% 50% no-repeat #AACCB1;
+  background: url('../images/ico-success.png?1418143169') 1% 50% no-repeat #aaccb1;
 }
 /* line 32, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .styleguide-palette,
@@ -1788,7 +1788,7 @@ tbody {
 /* line 21, ../sass/partials/components/_tables.sass */
 tr.even,
 tr.odd {
-  background-color: #FFFFFF;
+  background-color: white;
   border-bottom: none;
   padding: 0;
 }
@@ -1800,7 +1800,7 @@ th.active img {
 
 /* line 30, ../sass/partials/components/_tables.sass */
 td.active {
-  background-color: #D3E2B6;
+  background-color: #d3e2b6;
 }
 
 /* line 33, ../sass/partials/components/_tables.sass */
@@ -1811,18 +1811,18 @@ table.tabledrag-processed {
 
 /* line 37, ../sass/partials/components/_tables.sass */
 tr.draggable td {
-  border: 1px solid #DBCFB7;
+  border: 1px solid #dbcfb7;
   padding: 0.5em;
 }
 
 /* line 41, ../sass/partials/components/_tables.sass */
 tr.drag {
-  background-color: #DBCFB7;
+  background-color: #dbcfb7;
 }
 
 /* line 44, ../sass/partials/components/_tables.sass */
 tr.drag-previous {
-  background-color: #EEEADD;
+  background-color: #eeeadd;
 }
 
 /* line 47, ../sass/partials/components/_tables.sass */
@@ -1843,7 +1843,7 @@ form .field-multiple-table td.field-multiple-drag {
 
 /* line 57, ../sass/partials/components/_tables.sass */
 tr.selected td {
-  background: #AACCB1;
+  background: #aaccb1;
 }
 
 /* line 60, ../sass/partials/components/_tables.sass */
@@ -1899,9 +1899,9 @@ a.tabledrag-handle .handle {
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0;
-  border-color: #AACCB1;
-  color: #FFFFFF;
-  background-color: #AACCB1;
+  border-color: #aaccb1;
+  color: white;
+  background-color: #aaccb1;
   display: block;
   font-size: 0.8em;
   margin-bottom: -1px;
@@ -1911,24 +1911,24 @@ a.tabledrag-handle .handle {
 /* line 21, ../sass/partials/components/_tabs.sass */
 .tabs.primary li a:hover,
 .nav-tabs.nav li a:hover {
-  color: #AACCB1;
-  background-color: #FFFFFF;
-  border-color: #AACCB1;
+  color: #aaccb1;
+  background-color: white;
+  border-color: #aaccb1;
 }
 /* line 26, ../sass/partials/components/_tabs.sass */
 .tabs.primary li.active a,
 .nav-tabs.nav li.active a {
-  color: #AACCB1;
-  background-color: #FFFFFF;
+  color: #aaccb1;
+  background-color: white;
   border-style: solid solid none solid;
-  border-color: #AACCB1;
+  border-color: #aaccb1;
   cursor: default;
 }
 
 /* line 1, ../sass/partials/components/_templates-ckeditor.sass */
 .template {
   overflow: hidden;
-  color: #42312C;
+  color: #42312c;
   font-size: 15px;
   font-weight: normal;
   margin: 15px 0;
@@ -1937,7 +1937,7 @@ a.tabledrag-handle .handle {
 /* line 8, ../sass/partials/components/_templates-ckeditor.sass */
 .template h1, .template h2, .template h3, .template h4, .template h5, .template h6 {
   font-weight: 700;
-  color: #AACCB1;
+  color: #aaccb1;
 }
 /* line 11, ../sass/partials/components/_templates-ckeditor.sass */
 .template h1, .template h2, .template h3 {
@@ -1957,7 +1957,7 @@ a.tabledrag-handle .handle {
 }
 /* line 19, ../sass/partials/components/_templates-ckeditor.sass */
 .template span {
-  color: #42312C;
+  color: #42312c;
 }
 /* line 24, ../sass/partials/components/_templates-ckeditor.sass */
 .template.image-left .image-description {
@@ -2050,7 +2050,7 @@ a.tabledrag-handle .handle {
 
 /* line 1, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation {
-  background-color: #CAB595;
+  background-color: #cab595;
   padding-top: 10px;
 }
 /* line 6, ../sass/partials/components/navigation/_main-menu.sass */
@@ -2078,10 +2078,10 @@ a.tabledrag-handle .handle {
 /* line 14, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li a {
   display: block;
-  color: #F8F8F1;
+  color: #f8f8f1;
   padding: 0 0.9em;
   height: 35px;
-  border-bottom: 0 solid #F8F8F1;
+  border-bottom: 0 solid #f8f8f1;
   line-height: 2.2em;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -2092,16 +2092,16 @@ a.tabledrag-handle .handle {
 }
 /* line 23, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li a:hover {
-  border-bottom: 35px solid #F8F8F1;
-  color: #80A18D;
+  border-bottom: 35px solid #f8f8f1;
+  color: #80a18d;
   -webkit-transition: color 0.4s 0.2s, border-bottom 0.4s;
   -moz-transition: color 0.4s 0.2s, border-bottom 0.4s;
   transition: color 0.4s 0.2s, border-bottom 0.4s;
 }
 /* line 27, ../sass/partials/components/navigation/_main-menu.sass */
 #navigation ul li a.active {
-  border-bottom: 35px solid #F8F8F1;
-  color: #80A18D;
+  border-bottom: 35px solid #f8f8f1;
+  color: #80a18d;
 }
 @media (min-width: 44em) {
   /* line 30, ../sass/partials/components/navigation/_main-menu.sass */
@@ -2155,7 +2155,7 @@ a.tabledrag-handle .handle {
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     transition: all 0.25s linear;
-    background: #F8F8F1;
+    background: #f8f8f1;
     z-index: 999999;
     opacity: 0.95;
     padding-top: 20px;
@@ -2180,7 +2180,7 @@ a.tabledrag-handle .handle {
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  background: #AACCB1;
+  background: #aaccb1;
   opacity: 0;
   visibility: hidden;
   z-index: 9;
@@ -2193,8 +2193,8 @@ a.tabledrag-handle .handle {
 
 /* line 1, ../sass/partials/regions/_content.sass */
 .region-content {
-  background: #FFFFFF;
-  border: 1px solid #AACCB1;
+  background: white;
+  border: 1px solid #aaccb1;
   padding: 1em;
   margin-bottom: 1em;
   -moz-border-radius: 0.5em;
@@ -2205,25 +2205,25 @@ a.tabledrag-handle .handle {
 /* line 1, ../sass/partials/regions/_footer.sass */
 .site-footer {
   width: 100%;
-  background: #42312C;
+  background: #42312c;
   position: absolute;
   bottom: 0;
   left: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 2em 0;
-  color: #F8F8F1;
+  color: #f8f8f1;
 }
 
 /* line 1, ../sass/partials/regions/_header.sass */
 .top-bar {
   overflow: hidden;
-  background: #AACCB1;
+  background: #aaccb1;
 }
 
 /* line 5, ../sass/partials/regions/_header.sass */
 .site-header {
-  background: #CAB595;
+  background: #cab595;
   min-height: 75px;
 }
 /* line 8, ../sass/partials/regions/_header.sass */
@@ -2238,11 +2238,11 @@ a.tabledrag-handle .handle {
 }
 /* line 15, ../sass/partials/regions/_header.sass */
 .site-header #name-slogan .site-name a {
-  color: #EEEADD;
+  color: #eeeadd;
 }
 /* line 17, ../sass/partials/regions/_header.sass */
 .site-header #name-slogan .site-slogan {
-  color: #80A18D;
+  color: #80a18d;
 }
 
 /* line 20, ../sass/partials/regions/_header.sass */
@@ -2252,8 +2252,8 @@ a.tabledrag-handle .handle {
 
 /* line 1, ../sass/partials/regions/_preface.sass */
 #preface {
-  color: #FFFFFF;
-  background: #EEEADD;
+  color: white;
+  background: #eeeadd;
   min-height: 8em;
 }
 
@@ -2264,55 +2264,55 @@ a.tabledrag-handle .handle {
   padding: 0;
 }
 /* line 8, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul {
+.page-masonry .view-masonry .view-content {
   overflow: hidden;
 }
 /* line 10, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row {
+.page-masonry .view-masonry .view-content .views-row {
   margin: 0;
   width: 100%;
   cursor: pointer;
 }
 @media (min-width: 30em) {
   /* line 10, ../sass/partials/content/block/_block-masonry.sass */
-  .page-masonry .view-masonry ul li.views-row {
+  .page-masonry .view-masonry .view-content .views-row {
     width: 50%;
   }
 }
 @media (min-width: 64em) {
   /* line 10, ../sass/partials/content/block/_block-masonry.sass */
-  .page-masonry .view-masonry ul li.views-row {
+  .page-masonry .view-masonry .view-content .views-row {
     width: 33%;
   }
 }
 /* line 19, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article {
-  border-bottom: 3px solid #DBCFB7;
-  background-color: #FFFFFF;
-  -moz-box-shadow: 5px 0px 16px -9px #42312C;
-  -webkit-box-shadow: 5px 0px 16px -9px #42312C;
-  box-shadow: 5px 0px 16px -9px #42312C;
+.page-masonry .view-masonry .view-content .views-row .node-article {
+  border-bottom: 3px solid #dbcfb7;
+  background-color: white;
+  -moz-box-shadow: 5px 0px 16px -9px #42312c;
+  -webkit-box-shadow: 5px 0px 16px -9px #42312c;
+  box-shadow: 5px 0px 16px -9px #42312c;
   padding: 5px 10px 20px 10px;
   margin: 0 15px 25px 0;
   position: relative;
 }
 /* line 27, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .title {
+.page-masonry .view-masonry .view-content .views-row .node-article .title {
   margin-bottom: 5px;
 }
 /* line 30, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .close {
+.page-masonry .view-masonry .view-content .views-row .node-article .close {
   display: none;
 }
 /* line 33, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article:hover .close {
+.page-masonry .view-masonry .view-content .views-row .node-article:hover .close {
   opacity: 1;
   display: block;
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../images/close.png?1417427952') center no-repeat;
-  background-color: #AACCB1;
+  background: url('../images/close.png?1417533903') center no-repeat;
+  background-color: #aaccb1;
   width: 16px;
   height: 16px;
   padding: 11px;
@@ -2322,32 +2322,32 @@ a.tabledrag-handle .handle {
   transition: all 0.3s;
 }
 /* line 47, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article:hover .close:hover {
-  background-color: #80A18D;
+.page-masonry .view-masonry .view-content .views-row .node-article:hover .close:hover {
+  background-color: #80a18d;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
 /* line 51, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .field-type-image {
+.page-masonry .view-masonry .view-content .views-row .node-article .field-type-image {
   float: none;
   text-align: center;
 }
 /* line 56, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .links li {
+.page-masonry .view-masonry .view-content .views-row .node-article .links li {
   margin: 4px 0;
   display: block;
 }
 /* line 59, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .links li.comment_forbidden {
+.page-masonry .view-masonry .view-content .views-row .node-article .links li.comment_forbidden {
   font-size: 14px;
   margin-top: 15px;
   text-align: center;
-  border-top: 1px solid #AACCB1;
+  border-top: 1px solid #aaccb1;
   padding-top: 5px;
 }
 /* line 65, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry ul li.views-row .node-article .links li > a {
+.page-masonry .view-masonry .view-content .views-row .node-article .links li > a {
   display: block;
 }
 
@@ -2356,7 +2356,7 @@ a.tabledrag-handle .handle {
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
-  background: url('../images/lupa.png?1418383909') center center no-repeat #AACCB1;
+  background: url('../images/lupa.png?1418143169') center center no-repeat #aaccb1;
   padding: 15px 17px;
   position: relative;
   top: -4px;
@@ -2366,7 +2366,7 @@ a.tabledrag-handle .handle {
 #block-search-form #edit-basic .form-submit:hover,
 #search-form .form-actions .form-submit:hover,
 #search-form #edit-basic .form-submit:hover {
-  background-color: #80A18D;
+  background-color: #80a18d;
 }
 
 /* line 4, ../sass/partials/content/browser/_explorer.sass */
@@ -2463,17 +2463,17 @@ a.tabledrag-handle .handle {
   box-shadow: none;
   margin-right: 0;
   margin-bottom: 0;
-  background: #FFFFFF;
+  background: white;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  color: #CAB595;
+  color: #cab595;
   text-shadow: none;
 }
 
 /* line 2, ../sass/partials/content/pages/_page-maintenance.sass */
 .maintenance-page #page {
-  background: #DBCFB7;
+  background: #dbcfb7;
   text-align: center;
 }
 /* line 6, ../sass/partials/content/pages/_page-maintenance.sass */
@@ -2489,7 +2489,7 @@ a.tabledrag-handle .handle {
 .node-teaser {
   padding-bottom: 7.14286%;
   margin-bottom: 7.14286%;
-  border-bottom: 2px solid #DBCFB7;
+  border-bottom: 2px solid #dbcfb7;
 }
 /* line 5, ../sass/partials/content/views/_views.sass */
 .node-teaser .content {
