@@ -1,22 +1,22 @@
 js:
 ===
-Contain the libraries and also the needy js plugins.
+Contains the libraries and also the js plugins.
 
 	Plugins:
 	========
 
 		css_browser.js:
 		===============
-    This plugin can identify the browser that is being used for view the website and give us the necessary classes in the body for can give specific styles.
+    This plugin can identify the browser that is being used for view the website and gives us the necessary classes in the body for can give specific styles.
     If we need specific class for a concrete version of any browser, this is our file.
 
 		html5.js:
 		=========
-    For those browsers that don't support HTML5, this file give them the capacity to can identify and read them.
+    For those browsers that don't support HTML5, this file gives them the capacity to can identify and read them.
 
   chosen.js:
   ==========
-  Librarie for the chosen jQuery.
+  Library for the chosen jQuery.
 
 	custom.js:
 	==========
@@ -27,8 +27,8 @@ Contain the libraries and also the needy js plugins.
 
 	modales.js
 	===========
-  Needy functions for open the modal windows. If we need a new modal, this is our file.
-  The content of the 'styleguide' module was converted in a modal. See the interior of the file to read more info about 'styleguide'.
+  Necessary functions for open the modal windows. If we need a new modal, this is our file.
+  The content of the 'styleguide' module was converted in a modal. See the interior of the file to read more information about 'styleguide'.
 
 
 ===========
