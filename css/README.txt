@@ -11,7 +11,7 @@ Read README in 'Sass'.
 main.css & chosen.css:
 ====================== 
 
-Are the compiled files 'main.sass' and 'chosen.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
+They are the compiled files 'main.sass' and 'chosen.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
 
 
 Chronology compilation:

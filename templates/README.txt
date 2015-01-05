@@ -1,12 +1,12 @@
 TEMPLATES:
 ==========
-The templates directory contain the theme templates, diferentiated and separated by folders. They are the structure of all the content that we can see.
+The templates directory contains the theme templates, diferentiated and divided by folders. They are the structure of all the content that we can see.
 
 In this way, each block, node, page, region, panel (by default or not) depart from their corresponding templates: 'block.tpl.php' 'node.tpl.php' 'page.tpl.php', 'region.tpl.php' ...
 
-If we need to create a specific template for a content, we only have to add "--" to the end, with the name of our content type that we wish. For example, if we want to create a template only for the nodes of type article, we will create "node--article.tpl.php". 
+If we need to create a specific template for a content, we only have to add "--" to the end, with the name of our content type. For example, if we want to create a template only for the nodes of type article, we will create "node--article.tpl.php". 
 
-Drupal is able to recognize automatically the change, in this way we can modify this new template without alter the rest of existent nodes.
+Drupal is able to recognize automatically the change, in this way we can modify this new template without alter the rest of existing nodes.
 
 
 ============

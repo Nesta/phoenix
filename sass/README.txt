@@ -3,7 +3,7 @@
 	|
 	| Partials:
 	===========
-   Contain the stylesheets with 'sass' extension. Any change in the styles of the website and the creation of new stylesheets, can make in this directoy.
+   Contains the stylesheets with 'sass' extension. Any change in the styles of the website and the creation of new stylesheets, can be modified in this directoy.
 
 	 		|
 	 		| Base:
@@ -13,7 +13,7 @@
 	 		|
 	 		| Components:
 	 		=============
-      Contain the styles for the different elements of the theme: buttons, error messages, modals, breadcrumbs...
+      Contains the styles for the different elements of the theme: buttons, error messages, modals, breadcrumbs...
 	 		  |
 	 			| Navigation:
 	 			=============
@@ -32,20 +32,20 @@
 	 		|
 	 		| Regions:
 	 		==========
-      Contain the styles for each region. If we create a new region, here, its styles will be define. If, otherwise, we are going to give styles to a content inside a region, we should use the 'Content' directory.
+      Contains the styles for each region. If we create a new region here, its styles will be defined. Otherwise if we are going to give styles to a content inside a region, we should use the 'Content' directory.
 
 	 		|
 	 		| Utilities: 
 	 		============
-      This directory contain the variables, extends, mixins... that can be of utility when we'll going to personalize our styles.
+      This directory contains the variables, extends, mixins... that can be usefull when personalizing our styles.
 
 	====================================================================================================
 
 	|
 	| Main.sass:
 	============
-  All the previous styles will compile in a single file called 'main.sass'. This file will be converted in the final file: 'main.css'.
-  We won't modify any style in this file, only can make refference to those needy dependencies and also to each file created in 'partials'.
+  All the previous styles will compile in a single file called 'main.sass'. This file will be converted into the final file: 'main.css'.
+  We won't modify any style in this file, we are only able to add refferences to dependencies and also each file created in 'partials'.
 
 	|
 	| Chosen.sass:
