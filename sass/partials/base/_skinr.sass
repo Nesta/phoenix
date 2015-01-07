@@ -1,14 +1,15 @@
+/**
+ *  @file
+ *  Skinr styles
+ */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
 @import url(http://fonts.googleapis.com/css?family=Over+the+Rainbow)
-
 // Structure
 html,
 body
   height: 100%
-
 html
   font-size: 1em
-
 body
   color: $gray-7
   font-family: 'Lato', 'Helvetica', sans-serif
@@ -21,17 +22,10 @@ body
 .main-content
   margin-top: 2em
   padding-bottom: 9em
-
 // Headings & typography
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+h1, h2, h3, h4, h5, h6
   color: $dark-beige
   font-weight: 700
-
 h1
   font-size: 2.074em
 h2
@@ -40,17 +34,14 @@ h3
   font-size: 1.44em
 h4
   font-size: 1.2em
-
 p
   margin-bottom: 1em
-
 a
   color: $dark-green
   text-decoration: none
   &:hover
     color: $green
     text-decoration: none
-
 // User Title
 .hx
   margin: 1em 0
@@ -69,19 +60,15 @@ a
     top: 23px
     position: absolute
     width: 100%
-
 // Lists
 ul
   +hide_bullets()
-
 ol.show-bullets
   +show_bullets()
   li
     list-style-type: decimal
-
 ul.show-bullets
   +show_bullets()
-
 // Forms
 input,
 select,
@@ -94,13 +81,11 @@ textarea
   padding: 0.4em 0.8em
   &.error
     border: 1px solid $red-error
-
 label
   color: $dark-beige
   font-size: 0.9em
   font-weight: normal
   margin-bottom: 0.2em
-
 .form-item .description
   color: $beige
   font-size: 0.8em

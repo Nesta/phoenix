@@ -1,16 +1,11 @@
-
-html.js input.form-autocomplete
-  //background-image: image-url("throbber_3.gif")
-  background-position: 100% 8px
-html.js input.throbbing
-  background-position: 100% -17px
-  //background-image: image-url("throbber_3.gif")
-
+/**
+ *  @file
+ *  Form styles
+ */
 // Overwrite the Drupal modules/field/theme/field.css
 form .field-multiple-table
   margin: 0
 form .field-multiple-table th.field-label
-  //No side-padding for labels as there are no borders
   padding-left: 0
   padding-right: 0
 form .field-multiple-table td.field-multiple-drag
@@ -21,7 +16,6 @@ form .field-multiple-table td.field-multiple-drag a.tabledrag-handle
 form .field-add-more-submit
   margin: .5em 0 0
 // END: Overwrite the Drupal modules/field/theme/field.css
-
 // Hierarchical Select style corrections
 tr.odd .form-item.shs-wrapper-processed,
 tr.even .form-item.shs-wrapper-processed
@@ -29,7 +23,6 @@ tr.even .form-item.shs-wrapper-processed
   .shs-select
     margin-right: 1em
     margin-bottom: 1em
-
 // Overwrite file.css styles for file/image upload
 .form-managed-file .form-file,
 .form-managed-file .form-submit
@@ -46,8 +39,7 @@ tr.even .form-item.shs-wrapper-processed
       background: $light-green
   #edit-submit
     +no-icon(10px)
-
-// Style for contact site form module
+// Contact form module
 #contact-site-form
   #edit-name,
   #edit-mail,
@@ -55,13 +47,12 @@ tr.even .form-item.shs-wrapper-processed
     width: 100%
   #edit-actions
     text-align: right
-
 // Loading Icon
 .loading-layer
   .form-actions
     &:before
       content: ""
-      //background: image-url('home/misc/progress.gif') 0 0 no-repeat
+      background: image-url('progress.gif') 0 0 no-repeat
       width: 16px
       height: 16px
       display: inline-block
@@ -73,7 +64,6 @@ tr.even .form-item.shs-wrapper-processed
       &:hover
         background: $light-green
         cursor: default
-
 #user-login-form
   .item-list
     li

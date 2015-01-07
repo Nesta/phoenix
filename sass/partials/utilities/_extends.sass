@@ -1,40 +1,39 @@
-// EXTENDS
-
-// Different ways to hide an element
+/**
+ *  @file 
+ *  Extends and Placeholder library
+ */
+/** 
+ *  Hide modes:
+ *    hide-accessible
+ *    hide-modern
+ *    hide
+ *    hidden-tablet / show-tablet
+ */
 .hide-accessible
   position: absolute
   white-space: nowrap
   left: -9999px
-
 .hide-modern
   font-size: 0
   color: transparent
   line-height: 0
-
 .hide
   display: none
-
 .hidden-tablet
   display: none
   +breakpoint($tablet)
     display: block
-
 .show-tablet
   display: block
   +breakpoint($tablet)
     display: none
-
-// Using media object mixin
+// Class Helpers
 .media-object
   +media-object()
   +clearfix
-
-// First level children aligned
 .inline
   > *
     display: inline-block
-
-// General style button
 .button
   border: none
   color: $white
@@ -48,34 +47,25 @@
   &:hover
     background: $dark-green
     text-decoration: none
-
-// Not allowed select an item
 .unselectable
-  // Chrome all / Safari all / Firefox all / IE 10+
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  -o-user-select: none
-  user-select: none
-
+  +user-select(none)
 .clearfix
   +clearfix()
-
-
-/*------------------
-  Placeholders
-  ------------------*/
-
-// See this URL for explanation: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+/**
+ *  Placeholders
+ */
+/**
+ *  %vertical-align
+ *  @see http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ */
 %vertical-align
   position: relative
   top: 50%
-  -webkit-transform: translateY(-50%)
-  -ms-transform: translateY(-50%)
-  transform: translateY(-50%)
-
-
-//Let's Have an extend for tables with some basic styles
+  +transform(translateY(-50%))
+/**
+ *  %table-style-1
+ *  Table generic styles
+ */
 %table-style-1
   table
     border: 1px solid $black
@@ -95,8 +85,10 @@
     font-size: .9em
     padding: 1em .5em
     vertical-align: top
-
-// Placeholder for right icon fixed: styleguide and grid
+/**
+ *  %grow-width
+ *  Placeholder for right icon fixed: styleguide and grid
+ */
 %grow-width
   z-index: 99
   display: block
