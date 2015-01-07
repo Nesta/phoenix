@@ -8,10 +8,10 @@ Any change of styles o the creation of new files can make from the folder 'Sass 
 Read README in 'Sass'.
 
 
-main.css & chosen.css:
+main.css & libs.css:
 ====================== 
 
-Are the compiled files 'main.sass' and 'chosen.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
+Are the compiled files 'main.sass' and 'libs.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
 
 
 Chronology compilation:
@@ -41,9 +41,9 @@ Cualquier cambio de estilos o creación de nuevos ficheros se hará desde la car
 Leer README en 'Sass'.
 
 
-main.css & chosen.css:
+main.css & libs.css:
 ====================== 
-Son los ficheros compilados 'main.sass' y 'chosen.sass' transformados a extensión .css y que serán los archivos finales incluidos en 'da_vinci.info'.
+Son los ficheros compilados 'main.sass' y 'libs.sass' transformados a extensión .css y que serán los archivos finales incluidos en 'da_vinci.info'.
 
 
 Cronología de compilación:
@@ -51,4 +51,4 @@ Cronología de compilación:
 
 Todos los archivos 'sass' se compilan en un único archivo.
   (modals.sass, buttons.sass, form.sass...)   >   Main.sass
-
+  

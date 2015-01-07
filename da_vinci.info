@@ -3,7 +3,7 @@ description = Da Vinci Theme - Drupal 7 Full theme with the best Sass's componen
 core = 7.x
 engine = phptemplate
 
-stylesheets[all][] = css/chosen.css
+stylesheets[all][] = css/lib.css
 stylesheets[all][] = css/main.css
 
 scripts[] = js/plugins/chosen/chosen.jquery.min.js
