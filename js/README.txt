@@ -58,9 +58,6 @@ Contiene tanto las librerias como los plugins js necesarios.
 	==========
 	Cuando necesitemos modificar nuestro javascript, insertaremos el código en este fichero.
 
-	guide.js
-	========
-
 	modales.js
 	===========
 	Funciones necesarias para lanzar las ventanas modales. Si necesitamos una nueva ventana modal, este es el archivo. 

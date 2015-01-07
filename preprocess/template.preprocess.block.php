@@ -1,10 +1,7 @@
 <?php
 /**
  * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
+ * Preproccess functions for the Block element.
  */
 
 /**
@@ -25,7 +22,6 @@ function da_vinci_preprocess_block(&$vars) {
   }
 
   if (drupal_is_front_page()) {
-    // Proporcionamos template suggestions para los nodos por view mode.
     $vars['theme_hook_suggestions'][] = 'block__home_content';
 
   }
