@@ -1,13 +1,15 @@
-//Define the initial layout of the regions in page.tpl.php
+/**
+ *  @file
+ *  Layouts
+ *  Define the initial layout of the regions in page.tpl.php
+ */
 .container
   +container
   +clearfix
-
 .region-top-bar,
 .region-preface,
 .region-footer
   @extend .container
-
 .site-header
   position: relative
   .header-left
@@ -17,7 +19,6 @@
 .hx
   +full
   float: none
-
 +breakpoint($tablet)
   .container
     +container
@@ -31,7 +32,6 @@
       +span(9 of 12 first)
     #sidebar-second
       +span(3 of 12 last)
-
   .two-sidebars
     #content
       +span(isolate 6 at 4 of 12)
@@ -39,24 +39,4 @@
       +span(3 of 12 first)
     #sidebar-second
       +span(3 of 12 last)
-
-+breakpoint($desk)
-  .container
-    +container
-  .one-sidebar.sidebar-first
-    #content
-      //+span(isolate 10 at 3 last)
-    #sidebar-first
-      //+span(2 first)
-  .one-sidebar.sidebar-second
-    #content
-      //+span(9 of 12 first)
-    #sidebar-second
-      //+span(3 of 12 last)
-  .two-sidebars
-    #content
-      //+span(isolate 6 at 4 of 12)
-    #sidebar-first
-      //+span(3 of 12 first)
-    #sidebar-second
-      //+span(3 of 12 last)
+// +breakpoint($desk)

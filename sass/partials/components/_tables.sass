@@ -1,8 +1,10 @@
-//Overwrite styles from Drupal, mainly system.theme.css
+/**
+ *  @file
+ *  Tables generic styles
+ */
 table
   border-collapse: collapse
   width: 100%
-
   // Let code wrap in tables to avoid tables above 100% width
   code
     white-space: normal
@@ -11,56 +13,41 @@ th
   border-bottom: none
   padding: 0.1em 0.6em
   text-align: left
-
 td
   padding: 0.2em 0.6em
-
 tbody
   border-top: none
-
 tr.even,
 tr.odd
   background-color: $white
   border-bottom: none
   padding: 0
-
 th.active img
   display: inline
-
 td.active
   background-color: $lightest-green
-
 table.tabledrag-processed
   border-collapse: separate
   border-spacing: 0 1em
-
 tr.draggable td
   border: 1px solid $beige
   padding: 0.5em
-
 tr.drag
   background-color: $beige
-
 tr.drag-previous
   background-color: $light-beige
-
 .tabledrag-toggle-weight
   font-size: 0.9em
-
 body div.tabledrag-changed-warning
   margin-bottom: 0.5em
-
 form .field-multiple-table td.field-multiple-drag
   padding-right: 0
   width: 50px
-
 tr.selected td
   background: $green
-
 td.checkbox,
 th.checkbox
   text-align: center
-
 .draggable a.tabledrag-handle
   cursor: move
   float: left
@@ -68,13 +55,8 @@ th.checkbox
   margin-left: 0
   overflow: hidden
   text-decoration: none
-
 a.tabledrag-handle .handle
-  //background: url(../images/move.png) no-repeat 0 0
   height: 15px
   margin: 0
   padding: 0
   width: 15px
-
-a.tabledrag-handle-hover .handle
-  //background: url(../images/move.png) no-repeat 0 -20px

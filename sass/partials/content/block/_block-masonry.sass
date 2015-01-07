@@ -1,4 +1,7 @@
-// View masonry
+/**
+ *  @file
+ *  Masonry Blocks Styles
+ */
 .page-masonry
   .region-content
     background: none
@@ -15,7 +18,6 @@
           width: 50%
         +breakpoint($desk)
           width: 33%
-        // Each article
         .node-article
           border-bottom: 3px solid $beige
           background-color: $white
@@ -23,10 +25,8 @@
           padding: 5px 10px 20px 10px
           margin: 0 15px 25px 0
           position: relative
-          // Title
           .title
             margin-bottom: 5px
-          // Close icon
           .close
             display: none
           &:hover
@@ -47,11 +47,9 @@
               &:hover
                 background-color: $dark-green
                 +transition(all .3s)
-          // Image
           .field-type-image
             float: none
             text-align: center
-          // Read more and new comment button
           .links
             li
               margin: 4px 0
