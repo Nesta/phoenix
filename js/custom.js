@@ -1,15 +1,10 @@
 /**
  * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
+ * Custom output of the javascript behaviour.
  */
-
 (function ($) {
   Drupal.behaviors.da_vinciTheme = {
     attach: function (context) {
-
       var isMobile = {
         Android: function () {
           return navigator.userAgent.match(/Android/i);
@@ -41,7 +36,6 @@
       });
       // On click: add class 'hide' to hide message wrapper unless the user is admin
       $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');});
-
       // Show back to top button
       $(window).scroll(function() {
         if ($(window).scrollTop() < $(window).height()*2) {
@@ -58,8 +52,6 @@
         }, 500);
         return false;
       });
-      // Add Close element to "Masonry" article
-      $('.view-masonry .node-article').append('<span class="close">close</a>');
     }
   }
 })(jQuery);
