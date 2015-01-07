@@ -46,6 +46,6 @@
         $('#'+id+' .modal-content').trigger('openModal');    
       }
     };
-    var style_guide_modal = da_vinci_modal.init('style-guide-modal','/admin/appearance/styleguide/da_vinci','.style-guide-modal-fire');
+    var style_guide_modal = da_vinci_modal.init('style-guide-modal','?q=/admin/appearance/styleguide/da_vinci','.style-guide-modal-fire');
   });
 })(jQuery);
