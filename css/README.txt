@@ -13,7 +13,6 @@ main.css & libs.css:
 
 Are the compiled files 'main.sass' and 'libs.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
 
-
 Chronology compilation:
 =======================
 
