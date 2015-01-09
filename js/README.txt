@@ -67,7 +67,3 @@ Contiene tanto las librerias como los plugins js necesarios.
 	===========
 	Funciones necesarias para lanzar las ventanas modales. Si necesitamos una nueva ventana modal, este es el archivo. 
   Se ha convertido el contenido del modulo "styleguide" en una ventana modal. Ver el interior del archivo para leer más sobre "styleguide".
-
-  masonry-view.js:
-  ================
-  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we need to install the "views_infinite_scroll" and "autopager" module.
