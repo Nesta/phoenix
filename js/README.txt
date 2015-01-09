@@ -22,8 +22,9 @@ Contains the libraries and also the js plugins.
 	==========
 	When we'll need modify our javascript, we should insert the code in this file.
 
-	guide.js
-	========
+  masonry-view.js:
+  ================
+  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we need to install the "views_infinite_scroll" and "autopager" module.
 
 	modales.js
 	===========
@@ -58,7 +59,15 @@ Contiene tanto las librerias como los plugins js necesarios.
 	==========
 	Cuando necesitemos modificar nuestro javascript, insertaremos el código en este fichero.
 
+  masonry-view.js:
+  ================
+  Funciones para el metodo remove de masonry, si queremos implementar el scroll infinito necesitamos instalar el modulo "views_infinite_scroll" y el "autopager".
+
 	modales.js
 	===========
 	Funciones necesarias para lanzar las ventanas modales. Si necesitamos una nueva ventana modal, este es el archivo. 
   Se ha convertido el contenido del modulo "styleguide" en una ventana modal. Ver el interior del archivo para leer más sobre "styleguide".
+
+  masonry-view.js:
+  ================
+  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we need to install the "views_infinite_scroll" and "autopager" module.
