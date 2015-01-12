@@ -24,7 +24,7 @@ Contains the libraries and also the js plugins.
 
   masonry-view.js:
   ================
-  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we need to install the "views_infinite_scroll" and "autopager" module.
+  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we will need to install the "views_infinite_scroll" and "autopager" module.
 
 	modales.js
 	===========
