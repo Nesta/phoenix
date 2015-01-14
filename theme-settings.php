@@ -43,7 +43,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description'   => t("If you want to add the masonry style in views, you only have to insert the class name here"),
   );
   
-  if (!(module_exists('styleguide')||module_exists('jquery_update'))) {
+  if (!(module_exists('styleguide') && module_exists('jquery_update'))) {
     $form['da_vinci_settings']['styleguide']['#disabled'] = true;
   }
 
