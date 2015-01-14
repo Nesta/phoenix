@@ -1,10 +1,7 @@
 <?php
 /**
  * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
+ * Preproccess functions for HTML.
  */
 
 /**
@@ -30,13 +27,15 @@ function da_vinci_preprocess_html(&$vars) {
     drupal_add_js($theme_path . '/js/plugins/jquery.easyModal.js');  
     drupal_add_js($theme_path . '/js/modales.js');  
   }
+  if (theme_get_setting('debug')){
+    $vars['html_classes'][] = 'debug';
+  }
 
   // Since menu is rendered in preprocess_page we need to detect it here to add body classes
   $has_main_menu = theme_get_setting('toggle_main_menu');
   $has_secondary_menu = theme_get_setting('toggle_secondary_menu');
 
-  /* Add extra classes to body for more flexible theming */
-
+  // Add extra classes to body for more flexible theming
   if ($has_main_menu or $has_secondary_menu) {
     $vars['classes_array'][] = 'with-navigation';
   }
@@ -64,7 +63,7 @@ function da_vinci_preprocess_html(&$vars) {
   $page_name = array_shift($temp);
 
 
-  // add template suggestions
+  // Add template suggestions
   $vars['theme_hook_suggestions'][] = "page__section__" . $section;
   $vars['theme_hook_suggestions'][] = "page__" . $page_name;
 

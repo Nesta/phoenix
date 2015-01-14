@@ -1,10 +1,7 @@
 <?php
 /**
  * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
+ * Preproccess functions for Node element.
  */
 
 /**
@@ -19,7 +16,7 @@ function da_vinci_preprocess_node(&$vars) {
 
   $vars['date'] = t('!datetime', array('!datetime' => date('j F Y', $vars['created'])));
 
-  // Proporcionamos template suggestions para los nodos por view mode.
+  // Providing templates suggestions for the nodes for view mode.
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__' . $vars['view_mode'];
 

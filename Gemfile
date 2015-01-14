@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gem 'sass'
 gem 'sass-globbing'           # Allows you to import files in a single import statement.
 gem 'compass'
+gem 'listen', '2.7.11'        # Workaround for sass --watch or compass watch
 gem 'compass-normalize'       # Compass version of normalize.css.
 gem 'susy', '2.1.2'           # Gris Framework
 gem 'breakpoint'              # Helper for grid

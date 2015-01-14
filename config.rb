@@ -1,4 +1,4 @@
-# Import necesary Gems
+# Import necessary Gems
 
 require 'compass-normalize'
 require 'sass-globbing'
@@ -21,8 +21,8 @@ require 'sassy-buttons'
 # Using :development enables the use of FireSass but will bloat the stylesheets
 # with debug code, be sure to change to :production when moving from development
 # to production servers.
-environment = :development
-#environment = :production
+#environment = :development
+environment = :production
 
 # Location of the theme's resources.
 # Compass will overwrite the CSS files in the css_dir when set to watch.
@@ -63,5 +63,5 @@ line_comments = true
 #   scss may not have changed, since we want the CSS to be compressed and have
 #   the debug info removed.
 
-sass_options = {:sourcemap => true}
+# sass_options = {:sourcemap => true}
 

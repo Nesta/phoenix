@@ -1,27 +1,24 @@
-// Style for module/modal styleguide
-// Open modal styleguide button
+/**
+ *  @file
+ *  Styleguide styles
+ *  @pre Activate Styleguide option at theme setting
+ *  @pre Styleguide module installed
+ *  @pre Admin user logged in
+ */
 .style-guide-modal-fire
-  z-index: 99
-  position: fixed
-  top: 50%
-  display: block
-  width: 0
-  height: 32px
-  padding: 8px 0 0 32px
-  background: image-url('brocha.png') no-repeat
-  background-position: left 5px center
-  background-color: $green
-  font-size: 14px
-  overflow: hidden
-  +border-radius(4px)
-  white-space: nowrap
-  color: $white
-  +transition(all 0.7s ease-in-out .5s)
-  &:hover
-    +transition(all 0.7s ease-in-out)
-    width: 110px
-    color: white
-    background-color: $dark-green
+  @extend .hide
+.admin
+  .style-guide-modal-fire
+    top: 50%
+    padding: 8px 0 0 32px
+    background-image: image-url("brocha.png")
+    background-repeat: no-repeat
+    background-position: left 5px center
+    +transition(all 0.3s ease-in-out .4s)
+    @extend %grow-width
+    &:hover
+      width: 118px
+      +transition(all 0.3s ease-in-out)
 .page-admin-appearance-styleguide,
 #style-guide-modal
   .messages

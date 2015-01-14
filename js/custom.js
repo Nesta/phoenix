@@ -1,16 +1,10 @@
 /**
  * @file
- * The theme system, which controls the output of Drupal.
- *
- * The theme system allows for nearly all output of the Drupal system to be
- * customized by user themes.
+ * Custom output of the javascript behaviour.
  */
-
 (function ($) {
   Drupal.behaviors.da_vinciTheme = {
     attach: function (context) {
-
-      // Detectar si es Movil
       var isMobile = {
         Android: function () {
           return navigator.userAgent.match(/Android/i);
@@ -32,8 +26,8 @@
         }
       };
       if(isMobile.any()){
-        slidingMenu = $('#navigation ul').html();
-        $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content"> <ul>'+ slidingMenu +'</ul></nav><div class="js-menu-screen menu-screen"></div>');
+        slidingMenu = $('#navigation').html();
+        $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content">'+ slidingMenu +'</nav><div class="js-menu-screen menu-screen"></div>');
       }
       $('.js-menu-trigger,.js-menu-screen', context).once('mainMenu', function () {
         $(this).click(function () {
@@ -42,7 +36,6 @@
       });
       // On click: add class 'hide' to hide message wrapper unless the user is admin
       $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');});
-
       // Show back to top button
       $(window).scroll(function() {
         if ($(window).scrollTop() < $(window).height()*2) {

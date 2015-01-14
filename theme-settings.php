@@ -22,11 +22,25 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#collapsed' => FALSE,
   );
 
+  $form['da_vinci_settings']['debug'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Grid Debug Settings'),
+    '#default_value' => theme_get_setting('debug', 'da_vinci'),
+    '#description'   => t("Check this option to show Grid Debug Button in page. Uncheck to hide. This will only be displayed if admin is logged."),
+  );
+  
   $form['da_vinci_settings']['styleguide'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show Style Guide Icon'),
     '#default_value' => theme_get_setting('styleguide', 'da_vinci'),
     '#description'   => t("Check this option to show Style Guide Button in page. Uncheck to hide."),
+  );
+
+  $form['da_vinci_settings']['masonry'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Activate masonry view'),
+    '#default_value' => theme_get_setting('masonry', 'da_vinci'),
+    '#description'   => t("If you want to add the masonry style in views, you only have to insert the class name here"),
   );
   
   if (!(module_exists('styleguide')||module_exists('jquery_update'))) {

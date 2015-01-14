@@ -1,4 +1,7 @@
-// General IE stylesheet
+/**
+ *  @file
+ *  IE specific styles
+ */
 .ie
   .form-contact
     .form-textarea
@@ -9,9 +12,25 @@
       a
         img
           width: 100%
+  #navigation
+    ul
+      li
+        a
+          color: $gray
+          border-bottom: 0
+          +border-radius(4px)
+          +transition(color .1 easy-in-out)
+          &:hover
+            border-bottom: 0
+            color: $dark-green
+            background-color: $gray
+            +transition(color .1 easy-in-out)
+          &.active
+            border-bottom: 0
+            background-color: $gray
+            color: $dark-green
 // IE 9
 //.ie9
-
 // IE 11
 // Text-align: justify not working in IE11
 //.ie11

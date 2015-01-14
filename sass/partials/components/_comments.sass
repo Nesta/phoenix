@@ -1,13 +1,13 @@
-// Comments wrapper
+/**
+ *  @file
+ *  Comments styles
+ */
 #comments
-  margin-top: +gutter(2)
+  margin-top: +gutter(4)
   .title
     color: $green
     display: inline-block
     font-weight: normal
-
-
-// Comments Count
 .comments-count
   position: relative
   top: -5px
@@ -19,8 +19,6 @@
   height: 40px
   display: inline-block
   color: $white
-
-// Each comment
 .comment
   .attribution
     border-top: 1px solid $light-beige
@@ -46,7 +44,6 @@
       float: right
       border-top: 1px dotted $green
       width: 60%
-
   // Icon of a new comment
   .new
     +border-radius(5px)
@@ -57,8 +54,6 @@
     margin-left: 0.5em
     padding: 0.2em 0.5em
     text-transform: uppercase
-
-// Button: add new comment
 .new-comment
   display: inline-block
   float: right
@@ -66,4 +61,3 @@
     @extend .button
     &:hover
       color: $white
-

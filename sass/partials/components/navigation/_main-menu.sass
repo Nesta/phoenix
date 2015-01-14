@@ -1,3 +1,7 @@
+/**
+ *  @file
+ *  Main menu navigation styles
+ */
 #navigation
   background-color: $dark-beige
   padding-top: 10px
@@ -6,7 +10,7 @@
   ul
     +hide_bullets()
     li
-      height: 35px
+      height: 32px
       float: left
       margin-right: .6em
       &:last-child
@@ -18,13 +22,21 @@
         height: 35px
         border-bottom: 0 solid $gray
         line-height: 2.2em
-        +border-top-left-radius(4px)
-        +border-top-right-radius(4px)
+        +border-radius(4px)
         +transition(color .4s, border-bottom .4s .1s)
         &:hover
           border-bottom: 35px solid $gray
-          color: $turquoise
+          color: $dark-green
           +transition(color .4s .2s, border-bottom .4s)
         &.active
           border-bottom: 35px solid $gray
-          color: $turquoise
+          color: $dark-green
+    &#main-menu,
+    &#secondary-menu
+      @extend .hidden-tablet
+      +breakpoint($tablet)
+        display: inline-block
+    &#main-menu
+      float: left
+    &#secondary-menu
+      float: right

@@ -1,5 +1,9 @@
 <?php
 /**
+ * @file
+ * Preproccess functions for Comment element.
+ */
+/**
  *  Implements hook_preprocess_comment().
  */
 function da_vinci_preprocess_comment(&$vars) {
