@@ -117,7 +117,7 @@
       </div></div> <!-- /.section, /#navigation -->
   <?php endif; ?>
   <div id="main-content" class="main-content container">
-    <?php if (theme_get_setting('styleguide')): ?>
+    <?php if (theme_get_setting('styleguide') && module_exists('styleguide') && module_exists('jquery_update')): ?>
       <div>
         <a class="style-guide-modal-fire" href="#">Style Guide</a>
       </div>
