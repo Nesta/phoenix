@@ -37,6 +37,9 @@ features[] = main_menu
 features[] = secondary_menu
 settings[breadcrumbs]  = 1
 
+settings[styleguide] = 1
+settings[debug] = 1
+
 ; Exclude Css's.
 ;settings[css_exclude][]  = ''
 
