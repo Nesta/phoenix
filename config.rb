@@ -1,4 +1,4 @@
-# Import necessary Gems
+# Import necesary Gems
 
 require 'compass-normalize'
 require 'sass-globbing'
