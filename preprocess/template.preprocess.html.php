@@ -21,7 +21,7 @@ function da_vinci_preprocess_html(&$vars) {
   if (module_exists('panels') && function_exists('panels_get_current_page_display')) {
     $vars['classes_array'][] = (panels_get_current_page_display()) ? 'panels' : '';
   }
-  if (theme_get_setting('styleguide')){
+  if (theme_get_setting('styleguide') && module_exists('styleguide') && module_exists('jquery_update')){
     $theme_path = drupal_get_path('theme', 'da_vinci');
     drupal_add_js($theme_path . '/js/plugins/jquery.actual.min.js');  
     drupal_add_js($theme_path . '/js/plugins/jquery.easyModal.js');  

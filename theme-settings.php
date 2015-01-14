@@ -33,7 +33,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Show Style Guide Icon'),
     '#default_value' => theme_get_setting('styleguide', 'da_vinci'),
-    '#description'   => t("Check this option to show Style Guide Button in page. Uncheck to hide."),
+    '#description'   => t("Check this option to show Style Guide Button in page. Uncheck to hide. Require jquery_update and styleguide module."),
   );
 
   $form['da_vinci_settings']['masonry'] = array(
@@ -42,10 +42,6 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('masonry', 'da_vinci'),
     '#description'   => t("If you want to add the masonry style in views, you only have to insert the class name here"),
   );
-  
-  if (!(module_exists('styleguide')||module_exists('jquery_update'))) {
-    $form['da_vinci_settings']['styleguide']['#disabled'] = true;
-  }
 
   $form['da_vinci_settings']['breadcrumbs'] = array(
     '#type' => 'checkbox',
@@ -72,6 +68,11 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
 
   // Add our custom submit function:
   $form['#submit'][] = 'da_vinci_form_system_theme_settings_submit';
+
+  if (!(module_exists('styleguide') && module_exists('jquery_update'))) {
+    $form['da_vinci_settings']['styleguide']['#value'] = 0;
+    $form['da_vinci_settings']['styleguide']['#disabled'] = true;
+  }
 }
 
 /**
