@@ -69,4 +69,3 @@ INSERT INTO `styleguide_palette_swatch` (`id`, `name`, `description`, `hex`, `th
 (28, '$light-beige', 'Secondary colour', '#EEEADD', 'da_vinci'),
 (29, '$red-error', 'Basic colour', '#A33737', 'da_vinci'),
 (31, '$dark-green', 'Primary colour', '#80A18D', 'da_vinci');
-

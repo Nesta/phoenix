@@ -8,10 +8,8 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * @param $form
- *   The form.
- * @param $form_state
- *   The form state.
+ * @param $form, $form_state
+ *   The form and form state.
  */
 function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
 
@@ -77,10 +75,6 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
 
 /**
  * Form submit for da_vinci_form_system_theme_settings_alter().
- * @param $form
- *   The form.
- * @param $form_state
- *   The form state.
  */
 function da_vinci_form_system_theme_settings_submit($form, &$form_state) {
   $exclude_css = array_filter(array_map('trim', explode("\n", $form_state['values']['css_exclude'])));
