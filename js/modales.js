@@ -12,14 +12,14 @@
 
 (function ($) {
   $(document).ready(function () {
-    /** 
-     *  @brief da_vinci_modal
-     *  Object Literal for setup and populating modals
-     *
-     *  @param id, will be the #id of your modal
-     *  @param url, will be the target of the ajax content
-     *  @param fire, will be the click element for display the modal
-     */
+    
+     //  @brief da_vinci_modal
+     // Object Literal for setup and populating modals
+
+     //  @param id, will be the #id of your modal
+     //  @param url, will be the target of the ajax content
+     //  @param fire, will be the click element for display the modal
+
     var da_vinci_modal = {
       init: function(id,url,fire){
         $('body').append('<div id="' + id + '" class="generic-modal"><div class="modal-content"><a class="close" href="#">Close</a></div></div>');
