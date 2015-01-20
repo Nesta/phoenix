@@ -8,9 +8,9 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * @param $form
+ * @param array $form
  *   The form.
- * @param $form_state
+ * @param array $form_state
  *   The form state.
  */
 function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
