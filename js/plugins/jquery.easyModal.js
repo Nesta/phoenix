@@ -1,5 +1,6 @@
 /**
  * EasyModal.js v1.3.1 .
+ *
  * A minimal jQuery modal that works with your CSS.
  *
  * Author: Flavius Matis - http://flaviusmatis.github.com
@@ -8,8 +9,8 @@
  *
  */
 
-/*jslint browser: true*/
-/*global jQuery*/
+/* jslint browser: true */
+/* global jQuery */
 
 (function ($) {
   "use strict";
