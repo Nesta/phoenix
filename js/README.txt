@@ -7,7 +7,8 @@ Contains the libraries and also the js plugins.
 
 		css_browser.js:
 		===============
-    This plugin can identify the browser that is being used for view the website and gives us the necessary classes in the body for can give specific styles.
+    This plugin can identify the browser that is being used for view the website,
+    and gives us the necessary classes in the body for can give specific styles.
     If we need specific class for a concrete version of any browser, this is our file.
 
 		html5.js:
@@ -24,12 +25,14 @@ Contains the libraries and also the js plugins.
 
   masonry-view.js:
   ================
-  Necessary functions for masonry remove method. If we want to implement the infinite scroll, we will need to install the "views_infinite_scroll" and "autopager" module.
+  Necessary functions for masonry remove method. If we want to implement the infinite scroll, 
+  we will need to install the "views_infinite_scroll" and "autopager" module.
 
 	modales.js
 	===========
   Necessary functions for open the modal windows. If we need a new modal, this is our file.
-  The content of the 'styleguide' module was converted in a modal. See the interior of the file to read more information about 'styleguide'.
+  The content of the 'styleguide' module was converted in a modal. 
+  See the interior of the file to read more information about 'styleguide'.
 
 
 ===========
@@ -45,7 +48,9 @@ Contiene tanto las librerias como los plugins js necesarios.
 
 		css_browser.js:
 		===============
-		Este plugin identifica el navegador que está siendo usado para visualizar el portal y aporta las clases necesarias en el body para poder dar estilos específicos. Si necesitamos sacar clases específicas para alguna versión en concreto de cualquier navegador, este es nuestro archivo.
+		Este plugin identifica el navegador que está siendo usado para visualizar el portal 
+    y aporta las clases necesarias en el body para poder dar estilos específicos. 
+    Si necesitamos sacar clases específicas para alguna versión en concreto de cualquier navegador, este es nuestro archivo.
 
 		html5.js:
 		=========
@@ -67,3 +72,4 @@ Contiene tanto las librerias como los plugins js necesarios.
 	===========
 	Funciones necesarias para lanzar las ventanas modales. Si necesitamos una nueva ventana modal, este es el archivo. 
   Se ha convertido el contenido del modulo "styleguide" en una ventana modal. Ver el interior del archivo para leer más sobre "styleguide".
+
