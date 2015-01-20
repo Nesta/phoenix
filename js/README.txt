@@ -72,4 +72,4 @@ Contiene tanto las librerias como los plugins js necesarios.
 	===========
 	Funciones necesarias para lanzar las ventanas modales. Si necesitamos una nueva ventana modal, este es el archivo. 
   Se ha convertido el contenido del modulo "styleguide" en una ventana modal. Ver el interior del archivo para leer más sobre "styleguide".
-
+.
