@@ -1,9 +1,12 @@
 <?php
 /**
  * @file
- *   @param $form: Nested array of form elements that comprise the form.
- *   @param $form_state: A keyed array containing the current state of the form.
  * Theme setting callbacks for the da_vinci theme.
+ *
+ * @param $form: 
+ *  Nested array of form elements that comprise the form.
+ * @param $form_state: 
+ *  A keyed array containing the current state of the form.
  *
  * Implements hook_form_FORM_ID_alter().
  */
