@@ -1,8 +1,8 @@
 /**
  * @file
  * Custom output of the javascript behaviour.
- *
  */
+
 (function ($) {
   Drupal.behaviors.da_vinciTheme = {
     attach: function (context) {
