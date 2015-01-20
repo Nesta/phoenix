@@ -7,9 +7,10 @@
  *
  * URL: https://github.com/flaviusmatis/easyModal.js
  *
- */
-/* jslint browser: true */
-/* global jQuery */
+ * jslint browser: true
+ * global jQuery 
+ * 
+**/
 
 (function ($) {
   "use strict";
