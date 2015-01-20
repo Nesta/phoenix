@@ -118,9 +118,11 @@
             'id' => 'main-menu',
             'class' => array('links', 'inline', 'clearfix')),
           'heading' => t('Main menu'))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu,
-          'attributes' => array('id' => 'secondary-menu',
-          'class' => array('links', 'inline', 'clearfix')),
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'id' => 'secondary-menu',
+            'class' => array('links', 'inline', 'clearfix')),
           'heading' => t('Secondary menu'))); ?>
       </div></div> <!-- /.section, /#navigation -->
   <?php endif; ?>
