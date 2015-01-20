@@ -8,18 +8,19 @@
  */
 
 /**
- * Implement hook_html_head_alter().
+ * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
+ *
  */
 function da_vinci_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
-    'charset' => 'utf-8'
+    'charset' => 'utf-8',
   );
   unset($head_elements['metatag_content-language_0']);
 }
 
 /**
- * Implement hook_status_messages().
+ * Implements hook_status_messages().
  */
 function da_vinci_status_messages($variables) {
   $display = $variables['display'];
@@ -53,7 +54,7 @@ function da_vinci_status_messages($variables) {
 }
 
 /**
- * Implement hook_css_alter().
+ * Implements hook_css_alter().
  */
 function da_vinci_css_alter(&$css) {
   $data = array();
@@ -76,7 +77,7 @@ function da_vinci_css_alter(&$css) {
 }
 
 /**
- * Implement hook_js_alter().
+ * Implements hook_js_alter().
  */
 function da_vinci_js_alter(&$js) {
   $data = array();
@@ -107,14 +108,12 @@ function da_vinci_breadcrumb($variables) {
   if (!empty($breadcrumb)) {
     // Use CSS to hide titile .element-invisible.
     //$output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-    // comment below line to hide current page to breadcrumb
+    // comment below line to hide current page to breadcrumb.
     $breadcrumb[] = drupal_get_title();
     $output = '<nav class="breadcrumb">' . implode('<span class="breadcrumb_next"> » </span>', $breadcrumb) . '</nav>';
     return $output;
   }
 }
-
-     
 
 /**
  * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
