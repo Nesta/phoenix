@@ -12,7 +12,6 @@
  *
  * This will overwrite the default meta character type tag with HTML5 version.
  */
-
 function da_vinci_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8',
@@ -154,7 +153,7 @@ function da_vinci_menu_tree(&$variables) {
  * Insert viewport.
  */
 function da_vinci_page_alter($page) {
-  /* <meta name="viewport" content="width=device-width, 
+  /* <meta name="viewport" content="width=device-width,
    * initial-scale=1, maximum-scale=1"/>
    */
   $viewport = array(
@@ -162,7 +161,7 @@ function da_vinci_page_alter($page) {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'viewport',
-      'content' => 'width=device-width, user-scalable=no'
+      'content' => array('width=device-width, user-scalable=no')
     )
   );
   drupal_add_html_head($viewport, 'viewport');
