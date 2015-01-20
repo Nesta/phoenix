@@ -1,14 +1,15 @@
 /**
- * @file  
- * Modal output and behaviour 
+ * @file 
+ * Modal output and behaviour.
  *
  * @pre Style Guide Icon setting active
  * @pre style-guide Module installed
  * @pre User admin logged in
  *
- * We get the content of the style-guide module (through ajax) into the modal window, 
- * displaying a fixed icon at the right side. 
+ * We get the content of the style-guide module (through ajax) into the modal window,
+ * displaying a fixed icon at the right side.
  */
+
 (function ($) {
   $(document).ready(function () {
     /** 
