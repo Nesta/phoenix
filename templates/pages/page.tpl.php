@@ -77,7 +77,7 @@
 <section id="page">
   <?php if($page['top_bar']): ?>
     <nav class="top-bar" role="navigation">
-      <?php print render ($page['top_bar']); ?>
+      <?php print render($page['top_bar']); ?>
     </nav>
   <?php endif; ?>
 
