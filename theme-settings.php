@@ -8,7 +8,8 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * @param $form, $form_state
+ * @param $form
+ * @param $form_state
  *   The form and form state.
  */
 function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
@@ -26,7 +27,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('debug', 'da_vinci'),
     '#description'   => t("Check this option to show Grid Debug Button in page. Uncheck to hide. This will only be displayed if admin is logged."),
   );
-  
+
   $form['da_vinci_settings']['styleguide'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show Style Guide Icon'),
@@ -69,7 +70,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
 
   if (!(module_exists('styleguide') && module_exists('jquery_update'))) {
     $form['da_vinci_settings']['styleguide']['#value'] = 0;
-    $form['da_vinci_settings']['styleguide']['#disabled'] = true;
+    $form['da_vinci_settings']['styleguide']['#disabled'] = TRUE;
   }
 }
 
