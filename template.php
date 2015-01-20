@@ -13,6 +13,7 @@
  * This will overwrite the default meta character type tag with HTML5 version.
  *
  */
+
 function da_vinci_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8',
@@ -108,7 +109,7 @@ function da_vinci_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     // Use CSS to hide titile .element-invisible.
-    //$output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    // $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
     // comment below line to hide current page to breadcrumb.
     $breadcrumb[] = drupal_get_title();
     $output = '<nav class="breadcrumb">' . implode('<span class="breadcrumb_next"> » </span>', $breadcrumb) . '</nav>';
@@ -143,12 +144,18 @@ function da_vinci_menu_local_tasks(&$variables) {
   return $output;
 }
 
+/**
+ * Insert class menu and structure.
+ */
 function da_vinci_menu_tree(&$variables) {
   return '<ul class="menu">' . $variables['tree'] . '</ul>';
 }
 
+/**
+ * Insert viewport.
+ */
 function da_vinci_page_alter($page) {
-  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>.
   $viewport = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
@@ -160,7 +167,7 @@ function da_vinci_page_alter($page) {
   drupal_add_html_head($viewport, 'viewport');
 }
 
-//Preprocess 
+//Preprocess.
 require_once "preprocess/template.preprocess.html.php";
 require_once "preprocess/template.preprocess.page.php";
 require_once "preprocess/template.preprocess.node.php";
@@ -170,5 +177,5 @@ require_once "preprocess/template.preprocess.comment.php";
 require_once "preprocess/template.preprocess.region.php";
 require_once "preprocess/template.preprocess.user-profile.php";
 
-//Process
+//Process.
 require_once "process/template.process.html.php";
