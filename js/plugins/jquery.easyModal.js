@@ -1,7 +1,7 @@
 /**
- * easyModal.js v1.3.1
+ * EasyModal.js v1.3.1.
  * A minimal jQuery modal that works with your CSS.
- * Author: Flavius Matis - http://flaviusmatis.github.com/
+ * Author: Flavius Matis - http://flaviusmatis.github.com
  * URL: https://github.com/flaviusmatis/easyModal.js
  */
 
@@ -83,7 +83,7 @@
           $overlay.fadeIn();
 
           if (o.onOpen && typeof o.onOpen === 'function') {
-            // onOpen callback receives as argument the modal window
+            // onOpen callback receives as argument the modal window.
             o.onOpen($modal[0]);
           }
         });
@@ -93,12 +93,12 @@
           $overlay.fadeOut();
 
           if (o.onClose && typeof o.onClose === 'function') {
-            // onClose callback receives as argument the modal window
+            // onClose callback receives as argument the modal window.
             o.onClose($modal[0]);
           }
         });
 
-        // Close on overlay click
+        // Close on overlay click.
         $overlay.click(function () {
           if (o.overlayClose) {
             $modal.trigger('closeModal');
@@ -112,13 +112,13 @@
           }
         });
 
-        // Close when button pressed
+        // Close when button pressed.
         $modal.on('click', o.closeButtonClass, function (e) {
           $modal.trigger('closeModal');
           e.preventDefault();
         });
 
-        // Automatically open modal if option set
+        // Automatically open modal if option set.
         if (o.autoOpen) {
           $modal.trigger('openModal');
         }
@@ -130,7 +130,7 @@
 
   $.fn.easyModal = function (method) {
 
-    // Method calling logic
+    // Method calling logic.
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
     }
