@@ -2,14 +2,12 @@
 
 /**
  * @file
+ * @param $form: Nested array of form elements that comprise the form.
+ * @param $form_state: A keyed array containing the current state of the form.
  * Implements hook_form_FORM_ID_alter().
  *
  * Theme setting callbacks for the da_vinci theme.
- *
- * @param $form: Nested array of form elements that comprise the form.
- * @param $form_state: A keyed array containing the current state of the form.
  */
-
 function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['da_vinci_settings'] = array(
