@@ -1,6 +1,7 @@
 <?php
 /**
- * @file panels-pane.tpl.php
+ * @File panels-pane.tpl.php.
+ *
  * Main panel pane template
  *
  * Variables available:

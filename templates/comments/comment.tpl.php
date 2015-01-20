@@ -74,7 +74,7 @@
       <?php endif; ?>
 
       <p class="comment-time">
-        <?php //print $created; ?>
+        <?php /* print $created; */ ?>
         <?php print $created_ago; ?>
       </p>
       <?php if (isset($show_permalink)): ?>
