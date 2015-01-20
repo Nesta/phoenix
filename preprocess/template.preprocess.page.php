@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @file
  * Preproccess functions for Page.
@@ -17,8 +17,8 @@ function da_vinci_preprocess_page(&$vars) {
   if (isset($vars['node']->type)) {
     $vars['theme_hook_suggestions'][] = 'page__node__' . $vars['node']->type;
   }
-  
-  // Adding classes wether #navigation is here or not
+
+  // Adding classes wether #navigation is here or not.
   if (!empty($vars['main_menu']) or !empty($vars['sub_menu'])) {
     $vars['classes_array'][] = 'with-navigation';
   }
@@ -28,7 +28,7 @@ function da_vinci_preprocess_page(&$vars) {
   // Since the title and the shortcut link are both block level elements,
   // positioning them next to each other is much simpler with a wrapper div.
   if (!empty($vars['title_suffix']['add_or_remove_shortcut']) && $vars['title']) {
-    // Add a wrapper div using the title_prefix and title_suffix render elements.
+    // Add a wrapper div using the title_prefix & title_suffix render elements.
     $vars['title_prefix']['shortcut_wrapper'] = array(
       '#markup' => '<div class="shortcut-wrapper clearfix">',
       '#weight' => 100,
