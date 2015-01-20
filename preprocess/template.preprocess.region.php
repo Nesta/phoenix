@@ -3,6 +3,7 @@
  * @file
  * Preproccess functions for Regions.
  */
+
 /**
  * Implement template_preprocess_block().
  */
