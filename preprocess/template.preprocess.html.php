@@ -62,7 +62,6 @@ function da_vinci_preprocess_html(&$vars) {
   $section = array_shift($temp);
   $page_name = array_shift($temp);
 
-
   // Add template suggestions.
   $vars['theme_hook_suggestions'][] = "page__section__" . $section;
   $vars['theme_hook_suggestions'][] = "page__" . $page_name;
