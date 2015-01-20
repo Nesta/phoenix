@@ -1,8 +1,9 @@
 /**
- * EasyModal.js v1.3.1.
+ * EasyModal.js v1.3.1 .
  * A minimal jQuery modal that works with your CSS.
  * Author: Flavius Matis - http://flaviusmatis.github.com
  * URL: https://github.com/flaviusmatis/easyModal.js
+ *
  */
 
 /*jslint browser: true*/
@@ -106,7 +107,7 @@
         });
 
         $(document).keydown(function (e) {
-          // ESCAPE key pressed
+          // ESCAPE key pressed.
           if (o.closeOnEscape && e.keyCode === 27) {
             $modal.trigger('closeModal');
           }
