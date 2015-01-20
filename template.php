@@ -161,7 +161,7 @@ function da_vinci_page_alter($page) {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'viewport',
-      'content' => array('width=device-width, user-scalable=no')
+      'content' => 'width=device-width, user-scalable=no'
     )
   );
   drupal_add_html_head($viewport, 'viewport');
