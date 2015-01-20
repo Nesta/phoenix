@@ -27,7 +27,7 @@
       },
       attach: function(id,url,fire){
         p=this;
-        $('#'+id+' .modal-content').easyModal();
+        $('#' + id + ' .modal-content').easyModal();
         $(fire).on('click',function(e){
           p.onClick(id,url,e);
         });
@@ -39,12 +39,12 @@
       },
       load: function(id,url){
         $.get(url).then(function(data){
-          $('#'+id+' .modal-content').html($("#block-system-main",data));
-          $('#'+id+' .modal-content').css({'top':'10%','left':'10%','width':'80%','height':'80%','overflow-y':'auto','margin-left':'1px','margin-top':'1px'});
+          $('#' + id + ' .modal-content').html($("#block-system-main",data));
+          $('#' + id + ' .modal-content').css({'top':'10%','left':'10%','width':'80%','height':'80%','overflow-y':'auto','margin-left':'1px','margin-top':'1px'});
         });
       },
       open: function(id){
-        $('#'+id+' .modal-content').trigger('openModal');
+        $('#' + id + ' .modal-content').trigger('openModal');
       }
     };
     var style_guide_modal = da_vinci_modal.init('style-guide-modal','?q=/admin/appearance/styleguide/da_vinci','.style-guide-modal-fire');
