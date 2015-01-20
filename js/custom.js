@@ -1,6 +1,7 @@
 /**
  * @file
  * Custom output of the javascript behaviour.
+ *
  */
 (function ($) {
   Drupal.behaviors.da_vinciTheme = {
@@ -27,24 +28,24 @@
       };
       if(isMobile.any()){
         slidingMenu = $('#navigation').html();
-        $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content">'+ slidingMenu +'</nav><div class="js-menu-screen menu-screen"></div>');
+        $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content">' + slidingMenu + '</nav><div class="js-menu-screen menu-screen"></div>');
       }
       $('.js-menu-trigger,.js-menu-screen', context).once('mainMenu', function () {
         $(this).click(function () {
           $('.js-menu,.js-menu-screen').toggleClass('is-visible');
         });
       });
-      // On click: add class 'hide' to hide message wrapper unless the user is admin
+      // On click: add class 'hide' to hide message wrapper unless the user is admin.
       $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');});
-      // Show back to top button
+      // Show back to top button.
       $(window).scroll(function() {
-        if ($(window).scrollTop() < $(window).height()*2) {
+        if ($(window).scrollTop() < $(window).height() * 2) {
           $('.backtotop').removeClass('active');
         } else {
           $('.backtotop').addClass('active');
         }
       });
-      // Back to top click event
+      // Back to top click event.
       $(".backtotop").click(function(e) {
         e.preventDefault();
         $('body').animate({
