@@ -11,7 +11,6 @@
  * Implements html_head_alter().
  *
  * This will overwrite the default meta character type tag with HTML5 version.
- *
  */
 
 function da_vinci_html_head_alter(&$head_elements) {
@@ -155,7 +154,9 @@ function da_vinci_menu_tree(&$variables) {
  * Insert viewport.
  */
 function da_vinci_page_alter($page) {
-  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>.
+  /* <meta name="viewport" content="width=device-width, 
+   * initial-scale=1, maximum-scale=1"/>
+   */
   $viewport = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
@@ -167,7 +168,7 @@ function da_vinci_page_alter($page) {
   drupal_add_html_head($viewport, 'viewport');
 }
 
-//Preprocess.
+// Preprocess.
 require_once "preprocess/template.preprocess.html.php";
 require_once "preprocess/template.preprocess.page.php";
 require_once "preprocess/template.preprocess.node.php";
@@ -177,5 +178,5 @@ require_once "preprocess/template.preprocess.comment.php";
 require_once "preprocess/template.preprocess.region.php";
 require_once "preprocess/template.preprocess.user-profile.php";
 
-//Process.
+// Process.
 require_once "process/template.process.html.php";
