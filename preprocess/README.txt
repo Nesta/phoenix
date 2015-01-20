@@ -1,6 +1,6 @@
 PREPROCESS:
 ===========
-Throught the preprocess we can define functions with the goal of realize changes that can alter the behavior by default of our Drupal before render our page.
+Thought the preprocess we can define functions with the goal of realize changes that can alter the behavior by default of our Drupal before render our page.
 
 For see more about functions in the theme, see the Readme.txt in Process folder.
 

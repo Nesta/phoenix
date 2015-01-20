@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Proccess functions for HTML.
+ * Process functions for HTML.
  */
 /**
  * Implements template_process_html().

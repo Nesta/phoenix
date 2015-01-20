@@ -37,7 +37,7 @@
 	 		|
 	 		| Utilities: 
 	 		============
-      This directory contains the variables, extends, mixins... that can be usefull when personalizing our styles.
+      This directory contains the variables, extends, mixins... that can be useful when personalizing our styles.
 
 	====================================================================================================
 
