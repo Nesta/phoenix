@@ -10,7 +10,7 @@
  * jslint browser: true
  * global jQuery
  *
-*/
+ */
 (function ($) {
   "use strict";
   var methods = {
