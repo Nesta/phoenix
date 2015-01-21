@@ -4,14 +4,18 @@ CSS:
 DON'T TOUCH ME !!!!
 
 In this folder are the compiled styles of our theme.
-Any change of styles o the creation of new files can make from the folder 'Sass > partials'.
+Any change of styles o the creation of new files can make from the folder
+'Sass > partials'.
+
 Read README in 'Sass'.
 
 
 main.css & libs.css:
 ====================== 
 
-Are the compiled files 'main.sass' and 'libs.sass' processed in a .css extension. They will be the final files included in 'da_vinci.info'.
+Are the compiled files 'main.sass' and 'libs.sass' processed 
+in a .css extension. They will be the final files 
+included in 'da_vinci.info'.
 
 Chronology compilation:
 =======================
@@ -36,13 +40,17 @@ CSS:
 ¡¡¡ NO MODIFICAR !!!!
 
 En esta carpeta se recogen los estilos compilados de nuestro tema.
-Cualquier cambio de estilos o creación de nuevos ficheros se hará desde la carpeta 'Sass > partials'. 
+Cualquier cambio de estilos o creación de nuevos ficheros se hará
+desde la carpeta 'Sass > partials'. 
+
 Leer README en 'Sass'.
 
 
 main.css & libs.css:
 ====================== 
-Son los ficheros compilados 'main.sass' y 'libs.sass' transformados a extensión .css y que serán los archivos finales incluidos en 'da_vinci.info'.
+Son los ficheros compilados 'main.sass' y 'libs.sass'
+transformados a extensión .css y que serán los archivos
+finales incluidos en 'da_vinci.info'.
 
 
 Cronología de compilación:
