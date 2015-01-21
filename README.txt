@@ -1,5 +1,5 @@
-About Da Vinci
-====================
+INTRODUCTION
+------------
 Da Vinci is a Drupal 7 theme. The theme is not dependent on any 
 core theme. Its very light weight for fast loading with modern look.
   Simple and clean design
@@ -8,39 +8,9 @@ core theme. Its very light weight for fast loading with modern look.
   Browser selector
   sass & compass
 
-
-Drupal compatibility:
-=====================
-This theme is compatible with Drupal 7.x.x
-
-Developed by
-============
-
-Help and Support Us
-=====================
-
-
--- phpMyAdmin SQL Dump
--- version 4.1.12
--- http://www.phpmyadmin.net
---
--- Servidor: localhost:8889
--- Tiempo de generación: 03-12-2014 a las 20:08:18
--- Versión del servidor: 5.5.34
--- Versión de PHP: 5.4.26
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
---
--- Base de datos: `davinci`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `styleguide_palette_swatch`
---
+REQUIREMENTS (Optional)
+------------
+Add sql script into table in styleguide module:
 
 CREATE TABLE `styleguide_palette_swatch` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The primary identifier for the swatch.',
@@ -50,10 +20,6 @@ CREATE TABLE `styleguide_palette_swatch` (
   `theme` varchar(64) NOT NULL DEFAULT '' COMMENT 'The theme the palette is used for.',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Stores color palette swatch data.' AUTO_INCREMENT=32 ;
-
---
--- Volcado de datos para la tabla `styleguide_palette_swatch`
---
 
 INSERT INTO `styleguide_palette_swatch` (`id`, `name`, `description`, `hex`, `theme`) VALUES
 (18, '$white', 'Basic colour', '#FFFFFF', 'da_vinci'),
@@ -69,3 +35,17 @@ INSERT INTO `styleguide_palette_swatch` (`id`, `name`, `description`, `hex`, `th
 (28, '$light-beige', 'Secondary colour', '#EEEADD', 'da_vinci'),
 (29, '$red-error', 'Basic colour', '#A33737', 'da_vinci'),
 (31, '$dark-green', 'Primary colour', '#80A18D', 'da_vinci');
+
+
+CONFIGURATION
+------------
+This theme is compatible with Drupal 7.x.x
+
+USAGE
+------------
+Easy and Fast.
+
+MAINTAINERS
+-----------
+Current maintainers:
+ * Nesta Guerrero (nguerrero) - https://www.drupal.org/u/nguerrero
