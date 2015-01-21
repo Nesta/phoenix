@@ -80,7 +80,8 @@ Contiene tanto las librerias como los plugins js necesarios.
   masonry-view.js:
   ================
   Funciones para el metodo remove de masonry, si queremos implementar el scroll
-  infinito necesitamos instalar el modulo "views_infinite_scroll" y el "autopager".
+  infinito necesitamos instalar el modulo "views_infinite_scroll" 
+  y el "autopager".
 
 	modales.js
 	===========
