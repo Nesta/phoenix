@@ -7,7 +7,6 @@
 /**
  * Implements template_preprocess_node().
  */
-
 function da_vinci_preprocess_node(&$vars) {
 
   if ($vars['view_mode'] == 'full' && node_is_page($vars['node'])) {

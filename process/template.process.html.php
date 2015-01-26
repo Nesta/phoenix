@@ -1,15 +1,17 @@
 <?php
 /**
  * @file
- * Proccess functions for HTML.
+ * Process functions for HTML.
  */
+
 /**
  * Implements template_process_html().
  */
 function da_vinci_process_html(&$vars) {
-  if (theme_get_setting('debug') && user_access('administer content')){
+  if (theme_get_setting('debug') && user_access('administer content')) {
     $vars['html_classes'] = implode(' ', $vars['html_classes']);
-  }else{
+  }
+  else {
     $vars['html_classes'] = '';
   }
 }

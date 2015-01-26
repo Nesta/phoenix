@@ -2,7 +2,7 @@
 
 /**
  * @file
- * touch theme implementation to display a block.
+ * Touch theme implementation to display a block.
  *
  * Available variables:
  * - $block->subject: Block title.

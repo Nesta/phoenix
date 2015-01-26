@@ -1,6 +1,9 @@
 <?php
+
 /**
- * @file panels-pane.tpl.php
+ * @file
+ * Default theme implementation to display the basic html structure of a single.
+ *
  * Main panel pane template
  *
  * Variables available:

@@ -91,7 +91,7 @@
 
     <?php if($display_submitted): ?>
       <div class="submitted clearfix">
-        <p><?php print t('Posted on '); ?><strong><?php print $date; ?></strong><?php print t(' by '); ?><strong><?php print $name; ?></strong></p>
+        <p><?php print t('Posted on'); ?> <strong><?php print $date; ?></strong> <?php print t('by'); ?> <strong><?php print $name; ?></strong></p>
       </div>
     <?php endif; ?>
   <?php if(!$page): ?>

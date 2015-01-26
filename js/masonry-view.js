@@ -10,6 +10,7 @@
  *
  * With our functions, the contents will taking the place of the previous deleted content.
  */
+
 (function ($) {
   Drupal.behaviors.da_vinciThemeMasonry = {
     attach: function (context) {
@@ -18,7 +19,7 @@
         itemSelector: '.views-row',
         columnWidth: '.views-row'
       });
-      imagesLoaded(container, function(){msnry.layout();}); 
+      imagesLoaded(container, function(){msnry.layout();});
       eventie.bind(container, 'click', function (event) {
         if (!classie.has(event.target, 'close')) {
           return;
@@ -26,7 +27,7 @@
         msnry.remove($(event.target).closest('.views-row'));
         msnry.layout();
       });
-    // Add Close element to "Masonry" article
+    // Add Close element to "Masonry" article.
     $('.view-masonry .node-article').append('<span class="close">close</span>');
     }
   }
