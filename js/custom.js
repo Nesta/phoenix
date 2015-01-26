@@ -35,6 +35,8 @@
           $('.js-menu,.js-menu-screen').toggleClass('is-visible');
         });
       });
+      // Add Class Krumo-messages and remove styles for messages when dpm is active.
+      $('.messages .krumo-root').closest('.messages').removeClass('messages status').addClass('krumo-messages');
       // On click: add class 'hide' to hide message wrapper unless the user is admin.
       $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');});
       // Show back to top button.
