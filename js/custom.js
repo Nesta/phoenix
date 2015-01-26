@@ -53,6 +53,12 @@
         }, 500);
         return false;
       });
-    }
+      // Footer height
+      footerpush=function(){
+        var footerHeight = $('.site-footer').outerHeight()+50;
+        $('#page #main-content').css('padding-bottom', footerHeight + 'px');
+      };
+      footerpush();
+      $(window).resize(footerpush);
   }
-})(jQuery);
+}} )(jQuery);
