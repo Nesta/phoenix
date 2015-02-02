@@ -10,10 +10,12 @@
 $chosen-sprite: image-url("chosen/chosen-sprite.png") !default
 $chosen-sprite-retina: image-url("chosen/chosen-sprite@2x.png") !default
 
-/* @group Base
+/* @group Base - Fixed &.chosen-container
 .chosen-container
+  &.chosen-container
+    display: inline-block
+    min-width: 200px
   position: relative
-  display: inline-block
   vertical-align: middle
   font-size: 13px
   zoom: 1
@@ -35,7 +37,6 @@ $chosen-sprite-retina: image-url("chosen/chosen-sprite@2x.png") !default
     left: 0
   a
     cursor: pointer
-
 /* @end
 
 /* @group Single Chosen
