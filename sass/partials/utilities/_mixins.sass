@@ -34,11 +34,12 @@
 /**
  *  Tag base style
  */
+
 =tags()
-  background: $lightest-green
+  background: $background-tags
   +border-radius(8px)
-  border: 1px solid $beige
-  color: $black
+  border: 1px solid $border-tags
+  color: $color-tags
   display: block
   float: left
   font-size: 12px
@@ -49,11 +50,11 @@
   text-transform: uppercase
   white-space: nowrap
   &.active
-    background: $green
-    color: $white
+    background: $background-tags-active
+    color: $color-tags-active
     font-weight: 700
     &:hover
-      color: $gray
+      color: $color-tags-active-hover
   &:last-child
     margin-right: 0
   &:before
@@ -64,18 +65,18 @@
     top: -1px
     width: 12px
   &:hover
-    background-color: $light-green
-    border: 1px solid $green
+    background-color: $background-tags-hover
+    border: 1px solid $border-tags-hover
     border-left: 0
-    color: $white
+    color: $color-tags-hover
     text-decoration: none
 /**
  *  Generic Button style
  */
-=button($bgcolor: $light-green)
+=button($bgcolor: $background-button-parameter)
   background-color: $bgcolor
   border: 0
-  color: $white
+  color: $color-button-mixin
   font-size: 14px
   font-weight: normal
   padding: 10px
@@ -91,14 +92,14 @@
 /**
  *  Generic Icon Button style
  */
-=button-icon($bgcolor: $light-green, $icon: 'close.png')
+=button-icon($bgcolor: $background-button-parameter, $icon: 'close.png')
   +button($bgcolor)
   background-image: image-url($icon)
   background-repeat: no-repeat
   background-position: 10px center
   padding-left: 38px
   a
-    color: $white
+    color: $color-button-icon-a
 /**
  *  Text Vertical alignment
  *  @pre  The container element must have a fixed height.
@@ -143,7 +144,8 @@
  *  @param $overlay-color; 
  *  @param $opacity;
  */
-=hover-info($overlay-color: #000, $opacity: 0.8)
+
+=hover-info($overlay-color: $background-info-parameter, $opacity: 0.8)
   position: relative
   .hover
     +box-sizing(border-box)
@@ -164,7 +166,7 @@
       left: 0
       top: 0
   .show-info
-    background-color: rgba($proyect-blue, $opacity)
+    background-color: rgba($background-show-info, $opacity)
     visibility: visible
 /**
  *  Media Object styles
@@ -189,7 +191,7 @@
  *  @param $color; initial color
  *  @param $n; number of childs are expected to degrade color
  */
-=degrading($color:black,$n:5)
+=degrading($color:$color-degrading-parameter,$n:5)
   @for $i from 1 through $n
     &:nth-child(#{$i})
       background-color: lighten($color, $i*10)
