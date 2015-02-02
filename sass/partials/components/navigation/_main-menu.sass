@@ -3,7 +3,7 @@
  *  Main menu navigation styles
  */
 #navigation
-  background-color: $dark-beige
+  background-color: $background-menu
   padding-top: 10px
   h2
     @extend .hide-modern
@@ -18,20 +18,20 @@
         margin-right: 0
       a
         display: block
-        color: $gray
+        color: $color-menu-a
         padding: 0 .9em
         height: 35px
-        border-bottom: 0 solid $gray
+        border-bottom: 0 solid $border-menu-a
         line-height: 2.2em
         +border-radius(4px)
         +transition(color .4s, border-bottom .4s .1s)
         &:hover
-          border-bottom: 35px solid $gray
-          color: $dark-green
+          border-bottom: 35px solid $border-menu-a-hover-active
+          color: $color-menu-a-hover-active
           +transition(color .4s .2s, border-bottom .4s)
         &.active
-          border-bottom: 35px solid $gray
-          color: $dark-green
+          border-bottom: 35px solid $border-menu-a-hover-active
+          color: $color-menu-a-hover-active
     &#main-menu,
     &#secondary-menu
       @extend .hidden-tablet

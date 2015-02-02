@@ -16,7 +16,7 @@ body
   font-weight: 400
   line-height: 1.2
 #page
-  background: $color-page-bg
+  background: $background-page
   min-height: 100%
   position: relative
 .main-content
@@ -47,13 +47,13 @@ a
   position: relative
   text-align: center
   .page-title
-    color: $color-title
-    background: $color-title-bg
+    color: $color-page-title
+    background: $background-page-title
     display: inline-block
     padding: 0 1em
     position: relative
   &:before
-    border-top: 2px dashed $color-title-border
+    border-top: 2px dashed $border-page-title
     content: ''
     display: block
     top: 23px
@@ -73,13 +73,13 @@ input,
 select,
 textarea
   +border-radius(5px)
-  background: $color-form-bg
-  border: 1px solid $color-form-border
+  background: $background-form-element
+  border: 1px solid $border-form-element 
   font-size: 0.9em
   max-width: 100%
   padding: 0.4em 0.8em
   &.error
-    border: 1px solid $color-form-error-border
+    border: 1px solid $border-form-error
 label
   color: $color-label
   font-size: 0.9em

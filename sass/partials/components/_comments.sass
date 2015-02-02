@@ -2,10 +2,11 @@
  *  @file
  *  Comments styles
  */
+ 
 #comments
   margin-top: +gutter(4)
   .title
-    color: $green
+    color: $color-comment-title
     display: inline-block
     font-weight: normal
 .comments-count
@@ -18,10 +19,10 @@
   width: 42px
   height: 40px
   display: inline-block
-  color: $white
+  color: $color-count
 .comment
   .attribution
-    border-top: 1px solid $light-beige
+    border-top: 1px solid $color-attribution-border
     padding:  5px
     margin-top: 5px
     margin-bottom: 5px
@@ -31,7 +32,7 @@
       margin-right: 1em
     .comment-submitted
       p
-        color: $dark-beige
+        color: $color-submitted
         font-size: 0.9em
       .commenter-name
         float: left
@@ -42,22 +43,22 @@
     ul.links
       text-align: right
       float: right
-      border-top: 1px dotted $green
+      border-top: 1px dotted $color-comment-links-border
       width: 60%
   // Icon of a new comment
-  .new
-    +border-radius(5px)
-    background: $green
-    color: $gray
-    float: right
-    font-size: 0.8em
-    margin-left: 0.5em
-    padding: 0.2em 0.5em
-    text-transform: uppercase
-.new-comment
-  display: inline-block
-  float: right
-  a
-    @extend .button
-    &:hover
-      color: $white
+  //.new
+    //+border-radius(5px)
+    //background: $green
+    //color: $gray
+    //float: right
+    //font-size: 0.8em
+    //margin-left: 0.5em
+    //padding: 0.2em 0.5em
+    //text-transform: uppercase
+//.new-comment
+  //display: inline-block
+  //float: right
+  //a
+    //@extend .button
+    //&:hover
+      //color: $white
