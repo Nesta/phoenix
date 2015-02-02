@@ -13,11 +13,14 @@
     +transition(right 1s ease-in-out 0)
   a
     // Debe ser una imagen de fondo completa, sin padding
-    background: image-url('backtotop.png') center center no-repeat $green
+    background: $background-backtotop
     display: block
     padding: 18px 20px
-    color: $white
+    color: $color-backtotop
     +border-radius(8px)
     @extend .hide-modern
     &:hover
-      background-color: $dark-green
+      background-color: $color-backtotop-hover
+$background-backtotop: image-url('backtotop.png') center center no-repeat $green
+$color-backtotop: $white
+$color-backtotop-hover: $dark-green

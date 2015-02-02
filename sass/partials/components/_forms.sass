@@ -36,7 +36,7 @@ tr.even .form-item.shs-wrapper-processed
     font-weight: bold
     font-size: 15px
     &:hover
-      background: $light-green
+      background: $background-confirmation
   #edit-submit
     +no-icon(10px)
 // Contact form module
@@ -62,9 +62,12 @@ tr.even .form-item.shs-wrapper-processed
       opacity: 0.2
       cursor: default
       &:hover
-        background: $light-green
+        background: $background-loading-layer
         cursor: default
 #user-login-form
   .item-list
     li
       margin: 0
+
+$background-loading-layer: $light-green
+$background-confirmation: $light-green
