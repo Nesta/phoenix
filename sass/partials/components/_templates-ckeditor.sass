@@ -1,17 +1,22 @@
+// -- CKeditor --
+$color-template: $black
+$color-template-header: $green
+$color-template-span: $black
+
 /**
  *  @file
  *  CKEditor templates styles
  */
 .template
   overflow: hidden
-  color: $black
+  color: $color-template
   font-size: 15px
   font-weight: normal
   margin: 15px 0
   line-height: 1.6em
   h1, h2, h3, h4, h5, h6
     font-weight: 700
-    color: $green
+    color: $color-template-header
   h1, h2, h3
     font-size: 18px
   h4, h5, h6
@@ -21,7 +26,7 @@
   p
     margin-bottom: 1em
   span
-    color: $black
+    color: $color-template-span
   // Image Left & Image Right
   &.image-left
     .image-description
