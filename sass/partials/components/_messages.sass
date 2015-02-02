@@ -14,7 +14,7 @@
     opacity: 0.7
     padding: 0
     cursor: pointer
-    color: $white
+    color: $color-message
     border-width: 1px
     z-index: 99
     .container
@@ -27,28 +27,28 @@
           list-style: none
       a
         text-decoration: underline
-        color: $white
+        color: $color-message-a
         font-weight: bold
   // Specific style
   &.error
-    background: $red-error
-    border-color: darken($red-error, 10%)
+    background: $background-message-error
+    border-color: darken($border-message-error, 10%)
     .container
       background: image-url('ico-error.png') 0% 50% no-repeat
   &.warning
-    background: $warning
-    border-color: darken($warning, 10%)
+    background: $background-message-warning
+    border-color: darken($border-message-warning, 10%)
     .container
       background: image-url('ico-info.png') 0% 50% no-repeat
   &.status
-    background: $green
-    border-color: darken($green, 10)
+    background: $background-message-status
+    border-color: darken($border-message-status, 10)
     .container
       background: image-url('ico-success.png') 0% 50% no-repeat
 .krumo-messages
   &>pre
-    border: 1px solid black
+    border: 1px solid $border-dpm
     padding: 1em
-    background-color: #FADB61
+    background-color: $background-dpm
     overflow: hidden
     white-space: pre-wrap
