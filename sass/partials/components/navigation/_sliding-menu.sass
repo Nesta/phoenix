@@ -22,7 +22,7 @@
     +size(160px 100%)
     +transform(translateX(-220px))
     +transition(all 0.25s linear)
-    background: $gray
+    background: $background-sliding-menu-content
     z-index: 999999
     opacity: 0.95
     padding-top: 20px
@@ -31,7 +31,7 @@
 .menu-screen
   +position(fixed, 0px 0px 0px 0px)
   +transition
-  background: $green
+  background: $backrgound-menu-screen
   opacity: 0
   visibility: hidden
   z-index: 9
@@ -39,3 +39,6 @@
     opacity: .4
     visibility: visible
 // Based on code by Diego Eis
+$background-menu-screen: $green
+$background-sliding-menu-content: $gray
+
