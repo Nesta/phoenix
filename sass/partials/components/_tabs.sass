@@ -6,30 +6,46 @@
 .nav-tabs.nav
   margin: 0 0 1px 0
   border-width: 0
+  padding-left: 0
   +breakpoint($tablet)
     +span(9 of 12 last)
     float: none
+    padding-left: 1.5em
   li
-    display: inline-block
-    margin-bottom: 0
+    display: block
+    margin-bottom: 5px
+    +breakpoint($tablet)
+      display: inline-block
+      margin-bottom: 0
     a
-      +border-radius(4px 4px 0 0)
-      border-color: $green
-      color: $white
-      background-color: $green
+      border-color: $white
+      color: $green
+      background-color: $white
       display: block
       font-size: .8em
       margin-bottom: -1px
       padding: .5em 1em
       text-transform: uppercase
+      +breakpoint($tablet)
+        +border-radius(4px 4px 0 0)
+        background-color: $green
+        border-color: $green
+        color: $white
       &:hover
         color: $green
         background-color: $white
         border-color: $green
+        border-style: solid
+        +breakpoint($tablet)
+          border-style: solid solid none solid
   li.active
     a
-      color: $green
-      background-color: $white
-      border-style: solid solid none solid
+      color: $white
+      background-color: $green
+      border-style: solid
       border-color: $green
       cursor: default
+      +breakpoint($tablet)
+        color: $green
+        background-color: $white
+        border-style: solid solid none solid
