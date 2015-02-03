@@ -46,19 +46,19 @@
       border-top: 1px dotted $border-comment-links
       width: 60%
   // Icon of a new comment
-  //.new
-    //+border-radius(5px)
-    //background: $green
-    //color: $gray
-    //float: right
-    //font-size: 0.8em
-    //margin-left: 0.5em
-    //padding: 0.2em 0.5em
-    //text-transform: uppercase
-//.new-comment
-  //display: inline-block
-  //float: right
-  //a
-    //@extend .button
-    //&:hover
-      //color: $white
+  .new
+    +border-radius(5px)
+    background: $background-comment-new
+    color: $color-comment-new
+    float: right
+    font-size: 0.8em
+    margin-left: 0.5em
+    padding: 0.2em 0.5em
+    text-transform: uppercase
+.new-comment
+  display: inline-block
+  float: right
+  a
+    @extend .button
+    &:hover
+      color: $color-new-comment-a-hover   
