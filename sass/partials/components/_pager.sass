@@ -7,14 +7,14 @@
     li
       padding: 0
       &.pager-current
-        color: $black
+        color: $color-pager-current
       &.pager-first,
       &.pager-last
         a
           +transition(all 0.2s ease-in-out)
           padding: 5px 10px
-          background-color: $green
-          color: $white
+          background-color: $background-pager-first-last
+          color: $color-pager-first-last-a
           +border-radius(5px)
           &:hover
-            background-color: $dark-green
+            background-color: $background-pager-first-last-hover

@@ -19,9 +19,9 @@
         +breakpoint($desk)
           width: 33%
         .node-article
-          border-bottom: 3px solid $beige
-          background-color: $white
-          +box-shadow(5px 0px 16px -9px $black)
+          border-bottom: 3px solid $border-masonry-article
+          background-color: $background-masonry-article
+          +box-shadow(5px 0px 16px -9px $shadow-masonry-article)
           padding: 5px 10px 20px 10px
           margin: 0 15px 25px 0
           position: relative
@@ -37,7 +37,7 @@
               top: 0
               right: 0
               background: image-url('close.png') center no-repeat
-              background-color: $green
+              background-color: $background-masonry-close
               width: 16px
               height: 16px
               padding: 11px
@@ -45,7 +45,7 @@
               @extend .hide-modern
               +transition(all .3s)
               &:hover
-                background-color: $dark-green
+                background-color: $background-masonry-close-hover
                 +transition(all .3s)
           .field-type-image
             float: none
@@ -58,7 +58,7 @@
                 font-size: 14px
                 margin-top: 15px
                 text-align: center
-                border-top: 1px solid $green
+                border-top: 1px solid $border-masonry-forbidden
                 padding-top: 5px
               > a
                 display: block

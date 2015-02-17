@@ -18,9 +18,9 @@
       display: inline-block
       margin-bottom: 0
     a
-      border-color: $white
-      color: $green
-      background-color: $white
+      background-color: $background-tabs-element
+      border-color: $border-tabs-element
+      color: $color-tabs-element
       display: block
       font-size: .8em
       margin-bottom: -1px
@@ -28,24 +28,24 @@
       text-transform: uppercase
       +breakpoint($tablet)
         +border-radius(4px 4px 0 0)
-        background-color: $green
-        border-color: $green
-        color: $white
+        background-color: $background-tabs-element-tablet
+        border-color: $border-tabs-element-tablet
+        color: $color-tabs-element-tablet
       &:hover
-        color: $green
-        background-color: $white
-        border-color: $green
+        background-color: $background-tabs-element-tablet-hover
+        border-color: $border-tabs-element-tablet-hover
+        color: $color-tabs-element-tablet-hover
         border-style: solid
         +breakpoint($tablet)
           border-style: solid solid none solid
   li.active
     a
-      color: $white
-      background-color: $green
+      background-color: $background-tabs-element-tablet
+      border-color: $border-tabs-element-tablet
+      color: $color-tabs-element-active
       border-style: solid
-      border-color: $green
       cursor: default
       +breakpoint($tablet)
-        color: $green
-        background-color: $white
+        color: $color-tabs-element-hover
+        background-color: $background-tabs-element-hover
         border-style: solid solid none solid
