@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess_node().
+ * Implements da_vinci_preprocess_node().
  */
 function da_vinci_preprocess_node(&$vars) {
 

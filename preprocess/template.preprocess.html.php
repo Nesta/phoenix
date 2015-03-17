@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess_html().
+ * Implements da_vinci_preprocess_html().
  */
 function da_vinci_preprocess_html(&$vars) {
   if (isset($vars['node'])) {

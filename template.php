@@ -20,7 +20,7 @@ function da_vinci_html_head_alter(&$head_elements) {
 }
 
 /**
- * Implements hook_status_messages().
+ * Implements da_vinci_status_messages().
  */
 function da_vinci_status_messages($variables) {
   $display = $variables['display'];
@@ -54,7 +54,7 @@ function da_vinci_status_messages($variables) {
 }
 
 /**
- * Implements hook_css_alter().
+ * Implements da_vinci_css_alter().
  */
 function da_vinci_css_alter(&$css) {
   $data = array();
@@ -77,7 +77,7 @@ function da_vinci_css_alter(&$css) {
 }
 
 /**
- * Implements hook_js_alter().
+ * Implements da_vinci_js_alter().
  */
 function da_vinci_js_alter(&$js) {
   $data = array();

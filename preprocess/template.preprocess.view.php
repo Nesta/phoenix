@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess_views_view().
+ * Implements da_vinci_preprocess_views_view().
  */
 function da_vinci_preprocess_views_view(&$vars) {
   if ($vars['view']->name == 'masonry') {

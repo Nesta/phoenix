@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess_page().
+ * Implements da_vinci_preprocess_page().
  */
 function da_vinci_preprocess_page(&$vars) {
 

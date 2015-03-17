@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess_block().
+ * Implements da_vinci_preprocess_block().
  */
 function da_vinci_preprocess_block(&$vars) {
   $block = & $vars['block'];

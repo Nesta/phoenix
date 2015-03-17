@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements preprocess_comment().
+ * Implements da_vinci_preprocess_comment().
  */
 function da_vinci_preprocess_comment(&$vars) {
   // Overridden comment created data with time ago:
