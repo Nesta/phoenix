@@ -12,11 +12,6 @@ function da_vinci_preprocess_html(&$vars) {
     // For full nodes.
     $vars['classes_array'][] = ($vars['node']) ? 'full-node' : '';
     // For forums.
-    $vars['classes_array'][] = (($vars['node']->type == 'forum') || (arg(0) == 'forum')) ? 'forum' : '';
-  }
-  else {
-    // Forums.
-    $vars['classes_array'][] = (arg(0) == 'forum') ? 'forum' : '';
   }
   if (module_exists('panels') && function_exists('panels_get_current_page_display')) {
     $vars['classes_array'][] = (panels_get_current_page_display()) ? 'panels' : '';
@@ -66,26 +61,4 @@ function da_vinci_preprocess_html(&$vars) {
   $vars['theme_hook_suggestions'][] = "page__section__" . $section;
   $vars['theme_hook_suggestions'][] = "page__" . $page_name;
 
-  if (arg(0) == 'node') {
-    if (arg(1) == 'add') {
-      if ($section == 'node') {
-        // Remove 'section-node'.
-        array_pop($vars['classes_array']);
-      }
-      // Add 'section-node-add'.
-      $vars['classes_array'][] = 'section-node-add';
-    }
-    elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-      if ($section == 'node') {
-        // Remove 'section-node'.
-        array_pop($vars['classes_array']);
-      }
-      // Add 'section-node-edit' or 'section-node-delete'.
-      $vars['classes_array'][] = 'section-node-' . arg(2);
-    }
-  }
-
-  if (arg(0) == 'user' || arg(0) == 'users') {
-    array_push($vars['classes_array'], 'page-user-view');
-  }
 }
