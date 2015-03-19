@@ -36,9 +36,12 @@
         });
       });
       // Add Class Krumo-messages and remove styles for messages when dpm is active.
-      if($('.messages .krumo-root').parents('.messages').find('.container>ul>li').length>1) $('#main-content').prepend($('.messages .krumo-root').parents('li').addClass('krumo-messages'));
-      else $('.messages .krumo-root').parents('.messages').removeClass('messages status').addClass('krumo-messages');
-      if($('.messages .container pre').length) $('#main-content').prepend($('.messages .container pre').wrap('<div class="krumo-messages"></div>').closest('div.krumo-messages'));
+      if ($('.messages .krumo-root').parents('.messages').find('.container > ul > li').length>1) 
+        $('#main-content').prepend($('.messages .krumo-root').parents('li').addClass('krumo-messages'));
+      else 
+        $('.messages .krumo-root').parents('.messages').removeClass('messages status').addClass('krumo-messages');
+      if($('.messages .container pre').length) 
+        $('#main-content').prepend($('.messages .container pre').wrap('<div class="krumo-messages"></div>').closest('div.krumo-messages'));
       // On click: add class 'hide' to hide message wrapper unless the user is admin.
       $('.messages').not($('.admin .messages')).click(function() {$(this).addClass('hide');});
       // Show back to top button.
