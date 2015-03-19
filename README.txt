@@ -5,7 +5,9 @@ Da Vinci uses the jQuery plugin's.
 
 -- INSTALLATION --
 
-  1. Download the Plugin's (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) and extract the file under sites/all/libraries.
+  1. Download the Plugin's 
+     (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) 
+     and extract the file under sites/all/libraries.
 
 INTRODUCTION
 ------------

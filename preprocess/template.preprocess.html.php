@@ -32,7 +32,8 @@ function da_vinci_preprocess_html(&$vars) {
     $vars['html_classes'][] = 'debug';
   }
 
-  // Since menu is rendered in preprocess_page we need to detect it here to add body classes.
+  // Since menu is rendered in preprocess_page we need to detect it 
+  // here to add body classes.
   $has_main_menu = theme_get_setting('toggle_main_menu');
   $has_secondary_menu = theme_get_setting('toggle_secondary_menu');
 
