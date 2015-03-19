@@ -27,8 +27,8 @@
         msnry.remove($(event.target).closest('.views-row'));
         msnry.layout();
       });
-    // Add Close element to "Masonry" article.
-    $('.view-masonry .node-article').append('<span class="close">close</span>');
+      // Add Close element to "Masonry" article.
+      $('.view-masonry .node-article').append('<span class="close">close</span>');
     }
   }
 })(jQuery);
