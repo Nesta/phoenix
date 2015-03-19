@@ -36,7 +36,7 @@
         });
       });
       // Add Class Krumo-messages and remove styles for messages when dpm is active.
-      if ($('.messages .krumo-root').parents('.messages').find('.container > ul > li').length>1) { 
+      if ($('.messages .krumo-root').parents('.messages').find('.container > ul > li').length > 1) {
         $('#main-content').prepend($('.messages .krumo-root').parents('li').addClass('krumo-messages'));
       } else {
         $('.messages .krumo-root').parents('.messages').removeClass('messages status').addClass('krumo-messages');
@@ -62,16 +62,16 @@
         }, 500);
         return false;
       });
-      // Messages size
+      // Messages size.
       var totop = 0;
       $('.messages').not('.static').each(function(i){
-        if(!i) { $('body').hasClass('admin') ? totop+=80 : totop+=20;}
+        if(!i) { $('body').hasClass('admin') ? totop += 80 : totop += 20;}
         $(this).css('top',totop);
-        totop+=$(this).height()+15;
+        totop += $(this).height() + 15;
       });
       // Footer height
       footerpush=function(){
-        var footerHeight = $('.site-footer').outerHeight()+50;
+        var footerHeight = $('.site-footer').outerHeight() + 50;
         $('#page #main-content').css('padding-bottom', footerHeight + 'px');
       };
       footerpush();
