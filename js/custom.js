@@ -70,7 +70,7 @@
         totop += $(this).height() + 15;
       });
       // Footer height.
-      footerpush=function(){
+      footerpush = function(){
         var footerHeight = $('.site-footer').outerHeight() + 50;
         $('#page #main-content').css('padding-bottom', footerHeight + 'px');
       };
