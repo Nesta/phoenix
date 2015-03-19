@@ -51,7 +51,7 @@
 <title><?php print $head_title; ?></title>
 <?php print $styles; ?>
 <?php print $scripts; ?>
-<!--[if lt IE 9]><script src="<?php print base_path() . drupal_get_path('theme', 'da_vinci') . '/js/plugins/html5.js'; ?>"></script><![endif]-->
+<!--[if lt IE 9]><script src="<?php print base_path() . libraries_get_path('da-vinci-plugins') . '/html5.js'; ?>"></script><![endif]-->
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php print $page_top; ?>

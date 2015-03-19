@@ -2,7 +2,7 @@ js:
 ===
 Contains the libraries and also the js plugins.
 
-	Plugins:
+	Plugins (Libraries Folder):
 	========
 
 		css_browser.js:

@@ -6,9 +6,6 @@ engine = phptemplate
 stylesheets[all][] = css/lib.css
 stylesheets[all][] = css/main.css
 
-scripts[] = js/plugins/chosen/chosen.jquery.min.js
-scripts[] = js/plugins/css_browser.js
-
 scripts[] = js/chosen.js
 scripts[] = js/custom.js
 
