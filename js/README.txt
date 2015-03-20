@@ -2,6 +2,10 @@ js:
 ===
 Contains the libraries and also the js plugins.
 
+	da-vinci.js:
+	==========
+  Da Vinci JS Theme, menu mobile and styles for messages and krumo messages.
+
 	Plugins (Libraries Folder):
 	========
 
@@ -50,6 +54,10 @@ Contains the libraries and also the js plugins.
 js:
 ===
 Contiene tanto las librerias como los plugins js necesarios.
+
+	da-vinci.js:
+	==========
+  Da Vinci JS Theme, menu movil y estilos para los mensajes y mensajes de krumo.
 
 	Plugins:
 	========
