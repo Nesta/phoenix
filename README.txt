@@ -7,6 +7,7 @@ Da Vinci uses the jQuery plugin's.
 
   1. Download and enable Libraries module and Jquery Update module.
   1.1 Jquery theme use version > 1.7
+
   2. Download the Plugin's 
      (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) 
      and extract the file under sites/all/libraries.
