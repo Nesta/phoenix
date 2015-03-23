@@ -64,13 +64,6 @@
         }, 500);
         return false;
       });
-      // Messages size.
-      var totop = 0;
-      $('.messages').not('.static').each(function(i){
-        if(!i) { $('body').hasClass('admin') ? totop += 80 : totop += 20;}
-        $(this).css('top',totop);
-        totop += $(this).height() + 15;
-      });
       // Footer height.
       footerpush = function(){
         var footerHeight = $('.site-footer').outerHeight() + 50;
