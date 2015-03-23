@@ -5,7 +5,9 @@ Da Vinci uses the jQuery plugin's.
 
 -- INSTALLATION --
 
-  1. Download the Plugin's 
+  1. Download and enable Libraries module and Jquery Update module.
+  1.1 Jquery theme use version > 1.7
+  2. Download the Plugin's 
      (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) 
      and extract the file under sites/all/libraries.
 
@@ -60,3 +62,4 @@ MAINTAINERS
 -----------
 Current maintainers:
  * Nesta Guerrero (nguerrero) - https://www.drupal.org/u/nguerrero
+ * Karmen Garcia (Karmen) - https://www.drupal.org/u/karmen
