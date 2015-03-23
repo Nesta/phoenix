@@ -2,85 +2,87 @@
  *  @file 
  *  Sass Vars
  */
-// Primary Colours
-$dark-green: #80A18D
-$green: #AACCB1
-$light-green: #C3DBB4
-$lightest-green: #D3E2B6
-// Secondary Colours
-$dark-beige: #CAB595
-$beige: #DBCFB7
-$light-beige: #EEEADD
-// Basic Colours
-$white: #FFFFFF
-$gray: #F8F8F1
-$black: #42312C
-// Gray scale
-$gray-7: #686257
+// Typography
+$title: 'Advent Pro'
+$content: 'Open Sans'
+
+// Colours
+$color: #1abc9c
+$dark-color: #16a085
+
+$white: #ffffff
+$beige: #CFBEAE
+$light-gray: #E1DED2
+$gray: #686257
+$dark-gray: #ABA280
+
+////////////////////
+
 // Messages
-$red-error: #A33737
-$warning: #E4844A
+$red-error: #c0392b
+$warning: #d35400
+$status: #27ae60
 $dpm: #FADB61
 
 // -- Skinr | skinr.sass--
 
-$color-body                      : $gray-7
-$background-page                 : $gray
+$color-body                      : $gray
+$background-page                 : $white
 // Color for links
-$color-a                         : $dark-green
-$color-a-hover                   : $green
+$color-a                         : $color
+$color-a-hover                   : $dark-color
 // Color for titles
-$color-h                         : $dark-beige
-$color-page-title                : $dark-green
-$background-page-title           : $gray
+$color-h                         : $dark-color
+$color-page-title                : $color
+$background-page-title           : $white
 $border-page-title               : $beige
 // Color for label and description
-$color-label                     : $dark-beige
-$color-description               : $beige
+$color-label                     : $gray
+$color-description               : $gray
 // Color for input, select, textarea
 $background-form-element         : $white
-$border-form-element             : $green
+$border-form-element             : $gray
 $border-form-element-error       : $red-error
 
 // -- Menu | main-menu.sass --
 
-$background-menu                 : $dark-beige
-$color-menu-a                    : $gray
-$border-menu-a                   : $gray
-$color-menu-a-hover-active       : $dark-green
-$background-menu-a-hover-active  : $gray
-$border-menu-a-hover-active      : $gray
+$background-menu                 : $color
+$color-menu-a                    : $white
+$border-menu-a                   : $color
+$color-menu-a-hover-active       : $color
+$background-menu-a-hover-active  : $white
+$border-menu-a-hover-active      : $white
 
 // -- Sliding menu | sliding-menu.sass --
 
-$background-menu-screen          : $green
+$background-menu-screen          : $color
 $background-sliding-menu-content : $gray
 
 // -- Breadcrumbs | breadcrumbs.sass --
 
-$color-breadcrumbs               : $gray-7
+$color-breadcrumbs               : $gray
 
 // -- Comments | comments.sass --
 
 $color-count                     : $white
-$color-comment-title             : $green
-$color-submitted                 : $dark-beige
+$color-comment-title             : $dark-color
+$color-submitted                 : $dark-color
 $color-comment-new               : $gray
 $color-new-comment-a-hover       : $white
-$border-comment-links            : $green
-$border-attribution              : $light-beige
-$background-comment-new          : $green
+$border-comment-links            : $color
+$border-attribution              : $light-gray
+$background-comment-new          : $color
 
 // -- Elements | elements.sass --
 
 $color-backtotop                 : $white
-$color-backtotop-hover           : $dark-green
-$background-backtotop: image-url('backtotop.png') center center no-repeat $green
+$color-backtotop-hover           : $dark-color
+$background-backtotop: image-url('backtotop.png') center center no-repeat $color
 
 // -- Forms | forms.sass --
 
-$background-loading-layer        : $light-green
-$background-confirmation         : $light-green
+$background-loading-layer        : $dark-gray
+$background-confirmation         : $dark-gray
 
 // -- Message | messages.sass --
 
@@ -94,168 +96,168 @@ $border-message-error            : $red-error
 $background-message-warning      : $warning
 $border-message-warning          : $warning
 // Status
-$background-message-status       : $green
-$border-message-status           : $green
+$background-message-status       : $status
+$border-message-status           : $status
 // Dpm
 $background-dpm                  : $dpm
-$border-dpm                      : $black
+$border-dpm                      : $gray
 
 // -- Modal | modals.sass --
 
 $background-modal-content        : $white
-$color-modal-content             : $black
+$color-modal-content             : $gray
 
 // -- Pager | pager.sass --
 
-$color-pager-current                : $black
+$color-pager-current                : $dark-color
 $color-pager-first-last-a           : $white
-$background-pager-first-last        : $green
-$background-pager-first-last-hover  : $dark-green
+$background-pager-first-last        : $color
+$background-pager-first-last-hover  : $dark-color
 
 // -- Sprite Social links | sprite.sass --
 
-$color-service                      : $green
+$color-service                      : $color
 
 // -- Tables | tables-sass --
 
-$background-table-tr-selected       : $green
-$background-table-tr-drag           : $beige
-$background-table-tr-drag-previous  : $light-beige
-$background-table-tr-draggable      : $beige
-$background-table-td-active         : $lightest-green
+$background-table-tr-selected       : $color
+$background-table-tr-drag           : $gray
+$background-table-tr-drag-previous  : $light-gray
+$background-table-tr-draggable      : $gray
+$background-table-td-active         : $dark-gray
 $background-table-even-odd          : $white 
 
 // -- Tabs | tabs.sass --
 
 $background-tabs-element            : $white
 $border-tabs-element                : $white
-$color-tabs-element                 : $green
+$color-tabs-element                 : $color
 
 // Hover
 $background-tabs-element-hover      : $white
-$border-tabs-element-hover          : $green
-$color-tabs-element-hover           : $green
+$border-tabs-element-hover          : $color
+$color-tabs-element-hover           : $color
 
 // > tablet
 $color-tabs-element-tablet              : $white
-$color-tabs-element-tablet-hover        : $green
-$background-tabs-element-tablet         : $green
+$color-tabs-element-tablet-hover        : $color
+$background-tabs-element-tablet         : $color
 $background-tabs-element-tablet-hover   : $white 
-$border-tabs-element-tablet             : $green
-$border-tabs-element-tablet-hover       : $green
+$border-tabs-element-tablet             : $color
+$border-tabs-element-tablet-hover       : $color
 
 // Active
-$background-tabs-element-active         : $green
-$border-tabs-element-active             : $green
+$background-tabs-element-active         : $dark-color
+$border-tabs-element-active             : $color
 $color-tabs-element-active              : $white 
 
 // -- CKeditor | templates-ckeditor.sass --
 
-$color-template                         : $black
-$color-template-header                  : $green
-$color-template-span                    : $black
+$color-template                         : $gray
+$color-template-header                  : $color
+$color-template-span                    : $gray
 
 // -- Masonry | block-masonry --
 
 // Article
-$border-masonry-article                 : $beige
+$border-masonry-article                 : $gray
 $background-masonry-article             : $white
-$shadow-masonry-article                 : $black
+$shadow-masonry-article                 : $gray
 // Close icon
-$background-masonry-close               : $green
-$background-masonry-close-hover         : $dark-green
+$background-masonry-close               : $color
+$background-masonry-close-hover         : $dark-color
 // Link login to post
-$border-masonry-forbidden               : $green
+$border-masonry-forbidden               : $color
 
 // -- Search | search.sass --
 
-$background-search-button-hover         : $dark-green
-$background-search-button: image-url('lupa.png') center center no-repeat $green
+$background-search-button-hover         : $dark-color
+$background-search-button: image-url('lupa.png') center center no-repeat $color
 
 // -- Cookies | cookies.sass --
 
 $background-sliding-popup-button    : $white
-$color-sliding-popup-button         : $dark-beige
+$color-sliding-popup-button         : $dark-gray
 
 // -- Maintenance | page-maintenance.sass --
 
-$background-maintenance-page        : $beige
+$background-maintenance-page        : $light-gray
 
 // -- Views | views.sass
 
-$border-node-teaser                 : $beige
+$border-node-teaser                 : $gray
 
 // -- Region content | content.sass --
 
 $background-region         : $white
-$border-region             : $green
+$border-region             : $white
 
 // -- Footer | footers.sass --
 
-$background-footer         : $black
-$color-footer              : $gray
+$background-footer         : $light-gray
+$color-footer              : $white
 
 // -- Header | header.sass --
 
-$background-top-bar        : $green
-$background-header         : $dark-beige
-$color-site-name           : $light-beige 
-$color-site-slogan         : $light-beige
+$background-top-bar        : $white
+$background-header         : $white
+$color-site-name           : $beige 
+$color-site-slogan         : $dark-color
 
 // -- Preface | preface.sass--
 
 $color-preface             : $white
-$background-preface        : $light-beige
+$background-preface        : $beige
 
 // -- Extends | extends.sass-- 
 
 // Buttons
 $color-button              : $white
-$background-button         : $green
-$background-button-hover   : $dark-green
+$background-button         : $color
+$background-button-hover   : $dark-color
 
 // Table
-$border-table              : $black
+$border-table              : $dark-color
 // Color for th
-$color-th                  : $dark-green
-$border-th                 : $gray
-$background-th             : $beige
+$color-th                  : $white
+$border-th                 : $dark-color
+$background-th             : $color
 // Color for tr tag: Par & impar 
 $background-tr-impar       : $white
-$background-tr-par         : $beige
+$background-tr-par         : $light-gray
 
 // Placeholders
-$color-grow                : $gray
-$background-grow           : $green
-$background-grow-hover     : $dark-green
+$color-grow                : $white
+$background-grow           : $color
+$background-grow-hover     : $dark-color
 
 // -- Mixins | mixins.sass --
 
 // Tags mixin
-$color-tags                : $black
+$color-tags                : $white
 $color-tags-active         : $white
-$color-tags-active-hover   : $gray
+$color-tags-active-hover   : $white
 $color-tags-hover          : $white
-$background-tags           : $lightest-green
-$background-tags-active    : $green
-$background-tags-hover     : $light-green
-$border-tags-hover         : $green
-$border-tags               : $beige
+$background-tags           : $dark-gray
+$background-tags-active    : $gray
+$background-tags-hover     : $gray
+$border-tags-hover         : $light-gray
+$border-tags               : $gray
 
 // Button mixin 
-$background-button-parameter        : $light-green
+$background-button-parameter        : $dark-gray
 $color-button-mixin                 : $white
 
 // Button-icon mixin
-$background-button-icon-parameter   : $light-green
+$background-button-icon-parameter   : $dark-gray
 $color-button-icon-a                : $white
 
 // Hover-info mixin
-$background-info-parameter          : $black
-$background-show-info               : $beige
+$background-info-parameter          : $gray
+$background-show-info               : $gray
 
 // Degrading mixin
-$color-degrading-parameter          : $black
+$color-degrading-parameter          : $gray
 
 // -------------------------------------------------
 
