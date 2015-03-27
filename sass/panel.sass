@@ -1,0 +1,32 @@
+@import 'susy'
+@import 'breakpoint'
+@import 'sassy-buttons'
+@import 'bourbon/bourbon'
+
+@import partials/utilities/variables
+@import partials/utilities/normalize
+@import partials/utilities/mixins
+@import partials/utilities/extends
+
+@import partials/base/susy
+
+@import partials/components/panel-dv-custom
+
+.dv-custom .panel-region
+  margin-bottom: 1em
+
+.dv-custom .footer .panel-pane
+  width: 32%
+.dv-custom
+  .map .data-tags
+    > .data
+      width: 48%
+      margin-right: 4%
+    > .tags
+      width: 48%
+
+.dv-pane .footer
+  margin-top: 1em
+
+fieldset .fieldset-legend
+  margin-top: -1.5em
