@@ -28,10 +28,8 @@
         }
       };
       // Mobile menu.
-      if(isMobile.any()){
         slidingMenu = $('#navigation').html();
         $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content">' + slidingMenu + '</nav><div class="js-menu-screen menu-screen"></div>');
-      }
       $('.js-menu-trigger,.js-menu-screen', context).once('mainMenu', function () {
         $(this).click(function () {
           $('.js-menu,.js-menu-screen').toggleClass('is-visible');
