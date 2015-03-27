@@ -205,4 +205,4 @@ require_once "preprocess/template.preprocess.region.php";
 require_once "preprocess/template.preprocess.user-profile.php";
 
 // Process.
-require_once "process/template.process.html.php";
+require_once "process/template.process.php";
