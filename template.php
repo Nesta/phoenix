@@ -167,6 +167,33 @@ function da_vinci_page_alter($page) {
   drupal_add_html_head($viewport, 'viewport');
 }
 
+/**
+ * Implements hook_theme().
+ */
+function da_vinci_theme() {
+  $themes = array();
+
+  // Theme wrapper which wrapper an element with a span tag.
+  $themes['span_container'] = array(
+    'render element' => 'element',
+  );
+
+  return $themes;
+}
+
+/**
+ * Implements theme_THEME().
+ */
+function da_vinci_span_container(&$variables) {
+  $element = $variables['element'];
+
+  $output = "<span class='{$variables['classes']}'>";
+  $output .= $element['#children'];
+  $output .= '</span>';
+
+  return $output;
+}
+
 // Preprocess.
 require_once "preprocess/template.preprocess.html.php";
 require_once "preprocess/template.preprocess.page.php";
