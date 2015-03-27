@@ -6,13 +6,12 @@ engine = phptemplate
 stylesheets[all][] = css/lib.css
 stylesheets[all][] = css/main.css
 
-scripts[] = js/chosen.js
 scripts[] = js/da-vinci.js
-;scripts[] = js/custom.js
+scripts[] = js/custom.js
 
 ; Panels layouts.
-;plugins[panels][layouts] = plugins/layouts
-;plugins[panels][styles] = plugins/styles
+plugins[panels][layouts] = plugins/layouts
+plugins[panels][styles] = plugins/styles
 
 regions[top_bar]        = Top Bar
 regions[header]         = Header
