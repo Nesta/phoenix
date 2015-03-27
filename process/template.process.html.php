@@ -15,3 +15,16 @@ function da_vinci_process_html(&$vars) {
     $vars['html_classes'] = '';
   }
 }
+
+/**
+ * Implements template_process_span_container().
+ */
+function da_vinci_process_span_container(&$vars) {
+  $element = $vars['element'];
+  if (isset($element['#attributes']['class'])) {
+    $classes = $element['#attributes']['class'];
+  }
+  $classes[] = 'span-container';
+
+  $vars['classes'] = implode(' ', $classes);
+}
