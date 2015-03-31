@@ -1,16 +1,57 @@
 -- SUMMARY --
 
-Da Vinci uses the jQuery plugin's.
+Da Vinci uses:
+
+Sass 3 - with sourcemaps
+Sass Globbing - Call your partials with /* or /** in your Main Sass.
+Bourbon Refills - http://refills.bourbon.io/
+Compass - http://compass-style.org/
+Compass Normalize - Compass version of normalize.css
+Susy 2 - Grid Framework.
+Breakpoint - Helper for grid, excelent.
+Sassy Buttons - http://jaredhardy.com/sassy-buttons/
+
+and
+
+Guard & LiveReload Browser extension.
+
 
 
 -- INSTALLATION --
 
-  1. Download and enable Libraries module and Jquery Update module.
-  1.1 Jquery theme use version > 1.7
+  1. Download and enable:
+     https://www.drupal.org/project/libraries
+     https://www.drupal.org/project/jquery_update
+     https://www.drupal.org/project/chosen
+     and See Readme.txt
 
-  2. Download the Plugin's 
+     or
+
+     Drush command, more easy and fast: 
+     
+     drush dl libraries && drush en -y libraries && drush dl jquery_update && drush en -y jquery_update && drush dl chosen && drush en -y chosen && drush chosenplugin
+
+  2 Configure jquery update.
+      2.3.1 Path to configure: admin/config/development/jquery_update
+      2.3.2 Default jQuery Version major to 1.7, (recommended v1.10).
+
+  3. Download the Plugin's 
      (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) 
      and extract the file under sites/all/libraries.
+
+  4. Install Gems and RVM, very EASY, copy & paste
+
+      4.1 Install RVM.
+        http://www.ladrupalera.com/drupal/desarrollo/instalacion/rvm-gemas-y-drupal
+
+      4.2 Install Bundle
+        gem install bundle (maybe password sudo)
+
+      4.3 Install Gemfile
+        In theme directory /themes/da_vinci
+        4.3.1 execute: bundle install
+
+Finish :)
 
 INTRODUCTION
 ------------
@@ -24,32 +65,6 @@ core theme. Its very light weight for fast loading with modern look.
 
 REQUIREMENTS (Optional)
 ------------
-Add sql script into table in styleguide module:
-
-CREATE TABLE `styleguide_palette_swatch` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The primary identifier for the swatch.',
-  `name` varchar(255) NOT NULL DEFAULT '' COMMENT 'The swatch title.',
-  `description` varchar(255) NOT NULL DEFAULT '' COMMENT 'The swatch description.',
-  `hex` varchar(7) NOT NULL DEFAULT '0' COMMENT 'The swatch hex value.',
-  `theme` varchar(64) NOT NULL DEFAULT '' COMMENT 'The theme the palette is used for.',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Stores color palette swatch data.' AUTO_INCREMENT=32 ;
-
-INSERT INTO `styleguide_palette_swatch` (`id`, `name`, `description`, `hex`, `theme`) VALUES
-(18, '$white', 'Basic colour', '#FFFFFF', 'da_vinci'),
-(19, '$gray', 'Basic colour', '#F8F8F1', 'da_vinci'),
-(20, '$black', 'Basic colour', '#42312C', 'da_vinci'),
-(21, '$dark-turquoise', 'Primary colour', '#68B3AF', 'da_vinci'),
-(22, '$turquoise', 'Primary colour', '#87BDB1', 'da_vinci'),
-(23, '$green', 'Primary colour', '#AACCB1', 'da_vinci'),
-(24, '$light-green', 'Primary colour', '#C3DBB4', 'da_vinci'),
-(25, '$lightest-green', 'Primary colour', '#D3E2B6', 'da_vinci'),
-(26, '$dark-beige', 'Secondary colour', '#CAB595', 'da_vinci'),
-(27, '$beige', 'Secondary colour', '#DBCFB7', 'da_vinci'),
-(28, '$light-beige', 'Secondary colour', '#EEEADD', 'da_vinci'),
-(29, '$red-error', 'Basic colour', '#A33737', 'da_vinci'),
-(31, '$dark-green', 'Primary colour', '#80A18D', 'da_vinci');
-
 
 CONFIGURATION
 ------------
