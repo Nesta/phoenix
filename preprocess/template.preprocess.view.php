@@ -8,7 +8,7 @@
  * Implements da_vinci_preprocess_views_view().
  */
 function da_vinci_preprocess_views_view(&$vars) {
-  if ($vars['view']->name == 'masonry') {
+  if ($vars['view']->name == theme_get_setting('masonry')) {
     $theme_path = drupal_get_path('theme', 'da_vinci');
     $lib_dir = libraries_get_path('da-vinci-plugins');
     drupal_add_js($lib_dir . '/masonry.js');
