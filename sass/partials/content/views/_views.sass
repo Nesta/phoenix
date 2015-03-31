@@ -3,9 +3,11 @@
  *  Views styles
  */
 .node-teaser
-  padding-bottom: +gutter(3)
-  margin-bottom: +gutter(3)
-  border-bottom: 2px solid $border-node-teaser
+  padding-bottom: +gutter(6)
+  margin-bottom: +gutter(6)
+  border-bottom: 1px solid $border-node-teaser
+  &:last-child
+    border-width: 0
   .content
     overflow: hidden
     padding-top: +gutter(5)
@@ -24,3 +26,8 @@
       display: inline-block
     .field-item
       margin-left: 5px
+
+// Exposed form
+.views-exposed-form
+  .views-exposed-widget
+    max-width: 100%
