@@ -3,28 +3,28 @@
  *  Sass Vars
  */
 // Typography
-$title: 'Advent Pro'
-$content: 'Open Sans'
+$title                           : 'Advent Pro'
+$content                         : 'Open Sans'
 
 // Colours
-$color: #1abc9c
-$dark-color: #16a085
+$color                           : #1abc9c
+$dark-color                      : #16a085
 
-$white: #ffffff
-$beige: #CFBEAE
-$light-gray: #E1DED2
-$gray: #686257
-$dark-gray: #ABA280
+$white                           : #ffffff
+$beige                           : #CFBEAE
+$light-gray                      : #E1DED2
+$gray                            : #686257
+$dark-gray                       : #ABA280
 
-$shadow: #888888
+$shadow                          : #888888
 
 ////////////////////
 
 // Messages
-$red-error: #c0392b
-$warning: #d35400
-$status: #1ABC78
-$dpm: #FADB61
+$red-error                       : #c0392b
+$warning                         : #d35400
+$status                          : #1ABC78
+$dpm                             : #FADB61
 
 // -- Skinr | skinr.sass--
 
@@ -120,14 +120,29 @@ $background-pager-first-last-hover  : $dark-color
 
 $color-service                      : $color
 
-// -- Tables | tables-sass --
+// -- Tables | tables.sass & extends.sass--
 
-$background-table-tr-selected       : $color
+// Table
+$border-table                       : $dark-color
+// Color for thead
+$background-thead                   : $color
+$border-thead                       : $color
+$color-thead-a                      : $white
+// Color for tbody
+$border-tbody                       : $light-gray
+// Color for th
+$color-th                           : $white
+$border-th                          : $dark-color
+$background-th                      : $color
+// Color for tr tag: Par & impar
+$background-tr-impar                : $white
+$background-tr-par                  : $light-gray
+
+$background-table-tr-selected       : $light-gray
 $background-table-tr-drag           : $gray
 $background-table-tr-drag-previous  : $light-gray
 $background-table-tr-draggable      : $gray
-$background-table-td-active         : $dark-gray
-$background-table-even-odd          : $white 
+$background-table-td-active         : transparent
 
 // -- Tabs | tabs.sass --
 
@@ -219,15 +234,6 @@ $color-button              : $white
 $background-button         : $color
 $background-button-hover   : $dark-color
 
-// Table
-$border-table              : $dark-color
-// Color for th
-$color-th                  : $white
-$border-th                 : $dark-color
-$background-th             : $color
-// Color for tr tag: Par & impar 
-$background-tr-impar       : $white
-$background-tr-par         : $light-gray
 
 // Placeholders
 $color-grow                : $white
