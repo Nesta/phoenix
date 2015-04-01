@@ -40,7 +40,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Activate masonry view'),
     '#default_value' => theme_get_setting('masonry', 'da_vinci'),
-    '#description'   => t("If you want to add the masonry style in views, you only have to insert the class name here"),
+    '#description'   => t("If you want to add the masonry style in views, you only have to insert the class name here. More info in masonry-readme.txt"),
   );
 
   $form['da_vinci_settings']['breadcrumbs'] = array(
