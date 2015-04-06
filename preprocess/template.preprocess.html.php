@@ -18,7 +18,6 @@ function da_vinci_preprocess_html(&$vars) {
   }
   if (module_exists('libraries')) {
     $lib_dir = libraries_get_path('da-vinci-plugins');
-    //drupal_add_js($lib_dir . '/chosen/chosen.jquery.min.js');
     drupal_add_js($lib_dir . '/css_browser.js');
     if (theme_get_setting('styleguide') && module_exists('styleguide') && module_exists('jquery_update')) {
       $theme_path = drupal_get_path('theme', 'da_vinci');
