@@ -1827,6 +1827,15 @@ a.tabledrag-handle .handle {
   }
 }
 
+/* line 55, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs {
+  padding: 15px;
+}
+/* line 57, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs ul.vertical-tabs-list {
+  margin: -16px 0px -1px -15em;
+}
+
 /**
  *  @file
  *  CKEditor templates styles
