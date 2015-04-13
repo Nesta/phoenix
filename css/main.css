@@ -603,13 +603,13 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 48, ../sass/partials/base/_skinr.sass */
+/* line 49, ../sass/partials/base/_skinr.sass */
 .hx {
   margin: 1em 0;
   position: relative;
   text-align: center;
 }
-/* line 52, ../sass/partials/base/_skinr.sass */
+/* line 53, ../sass/partials/base/_skinr.sass */
 .hx .page-title {
   color: #1abc9c;
   background: white;
@@ -617,7 +617,7 @@ a:hover {
   padding: 0 1em;
   position: relative;
 }
-/* line 58, ../sass/partials/base/_skinr.sass */
+/* line 59, ../sass/partials/base/_skinr.sass */
 .hx:before {
   border-top: 2px dashed #cfbeae;
   content: "";
@@ -627,7 +627,7 @@ a:hover {
   width: 100%;
 }
 
-/* line 66, ../sass/partials/base/_skinr.sass */
+/* line 67, ../sass/partials/base/_skinr.sass */
 ul {
   margin: 0;
   padding: 0;
@@ -640,7 +640,7 @@ ul li {
   padding: 0;
 }
 
-/* line 68, ../sass/partials/base/_skinr.sass */
+/* line 69, ../sass/partials/base/_skinr.sass */
 ol.show-bullets {
   list-style-position: outside;
   list-style-image: none;
@@ -652,12 +652,12 @@ ol.show-bullets li {
   margin-bottom: 0.5em;
   list-style-type: disc;
 }
-/* line 70, ../sass/partials/base/_skinr.sass */
+/* line 71, ../sass/partials/base/_skinr.sass */
 ol.show-bullets li {
   list-style-type: decimal;
 }
 
-/* line 72, ../sass/partials/base/_skinr.sass */
+/* line 73, ../sass/partials/base/_skinr.sass */
 ul.show-bullets {
   list-style-position: outside;
   list-style-image: none;
@@ -670,7 +670,7 @@ ul.show-bullets li {
   list-style-type: disc;
 }
 
-/* line 75, ../sass/partials/base/_skinr.sass */
+/* line 76, ../sass/partials/base/_skinr.sass */
 input,
 select,
 textarea {
@@ -678,19 +678,20 @@ textarea {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background: white;
-  border: 1px solid #686257;
+  border: 1px solid #888888;
+  color: #686257;
   font-size: 0.9em;
   max-width: 100%;
   padding: 0.4em 0.8em;
 }
-/* line 84, ../sass/partials/base/_skinr.sass */
+/* line 86, ../sass/partials/base/_skinr.sass */
 input.error,
 select.error,
 textarea.error {
   border: 1px solid #c0392b;
 }
 
-/* line 86, ../sass/partials/base/_skinr.sass */
+/* line 88, ../sass/partials/base/_skinr.sass */
 label {
   color: #686257;
   font-size: 0.9em;
@@ -698,11 +699,21 @@ label {
   margin-bottom: 0.2em;
 }
 
-/* line 91, ../sass/partials/base/_skinr.sass */
+/* line 93, ../sass/partials/base/_skinr.sass */
 .form-item .description {
   color: #686257;
   font-size: 0.8em;
   margin-top: 0.2em;
+}
+
+/* line 97, ../sass/partials/base/_skinr.sass */
+select {
+  height: 31px;
+}
+
+/* line 101, ../sass/partials/base/_skinr.sass */
+dd {
+  margin-bottom: 10px;
 }
 
 /*
@@ -942,18 +953,27 @@ head:hover ~ body .region-footer:before {
  *  Fieldset form styles
  */
 /* line 5, ../sass/partials/components/_fieldsets.sass */
+fieldset {
+  margin-bottom: 1em;
+}
+
+/* line 7, ../sass/partials/components/_fieldsets.sass */
+legend {
+  margin: 0.5em 0;
+}
+
+/* line 9, ../sass/partials/components/_fieldsets.sass */
 fieldset .fieldset-legend {
-  margin-top: 0.5em;
   padding-left: 1em;
   text-transform: uppercase;
 }
 
-/* line 9, ../sass/partials/components/_fieldsets.sass */
+/* line 12, ../sass/partials/components/_fieldsets.sass */
 html.js fieldset.collapsed {
   border-width: 1px;
 }
 
-/* line 11, ../sass/partials/components/_fieldsets.sass */
+/* line 14, ../sass/partials/components/_fieldsets.sass */
 fieldset.collapsible .fieldset-legend {
   display: block;
 }
@@ -1809,6 +1829,15 @@ a.tabledrag-handle .handle {
     background-color: white;
     border-style: solid solid none solid;
   }
+}
+
+/* line 55, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs {
+  padding: 15px;
+}
+/* line 57, ../sass/partials/components/_tabs.sass */
+div.vertical-tabs ul.vertical-tabs-list {
+  margin: -16px 0px -1px -15em;
 }
 
 /*
