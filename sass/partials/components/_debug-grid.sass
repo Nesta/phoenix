@@ -19,6 +19,10 @@ html
       &:hover:before
         +transition(all 0.3s ease-in-out)
         width: 75px
+  // When overlay module is activated, only appear grid button of the overlay (iframe).
+  &.overlay-open
+    head:before
+      display: none
 // Fixing Susy debug grid issue
 head:hover ~ .container:before, 
 head:hover ~ .region-top-bar:before, 
