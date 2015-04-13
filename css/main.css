@@ -725,7 +725,7 @@ label {
 }
 /* line 12, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1427808320') 0 0 no-repeat;
+  background: url('../images/home.png?1428333895') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -779,7 +779,7 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1427808320') 0 0 no-repeat;
+  background: url('../images/comments.png?1428333895') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
@@ -879,8 +879,12 @@ html.debug head:hover:before {
   transition: all 0.3s ease-in-out;
   width: 75px;
 }
+/* line 24, ../sass/partials/components/_debug-grid.sass */
+html.overlay-open head:before {
+  display: none;
+}
 
-/* line 23, ../sass/partials/components/_debug-grid.sass */
+/* line 27, ../sass/partials/components/_debug-grid.sass */
 head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
 head:hover ~ .region-preface:before,
 head:hover ~ .region-footer:before,
