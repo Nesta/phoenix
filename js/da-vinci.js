@@ -62,10 +62,6 @@
         }, 500);
         return false;
       });
-      // Maronry Class Page.
-      if ($(".view").hasClass('view-masonry')) {
-        $("body").addClass('page-masonry');
-      }
       // Footer height.
       footerpush = function(){
         var footerHeight = $('.site-footer').outerHeight() + 50;

@@ -14,11 +14,12 @@
 (function ($) {
   Drupal.behaviors.da_vinciThemeMasonry = {
     attach: function (context) {
-      var container = document.querySelector('.view-masonry');
+      var container = document.querySelector('.view .view-content');
       var msnry = new Masonry(container, {
         itemSelector: '.views-row',
         columnWidth: '.views-row'
       });
+
       imagesLoaded(container, function(){msnry.layout();});
       eventie.bind(container, 'click', function (event) {
         if (!classie.has(event.target, 'close')) {
@@ -27,6 +28,9 @@
         msnry.remove($(event.target).closest('.views-row'));
         msnry.layout();
       });
+      // Added classes to control body and view styles
+      $("body").addClass('page-masonry');
+      $("body .view").addClass('view-masonry');
       // Add Close element to "Masonry" article.
       $('.view-masonry article').append('<span class="close">close</span>');
     }
