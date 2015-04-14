@@ -17,13 +17,14 @@ function da_vinci_preprocess_html(&$vars) {
     $vars['classes_array'][] = (panels_get_current_page_display()) ? 'panels' : '';
   }
   if (module_exists('libraries')) {
-    $lib_dir = libraries_get_path('da-vinci-plugins');
-    drupal_add_js($lib_dir . '/css_browser.js');
+    $lib_dv_dir = libraries_get_path('da-vinci-plugins');
+    $lib_easymodal_dir = libraries_get_path('easymodal');
+    drupal_add_js($lib_dv_dir . '/css_browser.js');
     if (theme_get_setting('styleguide') && module_exists('styleguide') && module_exists('jquery_update')) {
       $theme_path = drupal_get_path('theme', 'da_vinci');
-      $lib_dir = libraries_get_path('da-vinci-plugins');
-      drupal_add_js($lib_dir . '/jquery.actual.min.js');
-      drupal_add_js($lib_dir . '/jquery.easyModal.js');
+      $lib_dv_dir = libraries_get_path('da-vinci-plugins');
+      drupal_add_js($lib_dv_dir . '/jquery.actual.min.js');
+      drupal_add_js($lib_easymodal_dir . '/jquery.easyModal.js');
       drupal_add_js($theme_path . '/js/modales.js');
     }
   }
