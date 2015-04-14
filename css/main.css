@@ -107,7 +107,7 @@ html {
 }
 
 /* line 16, ../sass/partials/utilities/_extends.sass */
-.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #navigation h2, .page-masonry .view-masonry .view-content .views-row .node-article:hover .close, #block-search-form .form-actions .form-submit,
+.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #navigation h2, .page-masonry .view-masonry .view-content .views-row article:hover .close, #block-search-form .form-actions .form-submit,
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
@@ -533,7 +533,7 @@ body {
 
 /* line 11, ../sass/partials/base/_skinr.sass */
 html {
-  font-size: 1em;
+  font-size: 0.95em;
 }
 
 /* line 13, ../sass/partials/base/_skinr.sass */
@@ -541,7 +541,7 @@ body {
   color: #686257;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 /* line 18, ../sass/partials/base/_skinr.sass */
@@ -2269,33 +2269,63 @@ div.vertical-tabs ul.vertical-tabs-list {
   }
 }
 /* line 21, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article {
-  border-bottom: 3px solid #686257;
+.page-masonry .view-masonry .view-content .views-row article {
   background-color: white;
-  -moz-box-shadow: 5px 0px 16px -9px #686257;
-  -webkit-box-shadow: 5px 0px 16px -9px #686257;
-  box-shadow: 5px 0px 16px -9px #686257;
-  padding: 5px 10px 20px 10px;
-  margin: 0 15px 25px 0;
+  border: 1px solid #e1ded2;
+  border-bottom-width: 3px;
+  padding: 5px 20px 20px 20px;
+  margin: 0 15px 30px 0;
   position: relative;
-}
-/* line 28, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .title {
-  margin-bottom: 5px;
+  -moz-box-shadow: 7px 0px 10px -9px #686257;
+  -webkit-box-shadow: 7px 0px 10px -9px #686257;
+  box-shadow: 7px 0px 10px -9px #686257;
+  -webkit-transition: border-bottom 0.2s ease-in-out 0.2s;
+  -moz-transition: border-bottom 0.2s ease-in-out 0.2s;
+  transition: border-bottom 0.2s ease-in-out 0.2s;
 }
 /* line 30, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .close {
-  display: none;
+.page-masonry .view-masonry .view-content .views-row article .title {
+  margin-bottom: 5px;
+  text-align: center;
 }
 /* line 33, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article:hover .close {
+.page-masonry .view-masonry .view-content .views-row article .title:hover {
+  text-decoration: underline;
+}
+/* line 35, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .close {
+  display: none;
+}
+/* line 37, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .field-type-image {
+  float: none;
+  text-align: center;
+  border-top: 3px solid #e1ded2;
+}
+/* line 41, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .field-type-image img {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  -webkit-transition: all 0.2s ease-in-out 0.2s;
+  -moz-transition: all 0.2s ease-in-out 0.2s;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+/* line 44, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover {
+  border-bottom: 3px solid #686257;
+  -webkit-transition: border-bottom 0.2s ease-in-out;
+  -moz-transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out;
+}
+/* line 47, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .close {
   opacity: 1;
   display: block;
   position: absolute;
   top: 0;
   right: 0;
   background: url('../images/close.png?1427715852') center no-repeat;
-  background-color: #1abc9c;
+  background-color: #e1ded2;
   width: 16px;
   height: 16px;
   padding: 11px;
@@ -2304,33 +2334,36 @@ div.vertical-tabs ul.vertical-tabs-list {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 47, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article:hover .close:hover {
-  background-color: #16a085;
+/* line 61, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .close:hover {
+  background-color: #686257;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 50, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .field-type-image {
-  float: none;
-  text-align: center;
+/* line 65, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article:hover .field-type-image img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-/* line 54, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .links li {
+/* line 69, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li {
   margin: 4px 0;
   display: block;
 }
-/* line 57, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .links li.comment_forbidden {
+/* line 72, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li.comment_forbidden {
   font-size: 14px;
   margin-top: 15px;
   text-align: center;
   border-top: 1px solid #1abc9c;
   padding-top: 5px;
 }
-/* line 63, ../sass/partials/content/block/_block-masonry.sass */
-.page-masonry .view-masonry .view-content .views-row .node-article .links li > a {
+/* line 78, ../sass/partials/content/block/_block-masonry.sass */
+.page-masonry .view-masonry .view-content .views-row article .links li > a {
   display: block;
 }
 
