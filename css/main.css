@@ -107,7 +107,7 @@ html {
 }
 
 /* line 16, ../sass/partials/utilities/_extends.sass */
-.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #navigation h2, .page-masonry .view-masonry .view-content .views-row article:hover .close, #block-search-form .form-actions .form-submit,
+.hide-modern, #breadcrumbs .breadcrumb > a:first-child, .backtotop a, #modalContent .ctools-modal-content .modal-header .close, #navigation h2, .page-masonry .view-masonry .view-content .views-row article:hover .close, #block-search-form .form-actions .form-submit,
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
@@ -117,7 +117,7 @@ html {
 }
 
 /* line 20, ../sass/partials/utilities/_extends.sass */
-.hide, #overlay #overlay-content #masthead,
+.hide, #modalContent .ctools-modal-content .modal-header .close img, #overlay #overlay-content #masthead,
 #overlay #overlay-content #navigation, .style-guide-modal-fire, .page-node-add-article .text-summary-wrapper .description, .page-node-edit.node-type-article .text-summary-wrapper .description {
   display: none;
 }
@@ -283,7 +283,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .container:after, .region-top-bar:after,
 .region-preface:after,
 .region-footer:after {
@@ -291,7 +291,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   clear: both;
 }
-/* line 61, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 61, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head {
   display: block;
   position: fixed;
@@ -301,7 +301,7 @@ head {
   color: #333;
   background: rgba(255, 255, 255, 0.25);
 }
-/* line 62, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 62, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:before {
   content: "|||";
   display: block;
@@ -310,12 +310,12 @@ head:before {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 63, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 63, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover {
   background: rgba(255, 255, 255, 0.5);
   color: red;
 }
-/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container, head:hover ~ .region-top-bar,
 head:hover ~ .region-preface,
 head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -323,7 +323,7 @@ head:hover ~ body .region-preface,
 head:hover ~ body .region-footer {
   position: relative;
 }
-/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
 head:hover ~ .region-preface:before,
 head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -390,7 +390,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -398,7 +398,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -406,7 +406,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -486,7 +486,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -494,7 +494,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -502,7 +502,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -737,7 +737,7 @@ dd {
 }
 /* line 12, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1429007501') 0 0 no-repeat;
+  background: url('../images/home.png?1429081831') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -849,7 +849,7 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1429007501') 0 0 no-repeat;
+  background: url('../images/comments.png?1429081831') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
@@ -994,7 +994,7 @@ head:hover ~ body .region-footer:before {
 }
 /* line 14, ../sass/partials/components/_elements.sass */
 .backtotop a {
-  background: url('../images/backtotop.png?1429007501') center center no-repeat #1abc9c;
+  background: url('../images/backtotop.png?1429081831') center center no-repeat #1abc9c;
   display: block;
   padding: 18px 20px;
   color: white;
@@ -1117,7 +1117,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 /* line 53, ../sass/partials/components/_forms.sass */
 .loading-layer .form-actions:before {
   content: "";
-  background: url('../images/progress.gif?1429007501') 0 0 no-repeat;
+  background: url('../images/progress.gif?1429081831') 0 0 no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -1228,7 +1228,7 @@ img {
 .messages.error .container, .messages.error .region-top-bar,
 .messages.error .region-preface,
 .messages.error .region-footer {
-  background: url('../images/ico-error.png?1429007501') 0% 50% no-repeat;
+  background: url('../images/ico-error.png?1429081831') 0% 50% no-repeat;
 }
 /* line 31, ../sass/partials/components/_messages.sass */
 .messages.warning {
@@ -1239,7 +1239,7 @@ img {
 .messages.warning .container, .messages.warning .region-top-bar,
 .messages.warning .region-preface,
 .messages.warning .region-footer {
-  background: url('../images/ico-info.png?1429007501') 0% 50% no-repeat;
+  background: url('../images/ico-info.png?1429081831') 0% 50% no-repeat;
 }
 /* line 36, ../sass/partials/components/_messages.sass */
 .messages.status {
@@ -1250,7 +1250,7 @@ img {
 .messages.status .container, .messages.status .region-top-bar,
 .messages.status .region-preface,
 .messages.status .region-footer {
-  background: url('../images/ico-success.png?1429007501') 0% 50% no-repeat;
+  background: url('../images/ico-success.png?1429081831') 0% 50% no-repeat;
 }
 
 /* line 42, ../sass/partials/components/_messages.sass */
@@ -1265,40 +1265,48 @@ img {
 /*
  *  @file
  *  Modal styles
- *  @pre easyModal.jquery.js
+ *  @pre easyModal.jquery.js & ctools modal
  */
-/* line 6, ../sass/partials/components/_modal.sass */
-.modal-content {
-  width: 60%;
-  height: 80%;
-  padding: 2em;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  left: -99999px;
-  overflow-y: auto;
+/* line 7, ../sass/partials/components/_modal.sass */
+#modalBackdrop {
+  background: #aba280 !important;
 }
-/* line 15, ../sass/partials/components/_modal.sass */
-.modal-content p {
-  color: #686257;
-  font-size: 16px;
+
+/* line 10, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content {
+  border: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 5px 12px #aba280;
+  -webkit-box-shadow: 0 5px 12px #aba280;
+  box-shadow: 0 5px 12px #aba280;
+}
+/* line 14, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-header {
+  padding: 1em 1.5em;
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
 }
 /* line 18, ../sass/partials/components/_modal.sass */
-.modal-content .close {
-  background: url('../images/close-on.png?1429007501') 0 0 no-repeat;
+#modalContent .ctools-modal-content .modal-header .close {
+  margin-top: 3px;
+  background: url('../images/close.png?1429081831') 0 0 no-repeat;
   display: block;
   width: 16px;
   height: 16px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 0;
-  line-height: 0;
-  color: transparent;
+  opacity: 0.8;
 }
-/* line 29, ../sass/partials/components/_modal.sass */
-.modal-content .close:active, .modal-content .close:focus {
-  outline: none;
+/* line 26, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-header .close:hover {
+  opacity: 1;
+}
+/* line 30, ../sass/partials/components/_modal.sass */
+#modalContent .ctools-modal-content .modal-content {
+  width: 100% !important;
+  padding: 1.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* File
@@ -1344,17 +1352,17 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-custom:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-custom, head:hover ~ body .dv-custom {
   position: relative;
 }
-/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-custom:before, head:hover ~ body .dv-custom:before {
   position: absolute;
   top: 0;
@@ -1405,17 +1413,17 @@ head:hover ~ .dv-custom:before, head:hover ~ body .dv-custom:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-right-col:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-right-col, head:hover ~ body .dv-right-col {
   position: relative;
 }
-/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-right-col:before, head:hover ~ body .dv-right-col:before {
   position: absolute;
   top: 0;
@@ -1450,17 +1458,17 @@ head:hover ~ .dv-right-col:before, head:hover ~ body .dv-right-col:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-left-col:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-left-col, head:hover ~ body .dv-left-col {
   position: relative;
 }
-/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-left-col:before, head:hover ~ body .dv-left-col:before {
   position: absolute;
   top: 0;
@@ -1502,17 +1510,17 @@ head:hover ~ .dv-left-col:before, head:hover ~ body .dv-left-col:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-full:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-full, head:hover ~ body .dv-full {
   position: relative;
 }
-/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
   position: absolute;
   top: 0;
@@ -1590,7 +1598,7 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 .admin .style-guide-modal-fire {
   top: 50%;
   padding: 8px 0 0 32px;
-  background-image: url('../images/brocha.png?1429007501');
+  background-image: url('../images/brocha.png?1429081831');
   background-repeat: no-repeat;
   background-position: left 5px center;
   -webkit-transition: all 0.3s ease-in-out 0.4s;
@@ -1617,17 +1625,17 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 /* line 31, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.error,
 #style-guide-modal .messages.error {
-  background: url('../images/ico-error.png?1429007501') 1% 50% no-repeat #c0392b;
+  background: url('../images/ico-error.png?1429081831') 1% 50% no-repeat #c0392b;
 }
 /* line 33, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.warning,
 #style-guide-modal .messages.warning {
-  background: url('../images/ico-info.png?1429007501') 1% 50% no-repeat #d35400;
+  background: url('../images/ico-info.png?1429081831') 1% 50% no-repeat #d35400;
 }
 /* line 35, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.status,
 #style-guide-modal .messages.status {
-  background: url('../images/ico-success.png?1429007501') 1% 50% no-repeat #1abc78;
+  background: url('../images/ico-success.png?1429081831') 1% 50% no-repeat #1abc78;
 }
 /* line 37, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .styleguide-palette,
@@ -2216,7 +2224,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
 }
-/* line 15, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
+/* line 15, ../../../../.rvm/gems/ruby-2.1.2/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
 .region-content .block-system:after {
   content: "";
   display: table;
@@ -2380,7 +2388,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../images/close.png?1429007501') center no-repeat;
+  background: url('../images/close.png?1429081831') center no-repeat;
   background-color: #e1ded2;
   width: 16px;
   height: 16px;
@@ -2441,7 +2449,7 @@ div.vertical-tabs ul.vertical-tabs-list {
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
-  background: url('../images/lupa.png?1429007501') center center no-repeat #1abc9c;
+  background: url('../images/lupa.png?1429081831') center center no-repeat #1abc9c;
   padding: 15px 17px;
   position: relative;
   top: -4px;
