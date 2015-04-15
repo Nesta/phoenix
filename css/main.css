@@ -737,7 +737,7 @@ dd {
 }
 /* line 12, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1428333895') 0 0 no-repeat;
+  background: url('../images/home.png?1429007501') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -771,6 +771,62 @@ ul.inline .comment-comments {
   padding-left: 0;
 }
 
+/* File
+ * Chosen - Overwriting chosen styles
+ */
+/* line 6, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-choices {
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px;
+  border: 1px solid #686257;
+  height: 31px;
+  background-image: none;
+}
+/* line 11, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-single {
+  height: 31px;
+  background: white;
+  border: 1px solid #686257;
+  box-shadow: none;
+  line-height: 2.2em;
+}
+/* line 17, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-drop {
+  background: white;
+  border: 1px solid #686257;
+}
+/* line 20, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-results {
+  margin: 0;
+  padding: 0;
+}
+/* line 24, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container .chosen-results li.highlighted {
+  background-color: #1abc9c;
+  background-image: none;
+}
+
+/* line 30, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border: 1px solid #686257;
+  background: white;
+  box-shadow: none;
+}
+/* line 34, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-active .chosen-choices {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 39, ../sass/partials/components/_chosen-custom.sass */
+.chosen-container-multi .chosen-choices li.search-choice {
+  background-color: #e1ded2;
+  background-image: none;
+  color: #aba280;
+}
+
 /*
  *  @file
  *  Comments styles
@@ -793,7 +849,7 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1428333895') 0 0 no-repeat;
+  background: url('../images/comments.png?1429007501') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
@@ -938,7 +994,7 @@ head:hover ~ body .region-footer:before {
 }
 /* line 14, ../sass/partials/components/_elements.sass */
 .backtotop a {
-  background: url('../images/backtotop.png?1427715852') center center no-repeat #1abc9c;
+  background: url('../images/backtotop.png?1429007501') center center no-repeat #1abc9c;
   display: block;
   padding: 18px 20px;
   color: white;
@@ -1061,7 +1117,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 /* line 53, ../sass/partials/components/_forms.sass */
 .loading-layer .form-actions:before {
   content: "";
-  background: url('../images/progress.gif?1427715852') 0 0 no-repeat;
+  background: url('../images/progress.gif?1429007501') 0 0 no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -1172,7 +1228,7 @@ img {
 .messages.error .container, .messages.error .region-top-bar,
 .messages.error .region-preface,
 .messages.error .region-footer {
-  background: url('../images/ico-error.png?1427715852') 0% 50% no-repeat;
+  background: url('../images/ico-error.png?1429007501') 0% 50% no-repeat;
 }
 /* line 31, ../sass/partials/components/_messages.sass */
 .messages.warning {
@@ -1183,7 +1239,7 @@ img {
 .messages.warning .container, .messages.warning .region-top-bar,
 .messages.warning .region-preface,
 .messages.warning .region-footer {
-  background: url('../images/ico-info.png?1427715852') 0% 50% no-repeat;
+  background: url('../images/ico-info.png?1429007501') 0% 50% no-repeat;
 }
 /* line 36, ../sass/partials/components/_messages.sass */
 .messages.status {
@@ -1194,7 +1250,7 @@ img {
 .messages.status .container, .messages.status .region-top-bar,
 .messages.status .region-preface,
 .messages.status .region-footer {
-  background: url('../images/ico-success.png?1427715852') 0% 50% no-repeat;
+  background: url('../images/ico-success.png?1429007501') 0% 50% no-repeat;
 }
 
 /* line 42, ../sass/partials/components/_messages.sass */
@@ -1229,7 +1285,7 @@ img {
 }
 /* line 18, ../sass/partials/components/_modal.sass */
 .modal-content .close {
-  background: url('../images/close-on.png?1427715852') 0 0 no-repeat;
+  background: url('../images/close-on.png?1429007501') 0 0 no-repeat;
   display: block;
   width: 16px;
   height: 16px;
@@ -1534,7 +1590,7 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 .admin .style-guide-modal-fire {
   top: 50%;
   padding: 8px 0 0 32px;
-  background-image: url('../images/brocha.png?1427715852');
+  background-image: url('../images/brocha.png?1429007501');
   background-repeat: no-repeat;
   background-position: left 5px center;
   -webkit-transition: all 0.3s ease-in-out 0.4s;
@@ -1561,17 +1617,17 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 /* line 31, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.error,
 #style-guide-modal .messages.error {
-  background: url('../images/ico-error.png?1427715852') 1% 50% no-repeat #c0392b;
+  background: url('../images/ico-error.png?1429007501') 1% 50% no-repeat #c0392b;
 }
 /* line 33, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.warning,
 #style-guide-modal .messages.warning {
-  background: url('../images/ico-info.png?1427715852') 1% 50% no-repeat #d35400;
+  background: url('../images/ico-info.png?1429007501') 1% 50% no-repeat #d35400;
 }
 /* line 35, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.status,
 #style-guide-modal .messages.status {
-  background: url('../images/ico-success.png?1427715852') 1% 50% no-repeat #1abc78;
+  background: url('../images/ico-success.png?1429007501') 1% 50% no-repeat #1abc78;
 }
 /* line 37, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .styleguide-palette,
@@ -2324,7 +2380,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../images/close.png?1427715852') center no-repeat;
+  background: url('../images/close.png?1429007501') center no-repeat;
   background-color: #e1ded2;
   width: 16px;
   height: 16px;
@@ -2385,7 +2441,7 @@ div.vertical-tabs ul.vertical-tabs-list {
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
-  background: url('../images/lupa.png?1427715852') center center no-repeat #1abc9c;
+  background: url('../images/lupa.png?1429007501') center center no-repeat #1abc9c;
   padding: 15px 17px;
   position: relative;
   top: -4px;
