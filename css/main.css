@@ -737,7 +737,7 @@ dd {
 }
 /* line 12, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1429081831') 0 0 no-repeat;
+  background: url('../images/home.png?1429168164') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -849,7 +849,7 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1429081831') 0 0 no-repeat;
+  background: url('../images/comments.png?1429168164') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
@@ -994,7 +994,7 @@ head:hover ~ body .region-footer:before {
 }
 /* line 14, ../sass/partials/components/_elements.sass */
 .backtotop a {
-  background: url('../images/backtotop.png?1429081831') center center no-repeat #1abc9c;
+  background: url('../images/backtotop.png?1429168164') center center no-repeat #1abc9c;
   display: block;
   padding: 18px 20px;
   color: white;
@@ -1117,7 +1117,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 /* line 53, ../sass/partials/components/_forms.sass */
 .loading-layer .form-actions:before {
   content: "";
-  background: url('../images/progress.gif?1429081831') 0 0 no-repeat;
+  background: url('../images/progress.gif?1429168164') 0 0 no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -1228,7 +1228,7 @@ img {
 .messages.error .container, .messages.error .region-top-bar,
 .messages.error .region-preface,
 .messages.error .region-footer {
-  background: url('../images/ico-error.png?1429081831') 0% 50% no-repeat;
+  background: url('../images/ico-error.png?1429168164') 0% 50% no-repeat;
 }
 /* line 31, ../sass/partials/components/_messages.sass */
 .messages.warning {
@@ -1239,7 +1239,7 @@ img {
 .messages.warning .container, .messages.warning .region-top-bar,
 .messages.warning .region-preface,
 .messages.warning .region-footer {
-  background: url('../images/ico-info.png?1429081831') 0% 50% no-repeat;
+  background: url('../images/ico-info.png?1429168164') 0% 50% no-repeat;
 }
 /* line 36, ../sass/partials/components/_messages.sass */
 .messages.status {
@@ -1250,7 +1250,7 @@ img {
 .messages.status .container, .messages.status .region-top-bar,
 .messages.status .region-preface,
 .messages.status .region-footer {
-  background: url('../images/ico-success.png?1429081831') 0% 50% no-repeat;
+  background: url('../images/ico-success.png?1429168164') 0% 50% no-repeat;
 }
 
 /* line 42, ../sass/partials/components/_messages.sass */
@@ -1291,7 +1291,7 @@ img {
 /* line 18, ../sass/partials/components/_modal.sass */
 #modalContent .ctools-modal-content .modal-header .close {
   margin-top: 3px;
-  background: url('../images/close.png?1429081831') 0 0 no-repeat;
+  background: url('../images/close.png?1429168164') 0 0 no-repeat;
   display: block;
   width: 16px;
   height: 16px;
@@ -1598,7 +1598,7 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 .admin .style-guide-modal-fire {
   top: 50%;
   padding: 8px 0 0 32px;
-  background-image: url('../images/brocha.png?1429081831');
+  background-image: url('../images/brocha.png?1429168164');
   background-repeat: no-repeat;
   background-position: left 5px center;
   -webkit-transition: all 0.3s ease-in-out 0.4s;
@@ -1625,17 +1625,17 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 /* line 31, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.error,
 #style-guide-modal .messages.error {
-  background: url('../images/ico-error.png?1429081831') 1% 50% no-repeat #c0392b;
+  background: url('../images/ico-error.png?1429168164') 1% 50% no-repeat #c0392b;
 }
 /* line 33, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.warning,
 #style-guide-modal .messages.warning {
-  background: url('../images/ico-info.png?1429081831') 1% 50% no-repeat #d35400;
+  background: url('../images/ico-info.png?1429168164') 1% 50% no-repeat #d35400;
 }
 /* line 35, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.status,
 #style-guide-modal .messages.status {
-  background: url('../images/ico-success.png?1429081831') 1% 50% no-repeat #1abc78;
+  background: url('../images/ico-success.png?1429168164') 1% 50% no-repeat #1abc78;
 }
 /* line 37, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .styleguide-palette,
@@ -2388,7 +2388,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../images/close.png?1429081831') center no-repeat;
+  background: url('../images/close.png?1429168164') center no-repeat;
   background-color: #e1ded2;
   width: 16px;
   height: 16px;
@@ -2449,7 +2449,7 @@ div.vertical-tabs ul.vertical-tabs-list {
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
-  background: url('../images/lupa.png?1429081831') center center no-repeat #1abc9c;
+  background: url('../images/lupa.png?1429168164') center center no-repeat #1abc9c;
   padding: 15px 17px;
   position: relative;
   top: -4px;
