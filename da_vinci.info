@@ -1,5 +1,5 @@
 name = Da Vinci Theme
-description = Da Vinci Theme - Drupal 7 Full theme with the best Sass's components. Developed by Front-end Team of Emergya & collaborators: Enno, Capynet, Nicobot. Important!! Require Jquery Update, Libraries module.
+description = Da Vinci Theme - Drupal 7 Full theme with the <b>best Sass's components</b>. <br />Developed by <b>Front-end Team</b> of <a href="http://ladrupalera.com">@ladrupalera</a> by <a href="http://emergya.com">Emergya</a> & <b>collaborators:</b> <a href="https://www.drupal.org/u/enno">@Enno</a>, <a href="https://www.drupal.org/u/capynet">@Capynet</a>, <a href="https://www.drupal.org/u/nicobot">@Nicobot</a>.<br /> <b>Important!!</b> Require Jquery Update & Libraries module.
 core = 7.x
 engine = phptemplate
 
