@@ -15,6 +15,11 @@ function da_vinci_preprocess_views_view(&$vars) {
     drupal_add_js($lib_masonry_dir . '/masonry.pkgd.min.js');
     drupal_add_js($lib_dv_dir . '/classie.js');
     drupal_add_js($lib_dv_dir . '/imageload.js');
-    drupal_add_js($theme_path . '/js/masonry-view.js');
+    if ($vars['view']->editing == FALSE) {
+      drupal_add_js($theme_path . '/js/masonry-view.js');
+    }
+    else {
+      drupal_set_message(t('Masonry Desactivated to Edit Mode.'), 'info');
+    }
   }
 }
