@@ -102,6 +102,7 @@
           </div>
         </div>
       </div>
+      <?php print render($page['header']); ?>
     </div>
   </header>
 
