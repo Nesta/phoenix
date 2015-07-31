@@ -63,5 +63,5 @@ line_comments = true
 #   scss may not have changed, since we want the CSS to be compressed and have
 #   the debug info removed.
 
-sass_options = {:sourcemap => true}
+sass_options = {:sourcemap => false}
 

@@ -283,7 +283,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .container:after, .region-top-bar:after,
 .region-preface:after,
 .region-footer:after {
@@ -291,7 +291,7 @@ html.debug head:hover:before, .admin .style-guide-modal-fire:hover {
   display: block;
   clear: both;
 }
-/* line 61, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 61, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head {
   display: block;
   position: fixed;
@@ -301,7 +301,7 @@ head {
   color: #333;
   background: rgba(255, 255, 255, 0.25);
 }
-/* line 62, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 62, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:before {
   content: "|||";
   display: block;
@@ -310,12 +310,12 @@ head:before {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 63, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 63, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover {
   background: rgba(255, 255, 255, 0.5);
   color: red;
 }
-/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container, head:hover ~ .region-top-bar,
 head:hover ~ .region-preface,
 head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -323,7 +323,7 @@ head:hover ~ body .region-preface,
 head:hover ~ body .region-footer {
   position: relative;
 }
-/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
 head:hover ~ .region-preface:before,
 head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -390,7 +390,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -398,7 +398,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -406,7 +406,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -486,7 +486,7 @@ head:hover ~ body .region-footer:before {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after, .region-top-bar:after,
   .region-preface:after,
   .region-footer:after {
@@ -494,7 +494,7 @@ head:hover ~ body .region-footer:before {
     display: block;
     clear: both;
   }
-  /* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container, head:hover ~ .region-top-bar,
   head:hover ~ .region-preface,
   head:hover ~ .region-footer, head:hover ~ body .container, head:hover ~ body .region-top-bar,
@@ -502,7 +502,7 @@ head:hover ~ body .region-footer:before {
   head:hover ~ body .region-footer {
     position: relative;
   }
-  /* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+  /* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
   head:hover ~ .container:before, head:hover ~ .region-top-bar:before,
   head:hover ~ .region-preface:before,
   head:hover ~ .region-footer:before, head:hover ~ body .container:before, head:hover ~ body .region-top-bar:before,
@@ -532,85 +532,81 @@ body {
 }
 
 /* line 11, ../sass/partials/base/_skinr.sass */
-html {
-  font-size: 0.95em;
-}
-
-/* line 13, ../sass/partials/base/_skinr.sass */
 body {
+  font-size: 15px;
   color: #686257;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
 
-/* line 18, ../sass/partials/base/_skinr.sass */
+/* line 17, ../sass/partials/base/_skinr.sass */
 #page {
   background: white;
   min-height: 100%;
   position: relative;
 }
 
-/* line 22, ../sass/partials/base/_skinr.sass */
+/* line 21, ../sass/partials/base/_skinr.sass */
 .main-content {
   margin-top: 2em;
 }
 
-/* line 25, ../sass/partials/base/_skinr.sass */
+/* line 24, ../sass/partials/base/_skinr.sass */
 h1, h2, h3, h4, h5, h6 {
   color: #16a085;
   font-weight: 600;
   font-family: "Advent Pro";
 }
 
-/* line 29, ../sass/partials/base/_skinr.sass */
+/* line 28, ../sass/partials/base/_skinr.sass */
 h1 {
   font-size: 2.813em;
 }
 
-/* line 31, ../sass/partials/base/_skinr.sass */
+/* line 30, ../sass/partials/base/_skinr.sass */
 h2 {
   font-size: 2.074em;
 }
 
-/* line 33, ../sass/partials/base/_skinr.sass */
+/* line 32, ../sass/partials/base/_skinr.sass */
 h3 {
   font-size: 1.728em;
 }
 
-/* line 35, ../sass/partials/base/_skinr.sass */
+/* line 34, ../sass/partials/base/_skinr.sass */
 h4 {
   font-size: 1.44em;
 }
 
-/* line 37, ../sass/partials/base/_skinr.sass */
+/* line 36, ../sass/partials/base/_skinr.sass */
 h5 {
   font-size: 1.2em;
 }
 
-/* line 39, ../sass/partials/base/_skinr.sass */
+/* line 38, ../sass/partials/base/_skinr.sass */
 p {
   margin-bottom: 1em;
 }
 
-/* line 41, ../sass/partials/base/_skinr.sass */
+/* line 40, ../sass/partials/base/_skinr.sass */
 a {
   color: #1abc9c;
   text-decoration: none;
 }
-/* line 44, ../sass/partials/base/_skinr.sass */
+/* line 43, ../sass/partials/base/_skinr.sass */
 a:hover {
   color: #16a085;
   text-decoration: none;
 }
 
-/* line 49, ../sass/partials/base/_skinr.sass */
+/* line 48, ../sass/partials/base/_skinr.sass */
 .hx {
   margin: 1em 0;
   position: relative;
   text-align: center;
 }
-/* line 53, ../sass/partials/base/_skinr.sass */
+/* line 52, ../sass/partials/base/_skinr.sass */
 .hx .page-title {
   color: #1abc9c;
   background: white;
@@ -618,7 +614,7 @@ a:hover {
   padding: 0 1em;
   position: relative;
 }
-/* line 59, ../sass/partials/base/_skinr.sass */
+/* line 58, ../sass/partials/base/_skinr.sass */
 .hx:before {
   border-top: 2px dashed #cfbeae;
   content: "";
@@ -628,7 +624,7 @@ a:hover {
   width: 100%;
 }
 
-/* line 67, ../sass/partials/base/_skinr.sass */
+/* line 66, ../sass/partials/base/_skinr.sass */
 ul {
   margin: 0;
   padding: 0;
@@ -641,7 +637,7 @@ ul li {
   padding: 0;
 }
 
-/* line 69, ../sass/partials/base/_skinr.sass */
+/* line 68, ../sass/partials/base/_skinr.sass */
 ol.show-bullets {
   list-style-position: outside;
   list-style-image: none;
@@ -653,12 +649,12 @@ ol.show-bullets li {
   margin-bottom: 0.5em;
   list-style-type: disc;
 }
-/* line 71, ../sass/partials/base/_skinr.sass */
+/* line 70, ../sass/partials/base/_skinr.sass */
 ol.show-bullets li {
   list-style-type: decimal;
 }
 
-/* line 73, ../sass/partials/base/_skinr.sass */
+/* line 72, ../sass/partials/base/_skinr.sass */
 ul.show-bullets {
   list-style-position: outside;
   list-style-image: none;
@@ -671,7 +667,7 @@ ul.show-bullets li {
   list-style-type: disc;
 }
 
-/* line 76, ../sass/partials/base/_skinr.sass */
+/* line 75, ../sass/partials/base/_skinr.sass */
 input,
 select,
 textarea {
@@ -685,14 +681,14 @@ textarea {
   max-width: 100%;
   padding: 0.4em 0.8em;
 }
-/* line 86, ../sass/partials/base/_skinr.sass */
+/* line 85, ../sass/partials/base/_skinr.sass */
 input.error,
 select.error,
 textarea.error {
   border: 1px solid #c0392b;
 }
 
-/* line 88, ../sass/partials/base/_skinr.sass */
+/* line 87, ../sass/partials/base/_skinr.sass */
 label {
   color: #686257;
   font-size: 0.9em;
@@ -700,19 +696,19 @@ label {
   margin-bottom: 0.2em;
 }
 
-/* line 93, ../sass/partials/base/_skinr.sass */
+/* line 92, ../sass/partials/base/_skinr.sass */
 .form-item .description {
   color: #686257;
   font-size: 0.8em;
   margin-top: 0.2em;
 }
 
-/* line 97, ../sass/partials/base/_skinr.sass */
+/* line 96, ../sass/partials/base/_skinr.sass */
 select {
   height: 31px;
 }
 
-/* line 101, ../sass/partials/base/_skinr.sass */
+/* line 100, ../sass/partials/base/_skinr.sass */
 dd {
   margin-bottom: 10px;
 }
@@ -737,7 +733,7 @@ dd {
 }
 /* line 12, ../sass/partials/components/_breadcrumbs.sass */
 #breadcrumbs .breadcrumb > a:first-child {
-  background: url('../images/home.png?1429168164') 0 0 no-repeat;
+  background: url('../images/home.png?1438257927') 0 0 no-repeat;
   width: 25px;
   height: 22px;
   display: block;
@@ -849,7 +845,7 @@ ul.inline .comment-comments {
   text-align: center;
   line-height: 1.7em;
   margin-left: 10px;
-  background: url('../images/comments.png?1429168164') 0 0 no-repeat;
+  background: url('../images/comments.png?1438257927') 0 0 no-repeat;
   width: 42px;
   height: 40px;
   display: inline-block;
@@ -994,7 +990,7 @@ head:hover ~ body .region-footer:before {
 }
 /* line 14, ../sass/partials/components/_elements.sass */
 .backtotop a {
-  background: url('../images/backtotop.png?1429168164') center center no-repeat #1abc9c;
+  background: url('../images/backtotop.png?1438257927') center center no-repeat #1abc9c;
   display: block;
   padding: 18px 20px;
   color: white;
@@ -1117,7 +1113,7 @@ tr.even .form-item.shs-wrapper-processed .shs-select {
 /* line 53, ../sass/partials/components/_forms.sass */
 .loading-layer .form-actions:before {
   content: "";
-  background: url('../images/progress.gif?1429168164') 0 0 no-repeat;
+  background: url('../images/progress.gif?1438257927') 0 0 no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -1228,7 +1224,7 @@ img {
 .messages.error .container, .messages.error .region-top-bar,
 .messages.error .region-preface,
 .messages.error .region-footer {
-  background: url('../images/ico-error.png?1429168164') 0% 50% no-repeat;
+  background: url('../images/ico-error.png?1438257927') 0% 50% no-repeat;
 }
 /* line 31, ../sass/partials/components/_messages.sass */
 .messages.warning {
@@ -1239,7 +1235,7 @@ img {
 .messages.warning .container, .messages.warning .region-top-bar,
 .messages.warning .region-preface,
 .messages.warning .region-footer {
-  background: url('../images/ico-info.png?1429168164') 0% 50% no-repeat;
+  background: url('../images/ico-info.png?1438257927') 0% 50% no-repeat;
 }
 /* line 36, ../sass/partials/components/_messages.sass */
 .messages.status {
@@ -1250,7 +1246,7 @@ img {
 .messages.status .container, .messages.status .region-top-bar,
 .messages.status .region-preface,
 .messages.status .region-footer {
-  background: url('../images/ico-success.png?1429168164') 0% 50% no-repeat;
+  background: url('../images/ico-success.png?1438257927') 0% 50% no-repeat;
 }
 
 /* line 42, ../sass/partials/components/_messages.sass */
@@ -1291,7 +1287,7 @@ img {
 /* line 18, ../sass/partials/components/_modal.sass */
 #modalContent .ctools-modal-content .modal-header .close {
   margin-top: 3px;
-  background: url('../images/close.png?1429168164') 0 0 no-repeat;
+  background: url('../images/close.png?1438257927') 0 0 no-repeat;
   display: block;
   width: 16px;
   height: 16px;
@@ -1352,17 +1348,17 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-custom:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-custom, head:hover ~ body .dv-custom {
   position: relative;
 }
-/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-custom:before, head:hover ~ body .dv-custom:before {
   position: absolute;
   top: 0;
@@ -1413,17 +1409,17 @@ head:hover ~ .dv-custom:before, head:hover ~ body .dv-custom:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-right-col:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-right-col, head:hover ~ body .dv-right-col {
   position: relative;
 }
-/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-right-col:before, head:hover ~ body .dv-right-col:before {
   position: absolute;
   top: 0;
@@ -1458,17 +1454,17 @@ head:hover ~ .dv-right-col:before, head:hover ~ body .dv-right-col:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-left-col:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-left-col, head:hover ~ body .dv-left-col {
   position: relative;
 }
-/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-left-col:before, head:hover ~ body .dv-left-col:before {
   position: absolute;
   top: 0;
@@ -1510,17 +1506,17 @@ head:hover ~ .dv-left-col:before, head:hover ~ body .dv-left-col:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
 .dv-full:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 67, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-full, head:hover ~ body .dv-full {
   position: relative;
 }
-/* line 70, ../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+/* line 70, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
 head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
   position: absolute;
   top: 0;
@@ -1598,7 +1594,7 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 .admin .style-guide-modal-fire {
   top: 50%;
   padding: 8px 0 0 32px;
-  background-image: url('../images/brocha.png?1429168164');
+  background-image: url('../images/brocha.png?1438257927');
   background-repeat: no-repeat;
   background-position: left 5px center;
   -webkit-transition: all 0.3s ease-in-out 0.4s;
@@ -1625,17 +1621,17 @@ head:hover ~ .dv-full:before, head:hover ~ body .dv-full:before {
 /* line 31, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.error,
 #style-guide-modal .messages.error {
-  background: url('../images/ico-error.png?1429168164') 1% 50% no-repeat #c0392b;
+  background: url('../images/ico-error.png?1438257927') 1% 50% no-repeat #c0392b;
 }
 /* line 33, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.warning,
 #style-guide-modal .messages.warning {
-  background: url('../images/ico-info.png?1429168164') 1% 50% no-repeat #d35400;
+  background: url('../images/ico-info.png?1438257927') 1% 50% no-repeat #d35400;
 }
 /* line 35, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .messages.status,
 #style-guide-modal .messages.status {
-  background: url('../images/ico-success.png?1429168164') 1% 50% no-repeat #1abc78;
+  background: url('../images/ico-success.png?1438257927') 1% 50% no-repeat #1abc78;
 }
 /* line 37, ../sass/partials/components/_styleguide.sass */
 .page-admin-appearance-styleguide .styleguide-palette,
@@ -2224,7 +2220,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
 }
-/* line 15, ../../../../.rvm/gems/ruby-2.1.2/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
+/* line 15, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
 .region-content .block-system:after {
   content: "";
   display: table;
@@ -2388,7 +2384,7 @@ div.vertical-tabs ul.vertical-tabs-list {
   position: absolute;
   top: 0;
   right: 0;
-  background: url('../images/close.png?1429168164') center no-repeat;
+  background: url('../images/close.png?1438257927') center no-repeat;
   background-color: #e1ded2;
   width: 16px;
   height: 16px;
@@ -2449,7 +2445,7 @@ div.vertical-tabs ul.vertical-tabs-list {
 #block-search-form #edit-basic .form-submit,
 #search-form .form-actions .form-submit,
 #search-form #edit-basic .form-submit {
-  background: url('../images/lupa.png?1429168164') center center no-repeat #1abc9c;
+  background: url('../images/lupa.png?1438257927') center center no-repeat #1abc9c;
   padding: 15px 17px;
   position: relative;
   top: -4px;
@@ -2699,5 +2695,3 @@ div.vertical-tabs ul.vertical-tabs-list {
 .views-exposed-form .views-exposed-widget {
   max-width: 100%;
 }
-
-/*# sourceMappingURL=main.css.map */
