@@ -13,6 +13,9 @@ function da_vinci_preprocess_node(&$vars) {
     $vars['classes_array'][] = 'node-full';
   }
 
+  // Preprocessing title, &amp; &amp; &quot; &#039; &lt; y &gt;.
+  $vars['title'] = htmlspecialchars_decode($vars['node']->title);
+
   $vars['date'] = t('!datetime', array('!datetime' => date('j F Y', $vars['created'])));
 
   // Providing templates suggestions for the nodes for view mode.
