@@ -30,11 +30,11 @@
       // Mobile menu.
         slidingMenu = $('#navigation').html();
         $('body').append('<button type="button" class="js-menu-trigger sliding-menu-button"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon"></button><nav class="js-menu sliding-menu-content">' + slidingMenu + '</nav><div class="js-menu-screen menu-screen"></div>');
-      $('.js-menu-trigger,.js-menu-screen', context).once('mainMenu', function () {
-        $(this).click(function () {
+        $('.js-menu-trigger').click(function () {
           $('.js-menu,.js-menu-screen').toggleClass('is-visible');
         });
-      });
+       
+      
       // Add Class Krumo-messages and remove styles for messages when dpm is active.
       if ($('.messages .krumo-root').parents('.messages').find('.container > ul > li').length > 1) {
         $('#main-content').prepend($('.messages .krumo-root').parents('li').addClass('krumo-messages'));

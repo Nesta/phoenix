@@ -11,3 +11,12 @@ $plugin = array(
     'footer' => t('Footer'),
   ),
 );
+array(
+  '#attached' => array(
+    'css' => array(
+      drupal_get_path('theme', 'da_vinci') . '/css/panel.css'=> array('group' => CSS_THEME, 'type' => 'file'),
+    ),
+  ),
+);
+
+

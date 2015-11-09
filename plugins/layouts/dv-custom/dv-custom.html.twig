@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Template for a custom layout: 3 columns and 9 columns in a 12 column susy framework
+ */
+#}
+<div class="dv-custom dv-pane">
+<div class="dv-custom-wrapper">
+    <div class="logo-desc">
+      {{content.logo}}
+      {{content.description}}
+    </div>
+    <div class="map">
+      {{content.map}}
+      <div class="data-tags">
+        <div class="data">
+          {{content.data}}
+        </div>
+        <div class="tags">
+          {{content.tags}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    {{content.footer}}
+  </div>
+</div>

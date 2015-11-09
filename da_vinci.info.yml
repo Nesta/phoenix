@@ -1,0 +1,43 @@
+name: Da Vinci
+type: theme
+description: "Da Vinci Theme - Drupal 8 Full theme with the <b>best Sass's components</b>. <br />Developed by <b>Front-end Team</b> of <a href='http://ladrupalera.com'>@ladrupalera</a> by <a href='http://emergya.com'>Emergya</a> & <b>collaborators:</b> <a href='https://www.drupal.org/u/enno'>@Enno</a>, <a href='https://www.drupal.org/u/capynet'>@Capynet</a>, <a href='https://www.drupal.org/u/nicobot'>@Nicobot</a>.<br /> <b>Important!!</b> Require Jquery Update & Libraries module."
+package: Core
+version: VERSION
+# core: 8.x
+
+libraries:
+  - da_vinci/base
+  - da_vinci/javascript
+
+stylesheets-remove:
+  - ''
+
+regions:
+  footer: Footer
+  top_bar: 'Top bar'
+  header: Header
+  preface: 'Preface'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  content_top: 'Content top'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  help: Help
+  content: Content
+  breadcrumb: 'Breadcrumb'
+
+
+# Settings
+shortcut_module_link: '0' 
+breadcrumbs: '1'
+styleguide: '1'
+debug: '1'
+
+
+
+# Information added by Drupal.org packaging script on 2015-09-06
+#version: '8.0.0-beta15+43-dev'
+core: '8.x'
+project: 'drupal'
+
+datestamp: 1441576072

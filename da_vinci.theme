@@ -1,0 +1,367 @@
+<?php
+/**
+ * @file
+ * The theme system, which controls the output of Drupal.
+ *
+ * The theme system allows for nearly all output of the Drupal system to be
+ * customized by user themes.
+ */
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements da_vinci_status_messages().
+ */
+function da_vinci_status_messages($variables) {
+
+}
+
+/**
+ * Implements da_vinci_css_alter().
+ */
+function da_vinci_css_alter(&$css) {
+  $css_exclude = theme_get_setting('css_exclude');
+  if(isset($css_exclude)){
+      foreach ($css_exclude as $nameCss){
+        if(strpos($nameCss, "/"))
+          unset($css[$nameCss]);        
+        else
+          unset($css["themes/da_vinci/css/".$nameCss]);
+      }
+  }
+}
+
+/**
+ * Implements da_vinci_js_alter().
+ */
+function da_vinci_js_alter(&$js) {
+  $js_exclude = theme_get_setting('js_exclude');
+    if(isset($js_exclude)){
+      foreach ($js_exclude as $nameJs) {
+        if(strpos($nameJs, "/"))
+          unset($js[$nameJs]);        
+        else
+          unset($js["themes/da_vinci/css/".$nameJs]);
+      }
+    }
+}
+
+/**
+ * Insert themed breadcrumb page navigation at top of the node content.
+ */
+function da_vinci_breadcrumb($variables) {
+ 
+
+/*  $breadcrumb = $variables['page']['breadcrumb'];
+  if (!empty($breadcrumb)) {
+    // Use CSS to hide titile .visually-hidden.
+     $output = '<h2 class="visually-hidden">' . t('You are here') . '</h2>';
+    // comment below line to hide current page to breadcrumb.
+    $breadcrumb[] = drupal_get_title();
+    $output = '<nav class="breadcrumb">' . implode('<span class="breadcrumb_next"> » </span>', $breadcrumb) . '</nav>';
+    return $output;
+  }*/
+}
+
+/**
+ * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
+ */
+function da_vinci_menu_local_tasks(&$variables) {
+
+  $output = '';
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<div class="tabs-wrapper clearfix"><h2 class="visually-hidden">' . t('Primary tabs') . '</h2> <ul class="tabs primary clearfix">';
+    $variables['primary']['#suffix'] = '</ul></div>';
+   $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+   $variables['secondary']['#prefix'] = '<div class="tabs-wrapper clearfix"><h2 class="visually-hidden">' . t('Secondary tabs') . '</h2>';
+    if (arg(0) == 'user') {
+      $variables['secondary'][0]['#link']['title'] = t('My account');
+      $variables['secondary']['#prefix'] .= '<ul class="nav nav-tabs">';
+    }
+    else {
+      $variables['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
+    }
+    $variables['secondary']['#suffix'] = '</ul></div>';
+    $output .= drupal_render($variables['secondary']);
+  }
+  return $output;
+}
+
+/**
+ * Insert viewport.
+ */
+function da_vinci_page_alter($page) {
+  /* <meta name="viewport" content="width=device-width,
+   * initial-scale=1, maximum-scale=1"/>
+   */
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, user-scalable=no',
+    ),
+  );
+  drupal_add_html_head($viewport, 'viewport');
+}
+
+/**
+ * Implements hook_theme().
+ */
+function da_vinci_theme() {
+  $themes = array();
+
+  // Theme wrapper which wrapper an element with a span tag.
+  $themes['span_container'] = array(
+    'render element' => 'element',
+  );
+
+  return $themes;
+}
+/**
+ * Implements da_vinci_preprocess_html().
+ */
+
+function da_vinci_preprocess_html(&$variables) {
+  
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'two-sidebars';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'one-sidebar';
+    $variables['attributes']['class'][] = 'sidebar-first';
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = 'one-sidebar';
+    $variables['attributes']['class'][] = 'sidebar-second';
+  }
+  else {
+    $variables['attributes']['class'][] = 'no-sidebars';
+  }
+
+  if (!empty($variables['page']['featured_top'])) {
+    $variables['attributes']['class'][] = 'has-featured-top';
+  }
+  // Add extra classes to body for more flexible theming.
+  if (!empty($variables['page']['primary_menu']) || !empty($variables['page']['secondary_menu'])) {
+    $variables['attributes']['class'][] = 'with-navigation';
+  }
+
+  if (!empty($variables['page']['secondary_menu'])) {
+     $variables['attributes']['class'][] = 'with-subnav';
+  }
+
+  if (!empty($variables['page']['featured'])) {
+     $variables['attributes']['class'][] = 'featured';
+  }
+
+  if ($variables['is_admin']) {
+     $variables['attributes']['class'][] =array('admin', 'toolbar-fixed');
+  }
+
+  if (!empty($variables['page']['header_top'])) {
+     $variables['attributes']['class'][] = 'header_top';
+  }
+
+  if (!empty($variables['node'])) {
+    // For full nodes.
+    $variables['attributes']['class'][] = 'full-node';
+  }
+
+  if($variables['node_type'] == 'article'){
+     $variables['attributes']['class'][]= 'page-node-';
+  } 
+  if(theme_get_setting('masonry')){
+    $variables['is_masonry'] = true;
+  }
+  if(theme_get_setting('debug')){
+    $variables['debug']= true;
+  }
+
+
+}
+
+
+/**
+ * Implements da_vinci_preprocess_block().
+ */
+function da_vinci_preprocess_block(&$variables) {
+  $variables['title_attributes']['class'][] = 'block__title';
+  if (!$variables['is_admin']) {
+    $suggestions[] = 'block__home_content';
+  }  
+  if($variables['plugin_id'] == 'system_menu_block:account'){
+    $variables['content_attributes']['id']='secondary-menu';
+  }
+}
+
+
+/**
+ * Implements da_vinci_preprocess_node().
+ */
+function da_vinci_preprocess_node(&$variables) {
+
+ // if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
+   // $variables['classes_array'][] = 'node-full';
+ // }
+
+ // $variables['date'] = t('!datetime', array('!datetime' => date('j F Y', $variables['created'])));
+
+  // Providing templates suggestions for the nodes for view mode.
+  //$variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
+ // $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']->getType() . '__' . $variables['view_mode'];
+//  $variables['theme_hook_suggestions'][] = 'node__' . $variables['node']['vid'] . '__' . $variables['view_mode'];
+
+
+}
+
+/**
+ * Implements da_vinci_preprocess_page().
+ */
+function da_vinci_preprocess_page(&$variables) {
+  if(theme_get_setting('breadcrumbs')){
+    $variables['is_breadcrumbs'] = true;
+  }
+  if (isset($variables['logo'])){
+    $variables['logo'] = str_replace('.svg', '.png', $variables['logo']);
+  }
+  if($variables['is_admin'] && theme_get_setting('debug', 'da_vinci')){ 
+   $variables['html_classes'] = "debug";
+  }
+  if (isset($variables['node_title'])) {
+    $variables['title'] = $variables['node_title'];
+  }
+  
+  $variables['attributes']['class'][] = 'page-title';
+  // if (isset($variables['node']['type'])) {
+  //  $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']['type'];
+  //  }
+  // Adding classes wether #navigation is here or not.
+  if (!empty($variables['page']['primary_menu']['#region']) or !empty($variables['page']['sub_menu'])) {
+    $variables['attributes']['classes_array'][] = 'with-navigation';
+  }
+  if (!empty($variables['page']['secondary_menu']['#region'])) {
+   $variables['attributes']['classes_array'][] = 'with-subnav';
+  }
+  // Since the title and the shortcut link are both block level elements,
+  // positioning them next to each other is much simpler with a wrapper div.
+  if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
+    // Add a wrapper div using the title_prefix & title_suffix render elements.
+    $variables['title_prefix']['shortcut_wrapper'] = array(
+      '#markup' => '<div class="shortcut-wrapper clearfix">',
+      '#weight' => 100,
+    );
+    $variables['title_suffix']['shortcut_wrapper'] = array(
+      '#markup' => '</div>',
+      '#weight' => -99,
+    );
+    // Make sure the shortcut link is the first item in title_suffix.
+    $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
+  }
+  
+   // Add first/last classes to node listings about to be rendered.
+  if (isset($variables['page']['content']['system_main']['nodes'])) {
+    // All nids about to be loaded (without the #sorted attribute).
+    $nids = element_children($variables['page']['content']['system_main']['nodes']);
+    // Only add first/last classes if there is more than 1 node being rendered.
+    if (count($nids) > 1) {
+      $first_nid = reset($nids);
+      $last_nid = end($nids);
+      $first_node = $variables['page']['content']['system_main']['nodes'][$first_nid]['#node'];
+      $first_node->classes_array = array('first');
+      $last_node = $variables['page']['content']['system_main']['nodes'][$last_nid]['#node'];
+      $last_node->classes_array = array('last');
+    }
+  }
+  
+}
+
+/**
+ * Implement da_vinci_preprocess_menu.
+ */
+function da_vinci_preprocess_menu(&$variables) {
+
+  if($variables['theme_hook_original'] == 'menu__main'){
+     $variables['attributes']['id'] = 'main-menu';
+ 
+  } 
+  if($variables['theme_hook_original'] == 'menu__account'){
+    $variables['attributes']['id'] = 'secondary-menu';
+  } 
+}
+
+
+/**
+ * Implement da_vinci_preprocess_region.
+ */
+function da_vinci_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = 'region';
+  $variables['attributes']['class'][] = 'region-' .  $variables['region'];  
+}
+
+/**
+ * Implements da_vinci_preprocess_views_view().
+ */
+function da_vinci_preprocess_views_view(&$variables) {
+//  if ($variables['view']->name == theme_get_setting('masonry')) {
+ //   $theme_path = drupal_get_path('theme', 'da_vinci');
+    //$lib_dv_dir = libraries_get_path('da-vinci-plugins');
+    //$lib_masonry_dir = libraries_get_path('masonry');
+//   $variables['#attached'] = array(
+//    'js' => array($theme_path . '/masonry.pkgd.min.js'),
+//    'js' => array($theme_path . '/classie.js'),
+//    'js' => array($theme_path . '/imageload.js'),
+//   );
+    
+//    if ($variables['view']->editing == FALSE) {
+ //     $variables['#attached'] = array(
+  //    'js' => array ($theme_path . '/js/masonry-view.js'),
+  //  );
+ //   }
+ //   else {
+ //     drupal_set_message(t('Masonry Desactivated to Edit Mode.'), 'info');
+ //   }
+ // }
+}
+
+/**
+ * Implement da_vinci_preprocess_user_profile().
+ */
+function da_vinci_preprocess_user_profile(&$variables) {
+  if (!empty ($variables['elements']['#view_mode'])) {
+    // Add suggestion for user entity view modes:
+    $variables['theme_hook_suggestions'][] = 'user_profile__' . $variables['elements']['#view_mode'];
+
+    // Add view-mode class:
+    $variables['classes_array'][] = 'user-' . drupal_clean_css_identifier($variables['elements']['#view_mode']);
+  }
+}
+
+/**
+ * Implements da_vinci_preprocess_comment().
+ */
+function da_vinci_preprocess_comment(&$variables) {
+  // Overridden comment created data with time ago:
+ // $variables['created_ago'] = $this->formatInterval($variables['comment']->created->value);
+
+}
+/**
+ * Implements theme_THEME().
+ */
+function da_vinci_span_container(&$variables) {
+  $element = $variables['element'];
+
+  $output = "<span class='{$variables['classes']}'>";
+  $output .= $element['#children'];
+  $output .= '</span>';
+
+  return $output;
+}
+
+// Process.
+//require_once "process/template.process.php";

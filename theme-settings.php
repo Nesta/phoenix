@@ -29,13 +29,13 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description'   => t("Check this option to show Grid Debug Button in page. Uncheck to hide. This will only be displayed if admin is logged."),
   );
 
-  $form['da_vinci_settings']['styleguide'] = array(
+/*  $form['da_vinci_settings']['styleguide'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show Style Guide Icon'),
     '#default_value' => theme_get_setting('styleguide', 'da_vinci'),
     '#description'   => t("Check this option to show Style Guide Button in page. Uncheck to hide. Require jquery_update and styleguide module."),
   );
-
+*/
   $form['da_vinci_settings']['masonry'] = array(
     '#type' => 'textfield',
     '#title' => t('Activate masonry view'),
@@ -69,7 +69,7 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
   // Add our custom submit function:
   $form['#submit'][] = 'da_vinci_form_system_theme_settings_submit';
 
-  if (!(module_exists('styleguide') && module_exists('jquery_update'))) {
+  if (!(Drupal::moduleHandler()->moduleExists('styleguide') && Drupal::moduleHandler()->moduleExists('jquery_update'))) {
     $form['da_vinci_settings']['styleguide']['#value'] = 0;
     $form['da_vinci_settings']['styleguide']['#disabled'] = TRUE;
   }
@@ -79,8 +79,14 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
  * Form submit for da_vinci_form_system_theme_settings_alter().
  */
 function da_vinci_form_system_theme_settings_submit($form, &$form_state) {
-  $exclude_css = array_filter(array_map('trim', explode("\n", $form_state['values']['css_exclude'])));
-  $exclude_js = array_filter(array_map('trim', explode("\n", $form_state['values']['js_exclude'])));
-  form_set_value(array('#parents' => array('css_exclude')), $exclude_css, $form_state);
-  form_set_value(array('#parents' => array('js_exclude')), $exclude_js, $form_state);
+  $form_exclude = $form_state->getValues();
+  
+  $exclude_css = preg_split("/[\s,]+/", $form_exclude['css_exclude']);
+  $exclude_js = preg_split("/[\s,]+/", $form_exclude['js_exclude']);
+  $form_exclude['css_exclude']= $exclude_css;
+  $form_exclude['js_exclude']= $exclude_js;
+  
+  $form_state->setValues($form_exclude);
+  
+  
 }

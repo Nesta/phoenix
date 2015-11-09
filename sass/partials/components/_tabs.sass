@@ -21,35 +21,38 @@
     a
       background-color: $background-tabs-element
       border-color: $border-tabs-element
+      border-width: 1px
       color: $color-tabs-element
       display: block
       font-size: .8em
       margin-bottom: -1px
       padding: .5em 1em
       text-transform: uppercase
+      border-style: solid solid none solid 
       +breakpoint($tablet)
         +border-radius(4px 4px 0 0)
         background-color: $background-tabs-element-tablet
         border-color: $border-tabs-element-tablet
         color: $color-tabs-element-tablet
       &:hover
-        background-color: $background-tabs-element-tablet-hover
-        border-color: $border-tabs-element-tablet-hover
-        color: $color-tabs-element-tablet-hover
-        border-style: solid
+        background-color: $background-tabs-element-mobile-hover
+        border-color: $border-tabs-element-mobile-hover
+        color: $color-tabs-element-mobile-hover        
         +breakpoint($tablet)
-          border-style: solid solid none solid
-  li.active
-    a
+          background-color: $background-tabs-element-tablet-hover
+          border-color: $border-tabs-element-tablet-hover
+          color: $color-tabs-element-tablet-hover
+  li
+    a.is-active
       background-color: $background-tabs-element-tablet
       border-color: $border-tabs-element-tablet
-      color: $color-tabs-element-active
-      border-style: solid
+      color: $color-tabs-element-active      
       cursor: default
       +breakpoint($tablet)
         color: $color-tabs-element-hover
         background-color: $background-tabs-element-hover
         border-style: solid solid none solid
+
 
 // Vertical tabs
 div.vertical-tabs
