@@ -14,21 +14,21 @@ body
     +breakpoint($xx-large)
       //background: azure
 
-  &-one-sidebar.layout-sidebar-first
-    .layout-content
-      +breakpoint($medium)
-        +span(9 of 12 last)
-    .layout-sidebar-first
-      +breakpoint($medium)
-        +span(3 of 12 first)
-
-  &-one-sidebar.layout-sidebar-second
-    .layout-content
-      +breakpoint($medium)
-        +span(9 of 12 first)
-    .layout-sidebar-second
-      +breakpoint($medium)
-        +span(3 of 12 last)
+  &-one-sidebar
+    &.layout-sidebar-first
+      .layout-content
+        +breakpoint($medium)
+          +span(9 of 12 last)
+      .layout-sidebar-first
+        +breakpoint($medium)
+          +span(3 of 12 first)
+    &.layout-sidebar-second
+      .layout-content
+        +breakpoint($medium)
+          +span(9 of 12 first)
+      .layout-sidebar-second
+        +breakpoint($medium)
+          +span(3 of 12 last)
     
   &-two-sidebars
     .layout-content
@@ -41,8 +41,8 @@ body
         +span(3 of 12 first)
     .layout-sidebar-second
       +breakpoint($medium)
-        float: none
         clear: both
+        float: none
       +breakpoint($large)
         +span(3 of 12 last)
         clear: none
