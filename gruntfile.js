@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	
+
   var host = 'http://yourprojects.local/';
 
 	require('es6-promise').polyfill();
@@ -22,25 +22,25 @@ module.exports = function(grunt) {
 				tasks: ['sasslint','sass:dev'],
 			},
 			twig: {
-				
+
 				tasks: ['twig'],
 			},
 		},
 		sass: {
-			dist: { 
-				options: { 
+			dist: {
+				options: {
 					outputStyle: 'compressed',
 				},
-				files: { 
+				files: {
 					'css/main.css': 'src/sass/main.sass',
 				}
 			},
-			dev: { 
-				options: { 
+			dev: {
+				options: {
 					outputStyle: 'expanded',
 					sourceMap: true
 				},
-				files: { 
+				files: {
 					'css/main.css': 'src/sass/main.sass',
 				}
 			}
@@ -103,6 +103,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-postcss');
 
 	// Default task
 	grunt.registerTask('default', ['browserSync','watch:dev']);
