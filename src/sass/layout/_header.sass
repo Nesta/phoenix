@@ -1,42 +1,23 @@
-.sliding_menu
-  display: block
-  +breakpoint($large)
-    display: none
-  position: fixed
-  overflow-x: hidden
-  z-index: 99999
-  top: 0
-  left: 0
-  bottom: 0
-  right: 0
-  width: 100%
-  height: 100%
-  background-color: rgba(0, 0, 0, .95)
-  -webkit-transform: translateY(-100%)
-  -moz-transform: translateY(-100%)
-  -ms-transform: translateY(-100%)
-  -o-transform: translateY(-100%)
-  transform: translateY(-100%)
-  transition: all .25s linear
-  &.is-visible
-    transform: translateY(0)
-  .region-top-bar
-    +clearfix
-    position: relative
-    width: 100vw
-    padding: 2em
 .layout-container > header
-  background-color: black
-  color: #f1f1f1
+  background-color: $color
+  color: $white
   .region-header
     padding: 1em 0
     position: relative
     z-index: 2
-
     .site
-      &-logo, 
+      &-logo
+        float: left
+        margin-right: 1em
       &-name
-        display: inline-block
+        a
+          display: inline-block
+          margin-top: 0.5em
+        font-family: $font-title
+        font-size: 1.5em
+      &-slogan
+        font-style: italic
+        font-size: 0.65em
     h1
       +hide-text
       height: 0
@@ -46,19 +27,45 @@
       &:hover
         color: $white
 
-  .region-highlighted
-    h1
-      color: #fff
-      text-align: center
-    h2
-      color: #fff
+.top-bar
+  padding: 1em 0
+  font-size: 0.75em
+  background-color: lighten($color, 8%)
+.region-highlighted
+  margin-top: 1em
+  margin-bottom: 1em
+.region-secondary-menu
+  .menu
+    text-align: right
+    &-item
+      display: inline-block
+      margin-right: 8px
+      border-right: 1px solid $secondary-color
+      padding-right: 8px
+      line-height: 8px
+      &:last-child
+        border-width: 0
+        margin-right: 0
+        padding-right: 0
+      a
+        color: $white
+        display: block
+        text-transform: uppercase
+        font-size: 0.75em
+        &.is-active
+          cursor: default
+        &.is-active,
+        &:hover
+          color: $secondary-color
 
 
 +breakpoint($large)
   header
-    #block-da-vinci-branding
-      +span(3 of 12 first)
-    #block-menuprincipal
-      +span(isolate 8 at 4 of 12)
-    #block-languageswitcher
-      +span(1 of 12 last)
+    .region-header
+      +span(7 of 12 first)
+      #block-da-vinci-branding
+    .region-secondary-menu
+      +span(4  of 12 last)
+      #block-menuprincipal
+      #block-languageswitcher
+        +span(1 of 12 last)

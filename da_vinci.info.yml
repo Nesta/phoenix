@@ -1,6 +1,6 @@
 name: Da Vinci
 type: theme
-description: <b>Classy Subtheme</b> with <mark><i>Sass Core<i></mark>, <mark><i>Sass Tools</i></mark> and <mark><i>Sass Spirit</i></mark>
+description: <b>Classy Subtheme</b> with <i>Sass Core<i>, <i>Sass Tools</i> and <i>Sass Spirit</i>.
 core: 8.x
 base theme: classy
 libraries:
@@ -13,16 +13,14 @@ stylesheets-remove:
   - core/modules/views/css/views.module.css
 regions:
   top_bar: 'Extra Top bar'
-  header: Header
-  primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  highlighted: Highlighted
+  header: 'Header'
+  highlighted: 'Highlighted'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
   featured_top: 'Featured top'
-  breadcrumb: Breadcrumb
-  content: Content
+  content: 'Content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  footer: Footer
+  footer: 'Footer'
   footer_info: 'Extra Footer info'

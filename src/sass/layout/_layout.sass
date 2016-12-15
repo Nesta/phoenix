@@ -2,24 +2,23 @@ html,
 body
   min-height: 100vh
 
-html
-  background: $blue
-
 body
   color: $color-body
   background-color: $white
 
 // Add border to all region when "show region mode" is activated (See theme aparience to know more).
 // -----------------------------------------------------------------------------------------------//
-
 .border-region
   .region, main
-    outline: 3px violet groove
+    outline: 2px $secondary-color solid
 
 
 // Base layout: Header, main content, footer..
 //-------------------------------------------------------//
-
+.maintenance-page
+  h1
+    text-align: center
+    margin-bottom: 0.5em
 .restricted-container
   +clearfix
   +container(91.407%)
@@ -27,22 +26,32 @@ body
   +breakpoint($x-large)
     max-width: 1170px
 .layout-container
-  background-color: #fff
+  background-color: $white
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  margin: 0
+  > .region
+    @extend .restricted-container
+    width: 100%
   // Header
   > header
     position: relative
-    overflow: hidden
     .region
       +clearfix
+    > *:not(.top-bar),
+    .top-bar > *
+      @extend .restricted-container
   .region-header
-    @extend .restricted-container
-
   // Main navigation
   .region-primary-menu
-    @extend .restricted-container
 
   // Main content
   > main
+    @extend .restricted-container
+    flex: 1
+    width: 100%
+    margin-bottom: 2em
     // For Drupalera UK
     .region
       +clearfix
@@ -53,8 +62,18 @@ body
 
   // Footer
   > footer
+    > *
+      @extend .restricted-container
     .region-footer
       //@extend .restricted-container
+
+// La Drupalera
+.drupalera
+  margin-top: 1em
+  margin-left: 8px
+  display: inline-block
+  img
+    max-height: 15px
 
 
 // Dynamic main content

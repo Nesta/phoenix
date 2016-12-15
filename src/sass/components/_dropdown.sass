@@ -2,38 +2,32 @@
   position: relative
   z-index: 8
   text-align: right
-  margin-right: 20px
   max-height: 40px
-  margin-bottom: -40px
+  margin-left: 20px
   &-container
-    display: inline-block
     position: relative
     text-align: center
   &-button
     cursor: pointer
     float: right
-    font-size: 1.2em
+    font-size: 1em
     margin: 0
     position: relative
-    color: white
+    color: $white
     img
       vertical-align: top
       width: 32px
       height: auto
-
-
   &-button:after
-    color: red
+    color: $white
     content: "\25BE"
     font-size: 1.2em
     display: block
     position: absolute
-    right: -15px
-    top: -5px
-
+    right: 0px
+    top: 0px
   &-menu
     +transition(all 0.2s ease-in-out)
-
     background: $gray
     cursor: pointer
     display: none
@@ -45,10 +39,8 @@
     top: 35px
     width: auto
     z-index: 99999
-
     &:before
       +position(absolute, 0 1em 0 0)
-
       content: "\25b2"
       font-size: 1.4em
       pointer-events: none

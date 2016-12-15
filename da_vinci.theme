@@ -114,22 +114,6 @@ function da_vinci_preprocess_block(&$variables) {
 
   $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
 
-  if($variables['plugin_id'] == 'system_menu_block:account') {
-      if(null !== Drupal::currentUser()->id()) {
-          $user = User::load(Drupal::currentUser()->id());
-          if(null !== $user->get('user_picture')->target_id) {
-              $file = File::load($user->get('user_picture')->target_id);
-              $img_user_account = file_url_transform_relative(file_create_url($file->get('uri')->value));
-              $u = $variables['user'];
-              $u->img_user_account = $img_user_account;
-              $variables['user'] = $u;
-          }else {
-              $u = $variables['user'];
-              $u->img_user_account = $GLOBALS['base_url'].'/' . $variables['directory'] . '/images/avatar/48.jpg';
-              $variables['user'] = $u;
-          }
-      }
-  }
 }
 
 /**

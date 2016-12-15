@@ -9,6 +9,7 @@
 @import '../../sass-libs/susy/sass/susy'
 @import '../../sass-libs/breakpoint-sass/stylesheets/breakpoint'
 @import '../../sass-libs/bourbon/app/assets/stylesheets/bourbon'
+@import '../../sass-libs/bourbon/app/assets/stylesheets/css3/placeholder'
 @import '../../sass-libs/normalize-libsass/normalize'
 
 // Utils {Tools}.
@@ -19,29 +20,22 @@
 
 // Vendors {Extensions}.
 
-// Base {Fonts & Grid Framework}.
-@import 'base/typography'
+// Base {Skinr & Grid Framework}.
+@import 'base/skinr'
 @import 'base/susy'
 
 //Layout Regions {One underscore}.
 @import 'layout/header'
 @import 'layout/navigation'
 @import 'layout/layout'
-@import 'layout/blocks/blocks'
 @import 'layout/sidebar'
 @import 'layout/footer'
 
 //Layout Elements {Double underscore}.
 @import 'layout/_forms'
 @import 'layout/_tables'
+@import 'layout/_views'
 
 // SASS Glob {Components & Pages}.
 @import 'pages/**/*'
 @import 'components/**/*'
-
-//Theme {Skins}.
-@import 'themes/theme'
-@import 'themes/admin'
-
-//@import 'shame'
-

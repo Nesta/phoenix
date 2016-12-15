@@ -1,27 +1,30 @@
 .button
+  outline: none
   display: inline-block
-  padding: .2em .5em
+  padding: .2em 1.5em
   margin: 0 .5em .5em 0
   text-align: center
-  background-color: transparent
-  color: $color-a
-  border: 1px solid $color-a
+  background-color: $secondary-color
+  color: $white
   text-transform: uppercase
   transition: all .5s
-
+  font-size: 0.65em
+  height: 32px
+  position: relative
+  top: -2px
+  border: 1px solid transparent
+  font-weight: 600
+  line-height: 2.5em
   &:hover
     cursor: pointer
     text-decoration: none
-    border-color: $color-a-hover
-    color: $color-a-hover
+    border-color: $secondary-color
+    background-color: $white
+    color: $secondary-color
 
-.form-submit,
-.button-main
+.image-button
+  background-color: transparent
+  padding: 0.2em 0.5em
+
+.form-submit
   @extend .button
-  padding: .2em 2em
-  border-color: rgba($orange, 0.3)
-  color: $orange
-  letter-spacing: 10px
-  &:hover
-    border-color: rgba($orange, 1)
-    color: #fff

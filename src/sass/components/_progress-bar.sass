@@ -1,0 +1,11 @@
+.progress
+  &__track
+    background-image: none
+    background-color: $white
+    border-color: $border
+    border-radius: 0
+  &__bar
+    border-color: $main-color
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), -webkit-linear-gradient(left top, $main-color 0%, $main-color 25%, lighten($main-color, 8%) 25%, lighten($main-color, 8%) 50%, $main-color 50%, $main-color 75%, $main-color 100%)
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), linear-gradient(to right bottom, $main-color 0%, $main-color 25%, lighten($main-color, 8%) 25%, lighten($main-color, 8%) 50%, $main-color 50%, $main-color 75%, $main-color 100%)
+    border-radius: 0px

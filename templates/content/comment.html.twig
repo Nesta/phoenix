@@ -85,8 +85,9 @@
   <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
 
   <footer class="comment__meta">
-    {{ user_picture }}
-    <p class="comment__submitted">{{ submitted }}</p>
+    <div class="comment__submitted">
+    {{ submitted }}
+    </div>
 
     {#
       Indicate the semantic relationship between parent and child comments for

@@ -30,9 +30,10 @@
  * - page.top_bar: Items for the top bar region.
  * - page.secondary_menu: Items for the secondary menu region.
  * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted content region.
  * - page.primary_menu: Items for the primary menu region.
  * - page.breadcrumb: Items for the breadcrumb region.
- * - page.highlighted: Items for the highlighted content region.
+ * - page.featured_top: Items for the featured top region.
  * - page.help: Dynamic help text, mostly for admin pages.
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
@@ -46,23 +47,24 @@
 #}
 <div class="layout-container">
 
-  <nav role="navigation" class="sliding_menu">
-    {{ page.top_bar }}
-  </nav role="navigation">
 
   <header role="banner" aria-label="{{ 'Site header'|t}}">
-    {% if page.secondary_menu %}
-      {{ page.secondary_menu }}
+    {% if page.top_bar %}
+      <div class="top-bar">
+        {{ page.top_bar }}
+      </div>
     {% endif %}
-    <a href="#" class="menu-button-open" id="menuButtonOpen">
-    </a>
-    {{ page.header }}
-
-    {% if page.highlighted %}
-      {{ page.highlighted }}
-    {% endif %}
-    
+    <div class="site-header">
+      {% if page.secondary_menu %}
+        {{ page.secondary_menu }}
+      {% endif %}
+      {{ page.header }}
+    <div>
   </header>
+
+  {% if page.highlighted %}
+    {{ page.highlighted }}
+  {% endif %}
 
   {% if page.primary_menu %}
     {{ page.primary_menu }}
@@ -87,9 +89,6 @@
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
-    {% if page.page_bottom %}
-      {{ page.page_bottom }}
-    {% endif %}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -105,13 +104,13 @@
   </main>
 
   {% if page.footer %}
-    <footer role="complementary">
+    <footer class="site-footer" role="complementary">
       {{ page.footer }}
     </footer>
   {% endif %}
 
   {% if page.footer_info %}
-    <footer role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
       {{ page.footer_info }}
     </footer>
   {% endif %}
