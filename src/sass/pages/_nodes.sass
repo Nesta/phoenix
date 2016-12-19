@@ -9,22 +9,27 @@
       max-width: 20px
       display: inline-block
   &__content
-    .field--type-image
-      margin-right: 1.5em
-      margin-bottom: 1em
-      float: left
-    .field--type-entity-reference
-      .field__item
-        display: inline-block
-        margin-right: 5px
-        &:after
-          content: ','
-        &:last-child
+    .field
+      &--label-inline
+        overflow: hidden
+      &--type-image
+        margin-bottom: 1em
+        +breakpoint($medium)
+          margin-right: 1.5em
+          float: left
+      &--type-entity-reference
+        .field__item:not(.field--type-image):not(.text-formatted)
+          display: inline-block
+          margin-right: 5px
           &:after
-            content: ''
+            content: ','
+          &:last-child
+            &:after
+              content: ''
   &--view-mode-teaser
     .node__content
       > div:first-child.field--type-image
-        float: left
-        margin-right: 1em
         margin-bottom: 1em
+        +breakpoint($medium)
+          float: left
+          margin-right: 1em
