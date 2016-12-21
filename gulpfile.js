@@ -18,7 +18,7 @@ var gulp            = require('gulp'),
 
 /********** VARIABLES *************/
 
-// Hosts
+// Hosts - change localhost for see it in browsersync
 var hosts = 'localhost';
 
 // Paths
@@ -182,7 +182,7 @@ gulp.task('watch', function(){
 gulp.task('browsersync', function() {
   browserSync.init({
     proxy: {
-        target: "http://davinci.local",
+        target: hosts,
         ws: false
     }
   });
