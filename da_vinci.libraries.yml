@@ -1,0 +1,14 @@
+global-css:
+  css:
+    theme:
+      css/main.css: {}
+
+global-js:
+  header: true
+  js:
+    js/da-vinci.js: {}
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/drupal

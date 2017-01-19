@@ -7,6 +7,8 @@
   Drupal.behaviors.customTheme = {
     attach: function (context) {
       // Your Code.
+
+      // End your Code.
     }
-  }
+  };
 })(jQuery);

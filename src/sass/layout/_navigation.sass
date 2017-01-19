@@ -1,0 +1,27 @@
+header
+.region-primary-menu
+  .menu
+    margin: 0
+    text-align: center
+    border-bottom: 1px solid lighten($color, 80%)
+    padding-bottom: 1em
+    margin-bottom: 1em
+    &-item
+      display: inline-block
+      a
+        display: block
+        margin-right: 8px
+        padding-right: 8px
+        border-right: 1px solid $border
+        text-transform: uppercase
+        color: $color
+        &:hover,
+        &.is-active
+          color: $secondary-color
+          &:hover
+            color: $secondary-color
+        &.is-active
+          cursor: default
+          font-weight: 600
+      &:last-child a
+        border-right: 0

@@ -1,0 +1,18 @@
+table
+  border: 1px solid $border
+  th
+    background-color: $color
+    color: $white
+    padding: 0.65em
+    border: 1px solid $white
+    font-weight: 400
+    text-transform: uppercase
+    font-size: 0.85em
+  td
+    padding: 0.65em
+    border: 1px solid $white
+    background-color: lighten($secondary-color, 35%)
+  tr
+    &.odd
+      td
+        background-color: lighten($secondary-color, 33%)

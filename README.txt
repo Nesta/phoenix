@@ -36,8 +36,15 @@ Guard & LiveReload Browser extension.
       2.3.2 Default jQuery Version major to 1.7, (recommended v1.10).
 
   3. Download the Plugin's 
+
      (https://github.com/Emergya/da_vinci_plugins/archive/master.zip) 
-     and extract the file under sites/all/libraries.
+     and extract the file under sites/all/libraries/da-vinci-plugins.
+
+     (https://github.com/flaviusmatis/easyModal.js/archive/master.zip) 
+     and extract the file under sites/all/libraries/easymodal.
+
+     (http://masonry.desandro.com/masonry.pkgd.min.js) 
+     and extract the file under sites/all/libraries/masonry.
 
   4. Install Gems and RVM, very EASY, copy & paste
 

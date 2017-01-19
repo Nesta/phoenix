@@ -1,0 +1,91 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900|Montserrat'
+//300 = Light
+//400 = Regular
+//700 = bold
+//900 = black
+
+html
+  font-size: 1em
+
+body
+  color: $color-body
+  font-family: $font-default
+  font-weight: 400
+  line-height: 1.3
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $color-h
+  font-family: $font-title
+  font-weight: 700
+  margin: 1.0em 0 0.5em
+
+h1
+  line-height: 1
+h5,
+h6
+  text-transform: uppercase
+
+p
+  line-height: 1.2
+  margin: 0 0 1.2em
+
+a
+  color: $color-a
+  text-decoration: none
+  transition: color .2s
+  &:hover
+    color: $color-a-hover
+    text-decoration: none
+  &.icon-help
+    font-size: 0.85em
+
+strong
+  font-weight: 700
+
+mark,
+.marker
+  float: right
+  font-size: 0.65em
+  color: $white
+  padding: 6px
+  background-color: $gray
+
+.filter-help,
+.more-link
+  a
+    text-transform: uppercase
+    font-size: 0.65em
+    font-weight: 600
+
+summary
+  outline: none
+
+blockquote
+  background-color: $light-color
+  border-left: 1px solid $border
+  font-style: italic
+  margin: 1.5em 10px
+  padding: 0.5em 10px
+  &:after
+    color: $color
+    content: "\201D"
+    font-size: 3em
+    line-height: 0.1em
+    vertical-align: -0.45em
+  &:before
+    color: $color
+    content: "\201C"
+    font-size: 3em
+    line-height: 0.1em
+    margin-right: 0.2em
+    vertical-align: -0.4em
+  > p:first-child
+    display: inline
+
+code, kbd, pre, samp
+  font-size: 0.85em
