@@ -536,11 +536,6 @@ head:before {
   color: #ffffff;
 }
 
-.layout-container > header .site-header {
-  background: url("../images/christmas-bg.png") right top no-repeat;
-  background-size: 145px;
-}
-
 .layout-container > header .region-header {
   padding: 1em 0;
   position: relative;
@@ -551,18 +546,6 @@ head:before {
   float: left;
   margin-right: 1em;
   position: relative;
-}
-
-.layout-container > header .region-header .site-logo:before {
-  content: '';
-  background-image: url("../images/christmas.png");
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: -14px;
-  top: 0;
-  transform: rotate(23deg);
 }
 
 .layout-container > header .region-header .site-name {
@@ -950,12 +933,6 @@ head:hover ~ body .layout-container > footer > :before {
 .site-footer {
   padding: 1em 0;
   background-color: #ddd2ce;
-}
-
-.site-footer[role='complementary'] {
-  background: #ddd2ce url("../images/christmas-bg1.png");
-  background-position: 0 -30px;
-  background-size: 200px;
 }
 
 .site-footer a {
@@ -1373,14 +1350,14 @@ img {
   border-radius: 20px;
   background-color: #2a3249;
   font-weight: 400;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
 }
 
 .pager__item.is-active a {
-  color: #ffffff;
+  color: inherit;
   cursor: default;
 }
 

@@ -6,6 +6,7 @@ var gulp            = require('gulp'),
     sass            = require("gulp-sass"),
     sassGlob        = require("gulp-sass-glob"),
     sassLint        = require('gulp-sass-lint'),
+    color           = require('colors'),
     sourceMaps      = require("gulp-sourcemaps"),
     postCss         = require("gulp-postcss"),
     browserSync     = require('browser-sync').create(),
@@ -13,13 +14,14 @@ var gulp            = require('gulp'),
     sassDoc         = require('sassdoc'),
     jsHint          = require('gulp-jshint'),
     jsHintStylish   = require('jshint-stylish'),
-    color           = require('colors'),
-    del             = require('del');
+    del             = require('del'),
+    imagemin        = require('gulp-imagemin'),
+    pngquant        = require('imagemin-pngquant');
 
 /********** VARIABLES *************/
 
 // Hosts - change localhost for see it in browsersync
-var hosts = 'localhost';
+var hosts = 'http://davinci.local';
 
 // Paths
 
@@ -33,7 +35,6 @@ var distAssets = {
 };
 
 // Sass Doc
-
 var sassDocDist = 'sass_doc';
 
 var sassDocOptions = {
@@ -60,6 +61,7 @@ gulp.task('default', function(){
   console.log('gulp ' + 'clean:css'.cyan + '         ' + '# Clean css files from css directory'.grey)
   console.log('')
   console.log('Compiling tasks'.yellow)
+  console.log('gulp ' + 'imagemin'.cyan + '         ' + '# Minifiy your images in ./src/images into ./images'.grey)
   console.log('gulp ' + 'styles:dev'.cyan + '        ' + '# Compile expanded css and create a maps file.'.grey)
   console.log('gulp ' + 'styles:pro'.cyan + '        ' + '# Compile compressed css, apply autoprefixer to result.'.grey)
   console.log('')
@@ -93,6 +95,16 @@ gulp.task('clean:css', function () {
 });
 
 /************* COMPILING *****************/
+// Minify images
+gulp.task('imagemin', function () {
+    return gulp.src('./src/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('./images'));
+});
 
 // Css to development
 gulp.task('styles:dev', function () {
