@@ -6,11 +6,22 @@ base theme: classy
 libraries:
   - da_vinci/global-css
   - da_vinci/global-js
-stylesheets-remove:
-  - core/assets/vendor/normalize-css/normalize.css
-  - core/modules/system/css/system.module.css
-  - core/modules/system/css/system.theme.css
-  - core/modules/views/css/views.module.css
+
+libraries-override:
+  normalize:
+    css:
+      component:
+        /core/assets/vendor/normalize-css/normalize.css: false
+  system/base:
+    css:
+      component:
+        /core/modules/system/css/system.module.css: false
+        /core/modules/system/css/system.theme.css: false
+  views/views.module:
+    css:
+      component:
+        /core/modules/views/css/views.module.css: false
+
 regions:
   top_bar: 'Extra Top bar'
   secondary_menu: 'Secondary menu'

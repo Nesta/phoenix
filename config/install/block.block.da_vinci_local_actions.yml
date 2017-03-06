@@ -1,11 +1,8 @@
-uuid: fe388fa6-6c7d-4aea-8204-4a80cea17474
 langcode: en
 status: true
 dependencies:
   theme:
     - da_vinci
-_core:
-  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: da_vinci_local_actions
 theme: da_vinci
 region: content

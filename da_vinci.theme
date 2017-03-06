@@ -126,6 +126,16 @@ function da_vinci_preprocess_menu(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
+function da_vinci_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Add template suggestions based on the current view mode.
+  $node = $variables['elements']['#node'];
+  $suggestions[] = 'node__' . $variables['elements']['#view_mode'];
+  $suggestions[] = 'node__' . $node->bundle() . '__' . $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function da_vinci_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
   // Remove the block and replace dashes with underscores in the block ID to
   // use for the hook name.
@@ -167,4 +177,15 @@ function da_vinci_theme_suggestions_page_alter(array &$suggestions, array $varia
     $content_type = $node->bundle();
     $suggestions[] = 'page__'.$content_type;
   }
+}
+
+/**
+ * Template_theme_suggestions_field_alter().
+ */
+function da_vinci_theme_suggestions_field_alter(&$suggestions, $variables) {
+  // Add a suggestion field template for all the fields of a viewmode.
+  $suggestions[] = 'field__' . $variables['element']['#view_mode'];
+  // Add a suggestion field template for a field depending on entity, on bundle,
+  // on field and on viewmode.
+  $suggestions[] = 'field__' . $variables['element']['#field_name'] . '__' . $variables['element']['#entity_type'] . '_' . $variables['element']['#bundle'] . '__' . $variables['element']['#view_mode'];
 }
