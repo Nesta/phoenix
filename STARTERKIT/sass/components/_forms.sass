@@ -1,0 +1,45 @@
+input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+select,
+textarea
+  background-color: $white
+  border: 1px solid $border
+  padding: 8px
+  outline: none
+input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+select
+  height: 32px
+input[type='search']
+  box-sizing: border-box
+
+.fieldset-legend,
+label:not(.option)
+  font-weight: 600
+  margin-bottom: 5px
+  font-size: 0.85em
+  text-transform: uppercase
+  display: block
+
+.description
+  margin-top: 5px
+
+.form-type
+  &-radio,
+  &-checkbox
+    .description
+      margin-left: 0
+    input
+      margin-right: 5px
+
+// Password strength
+.password-strength
+  margin: 0.5em 0
+  font-size: 0.85em
+
+// Machine name
+.field-suffix
+  margin-left: 5px
+  .link
+    margin-left: 10px
+    text-transform: uppercase
+    font-size: 0.65em
+    color: $secondary-color
