@@ -15,18 +15,28 @@
     "colors": "^1.1.2",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
     "gulp-jshint": "^2.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-imagemin": "3.1.1",
     "imagemin-pngquant": "^5.0.0",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
-    "sassdoc": "^2.1.20"
+    "sassdoc": "^2.1.20",
+    "optipng": "^1.0.0",
+    "optipng-bin": "^3.1.2",
+    "jpegtran": "^1.0.4",
+    "jpegtran-bin": "^3.2.0",
+    "pngquant-bin": "0.1.6",
+    "gifsicle": "0.1.4",
+    "yargs": "6.6.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-imagemin": "^3.1.1"
   }
 }

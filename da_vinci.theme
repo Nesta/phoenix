@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the Bartik theme.
+ * Functions to support theming.
  */
 
 use Drupal\Core\Template\Attribute;
@@ -87,7 +87,7 @@ function da_vinci_preprocess_maintenance_page(&$variables) {
     $variables['site_name'] = '';
   }
 
-  // Bartik has custom styling for the maintenance page.
+  // Maintenance page.
   $variables['#attached']['library'][] = 'da_vinci/maintenance_page';
 }
 
@@ -110,7 +110,6 @@ function da_vinci_preprocess_block(&$variables) {
   if ($variables['plugin_id'] == 'system_branding_block') {
     $variables['attributes']['class'][] = 'clearfix';
   }
-  $variables['drupalera'] = $GLOBALS['base_url'] . '/' . drupal_get_path('theme','da_vinci') . '/images/la_drupalera.png';
 
   $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
 
