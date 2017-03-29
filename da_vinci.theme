@@ -111,8 +111,6 @@ function da_vinci_preprocess_block(&$variables) {
     $variables['attributes']['class'][] = 'clearfix';
   }
 
-  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
-
 }
 
 /**
