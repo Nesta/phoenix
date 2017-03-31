@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.da_vinciTheme = {
+  Drupal.behaviors.mythemeTheme = {
     attach: function (context) {
 
       

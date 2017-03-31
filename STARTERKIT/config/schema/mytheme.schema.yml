@@ -1,4 +1,4 @@
-# Schema for the configuration files of the Da Vinci theme.
+# Schema for the configuration files of the mytheme theme.
 
 mytheme.settings:
   type: theme_settings

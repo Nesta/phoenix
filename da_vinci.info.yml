@@ -16,6 +16,7 @@ libraries-override:
     css:
       component:
         /core/modules/system/css/system.module.css: false
+      theme:
         /core/modules/system/css/system.theme.css: false
   views/views.module:
     css:
