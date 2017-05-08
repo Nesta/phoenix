@@ -62,7 +62,7 @@ INSTALLATION
 2.- Read the 'USAGE' part and create your own subtheme.
 
 3.- Go to your subtheme directory and install bower/npm dependencies:
-  cd path-to-your-drupal/themes/YOURSUBTHEME
+  cd path-to-your-drupal/themes/custom/MYTHEMENAME
   npm install
   (Maybe you need to use 'sudo')
 
@@ -73,10 +73,9 @@ USAGE
 -----
 1.- CREATING A SUBTHEME:
 You should never modify a theme that is packaged and released from Drupal.org because, if you do, all your changes will be lost once that theme is updated.
-Instead, you should create a subtheme from one of the starterkits folders. Once you've donde that, you can override styles, templates...
-In short: YOU HAVE TO USE A SUBTHEME.
+Instead, you should create a subtheme from STARTERKIT folder. Once you've donde that, you can override styles, templates...
 
-For this, copy the STARTERKIT directory into /themes.
+For this, copy the STARTERKIT directory into /themes/custom and rename with your desired name.
 
 More info in STARTERKIT directory (README.txt file)
 

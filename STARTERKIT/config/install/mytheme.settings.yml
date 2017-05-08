@@ -1,4 +1,0 @@
-# If you want use logo.png, change 'use_default' to false BEFORE installation or re-install the Theme.
-logo:
-  path: 'themes/STARTERKIT/logo.png'
-  use_default: true

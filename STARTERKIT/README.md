@@ -8,7 +8,7 @@ Instead, you should create a subtheme from one of the starterkits folders. Once 
 INSTRUCTIONS
 ------------
 
-1.- Copy the STARTERKIT from this directory into themes directory.
+1.- Copy the STARTERKIT from this directory into themes/custom directory.
 
 2.- Rename the directory to a machine readable name you choose for your subtheme (we're going to call THEMENAME for these explanations). You need to rename info.yml file to THEMENAME.info.yml, because is the primary file Drupal uses to determine if a theme exists.
 
