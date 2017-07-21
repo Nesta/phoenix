@@ -5,7 +5,7 @@
  * Copyright (c) 2013 Yannick Albert (http://yckart.com)
  * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
  * 2013/07/26
-**/
+ **/
 ;(function ($) {
     var on = $.fn.on, timer;
     $.fn.on = function () {

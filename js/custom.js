@@ -1,28 +1,26 @@
 /**
  * @file
- * Custom Code for General Elements without behaviour.
+ * Custom Code for General Elements.
  */
 
 (function ($) {
   $(document).ready(function(){
 
-    //Add target blank to external links.
-    var open_new = Drupal.t('Open in new window');
+    // target blank method
 		$("main a[href*='http://'], main a[href*='https://']")
 				.addClass("external")
 	  		.attr("target","_blank")
-				.attr("title",open_new);
+				.attr("title","Opens new window");
 		$(".social-media a[href*='http://'], .social-media a[href*='https://']")
 				.addClass("external")
 	  		.attr("target","_blank")
-				.attr("title",open_new);
+				.attr("title","Opens new window");
 
     // Main Logo.
     var logo_title = $('.site-logo img').attr('alt');
     setTimeout(function(){ 
       $('.site-logo svg title').text(logo_title);
     }, 1000);
-
     // Fade into menu.
     $('.sliding-panel-button, .sliding-panel-fade-screen, .sliding-panel-close').on('click touchstart',function (e) {
       buttonChange();
@@ -75,5 +73,28 @@
         }
     }
 
+    // Fade Elements.
+    $('.lang-selection, #block-mainnavigation-sliding').addClass('hide-element');
+
+    $('#block-contactus .field--name-body').appendTo('#block-contactus');
+
+    //Add target blank to external links
+    $("a[href^='http://']").attr("target","_blank");
+
+    // Convert PX to EM - UI.
+    $('.region-convert').removeClass('region');
+    $('<div class="convert-close" title="Close">X</div>').appendTo('body');
+    $('.region-convert').on('click touchstart',function (e) {
+      if ($('#block-convertblock').hasClass('active')) {
+      }else{
+        $('#block-convertblock').addClass('active');
+        $('.convert-close').addClass('active');
+        $('.convert-close').on('click touchstart',function (e) {
+          $('#block-convertblock').removeClass('active');
+          $('.convert-close').removeClass('active');
+        });
+      }
+    });
   });
+
 })(jQuery);
