@@ -1,4 +1,3 @@
-uuid: a86c8b4a-0de7-405e-8a00-c3c497feac69
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - system
   theme:
     - da_vinci
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: da_vinci_main_menu
 theme: da_vinci
 region: primary_menu
