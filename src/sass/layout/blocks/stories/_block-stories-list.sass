@@ -1,0 +1,120 @@
+.path-stories
+  .view-stories
+    h1.page-title
+      +font-size(64)
+      text-align: center
+      color: $dark-blue
+      +padding-top(64)
+      +padding-bottom(32)
+      background-image: url('../images/title-red-line.png')
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: vmin-calc(172)
+      position: static!important
+      height: auto
+      width: auto
+      +margin-top(32)
+      +breakpoint($medium)
+        background-size: vw-calc(172)
+    background: transparent
+    .view-content
+      @extend .restricted-container
+      +padding(64, 0, 64, 0)
+      .views-row
+        text-align: center
+        +breakpoint($medium)
+          text-align: left
+        &.even
+          .views-field-field-story-featured-image
+            float: none
+            +breakpoint($medium)
+              float: right
+          .views-field-nothing
+            float: none
+            +breakpoint($medium)
+              float: left
+          .views-field-nothing .description--content--created
+            text-align: right
+
+        overflow: hidden
+        +margin-bottom(37)
+        +margin-top(37)
+        padding-bottom: vmin-calc(37)!important
+        +breakpoint($medium)
+          padding-bottom: vw-calc(37)!important
+        .views-field-field-story-featured-image
+          width: 100%
+          +height(300)
+          margin-bottom: vmin-calc(32)
+          +breakpoint($medium)
+            width: vw-calc(559)
+            margin-bottom: 0
+          position: relative
+          float: none
+          +breakpoint($medium)
+            float: left
+          img
+            width: 100%
+            height: 100%
+        .field-content
+          height: 100%
+        .views-field-nothing
+          width: 100%
+          float: none
+          +breakpoint($medium)
+            float: right
+            width: vw-calc(600)
+            height: vw-calc(300)
+          position: relative
+          .description--content
+            position: relative
+            &--created
+              +margin-bottom(4)
+              text-align: left
+              color: $blue
+            &-description
+              width: 100%
+              padding-bottom: 0
+              +breakpoint($medium)
+                width: vw-calc(600)
+                padding-bottom: vw-calc(32)
+              line-height: 1.38
+              +font-size(22)
+
+            h2 
+              +font-size(42)
+              //a
+                display: inline-block
+                +max-width(590)
+                +padding-right(10)
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap
+                margin: 0
+          .description--content-path
+            display: none
+            a
+              +buttons($white, $red, $dark-blue)
+              margin: 0 auto
+              letter-spacing: 1.1px
+              line-height: 1.14
+              +font-size(14)
+              background: none
+              box-shadow: 0 -0.5px 5px 0 $lighter-grey
+              width: 50%
+              margin-top: vmin-calc(-16)
+              +breakpoint($medium)
+                margin-top: vw-calc(10)
+              &:hover
+                background: $red
+                color: $white
+                border-color: $red
+              color: $dark-grey
+      .field--name-field-story-featured-image
+        +margin-top(66)
+    nav
+      ul
+        li
+          display: inline-block
+          &.pager__item
+            border-bottom: 0

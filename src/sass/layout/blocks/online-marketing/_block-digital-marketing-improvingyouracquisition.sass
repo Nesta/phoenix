@@ -1,0 +1,57 @@
+#block-digital-marketing-improvingyouracquisition
+  @extend .main-block
+  .stadistic-line
+    @extend .animated
+    @extend .fadeInLeft
+  &:before
+    @extend .animated
+    @extend .fadeInRightBig
+  &:after
+    @extend .animated
+    @extend .fadeInRightBig
+  
+  +breakpoint($medium)
+    align-items: flex-start
+    z-index: 10
+    .stadistic-line
+      position: absolute
+      background: url('../images/stadistic.png') 0 0 no-repeat
+      +width(850)
+      +height(295)
+      +top(212)
+      +right(200)
+      z-index: 10
+      background-size: contain
+    &:before
+      content: ''
+      position: absolute
+      +top(50)
+      right: 0
+      +width(391)
+      +height(506)
+      background: url('../images/card-digital-two.png') 0 0 no-repeat
+      background-size: contain
+      animation-delay: 2s
+      z-index: 9
+    &:after
+      content: ''
+      position: absolute
+      +top(50)
+      right: 0
+      +width(522)
+      +height(498)
+      background: url('../images/card-digital-one.png') 0 0 no-repeat
+      background-size: contain
+      animation-delay: 1s
+      z-index: 0
+    h1
+      width: 47%
+    h1, > div
+      text-align: left
+      +margin-left(138)
+      .description
+        margin-left: 0
+        width: 67%
+        text-align: left
+    .arrow-to-scroll
+      left: 0

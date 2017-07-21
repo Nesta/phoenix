@@ -1,0 +1,49 @@
+#block-contactus-contactcard
+  background-color: $dark-blue
+  +padding(64, 0, 115, 0)
+  .field--name-field-contact-card-contact
+    .field__label
+      @extend .visually-hidden
+  .field__items
+    @extend .restricted-container
+    +breakpoint($medium)
+      display: flex
+    justify-content: center
+    > div
+      justify-content: center
+      width: 100%
+      +breakpoint($medium)
+        display: flex
+        width: 33%
+      text-align: center
+      .paragraph--type--contact-card
+        position: relative
+        .field--name-field-contact-card-title
+          +breakpoint(0 $medium)
+            margin-top: vmin-calc(48)
+          color: $dark-grey
+          +font-size(14)
+          font-weight: 700
+          text-transform: uppercase
+          +margin-bottom(16)
+        .field--name-field-contact-card-description
+          color: $lighter-grey
+          +font-size(16)
+          line-height: 1.25
+          +breakpoint($medium)
+            width: vw-calc(262)
+        .description--contact-card
+          +breakpoint($medium)
+            position: absolute
+          bottom: -70px
+          width: 100%
+          .field--name-field-contact-card
+            &-phone
+              a
+                +font-size(16)
+                color: $lighter-grey
+                &:hover
+                  color: $lighter-grey
+            &-email
+              color: $red
+              +font-size(16)

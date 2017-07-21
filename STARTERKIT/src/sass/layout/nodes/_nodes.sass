@@ -1,0 +1,35 @@
+.node
+  &__links
+    line-height: 1.5
+    text-align: right
+  &__submitted
+    margin-bottom: 1em
+    text-align: right
+    .profile
+      max-width: 20px
+      display: inline-block
+  &__content
+    .field
+      &--label-inline
+        overflow: hidden
+      &--type-image
+        margin-bottom: 1em
+        +breakpoint($medium)
+          margin-right: 1.5em
+          float: left
+      &--type-entity-reference
+        .field__item:not(.field--type-image):not(.text-formatted)
+          display: inline-block
+          margin-right: 5px
+          &:after
+            content: ','
+          &:last-child
+            &:after
+              content: ''
+  &--view-mode-teaser
+    .node__content
+      > div:first-child.field--type-image
+        margin-bottom: 1em
+        +breakpoint($medium)
+          float: left
+          margin-right: 1em

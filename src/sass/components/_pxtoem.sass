@@ -1,0 +1,78 @@
+//body
+  .region-convert:after
+    content: "Convert px/em/rem"
+    display: block
+    padding: 0.313rem 0.625rem
+    font-family: sans-serif
+    font-size: 1rem
+    font-weight: bold
+    position: fixed
+    right: -0.125rem
+    top: 11.250rem
+    color: $light-color
+    background-color: $color
+    cursor: pointer
+    z-index: 999
+  .layout-container >
+    .region-convert
+      #block-convertblock
+        position: fixed
+        top: 13.125rem
+        width: 31.250rem
+        right: -34.375rem
+        color: $light-color
+        background-color: $color
+        z-index: 999
+        text-align: center
+        transition: 1s
+        &.active
+          transition: 1s
+          right: 0
+        .custom-base-size
+          display: none
+        input[type="text"]
+          width: 3.438rem
+          text-align: right
+          color: $color
+        .convert-title
+          font-size: 2rem
+          font-style: italic
+          margin: 0.938rem 0 1.250rem 0
+          display: block
+        .custom-px-to-em, .custom-wrap > span, .custom-em-to-px
+          display: inline-block
+          margin-right: 1.250rem
+        .custom-em-to-px
+          margin-right: 0
+        .convert-button
+          width: 50%
+          overflow: hidden
+          margin: 1.250rem 0
+          padding: 0.625rem
+          color: $color
+        .convert-or
+          text-transform: uppercase
+        .convert-result
+          padding: 0.625rem 0
+          background: $light-color
+          color: $color
+          font-weight: bold
+        .custom-result
+          padding: 0.625rem 0
+          font-size: 1.5rem
+//.convert-close
+  position: fixed
+  right: -31.250rem
+  font-family: fantasy
+  font-size: 3rem
+  padding: 0.313rem 0.625rem
+  cursor: pointer
+  top: 13.125rem
+  z-index: 999
+  transition: 1s
+  &.active
+    right: 27.813rem
+  &:hover
+    color: $white
+#block-convertblock, .convert-close
+  display: none!important

@@ -1,0 +1,36 @@
+#block-copyright
+  .copy 
+    margin-bottom: 0.313rem
+    span
+      display: block
+      text-align: left
+      font-size: 0.875rem
+      +breakpoint($medium-large)
+        text-align: right
+        font-size: 1rem
+      color: $lighter-grey
+      opacity: 0.64
+
+  .tech-lovers
+    margin-top: 0.313rem
+    padding-bottom: 4rem
+    float: none
+    margin: 0 auto
+    font-size: 0.875rem
+    width: 13.750rem
+    +breakpoint($medium-large)
+      width: 15.938rem
+      float: right
+      font-size: 1rem
+    span  
+      color: $lighter-grey
+      display: block
+      overflow: hidden
+      visibility: hidden
+      border-right: 0.15rem solid orange
+      white-space: nowrap
+      letter-spacing: -0.031rem
+      font-family: $font-mono
+      &.ready
+        animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite
+        visibility: visible

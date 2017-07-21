@@ -1,0 +1,16 @@
+#block-languages
+  margin-bottom: 1rem
+  +breakpoint(0 $medium)
+    padding-bottom: .5rem
+    border-bottom: 1px solid rgba($grey, .5)
+  .lang-selection 
+    margin-top: 5.5rem
+    +breakpoint($x-large)
+      margin-top: 0
+    @extend .animated
+    a
+      margin-right: 1.625rem
+      color: $white
+      font-family: $font-title 
+      &.active
+        color: $red

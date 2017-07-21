@@ -1,0 +1,17 @@
+.comment
+  overflow: hidden
+  margin-top: 1rem
+  padding-top: 1rem
+  &:last-child
+    border: 0
+  &__meta
+    margin-bottom: 1rem
+    +breakpoint($medium)
+      +span(3 of 12 first)
+  .content
+    +breakpoint($medium)
+      +span(9 of 12 last)
+    padding-bottom: 1rem
+    border-bottom: 0.063rem solid $border
+    > h3
+      margin-top: 0

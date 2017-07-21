@@ -1,0 +1,13 @@
+global-css:
+  css:
+    theme:
+      css/mytheme.css: {}
+
+global-js:
+  header: true
+  js:
+    js/mytheme.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/drupal

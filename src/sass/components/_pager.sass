@@ -1,0 +1,25 @@
+.pager
+  ul
+    padding: 0
+  &__item
+    display: block
+    margin: 0 0.313rem
+    a
+      color: $secondary-color
+    &.is-active
+      width: 2rem
+      height: 2rem
+      line-height: 1.1rem
+      border-radius: 1.250rem
+      background-color: $color
+      font-weight: 400
+      color: $white
+      a
+        color: inherit
+        cursor: default
+    &--first,
+    &--previous,
+    &--next,
+    &--last
+      text-transform: lowercase
+      font-size: 0.85rem

@@ -1,0 +1,71 @@
+.layout-container > header
+  background-color: $color
+  color: $white
+  .region-header
+    padding: 1em 0
+    position: relative
+    z-index: 2
+    .site
+      &-logo
+        float: left
+        margin-right: 1em
+        position: relative
+      &-name
+        a
+          display: inline-block
+          margin-top: 0.5em
+        font-family: $font-title
+        font-size: 1.5em
+      &-slogan
+        font-style: italic
+        font-size: 0.65em
+    h1
+      +hide-text
+      height: 0
+      margin: 0
+    a
+      color: $white  
+      &:hover
+        color: $white
+
+.top-bar
+  padding: 1em 0
+  font-size: 0.75em
+  background-color: lighten($color, 8%)
+.region-highlighted
+  margin-top: 1em
+  margin-bottom: 1em
+.region-secondary-menu
+  .menu
+    text-align: right
+    &-item
+      display: inline-block
+      margin-right: 8px
+      border-right: 1px solid $secondary-color
+      padding-right: 8px
+      line-height: 8px
+      &:last-child
+        border-width: 0
+        margin-right: 0
+        padding-right: 0
+      a
+        color: $white
+        display: block
+        text-transform: uppercase
+        font-size: 0.75em
+        &.is-active
+          cursor: default
+        &.is-active,
+        &:hover
+          color: $secondary-color
+
+
++breakpoint($large)
+  header
+    .region-header
+      +span(7 of 12 first)
+    .region-secondary-menu
+      +span(4  of 12 last)
+      #block-menuprincipal
+      #block-languageswitcher
+        +span(1 of 12 last)

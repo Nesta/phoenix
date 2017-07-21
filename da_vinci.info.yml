@@ -1,0 +1,43 @@
+name: Da Vinci
+type: theme
+description: <b>Classy Subtheme</b> with <i>Sass Core<i>, <i>Sass Tools</i> and <i>Sass Spirit</i>.
+# core: 8.x
+base theme: classy
+libraries:
+  - da_vinci/global-css
+  - da_vinci/global-js
+
+libraries-override:
+  normalize:
+    css:
+      component:
+        /core/assets/vendor/normalize-css/normalize.css: false
+  system/base:
+    css:
+      component:
+        /core/modules/system/css/system.module.css: false
+      theme:
+        /core/modules/system/css/system.theme.css: false
+  views/views.module:
+    css:
+      component:
+        /core/modules/views/css/views.module.css: false
+
+regions:
+  top_bar: 'Extra Top bar'
+  secondary_menu: 'Secondary menu'
+  sliding_menu: 'Sliding menu'
+  header: 'Header'
+  slick_fullpage: 'Slick Full Page'
+  highlighted: 'Highlighted'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
+  featured_top: 'Featured top'
+  content: 'Content'
+  content_bottom: 'Content bottom'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'
+  footer_info: 'Extra Footer info'
+  footer: 'Footer'
+  footer_info: 'Extra Footer info'

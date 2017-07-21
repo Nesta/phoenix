@@ -1,0 +1,31 @@
+#block-blk-socialnetworks
+  .social-media 
+    text-align: center
+    +breakpoint($medium-large)
+      text-align: right
+    > div
+      vertical-align: top
+      display: inline-block
+      margin-left: 3.250rem
+      +breakpoint($medium-large)
+        margin-left: calc(33% - 2.625rem)
+      height: 2.5rem
+      width: 2.5rem
+      text-indent: -624.938rem
+      text-align: left
+      a
+        display: block
+        width: 100%
+        height: 100%
+
+      &:first-child
+        margin-left: 0
+
+      &.ico-facebook
+        background: url('../images/ico-facebook.png') 0 0 no-repeat
+
+      &.ico-twitter
+        background: url('../images/ico-twitter.png') 0 0 no-repeat
+
+      &.ico-g-plus
+        background: url('../images/ico-g-plus.png') 0 0 no-repeat

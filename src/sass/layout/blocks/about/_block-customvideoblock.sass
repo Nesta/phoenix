@@ -1,0 +1,172 @@
+#block-customvideoblock
+  @extend .hide-rwd-medium
+  &.in-view
+    @extend .animated 
+    @extend .fadeIn 
+    visibility: visible
+  overflow: hidden
+  position: relative
+  h2
+    margin-top: 0
+    position: absolute
+    z-index: 99
+    top: vmin-calc(34)
+    +breakpoint($medium)
+      top: vw-calc(240)
+    +left(176)
+    +font-size(48)
+    +width(468)
+    +breakpoint($medium)
+      &:before
+        content: ' '
+        background: url('../images/video-lines.png') 0 0 no-repeat
+        +width(603)
+        +height(375)
+        +top(-30)
+        +left(-28)
+        position: absolute
+        background-size: contain 
+    &.inactive
+      visibility: hidden
+  video
+    position: absolute
+    width: 100%
+    top: 0
+    opacity: 0
+    transition: 1s
+    &.active
+      opacity: 1
+      @extend .animated
+      @extend .fadeIn
+  img
+    position: absolute
+    width: 100%
+    top: 0
+    opacity: 1
+    transition: 1s
+    left: 0
+    &.active
+      opacity: 0
+      left: -635rem
+      transition: 2s
+      @extend .animated
+      @extend .fadeOut
+  .custom-video-caption
+    position: absolute
+    top: vmin-calc(280)
+    right: vmin-calc(64)
+    +margin-top(24)
+    +breakpoint($medium)
+      top: vw-calc(410)
+      right: vw-calc(220)
+    z-index: 99
+    +font-size(36)
+    font-weight: 700
+    font-family: $font-title
+    color: $white
+    text-transform: uppercase
+    &.inactive
+      visibility: hidden
+  .custom-video-description
+    top: vmin-calc(134)
+    left: vmin-calc(24)
+    z-index: 99
+    +font-size(22)
+    line-height: 1.45
+    color: $dark-blue
+    width: 46%
+    position: absolute
+    +breakpoint($medium)
+      display: block
+      top: vw-calc(372)
+      left: vw-calc(176)
+      width: 36%
+    &.inactive
+      visibility: hidden
+  .play
+    background: url('../images/play.png') 50% 50% no-repeat
+    +width(120)
+    +height(120)
+    cursor: pointer
+    position: absolute
+    top: vmin-calc(134)
+    right: vmin-calc(124)
+    +breakpoint($medium)
+      top: vw-calc(293)
+      right: vw-calc(288)
+    background-size: cover
+    &.active
+      transition: 2s
+      +top(660)
+    &.inactive
+      transition: 2s
+      opacity: 0
+      visibility: hidden
+    &.mini
+      +width(50)
+      +height(50)
+      +top(660)
+      +right(320)
+      background: url('../images/play-mini.png') 50% 50% no-repeat
+      background-size: cover
+  .pause
+    +width(50)
+    +height(50)
+    cursor: pointer
+    position: absolute
+    +top(660)
+    +right(320)
+    z-index: 99
+    background: url('../images/pause.png') 50% 50% no-repeat
+    background-size: cover
+    opacity: 0
+    transition: 1s
+    &.active
+      opacity: 1
+      transition: 1s
+  .close
+    +width(50)
+    +height(50)
+    cursor: pointer
+    position: absolute
+    +top(660)
+    +right(380)
+    z-index: 99
+    background: url('../images/ic-close.png') 50% 50% no-repeat
+    background-size: cover
+    opacity: 0
+    transition: 1s
+    &.active
+      opacity: 1
+      transition: 1s
+  .mute
+    +width(50)
+    +height(50)
+    cursor: pointer
+    position: absolute
+    +top(660)
+    +right(260)
+    z-index: 99
+    opacity: 0
+    &.off
+      opacity: 1
+      background: url('../images/mute-off.png') 50% 50% no-repeat
+      background-size: cover
+      @extend .animated
+      @extend .fadeInUpBig
+    &.on
+      opacity: 1
+      background: url('../images/mute-on.png') 50% 50% no-repeat
+      background-size: cover
+      @extend .animated
+      @extend .fadeInUpBig
+
+.linux
+  #block-customvideoblock
+    h2
+      &:before
+        left: vw-calc(-35.5)
+        +breakpoint($medium)
+          left: vw-calc(-35)
+        +breakpoint($x-large)
+          left: vw-calc(-33.8)

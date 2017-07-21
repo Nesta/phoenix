@@ -1,0 +1,39 @@
+#block-blk-ourkeyvalues
+  @extend .featured-content
+  +padding-top(72)
+  +padding-bottom(46)
+  .field--name-body div.ourkeysvalue-list
+    font-family: $font-title
+    +font-size(48)
+    text-align: center
+    color: $lighter-grey
+    > div
+      display: inline-block
+      width: 30%
+      position: relative
+      +height(162)
+      .check-keys
+        background: url('../images/check-keys.png') center 0 no-repeat
+        +width(54.6)
+        +height(36.4)
+        margin: 0 auto
+        +margin-bottom(30.6)
+        background-size: cover
+      span
+        display: block
+        +font-size(32)
+  &.in-view
+    .ourkeysvalue-list
+      > div
+        &:first-child
+          @extend .animated
+          @extend .fadeIn
+          animation-delay: 1s
+        &:nth-child(2)
+          @extend .animated
+          @extend .fadeIn
+          animation-delay: 2s
+        &:last-child
+          @extend .animated
+          @extend .fadeIn
+          animation-delay: 3s

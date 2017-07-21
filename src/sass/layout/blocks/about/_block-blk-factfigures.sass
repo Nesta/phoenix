@@ -1,0 +1,143 @@
+#block-blk-factfigures
+  @extend .hide-rwd-medium
+  @extend .featured-content
+  @extend .featured-content-blue
+
+  > *
+    @extend .restricted-container
+  .more-than-title
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    color: $dark-grey
+
+
+  .more-than
+    &-boxes
+      margin-top: rem-calc(27)
+      margin-top: vw-calc(27)
+    &-box
+      border-radius: rem-calc(4)
+      border-radius: vw-calc(4)
+      background: $darker-blue
+      text-align: center
+      position: relative
+      &-title
+        line-height: 1.71
+        text-transform: uppercase
+        font-weight: 700
+        color: $lighter-grey
+      &-description
+        color: $dark-grey
+        line-height: 1.29
+      &-number
+        font-family: $font-title
+        font-weight: 700
+        color: $lighter-grey
+        line-height: 0.750
+      &-caption
+        font-family: $font-title
+        color: $lighter-grey
+
+  +breakpoint(0 $medium)
+    .more-than-title
+      font-size: .8rem
+      letter-spacing: .1rem
+
+    .more-than
+      &-boxes
+        margin-top: rem-calc(27)
+        margin-top: vw-calc(27)
+      &-box
+        padding: rem-calc(8)
+        margin: rem-calc(8)
+        min-height: rem-calc(32)
+        &-title
+          font-size: rem-calc(20)
+          letter-spacing: rem-calc(1)
+          text-align: left
+          padding-left: 6rem
+        &-description
+          font-size: rem-calc(12)
+          text-align: left
+          padding-left: 6rem
+        &-number
+          position: absolute
+          left: rem-calc(8)
+          top: rem-calc(8)
+          width: auto
+          height: auto
+          font-size: rem-calc(32)
+          line-height: 1.2
+
+        &-caption
+          font-size: rem-calc(12)
+          text-align: left
+          position: absolute
+          left: rem-calc(8)
+          top: rem-calc(48)
+          width: auto
+          height: auto 
+
+  +breakpoint($medium)
+    .description
+      width: rem-calc(965)
+      width: vw-calc(965)
+
+    .more-than-title
+      font-size: rem-calc(14)
+      font-size: vw-calc(14)
+      letter-spacing: rem-calc(2)
+      letter-spacing: vw-calc(2)
+
+    .more-than
+      &-boxes
+        margin-top: rem-calc(27)
+        margin-top: vw-calc(27)
+      &-box
+        +gallery(3 of 12)
+        border-radius: rem-calc(4)
+        border-radius: vw-calc(4)
+        height: rem-calc(285)
+        height: vw-calc(285)
+        padding: rem-calc(32) rem-calc(16)
+        padding: vw-calc(32) vw-calc(16)
+        background: $darker-blue
+        text-align: center
+        position: relative
+        &-title
+          font-size: rem-calc(14)
+          font-size: vw-calc(14)
+          text-align: center
+          margin-bottom: rem-calc(2)
+          margin-bottom: vw-calc(2)
+          margin-left: rem-calc(5)
+          margin-left: vw-calc(5)
+          letter-spacing: rem-calc(2)
+          letter-spacing: vw-calc(2)
+        &-description
+          font-size: rem-calc(14)
+          font-size: vw-calc(14)
+        &-number
+          margin-top: rem-calc(38)
+          margin-top: vw-calc(38)
+          font-size: rem-calc(104)
+          font-size: vw-calc(104)
+          position: absolute
+          bottom: rem-calc(64)
+          bottom: vw-calc(64)
+          width: 89%
+        &-caption
+          font-size: rem-calc(32)
+          font-size: vw-calc(32)
+          font-family: $font-title
+          color: $lighter-grey
+          position: absolute
+          bottom: rem-calc(24)
+          bottom: vw-calc(24)
+          width: 89%
+        &:first-child
+          .more-than-
+            &box
+              &-caption
+                width: 94%

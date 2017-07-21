@@ -1,0 +1,145 @@
+html,
+body
+  min-height: 100vh
+
+body
+  color: $color-body
+  background-color: $white
+  &.frozen-body
+    overflow: hidden
+
+// Base layout: Header, main content, footer..
+//-------------------------------------------------------//
+.maintenance-page
+  h1
+    text-align: center
+    margin-bottom: 0.5rem
+
+.toolbar-fixed.toolbar-horizontal
+  .layout-container > header
+    //Leave space on top for the Drupal toolbar
+    top: 80px
+    +breakpoint(0 $medium)
+      top: 60px
+  .region-secondary-menu
+    top: 160px
+    +breakpoint(0 $medium)
+      top: 140px
+
+.has-secondary-menu .layout-container
+  //Leave space for the fixed menu
+  padding-top: 140px
+  +breakpoint(0 $medium)
+    padding-top: 96px
+.layout-container
+  //Leave space for the fixed menu
+  padding-top: 80px
+  +breakpoint(0 $medium)
+    padding-top: 60px
+
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  margin: 0
+  > .region
+    @extend .restricted-container
+    width: 100%
+  // Header
+  > header
+    position: fixed
+    background-color: #fff
+
+    transition: all .2s ease-in
+    top: 0
+    width: 100%
+    height: 80px
+    +breakpoint(0 $medium)
+      height: 60px
+    z-index: 500
+    transform: translateY(0)
+    .region
+      +clearfix
+    > *:not(.top-bar),
+    .top-bar > *
+      @extend .restricted-container
+  .region-secondary-menu
+    transform: translateY(0)
+    position: fixed
+    background-color: #fff
+    transition: all .2s ease-in
+    top: 80px
+    +breakpoint(0 $medium)
+      top: 60px
+    width: 100%
+    height: auto
+    z-index: 498
+
+  &.sliding-panel-visible
+    > header
+      background-color: $dark-blue
+
+  &.menu-hide-scroll
+    > header
+      transform: translateY(-100px)
+    .region-secondary-menu
+      transform: translateY(-150px)
+
+  // Main content
+  > main
+    // @extend .restricted-container
+    flex: 1
+    width: 100%
+    //margin-bottom: 2rem
+    .region
+      +clearfix
+    position: relative
+    z-index: 2
+    overflow: hidden
+
+  // Footer
+  > footer
+    //> *
+      @extend .restricted-container
+    .region-footer
+      //@extend .restricted-container
+
+// Dynamic main content
+
+.layout
+  &-one-sidebar
+    &.layout-sidebar-first
+      .layout-content
+        +breakpoint($medium)
+          +span(9 of 12 last)
+      .layout-sidebar-first
+        +breakpoint($medium)
+          +span(3 of 12 first)
+  &-one-sidebar
+    &.layout-sidebar-second
+      .layout-content
+        +breakpoint($medium)
+          +span(9 of 12 first)
+      .layout-sidebar-second
+        +breakpoint($medium)
+          +span(3 of 12 last)
+  &-two-sidebars
+    .layout-content
+      +breakpoint($medium)
+        +span(9 of 12 last)
+      +breakpoint($large)
+        +span(isolate 6 at 4 of 12)
+    .layout-sidebar-first
+      +breakpoint($medium)
+        +span(3 of 12 first)
+    .layout-sidebar-second
+      +breakpoint($medium)
+        clear: both
+        float: none
+      +breakpoint($large)
+        +span(3 of 12 last)
+        clear: none
+
+
+.ie
+  .layout-container 
+    display: block

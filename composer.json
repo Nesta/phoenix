@@ -1,0 +1,18 @@
+{
+  "name": "drupal/da_vinci",
+  "description": "Da Vinci is a Classy Subtheme with Gulp, Sass Core, Sass Tools and Sass Spirit.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0",
+  "homepage": "https://drupal.org/project/da_vinci",
+  "authors": [
+    {
+      "name": "Neftalí Guerrero Pancorbo",
+      "homepage": "https://www.drupal.org/u/nesta_",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://drupal.org/project/issues/da_vinci",
+    "source": "https://cgit.drupalcode.org/da_vinci"
+  }
+}

@@ -1,0 +1,73 @@
+.path-careers
+  .view-careers
+    h1.page-title
+      +font-size(64)
+      text-align: center
+      color: $dark-blue
+      +padding-top(64)
+      +padding-bottom(32)
+      background-image: url('../images/title-red-line.png')
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: vmin-calc(172)
+      position: static!important
+      height: auto
+      width: auto
+      +margin-top(32)
+      +breakpoint($medium)
+        background-size: vw-calc(172)
+    background: transparent
+    .view-empty
+      p
+        text-align: center
+        +font-size(22)
+        line-height: 1.45
+        color: $blue
+    .view-content, .view-empty
+      @extend .restricted-container
+      +padding(64, 0, 64, 0)
+      .views-row
+        +padding(32, 32, 32, 32)
+        background: $white
+        text-align: center
+        box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.2)
+        +breakpoint($medium)
+          text-align: left
+        overflow: hidden
+        +margin-bottom(37)
+        +margin-top(37)
+        padding-bottom: vmin-calc(37)!important
+        +breakpoint($medium)
+          padding-bottom: vw-calc(37)!important
+        .views-field-nothing
+          width: 100%
+          position: relative
+          .description--content
+            position: relative
+            &--created
+              +margin-bottom(4)
+              text-align: right
+            &-description
+              width: 100%
+              line-height: 1.38
+              +font-size(22)
+              +padding-bottom(32)
+            h2 
+              +font-size(42)
+              +margin-bottom(24)
+          .description--content-path
+            display: block
+            a
+              +buttons($white, $red, $lighter-grey)
+              margin: 0 auto
+              letter-spacing: 1.1px
+              line-height: 1.14
+              +font-size(14)
+              background: none
+              box-shadow: 0 -0.5px 5px 0 $lighter-grey
+              width: 50%
+              margin-top: 0
+              &:hover
+                background: $red
+                color: $white
+              color: $dark-grey

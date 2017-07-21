@@ -1,0 +1,51 @@
+#block-views-block-view-project-blk-listsuccesscase
+  @extend .restricted-container
+  @extend .featured-content
+  background: none
+  padding-top: 0
+  .node__content
+    &:hover
+      .project-info
+        background-color: $red
+        h3
+          color: $dark-red
+  .project-info
+    padding-top: vw-calc(24)
+    background: $dark-blue
+    position: absolute
+    bottom: 0
+    width: 65%
+    padding-right: vw-calc(20)
+    h3
+      +font-size(16)
+      font-weight: 500
+      line-height: 3
+      color: $dark-grey
+      margin: 0
+      padding-left: vw-calc(24)
+      text-transform: uppercase
+    .field--name-field-project-headline
+      +font-size(22)
+      line-height: 1.45
+      color: $lighter-grey
+      padding-left: vw-calc(24)
+      margin-bottom: vw-calc(24)
+  .field--name-field-project-image
+    height: vw-calc(600)
+    +breakpoint($medium)
+      height: vw-calc(300)
+    img
+      width: 100%
+  .views-row
+    width: 100%
+    +breakpoint($medium)
+      float: left
+      width: 50%
+    overflow: hidden
+    position: relative
+    &:first-child
+      width: 100%
+      .project-info
+        width: 50%
+    .node--sticky
+      height: vw-calc(600)

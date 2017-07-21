@@ -1,0 +1,45 @@
+.sliding-panel-content
+  position: fixed
+  top: 80px
+  +breakpoint(0 $medium)
+    top: 60px
+  bottom: 0
+  right: 0
+  width: 100vw
+  +breakpoint($x-large)
+    width: 76vw
+  height: 100%
+  background: $dark-blue
+  -webkit-overflow-scrolling: touch
+  overflow-y: auto
+  transform: translateX(100%)
+  transition: all .5s ease-in-out
+  z-index: 499
+  &.is-visible
+    transform: translateX(0)
+
+  .sliding-panel-fade-screen
+    +position(fixed, 0)
+
+    background: black
+    opacity: 0
+    transition: all 1.2s ease-in-out
+    visibility: hidden
+    z-index: 999998
+
+    &.is-visible
+      opacity: 0.4
+      visibility: visible
+  .region-sliding-menu
+    padding-left: 7.5%
+    padding-right: 7.5%
+    +breakpoint($x-large)
+      padding: 2.313rem 5.063rem 4rem 6.250rem 
+
+//Overwrites the default admin-bar
+.toolbar-fixed
+  .sliding-panel-content
+    margin-top: 2.438rem
+  &.toolbar-tray-open.toolbar-horizontal
+    .sliding-panel-content
+      margin-top: 4.938rem

@@ -1,0 +1,77 @@
+#block-technology-qualityassurance-benefits
+  position: relative
+  +padding-top(96)
+  &.in-view
+    @extend .animated
+    @extend .fadeIn
+    visibility: visible
+  @extend .restricted-container
+  +clearfix
+  .field__items > .field__item
+    position: relative
+    +height(485)
+    width: 100%
+  .description
+    &--img
+      +height(485)
+      +width(600)
+      float: left
+      display: flex
+      align-items: center
+      position: absolute
+      img
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+    &--content
+      float: right
+      +padding(61, 87, 108, 87)
+      +width(655)
+      +height(485)
+      +margin-left(-35)
+      background: $white
+      box-shadow: 0 rem-calc(9) rem-calc(58) 0 rgba(0, 0, 0, 0.2)
+      box-shadow: 0 vw-calc(9) vw-calc(58) 0 rgba(0, 0, 0, 0.2)
+      z-index: 9
+      position: relative
+      +margin-bottom(32)
+      .field--name-field-groupfield-pretitle
+        font-weight: 700
+        letter-spacing: 2
+        text-align: left
+        +font-size(14)
+        font-family: $font-default
+        color: $grey
+        line-height: 1.71
+        text-transform: uppercase
+      li
+        list-style-image: url('../images/icon-check.png')
+        +padding-left(12)
+        +margin-bottom(18)
+        &:last-child
+          margin-bottom: 0
+      h3
+        font-family: $font-title
+        +font-size(48)
+        font-weight: 700
+        line-height: 1
+        text-align: left
+        position: relative
+        +margin-bottom(59)
+        &:before
+          content: ''
+          height: 0.250rem
+          width: 100%
+          left: 0
+          position: absolute
+          +bottom(-24)
+          background: $red
+      .field--name-field-groupfield-description,
+      & p
+        +margin-bottom(22)
+        +font-size(16)
+        line-height: 1.38
+        color: $dark-blue
+        ul
+          +padding-left(16)

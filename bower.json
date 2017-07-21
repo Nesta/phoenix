@@ -1,0 +1,20 @@
+{
+  "name": "Da Vinci",
+  "version": "2.0",
+  "authors": [
+    "@ladrupalera <info@ladrupalera.com>"
+  ],
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "sass-libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.7",
+    "breakpoint-sass": "~2.7.1",
+    "normalize-libsass": "~1.0.3"
+  }
+}

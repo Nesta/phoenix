@@ -1,0 +1,59 @@
+input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+select,
+textarea
+  background-color: $white
+  border: 0.063rem solid $border
+  padding: 0.5rem
+  outline: none
+  max-width: 100%
+  //max-width: calc(100% - 2px)
+  font-size: 0.85rem
+  color: $blue
+input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+select
+  height: 2rem
+input[type='search']
+  box-sizing: border-box
+
+.fieldset-legend,
+label:not(.option)
+  font-weight: 600
+  margin-bottom: 0.313rem
+  font-size: 0.85rem
+  text-transform: uppercase
+  display: block
+  color: $blue
+
+.description
+  margin-top: 0.313rem
+
+.form-type
+  &-radio,
+  &-checkbox
+    .description
+      margin-left: 0
+    input
+      margin-right: 0.313rem
+
+.form-item,
+.field--type-datetime
+  > label,
+  > .label
+    font-size: 0.85rem
+    font-weight: bold
+    color: $blue
+    text-transform: uppercase
+
+// Password strength
+.password-strength
+  margin: 0.5rem 0
+  font-size: 0.85rem
+
+// Machine name
+.field-suffix
+  margin-left: 0.313rem
+  .link
+    margin-left: 0.625rem
+    text-transform: uppercase
+    font-size: 0.65rem
+    color: $secondary-color

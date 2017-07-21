@@ -1,0 +1,45 @@
+#block-digital-ux-deliveringexperiences
+  @extend .main-block
+  &:before
+    @extend .animated
+    @extend .fadeInRightBig
+  &:after
+    @extend .animated
+    @extend .fadeInRightBig
+  
+  +breakpoint($medium)
+    align-items: flex-start
+    z-index: 10
+    &:before
+      content: ''
+      position: absolute
+      +top(168)
+      right: 0
+      +width(391)
+      +height(506)
+      background: url('../images/card-user-one.png') 0 0 no-repeat
+      background-size: contain
+      animation-delay: 1s
+      z-index: 8
+    &:after
+      content: ''
+      position: absolute
+      +top(73)
+      +right(53)
+      +width(483)
+      +height(295)
+      background: url('../images/card-user-two.png') 0 0 no-repeat
+      background-size: contain
+      animation-delay: 2s
+      z-index: 9
+    h1
+      width: 47%
+    h1, > div
+      text-align: left
+      +margin-left(138)
+      .description
+        margin-left: 0
+        width: 63%
+        text-align: left
+    .arrow-to-scroll
+      left: 0

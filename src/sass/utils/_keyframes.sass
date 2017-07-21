@@ -1,0 +1,346 @@
+@keyframes pulse
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.pulse
+  animation-name: pulse
+
+
+@keyframes typing
+  from
+    width: 0
+  to
+    width: 100%
+
+.typing
+  animation-name: typing
+
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+
+  50%
+    border-color: $lighter-grey
+
+.blink-caret
+  animation-name: blink-caret
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.fadeIn
+  animation-name: fadeIn
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.fadeOut
+  animation-name: fadeOut
+
+@keyframes fadeInUp
+	0%
+		opacity: 0
+		transform: translateY(20px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+.fadeInUp
+	animation-name: fadeInUp
+@keyframes fadeInDown
+	0%
+		opacity: 0
+		transform: translateY(-20px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+.fadeInDown
+	animation-name: fadeInDown
+@keyframes fadeInLeft
+	0%
+		opacity: 0
+		transform: translateX(-20px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.fadeInLeft
+	animation-name: fadeInLeft
+@keyframes fadeInRight
+	0%
+		opacity: 0
+		transform: translateX(20px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.fadeInRight
+	animation-name: fadeInRight
+@keyframes fadeInUpBig
+	0%
+		opacity: 0
+		transform: translateY(2000px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+.fadeInUpBig
+	animation-name: fadeInUpBig
+@keyframes fadeInDownBig
+	0%
+		opacity: 0
+		transform: translateY(-2000px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+.fadeInDownBig
+	animation-name: fadeInDownBig
+@keyframes fadeInLeftBig
+	0%
+		opacity: 0
+		transform: translateX(-2000px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.fadeInLeftBig
+	animation-name: fadeInLeftBig
+@keyframes fadeInRightBig
+	0%
+		opacity: 0
+		transform: translateX(2000px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.fadeInRightBig
+	animation-name: fadeInRightBig
+@keyframes fadeOut
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+@keyframes fadeOutDown
+	0%
+		opacity: 1
+		transform: translateY(0)
+	100%
+		opacity: 0
+		transform: translateY(20px)
+
+.fadeOutDown
+	animation-name: fadeOutDown
+
+.fadeOutUp
+  animation-name: fadeOutUp
+@keyframes fadeOutDown
+  0%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(20px)
+
+@keyframes fadeOutLeft
+	0%
+		opacity: 1
+		transform: translateX(0)
+	100%
+		opacity: 0
+		transform: translateX(-20px)
+
+.fadeOutLeft
+	animation-name: fadeOutLeft
+@keyframes fadeOutRight
+	0%
+		opacity: 1
+		transform: translateX(0)
+	100%
+		opacity: 0
+		transform: translateX(20px)
+
+.fadeOutRight
+	animation-name: fadeOutRight
+@keyframes fadeOutUpBig
+	0%
+		opacity: 1
+		transform: translateY(0)
+	100%
+		opacity: 0
+		transform: translateY(-2000px)
+
+.fadeOutUpBig
+	animation-name: fadeOutUpBig
+@keyframes fadeOutDownBig
+	0%
+		opacity: 1
+		transform: translateY(0)
+	100%
+		opacity: 0
+		transform: translateY(2000px)
+
+.fadeOutDownBig
+	animation-name: fadeOutDownBig
+@keyframes fadeOutLeftBig
+	0%
+		opacity: 1
+		transform: translateX(0)
+	100%
+		opacity: 0
+		transform: translateX(-2000px)
+
+.fadeOutLeftBig
+	animation-name: fadeOutLeftBig
+@keyframes fadeOutRightBig
+	0%
+		opacity: 1
+		transform: translateX(0)
+	100%
+		opacity: 0
+		transform: translateX(2000px)
+
+.fadeOutRightBig
+	animation-name: fadeOutRightBig
+
+
+@keyframes moveOnLeftOdd
+	0%
+		transform: translate(0px)
+    animation-timing-function: ease-in-out
+    
+ 100%
+		transform: translate(vw-calc(-615))
+    animation-timing-function: ease-in-out
+
+@keyframes moveOnRightOdd
+	0%
+		transform: translate(0px)
+    animation-timing-function: ease-in-out
+    
+ 100%
+		transform: translate(vw-calc(560))
+    animation-timing-function: ease-in-out
+
+@keyframes moveOnLeftEven
+	0%
+		transform: translate(0px)
+    animation-timing-function: ease-in-out
+    
+ 100%
+		transform: translate(vw-calc(-560))
+    animation-timing-function: ease-in-out
+
+@keyframes moveOnRightEven
+	0%
+		transform: translate(0px)
+    animation-timing-function: ease-in-out
+    
+ 100%
+		transform: translate(vw-calc(615))
+    animation-timing-function: ease-in-out
+
+@keyframes flip
+    0%
+      transform: perspective(400px) rotateY(0)
+      animation-timing-function: ease-out
+    40%
+      transform: perspective(400px) translateZ(150px) rotateY(170deg)
+      animation-timing-function: ease-out
+    50%
+      transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+      animation-timing-function: ease-in
+    80%
+      transform: perspective(400px) rotateY(360deg) scale(0.95)
+      animation-timing-function: ease-in
+    100%
+      transform: perspective(400px) scale(1)
+      animation-timing-function: ease-in
+
+.flip
+	backface-visibility: visible !important
+	animation-name: flip
+@keyframes flipInX
+	0%
+		transform: perspective(400px) rotateX(90deg)
+		opacity: 0
+	40%
+		transform: perspective(400px) rotateX(-10deg)
+	70%
+		transform: perspective(400px) rotateX(10deg)
+	100%
+		transform: perspective(400px) rotateX(0deg)
+		opacity: 1
+
+.flipInX
+	backface-visibility: visible !important
+	animation-name: flipInX
+@keyframes flipOutX
+	0%
+		transform: perspective(400px) rotateX(0deg)
+		opacity: 1
+	100%
+		transform: perspective(400px) rotateX(90deg)
+		opacity: 0
+
+.flipOutX
+	animation-name: flipOutX
+	backface-visibility: visible !important
+@keyframes flipInY
+	0%
+		transform: perspective(400px) rotateY(90deg)
+		opacity: 0
+	40%
+		transform: perspective(400px) rotateY(-10deg)
+	70%
+		transform: perspective(400px) rotateY(10deg)
+	100%
+		transform: perspective(400px) rotateY(0deg)
+		opacity: 1
+
+.flipInY
+	backface-visibility: visible !important
+	animation-name: flipInY
+@keyframes flipOutY
+	0%
+		transform: perspective(400px) rotateY(0deg)
+		opacity: 1
+	100%
+		transform: perspective(400px) rotateY(90deg)
+		opacity: 0
+
+.flipOutY
+	backface-visibility: visible !important
+	animation-name: flipOutY
+
+@keyframes bounce
+  0%, 20%, 50%, 80%, 100%
+    transform: translateY(0)
+  40%
+    transform: translateY(-30px)
+  60%
+    transform: translateY(-15px)
+
+.bounce
+  animation-name: bounce
+
+@keyframes border-dance
+	0%
+		background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px
+	100%
+		background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px
+
+.border-dance
+	animation-name: border-dance

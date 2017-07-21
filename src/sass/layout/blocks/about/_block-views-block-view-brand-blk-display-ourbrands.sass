@@ -1,0 +1,116 @@
+// Colors Brands.
+
+$ladrupalera: #0078af
+$bedjango: #29a156
+
+#block-views-block-view-brand-blk-display-ourbrands
+  @extend .hide-rwd-large
+  @extend .featured-content
+  > div:not(.block)
+    @extend .restricted-container
+  background: none
+  .description
+    +margin-bottom(38)
+    +breakpoint($medium)
+      width: vw-calc(741)
+  .field--type-link 
+    clear: both
+    overflow: hidden
+    a
+      +buttons($white, rgba(10, 34, 57, 0.5), rgba(10, 34, 57, 0.5))
+      background: none
+      +width(265)
+      +margin-top(32)
+      margin-left: auto
+      margin-right: auto
+  .view-content .views-row
+    float: left
+    width: 50%
+    padding: 0
+    h3
+      @extend .visually-hidden
+      text-transform: uppercase
+      font-weight: 700
+      color: $dark-blue
+      +font-size(22)
+      text-align: center
+      margin: 0
+      padding: 0
+      +margin-bottom(25)
+    .node__content
+      overflow: hidden
+      .field--name-field-brand-image
+        position: absolute
+        +height(267)
+        overflow: hidden
+        img
+          +width(608.39)
+      .field--name-field-brand-logo,
+      .field--name-field-brand-logo-text
+        +height(267)
+        +width(264)
+        display: table-cell
+        vertical-align: middle
+        position: relative
+        z-index: 99
+        border-right: vw-calc(1) solid $lighter-grey
+        border-left: vw-calc(0.5) solid $lighter-grey
+        img
+          margin: 0 auto
+      .brand-wrapper
+        +width(264)
+        float: left
+        .field--name-field-brand-logo-text
+          @extend .animated
+          opacity: 0
+          display: none
+      .brand-row 
+        &.hover
+          cursor: pointer
+          cursor: hand
+          .brand-wrapper
+            //float: right
+            transition: 1s
+            //opacity: 0.9
+            z-index: 99
+            position: relative
+            width: 100%
+            .field--name-field-brand-logo
+              border: 0
+              transition: 1s
+              display: none
+              opacity: 0
+            .field--name-field-brand-logo-text
+              border: 0
+              //transition: 1s
+              display: table-cell
+              opacity: 1
+              +width(586)
+          
+    &:first-child
+      .node__content
+        .field--name-field-brand-logo
+          background: $ladrupalera
+        .brand-row 
+          &.hover
+            .brand-wrapper
+              background: $ladrupalera
+    &:nth-child(2)
+      .node__content
+        .field--name-field-brand-logo
+          background: $bedjango
+        .brand-row 
+          &.hover
+            .brand-wrapper
+              background: $bedjango
+    &:nth-child(odd)
+      .node__content
+        .brand-row 
+          &.hover
+            .brand-wrapper
+              //float: left
+        .brand-wrapper
+          float: right
+        .field--name-field-brand-logo
+          border-right: vw-calc(0.5) solid $lighter-grey
+          border-left: vw-calc(1) solid $lighter-grey

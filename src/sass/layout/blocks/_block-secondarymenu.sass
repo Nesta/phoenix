@@ -1,0 +1,123 @@
+#block-secondarymenu
+  +clearfix
+  ul.menu
+    position: relative
+    margin: 0
+    padding: 0
+  li
+    margin: 0
+    padding: 0
+    display: block
+    a
+      font-weight: 500
+      display: block
+      padding: 0
+      color: $white
+      position: relative
+      transition: all .2s ease-in
+
+.path-outsourcing-services, .path-contact
+  #block-secondarymenu li:first-child a:after
+    display: none
+
++breakpoint(0 $medium)
+  #block-secondarymenu
+    li a.is-active
+      padding: rem-calc(8) 12vw rem-calc(8) 7.75vw
+
+      &:after
+        display: block
+        color: #fff
+        content: '▼'
+        transition: all .2s ease-in
+        position: absolute
+        right: 8vw
+        font-size: .7rem
+        line-height: rem-calc(20)
+        top: rem-calc(8)
+        bottom: auto
+        width: auto
+    li a:not(.is-active)
+      display: block
+      height: 0
+      opacity: 0
+      overflow: hidden
+
+    ul.menu
+      padding-top: rem-calc(36)!important
+      li
+        &.menu-item--active-trail
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: rem-calc(36)
+          a
+            padding: rem-calc(8) 12vw rem-calc(8) 7.75vw
+
+    ul.menu.menu-open
+      padding-top: rem-calc(36)!important
+      li
+        .is-active
+          &:after
+            content: '▼'
+            transform: rotate(180deg)
+
+      li a:not(.is-active)
+        height: rem-calc(36)
+        opacity: 1
+        padding: rem-calc(8) 12vw rem-calc(8) 7.75vw
+
+    li
+      position: relative
+      display: block
+      &:hover
+        cursor: pointer
+      a
+        line-height: rem-calc(20)
+        &:hover
+          background-color: rgba(181, 36, 41, 0.4)
+
+
++breakpoint($medium)
+  #block-secondarymenu
+    //restricted container - cannot use @extend because of breakpoint
+    +container(84.5vw)
+    li
+      display: inline-block
+      position: relative
+      &:first-child
+        a
+          &:after
+            position: absolute
+            right: 0.5rem
+            top: 1.55rem
+            width: vw-calc(10)
+            height: vw-calc(10)
+            display: block
+            color: #fff
+            content: ''
+            background: url('../images/direction-arrow.png') 0 0 no-repeat
+            background-size: contain
+            font-size: 1rem
+            line-height: 1
+          &:not(.is-active)
+            color: $dark-red
+            &:after
+              background: url('../images/direction-arrow-red.png') 0 0 no-repeat
+              background-size: contain
+
+      a
+        padding: 1.250rem 2rem
+
+    //This element is not created by Drupal, but comes from secondary-menu.js
+    #magic-line
+      border-radius: 1px
+      background-color: #ffffff
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17)
+      z-index: 3
+      position: absolute
+      bottom: 0
+      left: 2rem
+      width: 5rem 
+      height: 4px
