@@ -8,43 +8,11 @@ global-js:
   js:
     js/da-vinci.js: {}
     js/custom.js: {}
-    js/rwd.js: {}
     js/vendors/jquery.unevent.js: {}
     js/vendors/jquery.viewport.js: {}
-    js/vendors/css_browser_selector.js: {}
     js/utils/menu-svg.js: {}
     js/utils/pxtoem.js: {}
-    js/menu-coordination.js: {}
-    js/secondary-menu.js: {}
   dependencies:
     - core/jquery
     - core/modernizr
     - core/drupal
-
-
-project-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/project-floating-menu.js: {}
-
-story-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/story-floating-menu.js: {}
-
-offer-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/offer-floating-menu.js: {}
-
-about:
-  js:
-    js/vendors/jquery.cycle.all.js: {}
-    js/vendors/countUp.js: {}
-    js/vendors/slick.min.js: {}
-    js/in-view-about.js: {}
-    js/custom-about.js: {}
-
-  css:
-    theme:
-      css/vendors/slick.css: {}
