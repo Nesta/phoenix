@@ -21,30 +21,57 @@ global-js:
     - core/modernizr
     - core/drupal
 
-
-project-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/project-floating-menu.js: {}
-
-story-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/story-floating-menu.js: {}
-
-offer-floating-menu:
-  js:
-      js/scroll.js: {}
-      js/offer-floating-menu.js: {}
-
-about:
+path1:
   js:
     js/vendors/jquery.cycle.all.js: {}
     js/vendors/countUp.js: {}
     js/vendors/slick.min.js: {}
-    js/in-view-about.js: {}
-    js/custom-about.js: {}
+    js/vendors/jquery.selectBox.js: {}
+    js/vendors/slick.min.js: {}
 
   css:
     theme:
       css/vendors/slick.css: {}
+      css/vendors/jquery.selectBox.css: {}
+        
+# Front Path.
+front:
+  js:
+    js/in-view-front.js: {}
+home:
+  js:
+    js/in-view-home.js: {}
+    js/custom-home.js: {}
+  css:
+    theme:
+      css/home.css: {}
+
+# General Path.
+# Automatically loaded.
+path1:
+  js:
+
+  css:
+    theme:
+
+path1:
+  js:
+
+  css:
+    theme:
+
+
+# Dynamic Path.
+# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
+floating-menu:
+  js:
+      js/scroll.js: {}
+      js/project-floating-menu.js: {}
+
+404:
+  js:
+    js/in-view-404.js: {}
+
+custom-taxonomy:
+  js:
+    js/custom-taxonomy.js: {}
