@@ -1,6 +1,6 @@
 name: Da Vinci
 type: theme
-description: <b>Classy Subtheme</b> with <i>Sass Core<i>, <i>Sass Tools</i> and <i>Sass Spirit</i>.
+description: Classy Subtheme with Sass Core, Sass Tools and Sass Spirit.
 core: 8.x
 base theme: classy
 libraries:
