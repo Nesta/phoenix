@@ -55,13 +55,17 @@
       </div>
     {% endif %}
     <div class="site-header">
-      {% if page.secondary_menu %}
-        {{ page.secondary_menu }}
-      {% endif %}
+  {% if page.secondary_menu %}
+    {{ page.secondary_menu }}
+  {% endif %}
       {{ page.header }}
     </div>
   </header>
-
+  {% if page.sliding_menu %}
+    <nav class="js-menu sliding-panel-content">
+      {{ page.sliding_menu }}
+    </nav>
+  {% endif %}
   {% if page.highlighted %}
     {{ page.highlighted }}
   {% endif %}
@@ -82,8 +86,7 @@
     {{ page.help }}
   {% endif %}
 
-
-  <main role="main">
+  <main>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
@@ -91,28 +94,30 @@
     </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
+      <aside class="layout-sidebar-first">
         {{ page.sidebar_first }}
       </aside>
     {% endif %}
 
     {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
+      <aside class="layout-sidebar-second">
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
   </main>
 
-  {% if page.footer %}
-    <footer class="site-footer" role="complementary">
-      {{ page.footer }}
+  {% if page.content_bottom %}
+    {{ page.content_bottom }}
+  {% endif %}
+
+  {% if page.footer or page.footer_info %}
+    <footer class="site-footer">
+      <div class="footer-wrapper">
+        {{ page.footer }}
+        {{ page.footer_info }}
+      </div>
     </footer>
   {% endif %}
 
-  {% if page.footer_info %}
-    <footer class="site-footer" role="contentinfo">
-      {{ page.footer_info }}
-    </footer>
-  {% endif %}
-
+{{ page.convert }}
 </div>{# /.layout-container #}

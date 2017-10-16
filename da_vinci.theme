@@ -50,7 +50,18 @@ function da_vinci_preprocess_html(&$variables) {
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
     $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
   }
+  $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
 
+  if ($is_front_page) {
+    $variables['#attached']['library'][] = 'da_vinci/front';
+  }
+
+	// Load Libraries for Path.
+  if (!empty(isset($path_args[2])))  {
+    $variables['#attached']['library'][] = 'da_vinci/'.$path_args[1].'-'.$path_args[2];
+  }else{
+    $variables['#attached']['library'][] = 'da_vinci/'.$path_args[1];
+  }
 }
 
 /**
@@ -110,7 +121,7 @@ function da_vinci_preprocess_block(&$variables) {
   if ($variables['plugin_id'] == 'system_branding_block') {
     $variables['attributes']['class'][] = 'clearfix';
   }
-
+  $variables['drupalera'] = $GLOBALS['base_url'] . '/' . drupal_get_path('theme','da_vinci') . '/images/la_drupalera.png';
 }
 
 /**
@@ -142,9 +153,8 @@ function da_vinci_theme_suggestions_menu_alter(array &$suggestions, array $varia
   }
 }
 
-
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
 function da_vinci_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   if ($variables['element']['#form_id'] == 'search_block_form') {
@@ -152,8 +162,22 @@ function da_vinci_theme_suggestions_form_alter(array &$suggestions, array $varia
   }
 }
 
+
 /**
- * Implements hook_form_alter() to add classes to the search form.
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function da_vinci_theme_suggestions_file_link_alter(array &$suggestions, array $variables) {
+  // Get the node type.
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $type = $node->getType();
+
+    // Create the theme hook suggestion. 
+    $suggestions[] = 'file_link__' . 'type_' . $type;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
  */
 function da_vinci_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if (in_array($form_id, ['search_block_form', 'search_form'])) {
@@ -177,7 +201,14 @@ function da_vinci_theme_suggestions_page_alter(array &$suggestions, array $varia
 }
 
 /**
- * Template_theme_suggestions_field_alter().
+ * Implements hook_preprocess_HOOK().
+ */
+function da_vinci_preprocess_views_view(&$variables) {
+  $variables['theme_hook_original'] = $variables['theme_hook_original'] . '__' . $variables['id'];
+}
+
+/**
+ * Implements theme_suggestions_field_alter().
  */
 function da_vinci_theme_suggestions_field_alter(&$suggestions, $variables) {
   // Add a suggestion field template for all the fields of a viewmode.

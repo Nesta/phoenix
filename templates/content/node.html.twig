@@ -81,7 +81,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes)|without('role') }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -95,7 +95,7 @@
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
         {{ author_picture }}
-        {% trans %} {{ author_name }} on {{ date }}{% endtrans %}
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>

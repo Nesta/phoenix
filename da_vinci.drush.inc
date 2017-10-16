@@ -46,7 +46,7 @@ function drush_da_vinci ($name = NULL, $machine_name = NULL, $description = NULL
 		$subtheme_path = implode('/', $subtheme_path) . '/' . $machine_name;
 
 	// Make a fresh copy of STARTERKIT.
-		drush_op('da_vinci_starter', $da_vinci_path . '/STARTERKIT', $subtheme_path);
+	drush_op('da_vinci_starter', $da_vinci_path . '/STARTERKIT', $subtheme_path);
 
 	// Rename files with the machine name.
 	drush_op('rename', "$subtheme_path/mytheme.info.yml", "$subtheme_path/$machine_name.info.yml");

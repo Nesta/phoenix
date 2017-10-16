@@ -6,18 +6,8 @@
   "homepage": "https://drupal.org/project/da_vinci",
   "authors": [
     {
-      "name": "María del Carmen García Peral",
-      "homepage": "https://www.drupal.org/u/Karmen",
-      "role": "Maintainer"
-    },
-    {
       "name": "Neftalí Guerrero Pancorbo",
       "homepage": "https://www.drupal.org/u/nesta_",
-      "role": "Maintainer"
-    },
-    {
-      "name": "Rafael Vergara Moreno",
-      "homepage": "https://www.drupal.org/u/rafavermo",
       "role": "Maintainer"
     }
   ],

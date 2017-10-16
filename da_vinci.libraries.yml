@@ -8,7 +8,71 @@ global-js:
   js:
     js/da-vinci.js: {}
     js/custom.js: {}
+    js/rwd.js: {}
+    js/vendors/jquery.unevent.js: {}
+    js/vendors/jquery.viewport.js: {}
+    js/vendors/css_browser_selector.js: {}
+    js/utils/menu-svg.js: {}
+    js/menu-coordination.js: {}
+    js/secondary-menu.js: {}
   dependencies:
     - core/jquery
     - core/modernizr
     - core/drupal
+
+# Front Path.
+front:
+  js:
+    js/in-view-front.js: {}
+home:
+  js:
+    js/in-view-home.js: {}
+    js/custom-home.js: {}
+  css:
+    theme:
+      css/home.css: {}
+
+# General Path.
+# Automatically loaded.
+path1:
+  js:
+
+  css:
+    theme:
+
+# Dynamic Path.
+# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
+
+
+# Examples.
+#
+# Dynamic Path (Need attach)
+floating-menu:
+  js:
+      js/scroll.js: {}
+      js/project-floating-menu.js: {}
+
+404:
+  js:
+    js/in-view-404.js: {}
+
+custom-taxonomy:
+  js:
+    js/custom-taxonomy.js: {}
+
+
+# Example
+#
+# General Path (Automatic Load)
+path2:
+  js:
+    js/vendors/jquery.cycle.all.js: {}
+    js/vendors/countUp.js: {}
+    js/vendors/jquery.selectBox.js: {}
+    js/vendors/slick.min.js: {}
+
+  css:
+    theme:
+      css/vendors/slick.css: {}
+      css/vendors/jquery.selectBox.css: {}
+        
