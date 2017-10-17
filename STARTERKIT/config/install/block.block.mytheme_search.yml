@@ -1,3 +1,4 @@
+uuid: 8ba8ba88-cab3-4e26-ad42-37a39646a2c2
 langcode: en
 status: true
 dependencies:
@@ -5,15 +6,17 @@ dependencies:
     - search
   theme:
     - mytheme
+_core:
+  default_config_hash: n_5Ei3L4wJwynACbTc3s30MuJH3IpnYkgJ5YPqi4IYc
 id: mytheme_search
 theme: mytheme
-region: sidebar_first
-weight: -1
+region: header
+weight: -4
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
   label: Search
   provider: search
-  label_display: visible
+  label_display: '0'
 visibility: {  }

@@ -1,25 +1,18 @@
 .pager
   ul
     padding: 0
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    justify-content: center
   &__item
     display: block
-    margin: 0 5px
+    +margin(0, 5, 0, 5)
     a
       color: $secondary-color
     &.is-active
-      width: 32px
-      height: 32px
-      line-height: 1.1em
-      border-radius: 20px
+      +width(32)
+      +height(32)
+      line-height: 1.1
+      border-radius: 1.250rem
       background-color: $color
       font-weight: 400
-      display: flex
-      align-items: center
-      justify-content: center
       color: $white
       a
         color: inherit
@@ -29,4 +22,4 @@
     &--next,
     &--last
       text-transform: lowercase
-      font-size: 0.85em
+      +font-size(13)

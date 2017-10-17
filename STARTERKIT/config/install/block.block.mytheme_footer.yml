@@ -1,3 +1,4 @@
+uuid: bfd3b69c-7ec0-4bee-b00a-0d9469a7f203
 langcode: en
 status: false
 dependencies:
@@ -7,9 +8,11 @@ dependencies:
     - system
   theme:
     - mytheme
+_core:
+  default_config_hash: 4NiT7HROpPbfkK77DkbsLdTHeS60xG6GY-CjpFvaPk8
 id: mytheme_footer
 theme: mytheme
-region: '-1'
+region: top_bar
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'

@@ -1,30 +1,40 @@
 .button
   outline: none
   display: inline-block
-  padding: .2em 1.5em
-  margin: 0 .5em .5em 0
+  +padding(6, 12, 6, 12)
+  //margin: 0 0.5rem 0.5rem 0
   text-align: center
   background-color: $secondary-color
   color: $white
   text-transform: uppercase
   transition: all .5s
-  font-size: 0.65em
-  height: 32px
-  position: relative
-  top: -2px
-  border: 1px solid transparent
-  font-weight: 600
-  line-height: 2.5em
+  +font-size(10)
+  //position: relative
+  //top: -0.125rem
+  +border(1, solid, transparent)
+  font-family: $font-title
+  font-weight: 400
+  line-height: vmin-calc(40)
+  border-radius: vmin-calc(3)
   &:hover
     cursor: pointer
     text-decoration: none
     border-color: $secondary-color
     background-color: $white
     color: $secondary-color
+  &:focus
+    outline: none
 
 .image-button
   background-color: transparent
-  padding: 0.2em 0.5em
+  +padding(3, 8, 3, 8)
 
 .form-submit
   @extend .button
+  background-color: $red
+  +font-size(16)
+  //padding: 0 rem-calc(48)
+
+button
+  &:focus
+    outline: none

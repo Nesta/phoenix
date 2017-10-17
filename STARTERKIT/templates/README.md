@@ -1,6 +1,9 @@
 TEMPLATES
 ---------
-This is a Da Vinci subtheme, so an override is as simple as copying one of Da Vinci's templates into your templates directory. If you don't found the template that you want, search into Classy core theme, because Da Vinci is also a Classy subtheme.
+This is a Da Vinci subtheme, so an override is as simple as copying one of 
+Da Vinci's templates into your templates directory. If you don't found the 
+template that you want, search into Classy core theme, because Da Vinci is also
+a Classy subtheme.
 
 Remember to use the following twig template naming conventions:
 
@@ -15,8 +18,11 @@ Remember to use the following twig template naming conventions:
   Base template: page.html.twig
   Front page template: page--front.html.twig
 
-  The list of suggested template files is in order of specificity based on internal paths. One suggestion is made for every element of the current path, though numeric elements are not carried to subsequent suggestions.
-  For example, "http://www.example.com/node/1/edit" would result in the following suggestions:
+  The list of suggested template files is in order of specificity based on 
+  internal paths. One suggestion is made for every element of the current path,
+  though numeric elements are not carried to subsequent suggestions.
+  For example, "http://www.example.com/node/1/edit" would result in the 
+  following suggestions:
     page--node--edit.html.twig
     page--node--1.html.twig
     page--node.html.twig

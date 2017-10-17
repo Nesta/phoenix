@@ -1,35 +1,39 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900|Montserrat'
-
 // Typography
-$font-title: 'Montserrat', sans-serif
-$font-default: 'Lato', sans-serif
+$font-title: 'Roboto Condensed', sans-serif
+$font-default: 'Roboto', sans-serif
+$font-mono: 'Roboto Mono', monospace
 
 // Messages
-$error: #D64541
-$warning: #ef8f73
-$success: #3b9376
+$error: rgba(214, 69, 65, 1)
+$warning: rgba(239, 143, 115, 1)
+$success: rgba(59, 147, 118, 1)
 
+////////////////////
 
-$color: $blue
-$color-body: $gray
-$main-color: $marvle
-$secondary-color: $sand
-$light-color: $cream
-$border: $marvle
+$color: $dark-grey
+$color-body: $grey
+$main-color: $red
+$secondary-color: $dark-blue
+$light-color: $light-grey
+$border: $light-grey
 $shadow: hsl(0, 0%, 53%)
-$color-h: $blue
-$color-a: #3f5fbc
+$color-h: $dark-blue
+$color-a: $red
 $color-a-hover: lighten($color-a, 15%)
 
+$rem-base: 16px
+$vw-base: 1.1111vw
 
 html
-  font-size: 1em
+  +font-size(16)
 
 body
   color: $color-body
   font-family: $font-default
   font-weight: 400
   line-height: 1.3
+  main
+    background: $cream
 
 h1,
 h2,
@@ -40,27 +44,48 @@ h6
   color: $color-h
   font-family: $font-title
   font-weight: 700
-  margin: 1.0em 0 0.5em
+  margin: 1rem 0 0.5rem
 
 h1
   line-height: 1
-h5,
+  +font-size(32)
+
+h2
+  +font-size(24)
+
+h3
+  +font-size(18)
+
+h4, h5
+  +font-size(16)
+
+h4,
 h6
-  text-transform: uppercase
+  font-family: $font-default
+  font-weight: 700
+
+h5
+  font-family: $font-default
+  font-weight: 400
 
 p
-  line-height: 1.2
-  margin: 0 0 1.2em
+  //Enno: No queremos estilos basicos en el elemento "p" para que sea mas facil editar campos
+  //line-height: 1.2
+  margin: 0 0 1.2rem
+  //+font-size(22)
 
 a
   color: $color-a
   text-decoration: none
-  transition: color .2s
+  transition: color 0.2s
+
   &:hover
     color: $color-a-hover
     text-decoration: none
+
+
   &.icon-help
-    font-size: 0.85em
+    +font-size(13)
 
 strong
   font-weight: 700
@@ -68,42 +93,33 @@ strong
 mark,
 .marker
   float: right
-  font-size: 0.65em
+  +font-size(10)
   color: $white
-  padding: 6px
-  background-color: $gray
+  +padding(6, 6, 6, 6)
+  background-color: $grey
 
 .filter-help,
 .more-link
   a
     text-transform: uppercase
-    font-size: 0.65em
+    +font-size(10)
     font-weight: 600
 
 summary
   outline: none
 
 blockquote
-  background-color: $light-color
-  border-left: 1px solid $border
-  font-style: italic
-  margin: 1.5em 10px
-  padding: 0.5em 10px
-  &:after
-    color: $color
-    content: "\201D"
-    font-size: 3em
-    line-height: 0.1em
-    vertical-align: -0.45em
-  &:before
-    color: $color
-    content: "\201C"
-    font-size: 3em
-    line-height: 0.1em
-    margin-right: 0.2em
-    vertical-align: -0.4em
+  +border(3, solid, $red)
+  margin: vmin-calc(24) 0 vmin-calc(24) vmin-calc(8)
+  +breakpoint($medium)
+    margin: vw-calc(24) 0 vw-calc(24) vw-calc(48)
+  +padding-left(16)
+  font-family: $font-title
+  color: $grey
+  +font-size(24)
+
   > p:first-child
     display: inline
 
 code, kbd, pre, samp
-  font-size: 0.85em
+  +font-size(13)

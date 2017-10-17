@@ -1,3 +1,4 @@
+uuid: b0b315a6-c2b8-4053-8534-97cb5b781073
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - mytheme
+_core:
+  default_config_hash: _FwWsH0ZQ1FR72qLYrfB69f6IxGRVdU01JoNIvGSDVc
 id: mytheme_content
 theme: mytheme
 region: content

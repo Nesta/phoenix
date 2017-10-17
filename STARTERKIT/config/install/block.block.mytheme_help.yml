@@ -1,3 +1,4 @@
+uuid: 31dbd161-0b94-43fc-833b-c58db7253c74
 langcode: en
 status: true
 dependencies:
@@ -5,10 +6,12 @@ dependencies:
     - help
   theme:
     - mytheme
+_core:
+  default_config_hash: OAb6O9_h56du_6QPB-dvG3rJ9lSCxX-OdiqZXXRPtDA
 id: mytheme_help
 theme: mytheme
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: help_block
 settings:

@@ -1,3 +1,4 @@
+uuid: fc14f2cc-f63c-4f8f-8a32-98731ff829ea
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - mytheme
+_core:
+  default_config_hash: PdG0RrWnGxKCel9z9EecmZVFulP_lz-_XYcmxYXN_uU
 id: mytheme_breadcrumbs
 theme: mytheme
 region: breadcrumb

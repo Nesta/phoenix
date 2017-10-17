@@ -1,6 +1,10 @@
 <?php
-
 /**
  * @file
  * Functions to support theming in DaVinci subtheme.
- */
+*/
+function mytheme_preprocess_html(&$variables){
+  if (\Drupal::moduleHandler()->moduleExists('color')) {
+    $variables['html_attributes']['class'] = 'colors';
+  }
+}

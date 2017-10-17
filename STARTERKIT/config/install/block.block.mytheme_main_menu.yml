@@ -1,3 +1,4 @@
+uuid: c80ccb7d-e320-48c8-a1fb-b1fbb376a990
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - system
   theme:
     - mytheme
+_core:
+  default_config_hash: o_qieijwj7zqGFWSRx2lfrk3_NLglKKI5PKX5l536fE
 id: mytheme_main_menu
 theme: mytheme
 region: primary_menu

@@ -1,3 +1,4 @@
+uuid: d7c810a0-6083-4c41-a84b-7c0c3a8fe4da
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - mytheme
+_core:
+  default_config_hash: GHjALMs8FlttxGhtXUlHnS0hksj2sbXay3BYBf8e6UE
 id: mytheme_powered
 theme: mytheme
 region: footer

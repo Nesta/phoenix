@@ -1,0 +1,171 @@
+/**
+ * Functions
+ */
+// http://thesassway.com/intermediate/if-for-each-while
+
+// Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+
+// Max breakpoint
+$max-breakpoint: 1440
+
+// Function
+@function get-vw($target)
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: $max-breakpoint * 0.01 * 1px
+
+  // 1% viewport width
+  @return $target / $vw-context * 1vw
+
+// Mixin
+=vw($size)
+  font-size: get-vw($size)
+
+  // Prevent font-size from getting too big
+  //+breakpoint($monster)
+    font-size: $size
+
+
+// ###Functions
+
+// Strips unit suffix from value
+@function _strip-unit($num)
+  @if type-of($num) != "number"
+    @warn "num: #{$num} is not a number"
+
+    @return null
+
+  @return $num / ($num * 0 + 1)
+
+
+
+// Converts to rem, utility for rem-calc
+@function _convert-to-rem($value, $base-value: $rem-base)
+  @if type-of($value) != "number"
+    @warn "value: #{$value} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $value: _strip-unit($value) / _strip-unit($base-value) * 1rem
+
+  @if _strip-unit($value) == 0
+    $value: 0
+
+  // Turn 0rem into 0
+  @return $value
+
+// Calculates rem value from number
+@function rem-calc($values, $base-value: $rem-base)
+  @if type-of($values) != "number"
+    @warn "values: #{$values} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $max: length($values)
+
+  @if $max == 1
+    @return _convert-to-rem(nth($values, 1), $base-value)
+
+  $remValues: ()
+
+  @for $i from 1 through $max
+    $remValues: append($remValues, _convert-to-rem(nth($values, $i), $base-value))
+
+  @return $remValues
+
+// Converts to vmin, utility for vmin-calc
+@function _convert-to-vmin($value, $base-value: $rem-base)
+  @if type-of($value) != "number"
+    @warn "value: #{$value} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $value: _strip-unit($value) / _strip-unit($base-value) * 2.0vmin
+
+  @if _strip-unit($value) == 0
+    $value: 0
+
+  // Turn 0vmin into 0
+  @return $value
+
+// Calculates vmin value from number
+@function vmin-calc($values, $base-value: $rem-base)
+  @if type-of($values) != "number"
+    @warn "values: #{$values} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $max: length($values)
+
+  @if $max == 1
+    @return _convert-to-vmin(nth($values, 1), $base-value)
+
+  $vminValues: ()
+
+  @for $i from 1 through $max
+    $vminValues: append($vminValues, _convert-to-vmin(nth($values, $i), $base-value))
+
+  @return $vminValues
+
+// Converts to vw, utility for vw-calc
+@function _convert-to-vw($value, $base-value: $rem-base)
+  @if type-of($value) != "number"
+    @warn "value: #{$value} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $value: _strip-unit($value) / _strip-unit($base-value) * 1.1111vw
+
+  @if _strip-unit($value) == 0
+    $value: 0
+
+  // Turn 0vw into 0
+  @return $value
+
+// Calculates vw value from number
+@function vw-calc($values, $base-value: $rem-base)
+  @if type-of($values) != "number"
+    @warn "values: #{$values} is not a number"
+
+    @return null
+
+  @if type-of($base-value) != "number"
+    @warn "base-value: #{$base-value} is not a number"
+
+    @return null
+
+  $max: length($values)
+
+  @if $max == 1
+    @return _convert-to-vw(nth($values, 1), $base-value)
+
+  $vwValues: ()
+
+  @for $i from 1 through $max
+    $vwValues: append($vwValues, _convert-to-vw(nth($values, $i), $base-value))
+
+  @return $vwValues

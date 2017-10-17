@@ -2,6 +2,7 @@ global-css:
   css:
     theme:
       css/mytheme.css: {}
+      css/colors.css: {}
 
 global-js:
   header: true
@@ -11,3 +12,14 @@ global-js:
     - core/jquery
     - core/modernizr
     - core/drupal
+
+color.preview:
+  version: VERSION
+  css:
+    theme:
+      color/preview.css: {}
+      css/colors.css: {}
+  js:
+    color/preview.js: {}
+  dependencies:
+    - color/drupal.color

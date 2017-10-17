@@ -5,76 +5,104 @@ body
 body
   color: $color-body
   background-color: $white
-
-// Add border to all region when "show region mode" is activated (See theme aparience to know more).
-// -----------------------------------------------------------------------------------------------//
-.border-region
-  .region, main
-    outline: 2px $secondary-color solid
-
+  &.frozen-body
+    overflow: hidden
 
 // Base layout: Header, main content, footer..
 //-------------------------------------------------------//
 .maintenance-page
   h1
     text-align: center
-    margin-bottom: 0.5em
-.restricted-container
-  +clearfix
-  +container(91.407%)
-  +padding-container(100%, 2%)
-  +breakpoint($x-large)
-    max-width: 1170px
+    +margin-bottom(8)
+
+.toolbar-fixed.toolbar-horizontal
+  .layout-container > header
+    //Leave space on top for the Drupal toolbar
+    //top: vw-calc(80)
+    +breakpoint(0 $medium)
+      top: vmin-calc(60)
+  .region-secondary-menu
+    //top: 160px
+    +breakpoint(0 $medium)
+//top: 140px
+
+.has-secondary-menu .layout-container
+  //Leave space for the fixed menu
+  padding-top: vw-calc(140)
+  +breakpoint(0 $medium)
+    padding-top: vmin-calc(96)
 .layout-container
-  background-color: $white
+  //Leave space for the fixed menu
+  //padding-top: 80px
+  +breakpoint(0 $medium)
+    padding-top: vmin-calc(60)
+
   min-height: 100vh
   display: flex
   flex-direction: column
+  justify-content: space-between
   margin: 0
   > .region
     @extend .restricted-container
     width: 100%
   // Header
   > header
-    position: relative
-    .region
+    position: inherit
+    background-color: $darker-blue
+
+    transition: all .2s ease-in
+    top: 0
+    width: 100%
+    //height: 80px
+    +breakpoint(0 $medium)
+      height: vmin-calc(60)
+    //z-index: 500
+    transform: translateY(0)
+    .region:not(.region-header)
       +clearfix
     > *:not(.top-bar),
     .top-bar > *
       @extend .restricted-container
-  .region-header
-  // Main navigation
-  .region-primary-menu
+  //.region-secondary-menu
+    transform: translateY(0)
+    position: fixed
+    background-color: #fff
+    transition: all .2s ease-in
+    top: 80px
+    +breakpoint(0 $medium)
+      top: 60px
+    width: 100%
+    height: auto
+    z-index: 498
+
+  &.sliding-panel-visible
+    > header
+      background-color: $dark-blue
+
+  &.menu-hide-scroll
+    > header
+  //transform: translateY(-100px)
+  //.region-secondary-menu
+    transform: translateY(-150px)
 
   // Main content
   > main
-    @extend .restricted-container
-    flex: 1
+    //@extend .restricted-container
+    //flex: 1
     width: 100%
-    margin-bottom: 2em
-    // For Drupalera UK
+    //margin-bottom: 2rem
     .region
       +clearfix
-    position: relative
-    background-color: #fff
-    z-index: 2
-    overflow: hidden
+  //position: relative
+  //z-index: 2
+  //overflow: hidden
 
   // Footer
   > footer
-    > *
+    //> *
       @extend .restricted-container
     .region-footer
-      //@extend .restricted-container
-
-// La Drupalera
-.drupalera
-  margin-top: 1em
-  margin-left: 8px
-  display: inline-block
-  img
-    max-height: 15px
-
+//@extend .restricted-container
 
 // Dynamic main content
 
@@ -97,10 +125,10 @@ body
           +span(3 of 12 last)
   &-two-sidebars
     .layout-content
-      +breakpoint($medium)
-        +span(9 of 12 last)
-      +breakpoint($large)
-        +span(isolate 6 at 4 of 12)
+    +breakpoint($medium)
+      +span(9 of 12 last)
+    +breakpoint($large)
+      +span(isolate 6 at 4 of 12)
     .layout-sidebar-first
       +breakpoint($medium)
         +span(3 of 12 first)
@@ -111,3 +139,8 @@ body
       +breakpoint($large)
         +span(3 of 12 last)
         clear: none
+
+
+.ie
+  .layout-container
+    display: block
