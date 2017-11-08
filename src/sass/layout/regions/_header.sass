@@ -1,71 +1,112 @@
 .layout-container > header
-  background-color: $color
-  color: $white
+  +padding(14,0,14,0)
   .region-header
-    padding: 1em 0
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: space-around
+  +breakpoint(0 $medium)
+    padding: 0
+  +breakpoint($monster)
+    padding: vw-calc(14) 0
+  .menu-slide-action
+    cursor: pointer
+    float: right
+    margin: vmin-calc(10) 0
+    +breakpoint($monster)
+      margin: vw-calc(10) 0
+    z-index: 8
     position: relative
-    z-index: 2
-    .site
-      &-logo
-        float: left
-        margin-right: 1em
-        position: relative
-      &-name
-        a
-          display: inline-block
-          margin-top: 0.5em
-        font-family: $font-title
-        font-size: 1.5em
-      &-slogan
-        font-style: italic
-        font-size: 0.65em
-    h1
-      +hide-text
-      height: 0
-      margin: 0
+    +width(50)
+    +height(50)
+    #menu-svg
+      +width(50)
+      +height(50)
+      position: absolute
+    svg
+      width: vmin-calc(50)!important
+      height: vmin-calc(50)!important
+      position: absolute
+      top: vmin-calc(-10)
+      +breakpoint($monster)
+        width: vw-calc(44)!important
+        height: vw-calc(44)!important
+        top: vw-calc(-9)
+      path, a, g
+        fill: $dark-blue
+        transition: fill 2s ease
+    .is-visible
+      svg
+        path, a, g
+          fill: $white
+
+      
+  #block-da-vinci-branding
+    float: left
+    margin: vmin-calc(14) 0 vmin-calc(10) 0
+    margin-right: vmin-calc(69)
+    position: relative
+    z-index: 999
+    +breakpoint($monster)
+      margin: vw-calc(14) 0 vw-calc(10) 0
+      margin-right: vw-calc(69)
+      margin-left: vw-calc(40)
+      transform: scale(1.5)
     a
-      color: $white  
-      &:hover
-        color: $white
+      //position: relative
+      //z-index: 98
+  nav
+    ul
+      margin: 0
+      padding: 0
+      li
+        display: none
+        +breakpoint($large)
+          display: inline-block
+        margin: vmin-calc(15) 0 vmin-calc(14) 0
+        margin-right: vmin-calc(32)
+        padding: 0
+        +breakpoint($monster)
+          margin: vw-calc(15) 0 vw-calc(14) 0
+          margin-right: vw-calc(32)
+        +breakpoint($small)
+          //&:last-child
+            display: inline-block
+            margin: 0
+            margin-right: rem-calc(34)
+            +breakpoint(0 $medium)
+              margin-top: rem-calc(10)
+            //left: rem-calc(-40)
+            float: right
+            //border-radius: rem-calc(4)
+            //border: solid rem-calc(1) $red
+            //transition: border-color 2s ease
+            //color: $red
+            //position: relative
+            //z-index: 8
+            a
+              font-family: $font-title
+              padding: rem-calc(14) rem-calc(33) 
+              +breakpoint(0 $medium)
+                padding: rem-calc(7) rem-calc(33) 
+              display: block
+              color: $red
+              transition: color 2s ease
+        &.is-visible 
+          border-color: $white
+          a
+            color: $white
+        a
+          +font-size(16)
+          +breakpoint($monster)
+          text-transform: uppercase
 
-.top-bar
-  padding: 1em 0
-  font-size: 0.75em
-  background-color: lighten($color, 8%)
-.region-highlighted
-  margin-top: 1em
-  margin-bottom: 1em
-.region-secondary-menu
-  .menu
-    text-align: right
-    &-item
-      display: inline-block
-      margin-right: 8px
-      border-right: 1px solid $secondary-color
-      padding-right: 8px
-      line-height: 8px
-      &:last-child
-        border-width: 0
-        margin-right: 0
-        padding-right: 0
-      a
-        color: $white
-        display: block
-        text-transform: uppercase
-        font-size: 0.75em
-        &.is-active
-          cursor: default
-        &.is-active,
-        &:hover
-          color: $secondary-color
-
-
-+breakpoint($large)
-  header
-    .region-header
-      +span(7 of 12 first)
-    .region-secondary-menu
-      +span(4  of 12 last)
-      #block-menuprincipal
-      #block-languageswitcher
-        +span(1 of 12 last)
+.first-level
+  .layout-container > header
+    //position: absolute
+    width: 100%
+    //z-index: 98
+    svg path, a, svg g
+      color: $white
+      stroke: $white
+      fill: $white

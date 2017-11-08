@@ -1,9 +1,180 @@
 /**
  * Mixins
  */
-// Add padding to container when resolution is smaller than width container defined
-=padding-container($container-width, $padding)
-  transition: padding .5s ease-in-out
-  +breakpoint(max-width $container-width + $padding)
-    padding: 0 $padding
-    transition: padding .5s ease-in-out
+// http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+
+=position($position, $valor1)
+  position: $position
+  top: $valor1
+
+
+=clearfix()
+  &:after
+    clear: both
+    content: ""
+    display: table
+
+=font-size($size)
+  font-size: vmin-calc($size)
+  +breakpoint($medium)
+    font-size: vw-calc($size)
+
+=top($size)
+  top: vmin-calc($size)
+  +breakpoint($medium)
+    top: vw-calc($size)
+
+=right($size)
+  right: vmin-calc($size)
+  +breakpoint($medium)
+    right: vw-calc($size)
+
+=border($size, $model, $border-color)
+  border: vmin-calc($size) $model $border-color
+  +breakpoint($medium)
+    border: vw-calc($size) $model $border-color
+
+=border-top($size, $model, $border-color)
+  border-top: vmin-calc($size) $model $border-color
+  +breakpoint($medium)
+    border-top: vw-calc($size) $model $border-color
+
+=border-right($size, $model, $border-color)
+  border-right: vmin-calc($size) $model $border-color
+  +breakpoint($medium)
+    border-right: vw-calc($size) $model $border-color
+
+=border-bottom($size, $model, $border-color)
+  border-bottom: vmin-calc($size) $model $border-color
+  +breakpoint($medium)
+    border-bottom: vw-calc($size) $model $border-color
+
+=border-left($size, $model, $border-color)
+  border-left: vmin-calc($size) $model $border-color
+  +breakpoint($medium)
+    border-left: vw-calc($size) $model $border-color
+
+=bottom($size)
+  bottom: vmin-calc($size)
+  +breakpoint($medium)
+    bottom: vw-calc($size)
+
+=left($size)
+  left: vmin-calc($size)
+  +breakpoint($medium)
+    left: vw-calc($size)
+
+=width($size)
+  width: vmin-calc($size)
+  +breakpoint($medium)
+    width: vw-calc($size)
+
+=min-width($size)
+  min-width: vmin-calc($size)
+  +breakpoint($medium)
+    min-width: vw-calc($size)
+
+=max-width($size)
+  max-width: vmin-calc($size)
+  +breakpoint($medium)
+    max-width: vw-calc($size)
+
+=height($size)
+  height: vmin-calc($size)
+  +breakpoint($medium)
+    height: vw-calc($size)
+
+=min-height($size)
+  min-height: vmin-calc($size)
+  +breakpoint($medium)
+    min-height: vw-calc($size)
+
+=max-height($size)
+  max-height: vmin-calc($size)
+  +breakpoint($medium)
+    max-height: vw-calc($size)
+
+=margin-top($size)
+  margin-top: vmin-calc($size)
+  +breakpoint($medium)
+    margin-top: vw-calc($size)
+
+=margin-right($size)
+  margin-right: vmin-calc($size)
+  +breakpoint($medium)
+    margin-right: vw-calc($size)
+
+=margin-bottom($size)
+  margin-bottom: vmin-calc($size)
+  +breakpoint($medium)
+    margin-bottom: vw-calc($size)
+
+=margin-left($size)
+  margin-left: vmin-calc($size)
+  +breakpoint($medium)
+    margin-left: vw-calc($size)
+
+=margin($size-top, $size-right, $size-bottom, $size-left)
+  margin-top: vmin-calc($size-top)
+  margin-right: vmin-calc($size-right)
+  margin-bottom: vmin-calc($size-bottom)
+  margin-left: vmin-calc($size-left)
+
+  +breakpoint($medium)
+    margin-top: vw-calc($size-top)
+    margin-right: vw-calc($size-right)
+    margin-bottom: vw-calc($size-bottom)
+    margin-left: vw-calc($size-left)
+
+
+=padding-top($size)
+  padding-top: vmin-calc($size)
+  +breakpoint($medium)
+    padding-top: vw-calc($size)
+
+=padding-right($size)
+  padding-right: vmin-calc($size)
+  +breakpoint($medium)
+    padding-right: vw-calc($size)
+
+=padding-bottom($size)
+  padding-bottom: vmin-calc($size)
+  +breakpoint($medium)
+    padding-bottom: vw-calc($size)
+
+=padding-left($size)
+  padding-left: vmin-calc($size)
+  +breakpoint($medium)
+    padding-left: vw-calc($size)
+
+=padding($size-top, $size-right, $size-bottom, $size-left)
+  padding-top: vmin-calc($size-top)
+  padding-right: vmin-calc($size-right)
+  padding-bottom: vmin-calc($size-bottom)
+  padding-left: vmin-calc($size-left)
+
+  +breakpoint($medium)
+    padding-top: vw-calc($size-top)
+    padding-right: vw-calc($size-right)
+    padding-bottom: vw-calc($size-bottom)
+    padding-left: vw-calc($size-left)
+
+
+=buttons($bg, $cl, $br)
+  background: $bg
+  display: block
+  color: $cl
+  border-radius: 3px
+  border: solid 2px $br
+  font-family: $font-title
+  +font-size(16)
+  text-decoration: none
+  text-transform: uppercase 
+  text-align: center
+  +padding(20, 0, 20, 0)
+  &:hover
+    background: darken($bg , 8%)
+    transition: all 0.3s ease
+  &:active
+    background: darken($bg , 25%)
+

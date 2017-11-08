@@ -1,34 +1,30 @@
-*,
-:before,
-:after
+*, *:before, *:after
   box-sizing: border-box
 
 // Bower {Libraries}.
 @import '../../sass-libs/susy/sass/susy'
 @import '../../sass-libs/breakpoint-sass/stylesheets/breakpoint'
-@import '../../sass-libs/bourbon/app/assets/stylesheets/bourbon'
-@import '../../sass-libs/bourbon/app/assets/stylesheets/css3/placeholder'
 @import '../../sass-libs/normalize-libsass/normalize'
 
-// Utils {Tools}.
+// Utils {Tools} & Base {Skinr & Grid Framework}.
 @import 'utils/variables-colors'
 @import 'utils/variables-breakpoints'
 @import 'utils/functions'
-@import 'utils/keyframes'
 @import 'utils/mixins'
-@import 'utils/helpers'
-
-// Base {Skinr & Grid Framework}.
 @import 'base/skinr'
 @import 'base/susy'
+@import 'utils/keyframes'
+@import 'utils/helpers'
 
-// Components (Drupal Elements)
+// Components {Drupal Elements}.
 @import 'components/**/*'
 
-// Custom Layout
+//Layout Regions {Blocks, Forms, Nodes, Regions, Pages & Views}.
 @import 'layout/layout'
 @import 'layout/regions/*'
-@import 'layout/blocks/*'
+@import 'layout/blocks/**/*'
+@import 'layout/forms/*'
 @import 'layout/nodes/*'
 @import 'layout/pages/*'
 @import 'layout/views/*'
+

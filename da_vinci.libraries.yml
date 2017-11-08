@@ -8,6 +8,7 @@ global-js:
   js:
     js/da-vinci.js: {}
     js/custom.js: {}
+    js/svg.js: {}
     js/rwd.js: {}
     js/vendors/jquery.unevent.js: {}
     js/vendors/jquery.viewport.js: {}
@@ -21,9 +22,6 @@ global-js:
     - core/drupal
 
 # Front Path.
-front:
-  js:
-    js/in-view-front.js: {}
 home:
   js:
     js/in-view-home.js: {}
@@ -75,4 +73,3 @@ path2:
     theme:
       css/vendors/slick.css: {}
       css/vendors/jquery.selectBox.css: {}
-        

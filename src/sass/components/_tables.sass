@@ -1,18 +1,20 @@
 table
-  border: 1px solid $border
+  border: none
   th
-    background-color: $color
-    color: $white
-    padding: 0.65em
-    border: 1px solid $white
-    font-weight: 400
-    text-transform: uppercase
-    font-size: 0.85em
+    background-color: transparent
+    color: $dark-blue
+    font-weight: 700
+    +padding(10,10,10,10)
+    +font-size(16)
+    text-align: left
+    vertical-align: top
   td
-    padding: 0.65em
-    border: 1px solid $white
-    background-color: lighten($secondary-color, 35%)
-  tr
-    &.odd
-      td
-        background-color: lighten($secondary-color, 33%)
+    +padding(10,10,10,10)
+
+  //no margins for lists and paragraphs inside table cells.
+  th,
+  td
+    p,
+    ul
+      margin: 0
+      padding: 0
