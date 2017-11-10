@@ -1,3 +1,4 @@
+uuid: 280b3869-3f9e-49f1-8336-31c1183ca8e0
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - da_vinci
+_core:
+  default_config_hash: pIKRIRPNV43HFxKKhD-f-96wK787q4RhyQzDhPgq4Ws
 id: da_vinci_powered
 theme: da_vinci
 region: footer
