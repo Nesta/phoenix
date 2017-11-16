@@ -1,0 +1,18 @@
+uuid: bb3fb46c-1174-45f5-9cb5-028075205bfc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - da_vinci
+id: pagetitle
+theme: da_vinci
+region: sliding_menu
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
