@@ -1,3 +1,4 @@
+uuid: 976a24bb-86b5-4014-a6f1-9e2806404c38
 langcode: en
 status: true
 dependencies:
@@ -5,15 +6,17 @@ dependencies:
     - search
   theme:
     - da_vinci
+_core:
+  default_config_hash: DoBI95krC_UArhalMr-lpqnZLoTj5hAorRR_s4Ua-cY
 id: da_vinci_search
 theme: da_vinci
-region: sidebar_first
-weight: -1
+region: header
+weight: -3
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
   label: Search
   provider: search
-  label_display: visible
+  label_display: '0'
 visibility: {  }

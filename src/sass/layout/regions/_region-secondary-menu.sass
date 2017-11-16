@@ -1,3 +1,13 @@
 .region.region-secondary-menu
   max-width: 100%
-  background: $red
+  ul.menu
+    justify-content: flex-end
+    display: flex
+    li.menu-item
+      display: block
+      margin-left: vw-calc(32)
+      margin-right: 0
+      +breakpoint($large)
+        margin-left: vmin-calc(32)
+      +breakpoint($monster)
+        margin-left: vw-calc(32)

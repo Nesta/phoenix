@@ -1,3 +1,4 @@
+uuid: 572cccf1-733a-42c4-8934-e6eac48f24ee
 langcode: en
 status: true
 dependencies:
@@ -7,10 +8,12 @@ dependencies:
     - system
   theme:
     - da_vinci
+_core:
+  default_config_hash: oqloh-dtKuOmhYTezfeyjCI2BfJlQcfURzvj04NCXuk
 id: da_vinci_main_menu
 theme: da_vinci
-region: primary_menu
-weight: 0
+region: header
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,18 +1,16 @@
-.layout-container > header
-  +padding(14,0,14,0)
+.layout-container
+  > header
   .region-header
     display: flex
     align-items: center
     align-content: center
-    justify-content: space-around
+    justify-content: space-between
   +breakpoint(0 $medium)
     padding: 0
   +breakpoint($monster)
     padding: vw-calc(14) 0
   .menu-slide-action
     cursor: pointer
-    float: right
-    margin: vmin-calc(10) 0
     +breakpoint($monster)
       margin: vw-calc(10) 0
     z-index: 8
@@ -27,86 +25,112 @@
       width: vmin-calc(50)!important
       height: vmin-calc(50)!important
       position: absolute
-      top: vmin-calc(-10)
+      top: 0
       +breakpoint($monster)
         width: vw-calc(44)!important
         height: vw-calc(44)!important
         top: vw-calc(-9)
       path, a, g
-        fill: $dark-blue
+        fill: $main-color
         transition: fill 2s ease
-    .is-visible
-      svg
-        path, a, g
-          fill: $white
+    +breakpoint($medium)
+      display: none
 
-      
   #block-da-vinci-branding
-    float: left
-    margin: vmin-calc(14) 0 vmin-calc(10) 0
-    margin-right: vmin-calc(69)
-    position: relative
-    z-index: 999
+    display: flex
+    align-items: center
+    .site-logo
+      margin: vmin-calc(14) 0 vmin-calc(10) 0
+      margin-right: vmin-calc(30)
+      z-index: 999
     +breakpoint($monster)
       margin: vw-calc(14) 0 vw-calc(10) 0
       margin-right: vw-calc(69)
       margin-left: vw-calc(40)
       transform: scale(1.5)
-    a
-      //position: relative
-      //z-index: 98
+
+  .block-search
+    form
+      display: flex
+      align-items: center
+
   nav
     ul
       margin: 0
       padding: 0
       li
-        display: none
-        +breakpoint($large)
-          display: inline-block
         margin: vmin-calc(15) 0 vmin-calc(14) 0
         margin-right: vmin-calc(32)
         padding: 0
+        +breakpoint($large)
+          display: inline-block
         +breakpoint($monster)
           margin: vw-calc(15) 0 vw-calc(14) 0
           margin-right: vw-calc(32)
-        +breakpoint($small)
-          //&:last-child
-            display: inline-block
-            margin: 0
-            margin-right: rem-calc(34)
-            +breakpoint(0 $medium)
-              margin-top: rem-calc(10)
-            //left: rem-calc(-40)
-            float: right
-            //border-radius: rem-calc(4)
-            //border: solid rem-calc(1) $red
-            //transition: border-color 2s ease
-            //color: $red
-            //position: relative
-            //z-index: 8
-            a
-              font-family: $font-title
-              padding: rem-calc(14) rem-calc(33) 
-              +breakpoint(0 $medium)
-                padding: rem-calc(7) rem-calc(33) 
-              display: block
-              color: $red
-              transition: color 2s ease
-        &.is-visible 
-          border-color: $white
-          a
-            color: $white
+      &.is-visible
+        border-color: $white
         a
-          +font-size(16)
-          +breakpoint($monster)
-          text-transform: uppercase
+          color: $white
+      a
+        text-transform: uppercase
+      &:active, .is-active
+        color: $white
+        &:hover
+          color: $red
 
-.first-level
-  .layout-container > header
-    //position: absolute
-    width: 100%
-    //z-index: 98
-    svg path, a, svg g
-      color: $white
-      stroke: $white
-      fill: $white
+  .menu--account
+      display: block
+      position: relative
+      h2
+        @extend .hide-accesible
+        display: block
+        width: 42px
+        height: 42px
+        background-image: url('../images/ico-user.svg')
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: 100%
+        float: right
+        background-color: red
+        border: none !important
+
+      &:hover
+        > h2
+          background-position: 0 0
+          transition: 0.2s
+          border: none
+        > ul
+          opacity: 1
+          visibility: visible
+          transition: 0.2s
+      &.active
+        > h2
+          +breakpoint(0 $medium)
+            background-color: red
+            background-position: 0 0
+        > ul
+          +breakpoint(0 $large)
+            opacity: 1
+            visibility: visible
+            transition: 0.2s
+      > ul
+        display: block !important
+        background-color: $main-color
+        min-width: 200px
+        opacity: 0
+        position: absolute
+        z-index: 99999
+        right: 0px
+        top: 57px
+        visibility: hidden
+        transition: 0.2s
+        li
+          &.menu-item--active-trail
+            a
+              color: $white
+        a
+          color: $white
+          display: block
+          &:hover
+            color: $white
+            text-decoration: underline

@@ -1,3 +1,4 @@
+uuid: 08c2dae6-b03c-4e35-bd50-5f3d76e69bc6
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - da_vinci
+_core:
+  default_config_hash: 2JZ9iWc3Kc_RtTZ2ww99gVUmG8O4WLYbIFqi6bZ766U
 id: da_vinci_messages
 theme: da_vinci
 region: highlighted

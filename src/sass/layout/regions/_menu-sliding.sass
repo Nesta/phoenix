@@ -1,8 +1,11 @@
-//.sliding-panel-content
+
+.user-logged-in
+  .region-sliding-menu
+    +top(295)
+
+.region-sliding-menu
   position: fixed
-  top: 80px
-  +breakpoint(0 $medium)
-    top: 60px
+  +top(127)
   bottom: 0
   right: 0
   width: 100vw
@@ -34,12 +37,15 @@
     padding-left: 7.5%
     padding-right: 7.5%
     +breakpoint($x-large)
-      padding: 2.313rem 5.063rem 4rem 6.250rem 
-
-//Overwrites the default admin-bar
-//.toolbar-fixed
-  .sliding-panel-content
-    margin-top: 2.438rem
-  &.toolbar-tray-open.toolbar-horizontal
-    .sliding-panel-content
-      margin-top: 4.938rem
+      padding: 2.313rem 5.063rem 4rem 6.250rem
+  a
+  &.is-visible
+    border-color: $white
+    a
+      color: $white
+    a
+      text-transform: uppercase
+    &:active, .is-active
+      color: $white
+      &:hover
+        color: $red

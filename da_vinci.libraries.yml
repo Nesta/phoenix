@@ -14,8 +14,6 @@ global-js:
     js/vendors/jquery.viewport.js: {}
     js/vendors/css_browser_selector.js: {}
     js/utils/menu-svg.js: {}
-    js/menu-coordination.js: {}
-    js/secondary-menu.js: {}
   dependencies:
     - core/jquery
     - core/modernizr

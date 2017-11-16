@@ -9,16 +9,19 @@
 
   Drupal.behaviors.rwdElements = {
     attach: function (context, settings) {
+
       $(window).on('resize.rwdElements orientationchange', function () {
-        if (window.matchMedia('(max-width: 59.375em').matches) {
+
+        if (window.matchMedia('(max-width: 48.5rem').matches) {
+
           // First add ID to the main menu.
-          $('#block-legal>ul.menu').attr('id','block-legalList');
+          $('#block-da-vinci-main-menu>ul.menu').attr('id','block-mainMenu');
           // Move the main menu together with its children.
-          $('#block-legalList').appendTo('#block-blk-socialnetworks');
+          $('#block-mainMenu').appendTo('#sliding-panel .region-sliding-menu');
         }
         else {
           // Move back the lists into the desktop positions.
-          $('#block-legalList').appendTo('#block-legal');
+          $('#block-mainMenu').appendTo('#block-da-vinci-main-menu');
         }
       });
 

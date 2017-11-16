@@ -1,12 +1,15 @@
+uuid: 69ccb9de-6ae7-498a-8f11-5b4ec8bcfe16
 langcode: en
 status: true
 dependencies:
   theme:
     - da_vinci
+_core:
+  default_config_hash: nSHUhzZMSt_kYf4yqA6_2EXR6DC6Zfsn5rI_GGQvVLU
 id: da_vinci_page_title
 theme: da_vinci
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

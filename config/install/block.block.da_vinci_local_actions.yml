@@ -1,12 +1,15 @@
+uuid: 59fa6d39-86b1-49b2-a697-b05d74dd3abb
 langcode: en
 status: true
 dependencies:
   theme:
     - da_vinci
+_core:
+  default_config_hash: J1P5O6ohdhSXmk9ZfUK2RxzIcN79fjkLqEbOxOnnC5k
 id: da_vinci_local_actions
 theme: da_vinci
 region: content
-weight: -7
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:
