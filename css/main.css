@@ -417,7 +417,19 @@ body {
 }
 
 body main {
-  padding: 0 20px;
+  padding-top: 0;
+  padding-right: 2.5vmin;
+  padding-bottom: 0;
+  padding-left: 2.5vmin;
+}
+
+@media (min-width: 48.5rem) {
+  body main {
+    padding-top: 0;
+    padding-right: 1.38888vw;
+    padding-bottom: 0;
+    padding-left: 1.38888vw;
+  }
 }
 
 body .layout-container {
@@ -565,24 +577,12 @@ summary {
 }
 
 blockquote {
-  border: 0.375vmin solid #ef3340;
-  margin: 3vmin 0 3vmin 1vmin;
-  padding-left: 2vmin;
   font-family: "Roboto Condensed", sans-serif;
   color: #9da7b0;
+  margin: 3vmin 0 3vmin 1vmin;
+  padding-left: 2vmin;
   font-size: 3vmin;
-}
-
-@media (min-width: 48.5rem) {
-  blockquote {
-    border: 0.20833vw solid #ef3340;
-  }
-}
-
-@media (min-width: 48.5rem) {
-  blockquote {
-    margin: 1.66665vw 0 1.66665vw 3.3333vw;
-  }
+  border: 0.375vmin solid #ef3340;
 }
 
 @media (min-width: 48.5rem) {
@@ -594,6 +594,18 @@ blockquote {
 @media (min-width: 48.5rem) {
   blockquote {
     font-size: 1.66665vw;
+  }
+}
+
+@media (min-width: 48.5rem) {
+  blockquote {
+    border: 0.20833vw solid #ef3340;
+  }
+}
+
+@media (min-width: 48.5rem) {
+  blockquote {
+    margin: 1.66665vw 0 1.66665vw 3.3333vw;
   }
 }
 
@@ -5306,12 +5318,12 @@ footer.site-footer .region-footer-info #block-legalList li a {
 }
 
 .user-logged-in .region-sliding-menu {
-  top: 34.375vmin;
+  top: 36.875vmin;
 }
 
 @media (min-width: 48.5rem) {
   .user-logged-in .region-sliding-menu {
-    top: 19.09703vw;
+    top: 20.48591vw;
   }
 }
 

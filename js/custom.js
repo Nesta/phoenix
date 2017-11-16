@@ -27,7 +27,6 @@
         }, 500);
       });
 
-
       // Burguer Menu.
       var menu_svg = document.getElementById('menu-svg');
       var menu_settings = {
@@ -42,7 +41,6 @@
       var menu_svg_init;
       var menu_svg_x = false;
       menu_svg_init = bodymovin.loadAnimation(menu_settings);
-      //menu_svg.onclick = buttonChange;
 
       function throwComplete() {
         isThrowing = false;
