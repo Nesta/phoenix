@@ -1,0 +1,25 @@
+#block-da-vinci-search
+  +margin-right(20)
+  +breakpoint(0 $small)
+    width: 100%
+    margin-right: 0
+  #search-block-form
+    .js-form-item
+      display: block
+      margin: 0
+      +breakpoint(0 $small)
+        flex-grow: 1
+      #edit-keys
+        height: 32px
+        +breakpoint(0 $small)
+          width: 100%
+    +breakpoint(0 $small)
+      width: 100%
+    .form-actions
+      display: block
+      .js-form-submit
+        height: 32px
+        border-radius: 0
+        line-height: normal
+        +breakpoint(0 $small)
+          font-size: 14px
