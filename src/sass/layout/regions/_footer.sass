@@ -3,7 +3,12 @@ footer.site-footer
   margin-top: auto
   .footer-wrapper
     +padding(16,0,16,0)
+    display: flex
+    align-items: center
+    justify-content: space-between
     @extend .restricted-container
+    &:after
+      display: none
 
     h2
       +font-size(14)
@@ -35,9 +40,6 @@ footer.site-footer
             +margin-bottom(0)
 
   .region-footer-info
-    +span(12 of 12)
-    +breakpoint($medium-large)
-      +span(3 of 12 last)
 
 
     #block-legalList
