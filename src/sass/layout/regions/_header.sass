@@ -1,10 +1,25 @@
 .layout-container
+  padding-top: 0!important
   > header
+    z-index: 2
+  .site-header
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    flex-wrap: wrap
+    +padding(10,10,10,10)
   .region-header
     display: flex
     align-items: center
     align-content: center
     justify-content: space-between
+    flex-grow: 1
+    #block-da-vinci-branding
+      +breakpoint(0 $small)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        +padding(10,10,10,10)
   +breakpoint(0 $medium)
     padding: 0
   +breakpoint($monster)
@@ -41,7 +56,7 @@
     align-items: center
     .site-logo
       margin: vmin-calc(14) 0 vmin-calc(10) 0
-      margin-right: vmin-calc(30)
+      margin-right: vmin-calc(15)
       z-index: 999
     +breakpoint($monster)
       margin: vw-calc(14) 0 vw-calc(10) 0
