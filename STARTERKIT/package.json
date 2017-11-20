@@ -4,14 +4,14 @@
   "description": "Da Vinci dependencies",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node_modules/bower/bin/bower install && find node_modules/ -name \"*.info\" -type f -delete",
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "La Drupalera",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
-    "bower": "^1.8.0",
+    "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.16.0",
     "colors": "^1.1.2",
     "del": "^2.2.2",
@@ -30,10 +30,12 @@
     "jpegtran-bin": "^3.2.0",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
+    "normalize-libsass": "^1.0.3",
     "optipng": "^1.0.0",
     "optipng-bin": "^3.1.2",
     "pngquant-bin": "3.1.1",
     "sassdoc": "^2.1.20",
+    "susy": "^2.2.5",
     "yargs": "7.0.2"
   }
 }

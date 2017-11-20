@@ -11,6 +11,7 @@ libraries:
 regions:
   top_bar: 'Extra Top bar'
   secondary_menu: 'Secondary menu'
+  sliding_menu: 'Sliding menu'
   header: 'Header'
   highlighted: 'Highlighted'
   primary_menu: 'Primary menu'
