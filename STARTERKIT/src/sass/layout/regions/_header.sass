@@ -1,72 +1,151 @@
-.layout-container > header
-  background-color: $color
-  color: $white
-  .region-header
-    padding: 1em 0
-    position: relative
+.layout-container
+  padding-top: 0!important
+  > header
     z-index: 2
+  .site-header
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    flex-wrap: wrap
+    +padding(10,10,10,10)
+  .region-header
+    display: flex
+    align-items: center
+    align-content: center
     justify-content: space-between
-    .site
-      &-logo
-        float: left
-        margin-right: 1em
-        position: relative
-      &-name
-        a
-          display: inline-block
-          margin-top: 0.5em
-        font-family: $font-title
-        font-size: 1.5em
-      &-slogan
-        font-style: italic
-        font-size: 0.65em
-    h1
-      +hide-text
-      height: 0
+    flex-grow: 1
+    #block-mytheme-branding
+      +breakpoint(0 $small)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        +padding(10,10,10,10)
+  +breakpoint(0 $medium)
+    padding: 0
+  +breakpoint($monster)
+    padding: vw-calc(0) 0
+  .menu-slide-action
+    cursor: pointer
+    +breakpoint($monster)
+      margin: vw-calc(10) 0
+    z-index: 8
+    position: relative
+    +width(50)
+    +height(50)
+    #menu-svg
+      +width(50)
+      +height(50)
+      position: absolute
+    svg
+      width: vmin-calc(50)!important
+      height: vmin-calc(50)!important
+      position: absolute
+      top: 0
+      +breakpoint($monster)
+        width: vw-calc(44)!important
+        height: vw-calc(44)!important
+        top: vw-calc(-9)
+      path, a, g
+        fill: $main-color
+        transition: fill 2s ease
+    +breakpoint($medium)
+      display: none
+
+  #block-mytheme-branding
+    display: flex
+    align-items: center
+    .site-logo
+      margin: vmin-calc(14) 0 vmin-calc(10) 0
+      margin-right: vmin-calc(15)
+      z-index: 999
+    +breakpoint($monster)
+      margin: vw-calc(14) 0 vw-calc(10) 0
+      margin-right: vw-calc(69)
+      margin-left: vw-calc(40)
+      transform: scale(1.5)
+
+  .block-search
+    form
+      display: flex
+      align-items: center
+
+  nav
+    ul
       margin: 0
-    a
-      color: $white  
-      &:hover
-        color: $white
-
-.top-bar
-  padding: 1em 0
-  font-size: 0.75em
-  background-color: lighten($color, 8%)
-.region-highlighted
-  margin-top: 1em
-  margin-bottom: 1em
-.region-secondary-menu
-  .menu
-    text-align: right
-    &-item
-      display: inline-block
-      margin-right: 8px
-      border-right: 1px solid $secondary-color
-      padding-right: 8px
-      line-height: 8px
-      &:last-child
-        border-width: 0
-        margin-right: 0
-        padding-right: 0
+      padding: 0
+      li
+        margin: vmin-calc(15) 0 vmin-calc(14) 0
+        margin-right: vmin-calc(32)
+        padding: 0
+        +breakpoint($large)
+          display: inline-block
+        +breakpoint($monster)
+          margin: vw-calc(15) 0 vw-calc(14) 0
+          margin-right: vw-calc(32)
+      &.is-visible
+        border-color: $white
+        a
+          color: $white
       a
-        color: $white
-        display: block
         text-transform: uppercase
-        font-size: 0.75em
-        &.is-active
-          cursor: default
-        &.is-active,
+      &:active, .is-active
+        color: $white
         &:hover
-          color: $secondary-color
+          color: $red
 
+  .menu--account
+      display: block
+      position: relative
+      h2
+        @extend .hide-accesible
+        display: block
+        width: 42px
+        height: 42px
+        background-image: url('../images/ico-user.svg')
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: 100%
+        float: right
+        background-color: red
+        border: none !important
 
-+breakpoint($large)
-  header
-    .region-header
-      +span(12 of 12 first)
-    .region-secondary-menu
-      +span(4  of 12 last)
-      #block-menuprincipal
-      #block-languageswitcher
-        +span(1 of 12 last)
+      &:hover
+        > h2
+          background-position: 0 0
+          transition: 0.2s
+          border: none
+        > ul
+          opacity: 1
+          visibility: visible
+          transition: 0.2s
+      &.active
+        > h2
+          +breakpoint(0 $medium)
+            background-color: red
+            background-position: 0 0
+        > ul
+          +breakpoint(0 $large)
+            opacity: 1
+            visibility: visible
+            transition: 0.2s
+      > ul
+        display: block !important
+        background-color: $main-color
+        min-width: 200px
+        opacity: 0
+        position: absolute
+        z-index: 99999
+        right: 0px
+        top: 57px
+        visibility: hidden
+        transition: 0.2s
+        li
+          &.menu-item--active-trail
+            a
+              color: $white
+        a
+          color: $white
+          display: block
+          &:hover
+            color: $white
+            text-decoration: underline

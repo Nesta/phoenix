@@ -1,4 +1,4 @@
-uuid: c80ccb7d-e320-48c8-a1fb-b1fbb376a990
+uuid: 3dbfc72b-bc5f-42ef-8dc2-e79e27c9c1dc
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: o_qieijwj7zqGFWSRx2lfrk3_NLglKKI5PKX5l536fE
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: mytheme_main_menu
 theme: mytheme
-region: primary_menu
-weight: 0
+region: header
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
