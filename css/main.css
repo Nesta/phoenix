@@ -5577,7 +5577,7 @@ footer.site-footer .region-footer-info #block-legalList li a {
 
 @media (min-width: 0) and (max-width: 30rem) {
   #block-da-vinci-search {
-    width: 100%;
+    width: 54%;
     margin-right: 0;
   }
 }
@@ -5595,6 +5595,7 @@ footer.site-footer .region-footer-info #block-legalList li a {
 
 #block-da-vinci-search #search-block-form .js-form-item #edit-keys {
   height: 32px;
+  font-size: 14px;
 }
 
 @media (min-width: 0) and (max-width: 30rem) {
