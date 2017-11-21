@@ -1,15 +1,15 @@
-uuid: 99afec5f-6011-49fc-b948-4f143e0508b5
+uuid: 2a221f68-b25e-4947-90eb-032499be38c1
 langcode: en
 status: true
 dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: 2YoipGQkX9NyJ5-nLxHeMw0RAMsJVSJ1wd__jIVzmOA
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: mytheme_local_actions
 theme: mytheme
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,6 +1,6 @@
-uuid: bfd3b69c-7ec0-4bee-b00a-0d9469a7f203
+uuid: d138e148-d661-49ca-a67c-51996c7d1a5c
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.footer
@@ -9,10 +9,10 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: 4NiT7HROpPbfkK77DkbsLdTHeS60xG6GY-CjpFvaPk8
+  default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: mytheme_footer
 theme: mytheme
-region: top_bar
+region: footer_info
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'

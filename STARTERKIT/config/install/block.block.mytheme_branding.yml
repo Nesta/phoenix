@@ -1,4 +1,4 @@
-uuid: 82d89832-8efa-4266-a2a9-c811447ab282
+uuid: 81d01a2e-9aa2-4880-9e39-c2ca7754bfcc
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: lhc63jm_EEEGhty0lxNrydY2Zn9GUv5aQZrgY4i49kc
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: mytheme_branding
 theme: mytheme
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
