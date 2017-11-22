@@ -1,10 +1,12 @@
 #block-useraccountmenu
   #block-useraccountmenu-menu
     margin: 0
-    width: 32px
-    height: 32px
+    width: vmin-calc(32)
+    height: vmin-calc(32)
     &:hover
       cursor: pointer
+    +breakpoint($monster)
+      height: vw-calc(44)
   .menu
     top: 32px
     li
