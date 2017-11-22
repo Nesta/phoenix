@@ -5637,12 +5637,6 @@ footer.site-footer .region-footer-info #block-legalList li a {
   }
 }
 
-@media (min-width: 100rem) {
-  #block-da-vinci-search #search-block-form .js-form-item #edit-keys {
-    height: 3.05552vw;
-  }
-}
-
 #block-da-vinci-search #search-block-form .js-form-item .form-search {
   font-size: 14px;
 }
@@ -5675,13 +5669,6 @@ footer.site-footer .region-footer-info #block-legalList li a {
   margin-right: 5px;
   width: 4vmin;
   height: 4vmin;
-}
-
-@media (min-width: 100rem) {
-  .search-icons-button {
-    width: 3.05552vw;
-    height: 3.05552vw;
-  }
 }
 
 @media (min-width: 48.5rem) {
@@ -5722,13 +5709,6 @@ footer.site-footer .region-footer-info #block-legalList li a {
   transition: all 0.4s cubic-bezier(0.11, 0.92, 0.52, 0.98) 0.5s;
 }
 
-@media (min-width: 100rem) {
-  .search-icons-button .search-icon {
-    width: 3.05552vw;
-    height: 3.05552vw;
-  }
-}
-
 .search-icons-button .search-icon:before, .search-icons-button .search-icon:after {
   content: "";
   position: absolute;
@@ -5763,12 +5743,6 @@ footer.site-footer .region-footer-info #block-legalList li a {
 
 #block-useraccountmenu #block-useraccountmenu-menu:hover {
   cursor: pointer;
-}
-
-@media (min-width: 100rem) {
-  #block-useraccountmenu #block-useraccountmenu-menu {
-    height: 3.05552vw;
-  }
 }
 
 #block-useraccountmenu .menu {
