@@ -21,9 +21,14 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {{ content }}
-    <div class="menu-slide-action">
-      <div class="js-menu-trigger sliding-panel-button">
-        <div id="menu-svg"></div>
+    <div class="wrapper">
+      <div class="search-icons-button">
+        <span class="search-icon"/>
+      </div>
+      <div class="menu-slide-action">
+        <div class="js-menu-trigger sliding-panel-button">
+          <div id="menu-svg"></div>
+        </div>
       </div>
     </div>
   </div>
