@@ -36,8 +36,6 @@
         font-size: 14px
         +breakpoint(0 $small)
           width: 100%
-        +breakpoint($monster)
-          height: vw-calc(44)
       .form-search
         font-size: 14px
     +breakpoint(0 $small)
@@ -57,9 +55,6 @@
   margin-right: 5px
   width: vmin-calc(32)
   height: vmin-calc(32)
-  +breakpoint($monster)
-    width: vw-calc(44)
-    height: vw-calc(44)
   +breakpoint($medium)
     display: none
   &.active
@@ -87,9 +82,6 @@
     border-radius: 50%
     border: 2px solid white
     transition: all 0.4s cubic-bezier(0.11, 0.92, 0.52, 0.98) 0.5s
-    +breakpoint($monster)
-      width: vw-calc(44)
-      height: vw-calc(44)
     &:before,
     &:after
       content: ""
