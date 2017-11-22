@@ -8,6 +8,11 @@
     align-items: center
     flex-wrap: wrap
     +padding(10,10,10,10)
+    .wrapper
+      display: flex
+      flex-direction: inherit
+      align-items: center
+
   .region-header
     display: flex
     align-items: center
@@ -20,11 +25,16 @@
         flex-direction: column
         align-items: flex-start
         +padding(10,10,10,10)
+      .site-name
+        +breakpoint(0 $medium)
+          display: none
   +breakpoint(0 $medium)
     padding: 0
   +breakpoint($monster)
     padding: vw-calc(0) 0
   .menu-slide-action
+    width: vw-calc(32)
+    height: vw-calc(32)
     cursor: pointer
     +breakpoint($monster)
       margin: vw-calc(10) 0
@@ -33,8 +43,8 @@
     +width(50)
     +height(50)
     #menu-svg
-      +width(50)
-      +height(50)
+      width: vw-calc(32)
+      height: vw-calc(32)
       position: absolute
     svg
       width: vmin-calc(50)!important
