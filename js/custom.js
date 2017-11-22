@@ -56,6 +56,12 @@
           menu_svg_init.playSegments([0, 14], true)
         }
       }
+
+      // Search Button
+      $('.search-icons-button').on('click', function () {
+          $(this).toggleClass('active');
+          $('#block-da-vinci-search').toggleClass('active');
+      });
     }
   };
 })(jQuery);
