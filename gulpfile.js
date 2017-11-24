@@ -240,6 +240,19 @@ gulp.task('pro', ['styles:pro', 'jshint']);
 
 /************* QA - CODE QUALITY REPORTS *************/
 
+// JENKINS, jsHint report XML
+gulp.task('jenkinsJSHintReport', function(){
+    return gulp.src([distAssets.js + '*.js'])
+        .pipe(jsHint())
+        .pipe(jsHint.reporter('gulp-jshint-jenkins-reporter', {
+            filename: 'reports/jshint-checkstyle.xml',
+            level: 'e', // ewi [e:error;w=warning;i:info] 
+            // sourceDir:  __dirname + '/', // full path to file
+            rulesFile: '.jshintrc'
+        }))
+        .pipe(browserSync.stream());
+});
+
 // JENKINS, sasslint report XML
 gulp.task('jenkinsSassLintReport', function () {
     const fs = require('fs');
@@ -256,19 +269,6 @@ gulp.task('jenkinsSassLintReport', function () {
         file.end();
     });
     return stream;
-});
-
-// JENKINS, jsHint report XML
-gulp.task('jenkinsJSHintReport', function(){
-    return gulp.src([distAssets.js + '*.js'])
-        .pipe(jsHint())
-        .pipe(jsHint.reporter('gulp-jshint-jenkins-reporter', {
-            filename: 'reports/jshint-checkstyle.xml',
-            level: 'e', // ewi [e:error;w=warning;i:info] 
-            // sourceDir:  __dirname + '/', // full path to file
-            rulesFile: '.jshintrc'
-        }))
-        .pipe(browserSync.stream());
 });
 
 // DEVELOPER, sasslint report HTML
