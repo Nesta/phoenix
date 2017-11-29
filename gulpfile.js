@@ -5,22 +5,23 @@
 
 /****** DEPENDENCIES ********/
 
-var gulp            = require('gulp'),
-    sass            = require("gulp-sass"),
-    sassGlob        = require("gulp-sass-glob"),
-    sassLint        = require('gulp-sass-lint'),
-    color           = require('colors'),
-    sourceMaps      = require("gulp-sourcemaps"),
-    postCss         = require("gulp-postcss"),
-    browserSync     = require('browser-sync').create(),
-    autoprefixer    = require("autoprefixer"),
-    sassDoc         = require('sassdoc'),
-    jsHint          = require('gulp-jshint'),
-    jsHintStylish   = require('jshint-stylish'),
-    del             = require('del'),
-    imagemin        = require('gulp-imagemin'),
-    pngquant        = require('imagemin-pngquant'),
-    process         = require('yargs').argv;
+var autoprefixer = require("autoprefixer"),
+    browserSync = require('browser-sync').create(),
+    converter = require('sass-convert'),
+    color = require('colors'),
+    del = require('del'),
+    gulp = require('gulp'),
+    imagemin = require('gulp-imagemin'),
+    jsHint = require('gulp-jshint'),
+    jsHintStylish = require('jshint-stylish'),
+    postCss = require("gulp-postcss"),
+    pngquant = require('imagemin-pngquant'),
+    process = require('yargs').argv,
+    sassDoc = require('sassdoc'),
+    sass = require("gulp-sass"),
+    sassGlob = require("gulp-sass-glob"),
+    sassLint = require('gulp-sass-lint'),
+    sourceMaps = require("gulp-sourcemaps");
 
 /********** VARIABLES *************/
 
@@ -55,7 +56,7 @@ var sassDocOptions = {
         foo: 'Foo group',
         bar: 'Bar group'
     },
-    basePath: 'https://github.com/SassDoc/sassdoc'
+    description: 'Sassdoc for theme phoenix'
 };
 
 /********** TASKS ***************/
@@ -156,6 +157,10 @@ gulp.task('clean:sassdoc', function () {
 // Sassdoc
 gulp.task('sassdoc', ['clean:sassdoc'], function () {
     return gulp.src(srcAssets.styles + '**/*.s+(a|c)ss')
+        .pipe(converter({
+            from: 'sass',
+            to: 'scss',
+        }))
         .pipe(sassDoc(sassDocOptions));
 });
 
