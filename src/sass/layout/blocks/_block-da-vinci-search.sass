@@ -1,3 +1,4 @@
+/// Styles for search.
 #block-da-vinci-search
   +margin-right(20)
   +breakpoint(0 $medium)
@@ -29,8 +30,6 @@
     .js-form-item
       display: block
       margin: 0
-      +breakpoint(0 $small)
-        flex-grow: 1
       #edit-keys
         height: vmin-calc(32)
         font-size: 14px
@@ -38,8 +37,8 @@
           width: 100%
       .form-search
         font-size: 14px
-    +breakpoint(0 $small)
-      width: 100%
+      +breakpoint(0 $small)
+        flex-grow: 1
     .form-actions
       display: block
       .js-form-submit
@@ -48,6 +47,8 @@
         line-height: normal
         +breakpoint(0 $small)
           font-size: 14px
+    +breakpoint(0 $small)
+      width: 100%
 
 .search-icons-button
   cursor: pointer
@@ -55,8 +56,6 @@
   margin-right: 5px
   width: vmin-calc(32)
   height: vmin-calc(32)
-  +breakpoint($medium)
-    display: none
   &.active
     .search-icon
       border-color: transparent
@@ -103,3 +102,5 @@
       transform: rotate(-45deg) translate(-50%, -50%)
       transform-origin: left bottom
       transition: transform 0.4s cubic-bezier(0.11, 0.92, 0.52, 0.98), opacity 0.2s cubic-bezier(0.11, 0.92, 0.52, 0.98)
+  +breakpoint($medium)
+    display: none

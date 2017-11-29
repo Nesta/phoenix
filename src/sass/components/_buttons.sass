@@ -1,21 +1,19 @@
+/// Styles for buttons.
 .button
   outline: none
   display: inline-block
-  +padding(0, 24, 0, 24)
-  //margin: 0 0.5rem 0.5rem 0
   text-align: center
   background-color: $secondary-color
   color: $white
   text-transform: uppercase
   transition: all .5s
-  +font-size(10)
-  //position: relative
-  //top: -0.125rem
-  +border(1, solid, transparent)
   font-family: $font-title
   font-weight: 400
   line-height: vmin-calc(40)
   border-radius: vmin-calc(3)
+  +padding(0, 24, 0, 24)
+  +font-size(10)
+  +border(1, solid, transparent)
   &:hover
     cursor: pointer
     text-decoration: none
@@ -24,7 +22,6 @@
     color: $secondary-color
   &:focus
     outline: none
-
 .image-button
   background-color: transparent
   +padding(3, 8, 3, 8)
@@ -33,8 +30,6 @@
   @extend .button
   background-color: $red
   +font-size(16)
-  //padding: 0 rem-calc(48)
-
 button
   &:focus
     outline: none
