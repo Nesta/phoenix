@@ -1,59 +1,66 @@
 .layout-container
   padding-top: 0 !important
+
   > header
     z-index: 2
+
   .site-header
+    +padding(10, 10, 10, 10)
+    align-items: center
     display: flex
     flex-direction: row-reverse
-    align-items: center
     flex-wrap: wrap
-    +padding(10, 10, 10, 10)
+
     .wrapper
+      align-items: center
       display: flex
       flex-direction: inherit
-      align-items: center
 
   .region-header
-    display: flex
-    align-items: center
     align-content: center
-    justify-content: space-between
+    align-items: center
+    display: flex
     flex-grow: 1
+    justify-content: space-between
+
     #block-da-vinci-branding
       .site-name
         +breakpoint(0 $medium)
           display: none
       +breakpoint(0 $small)
+        +padding(10, 10, 10, 10)
+        align-items: flex-start
         display: flex
         flex-direction: column
-        align-items: flex-start
-        +padding(10, 10, 10, 10)
   +breakpoint(0 $medium)
     padding: 0
   +breakpoint($monster)
     padding: vw-calc(0) 0
+
   .menu-slide-action
-    width: vw-calc(32)
-    height: vw-calc(32)
-    cursor: pointer
-    z-index: 8
-    position: relative
     +width(50)
     +height(50)
+    cursor: pointer
+    position: relative
+    z-index: 8
+
     #menu-svg
-      width: vw-calc(32)
       height: vw-calc(32)
       position: absolute
+      width: vw-calc(32)
+
     svg
-      width: vmin-calc(50) !important
       height: vmin-calc(50) !important
       position: absolute
       top: 0
+      width: vmin-calc(50) !important
       +breakpoint($monster)
-        width: vw-calc(44) !important
         height: vw-calc(44) !important
         top: vw-calc(-9)
-      path, a, g
+        width: vw-calc(44) !important
+      path,
+      a,
+      g
         fill: $main-color
         transition: fill 2s ease
     +breakpoint($medium)
@@ -62,8 +69,8 @@
       margin: vw-calc(10) 0
 
   #block-da-vinci-branding
-    display: flex
     align-items: center
+    display: flex
     .site-logo
       margin: vmin-calc(14) 0 vmin-calc(10) 0
       margin-right: vmin-calc(15)
