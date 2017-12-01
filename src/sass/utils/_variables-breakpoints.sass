@@ -1,4 +1,6 @@
-/// Screen sizes (grid).
+////
+/// @group variables breakpoints
+////
 
 /// > 360px.
 $x-small: 22.5rem
@@ -6,7 +8,7 @@ $x-small: 22.5rem
 /// > 480px.
 $small: 30rem
 
-/// > 768.
+/// > 768px.
 $medium: 48.5rem
 
 /// > 1024px.
@@ -24,18 +26,43 @@ $monster: 100rem
 /// > 1920px.
 $x-monster: 120rem
 
-/// From 0 to breakpoint.
+// From 0 to breakpoint.
+
+/// @ignore Below_small.
 $below_small: $small - 00.01rem
+
+/// @ignore Bellow_medium.
 $bellow_medium: $medium - 00.01rem
+
+/// @ignore Bellow_large.
 $bellow_large: $large - 00.01rem
+
+/// @ignore Bellow_x_large.
 $bellow_x_large: $x-large - 00.01rem
-$below_xx_large: $xx-large -00.01rem
+
+/// @ignore Bellow_xx_large.
+$below_xx_large: $xx-large - 00.01rem
+
+/// @ignore Bellow_monster.
 $bellow_monster: $monster - 00.01rem
+
+/// @ignore Bellow_x_monster.
 $bellow_x_monster: $x-monster - 00.01rem
 
-/// Between two breakboints.
+// Between two breakboints.
+
+/// @ignore From x_small to bellow_small
 $x_small_small: $x-small $below_small
+
+/// @ignore From small to bellow_medium
 $small_medium: $small $bellow_medium
+
+/// @ignore From medium to bellow_large
 $medium_large: $medium $bellow_large
+
+/// @ignore From large to bellow-monster
 $large_monster: $large $bellow-monster
+
+/// @ignore From monster to bellow_x_monster
 $monster_x_monster: $monster $bellow_x_monster
+

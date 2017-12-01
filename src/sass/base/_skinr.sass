@@ -1,31 +1,75 @@
-/// Typography.
+////
+/// @group skinr
+////
+
+/// @ignore Font title.
 $font-title: 'Roboto Condensed', sans-serif
+/// @ignore Font Default.
 $font-default: 'Roboto', sans-serif
+/// @ignore Font Mono.
 $font-mono: 'Roboto Mono', monospace
 
-/// Messages.
+/// @ignore Messages error.
+/// @type color
 $error: rgba(214, 69, 65, 1)
+
+/// @ignore Messages warning.
+/// @type color
 $warning: rgba(239, 143, 115, 1)
+
+/// @ignore Messages success.
+/// @type color
 $success: rgba(59, 147, 118, 1)
 
-/// Colors.
+/// @ignore Colors.
+/// @type color
 $color: $dark-grey
+
+/// @ignore Colors.
+/// @type color
 $color-body: $grey
+
+/// @ignore Colors.
+/// @type color
 $main-color: $red
+
+/// @ignore Colors.
+/// @type color
 $secondary-color: $dark-blue
+
+/// @ignore Colors.
+/// @type color
 $light-color: $light-grey
+
+/// @ignore Colors.
+/// @type color
 $border: $light-grey
+
 $shadow: hsl(0, 0%, 53%)
+
+/// @ignore Colors.
+/// @type color
 $color-h: $dark-blue
+
+/// @ignore Colors.
+/// @type color
 $color-a: $red
+
+/// @ignore Colors.
+/// @type color
 $color-a-hover: lighten($color-a, 15%)
 
-/// Measurement.
+/// @ignore Measurement.
 $rem-base: 16px
+/// @ignore Measurement.
 $vw-base: 1.1111vw
 
+
+/// Font size for html.
 html
   font-size: 1rem
+
+/// Styles for body.
 body
   color: $color-body
   font-family: $font-default
@@ -36,6 +80,7 @@ body
   .layout-container
     background: $cream
 
+/// General styles for titles.
 h1,
 h2,
 h3,
@@ -47,43 +92,50 @@ h6
   font-weight: 700
   margin: 1rem 0 0.5rem
 
+/// Specific style for h1.
 h1
   line-height: 1
   +font-size(64)
 
+/// Specific style for h2.
 h2
   +font-size(48)
 
+/// Specific style for h3.
 h3
   +font-size(36)
 
+/// Specific style for h4 and h5.
 h4, h5
   +font-size(24)
 
+/// Specific style for h4 and h6.
 h4,
 h6
   font-family: $font-default
   font-weight: 700
 
+/// Specific style for h5.
 h5
   font-family: $font-default
   font-weight: 400
 
+/// Specific style for paragraph.
 p
   margin: 0 0 1.2rem
 
+/// Styles for link.
 a
   color: $color-a
   text-decoration: none
   transition: color 0.2s
-
   &:hover
     color: $color-a-hover
     text-decoration: none
-
   &.icon-help
     +font-size(13)
 
+/// Font in bold.
 strong
   font-weight: 700
 
@@ -94,13 +146,6 @@ mark,
   color: $white
   +padding(6, 6, 6, 6)
   background-color: $grey
-
-.filter-help,
-.more-link
-  a
-    text-transform: uppercase
-    +font-size(10)
-    font-weight: 600
 
 summary
   outline: none
