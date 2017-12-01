@@ -1,25 +1,32 @@
 .region-primary-menu
   .menu
-    text-align: center
     +margin(0, 0, 0, 0)
     +border-bottom(1, solid, lighten($color, 80%))
     +padding-bottom(16)
     +margin-bottom(16)
+    text-align: center
+
     &-item
       display: inline-block
+
       a
-        display: block
-        text-transform: uppercase
-        color: $color
         +margin-right(8)
         +border-right(1, solid, $border)
+        color: $color
+        display: block
+        text-transform: uppercase
+
         &:hover,
         &.is-active
           color: $secondary-color
+
           &:hover
             color: $secondary-color
+
         &.is-active
           cursor: default
           font-weight: 600
-      &:last-child a
-        border-right: 0
+
+      &:last-child
+        a
+          border-right: 0
