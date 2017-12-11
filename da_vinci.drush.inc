@@ -20,10 +20,11 @@ function da_vinci_drush_command() {
     'options' => [
       'description'  => 'Your theme description.',
       'machine-name' => '[a-z, 0-9] A machine-readable name for your theme.',
+      'set-value-rem' => 'Replace vw_calc with rem_calc.',
     ],
     'examples' => [
       'drush subtheme "Theme name"' => 'Create a sub-theme with default options.',
-      'drush subtheme "Theme name" "machine_theme_name" --description="Description for my theme"' => 'Create a sub-theme with machine name and description.',
+      'drush subtheme "Theme name" "machine_theme_name" --description="Description for my theme" --set-value-rem' => 'Create a sub-theme with machine name, description and rem.',
     ],
   ];
   return $items;
@@ -32,7 +33,7 @@ function da_vinci_drush_command() {
 /**
  * Create Da Vinci subtheme.
  */
-function drush_da_vinci($name = NULL, $machine_name = NULL, $description = NULL) {
+function drush_da_vinci($name = NULL, $machine_name = NULL) {
 
   /*
    * Determine all the command line options given.
@@ -177,7 +178,7 @@ function drush_da_vinci($name = NULL, $machine_name = NULL, $description = NULL)
 
   foreach ($sub_theme_files as $filename) {
     /*
-     * Replace all occurrences of 'STARTERKIT' with the machine name
+     * Replace all occurrences of 'STARTERKIT' and 'mytheme' with the machine name
      * of our sub theme.
      */
     drush_op('da_vinci_file_replace', $filename, ['STARTERKIT' => $machine_name]);
@@ -216,6 +217,10 @@ function drush_da_vinci($name = NULL, $machine_name = NULL, $description = NULL)
 
   drush_op('da_vinci_file_replace', $sub_theme_path . '/color/color.inc', $info_strings_color, $info_regexs_color);
 
+  shell_exec("grep -lr -e 'da-vinci' " . $sub_theme_path . "/src/sass/* | xargs sed -i 's/da-vinci/" . $machine_name . "/g'");
+  if (drush_get_option('set-value-rem')) {
+    shell_exec("grep -lr -e 'vw_calc' " . $sub_theme_path . "/src/sass/* | xargs sed -i 's/vw_calc/rem_calc/g'");
+  }
 
   /*
    * Notify user of the newly created theme.
