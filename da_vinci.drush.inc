@@ -177,12 +177,12 @@ function drush_da_vinci($name = NULL, $machine_name = NULL, $description = NULL)
 
   foreach ($sub_theme_files as $filename) {
     /*
-     * Replace all occurrences of 'STARTERKIT' with the machine name
+     * Replace all occurrences of 'STARTERKIT' and 'mytheme' with the machine name
      * of our sub theme.
      */
     drush_op('da_vinci_file_replace', $filename, ['STARTERKIT' => $machine_name]);
     drush_op('da_vinci_file_replace', $filename, ['mytheme' => $machine_name]);
-
+    
     // Rename all files with mytheme in their name.
     if (strpos($filename, 'mytheme') !== FALSE) {
       drush_op('rename', $filename, str_replace('mytheme', $machine_name, $filename));
@@ -216,6 +216,7 @@ function drush_da_vinci($name = NULL, $machine_name = NULL, $description = NULL)
 
   drush_op('da_vinci_file_replace', $sub_theme_path . '/color/color.inc', $info_strings_color, $info_regexs_color);
 
+  shell_exec("grep -lr -e 'da-vinci' " . $sub_theme_path . "/* | xargs sed -i 's/da-vinci/" . $machine_name . "/g'");
 
   /*
    * Notify user of the newly created theme.
