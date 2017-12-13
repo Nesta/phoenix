@@ -5,22 +5,23 @@
 
 /****** DEPENDENCIES ********/
 
-var gulp            = require('gulp'),
-    sass            = require("gulp-sass"),
-    sassGlob        = require("gulp-sass-glob"),
-    sassLint        = require('gulp-sass-lint'),
-    color           = require('colors'),
-    sourceMaps      = require("gulp-sourcemaps"),
-    postCss         = require("gulp-postcss"),
-    browserSync     = require('browser-sync').create(),
-    autoprefixer    = require("autoprefixer"),
-    sassDoc         = require('sassdoc'),
-    jsHint          = require('gulp-jshint'),
-    jsHintStylish   = require('jshint-stylish'),
-    del             = require('del'),
-    imagemin        = require('gulp-imagemin'),
-    pngquant        = require('imagemin-pngquant'),
-    process         = require('yargs').argv;
+var autoprefixer = require("autoprefixer"),
+    browserSync = require('browser-sync').create(),
+    converter = require('sass-convert'),
+    color = require('colors'),
+    del = require('del'),
+    gulp = require('gulp'),
+    imagemin = require('gulp-imagemin'),
+    jsHint = require('gulp-jshint'),
+    jsHintStylish = require('jshint-stylish'),
+    postCss = require("gulp-postcss"),
+    pngquant = require('imagemin-pngquant'),
+    process = require('yargs').argv,
+    sassDoc = require('sassdoc'),
+    sass = require("gulp-sass"),
+    sassGlob = require("gulp-sass-glob"),
+    sassLint = require('gulp-sass-lint'),
+    sourceMaps = require("gulp-sourcemaps");
 
 /********** VARIABLES *************/
 
@@ -55,7 +56,7 @@ var sassDocOptions = {
         foo: 'Foo group',
         bar: 'Bar group'
     },
-    basePath: 'https://github.com/SassDoc/sassdoc'
+    description: 'Sassdoc for theme phoenix',
 };
 
 /********** TASKS ***************/
@@ -83,8 +84,12 @@ gulp.task('default', function(){
     console.log('gulp ' + 'watch -h'.cyan + ' yourhost'.green + '                  ' + '# Modifies your host to use BrowserSync.'.grey);
     console.log('gulp ' + 'browsersync'.cyan + '                        ' + '# Synchronize browser and device in realtime and reload browser if any specified files are changed.'.grey);
     console.log('');
+    console.log('Developing task'.yellow);
+    console.log('gulp ' + 'dev:browser'.cyan + '                        ' + '# Run styles:dev to compile to development enviroment, run jshint and run browserSync to synchronize browser.'.grey);
+    console.log('gulp ' + 'pro'.cyan + '                                ' + '# Run styles:pro to compile to production enviroment, run jshint and run sassdoc.'.grey);
+    console.log('');
     console.log('Watching task example'.yellow);
-    console.log('gulp ' + 'watch -h'.cyan + ' davinci.local'.green + '             ' + '# To configure hosts as davinci.local.'.grey);
+    console.log('gulp ' + 'watch -h'.cyan + ' localhost'.green + '             ' + '# To configure hosts as davinci.local.'.grey);
     console.log('');
 });
 
@@ -94,7 +99,7 @@ gulp.task('default', function(){
 // Clean css
 gulp.task('clean:css', function () {
     return del([
-        distAssets.styles + '**/*.css'
+        distAssets.styles + '**/*'
     ]);
 });
 
@@ -152,6 +157,10 @@ gulp.task('clean:sassdoc', function () {
 // Sassdoc
 gulp.task('sassdoc', ['clean:sassdoc'], function () {
     return gulp.src(srcAssets.styles + '**/*.s+(a|c)ss')
+        .pipe(converter({
+            from: 'sass',
+            to: 'scss',
+        }))
         .pipe(sassDoc(sassDocOptions));
 });
 
@@ -219,10 +228,84 @@ gulp.task('browsersync', function() {
             console.log('-> File ' + event.path.magenta.bold + ' was ' + event.type.green + ', running tasks...');
             browserSync.reload();
         });
-    gulp.watch(distAssets.js + '**/*.js', ['jshint'])
-        .on('change', function(event) {
-            console.log('');
-            console.log('-> File ' + event.path.yellow + ' was ' + event.type.green + ', running tasks...');
-            browserSync.reload();
-        });
+});
+
+/************** TIME TO WORK ***********************/
+
+// Init enviroment
+gulp.task('init', ['clean:css', 'imagemin', 'styles:dev']);
+
+// Development enviroment
+gulp.task('dev:watch', ['styles:dev', 'watch']);
+gulp.task('dev:browsersync', ['styles:dev', 'browsersync']);
+
+// Production enviroment
+gulp.task('pro', ['styles:pro', 'jshint']);
+
+
+/************* QA - CODE QUALITY REPORTS *************/
+
+// JENKINS, jsHint report XML
+gulp.task('jenkinsJSHintReport', function(){
+    return gulp.src([distAssets.js + '*.js'])
+        .pipe(jsHint())
+        .pipe(jsHint.reporter('gulp-jshint-jenkins-reporter', {
+            filename: 'reports/jshint-checkstyle.xml',
+            level: 'e', // ewi [e:error;w=warning;i:info] 
+            // sourceDir:  __dirname + '/', // full path to file
+            rulesFile: '.jshintrc'
+        }))
+        .pipe(browserSync.stream());
+});
+
+// JENKINS, sasslint report XML
+gulp.task('jenkinsSassLintReport', function () {
+    const fs = require('fs');
+    var file = fs.createWriteStream('reports/sasslint-checkstyle.xml');
+    return gulp.src('src/sass/**/*.sass')
+        .pipe(sassLint({
+            options: {
+                configFile: 'da_vinci.sass-lint.yml',
+                formatter: 'checkstyle'
+            }
+        }))
+        .pipe(sassLint.format(file));
+    stream.on('finish', function() {
+        file.end();
+    });
+    return stream;
+});
+
+// DEVELOPER, sasslint report HTML
+gulp.task('sassLintReport', function () {
+    const fs = require('fs');
+    var file = fs.createWriteStream('reports/sassLintResult.html');
+    return gulp.src('src/sass/**/*.sass')
+        .pipe(sassLint({
+            options: {
+                configFile: 'da_vinci.sass-lint.yml',
+                formatter: 'html'
+            }
+        }))
+        .pipe(sassLint.format(file));
+    stream.on('finish', function() {
+        file.end();
+    });
+    return stream;
+});
+
+// DEVELOPER, jsHint report HTML
+gulp.task('jsHintReport', function(){
+    return gulp.src([distAssets.js + '*.js'])
+        .pipe(jsHint({
+            options: {
+                configFile: '.jshintrc',
+                reporter: 'checkstyle'
+            }
+        }))
+        .pipe(jsHint.reporter('gulp-jshint-html-reporter', {
+            filename: 'reports/jshintResult.html',
+            createMissingFolders : false
+        }))
+        .pipe(browserSync.stream());
 });

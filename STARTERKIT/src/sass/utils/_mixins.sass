@@ -1,165 +1,235 @@
-/**
- * Mixins
- */
-// http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+////
+/// Mixins.
+/// @link http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+/// @group mixins
+////
+
 
 =position($position, $valor1)
   position: $position
   top: $valor1
 
-
+/// Mixins for clear.
 =clearfix()
   &:after
     clear: both
     content: ""
     display: table
 
+/// Mixin for font size in different resolutions.
+/// @param {number} $size - number in pixel.
 =font-size($size)
   font-size: vmin-calc($size)
   +breakpoint($medium)
     font-size: vw-calc($size)
 
-=top($size)
-  top: vmin-calc($size)
-  +breakpoint($medium)
-    top: vw-calc($size)
-
-=right($size)
-  right: vmin-calc($size)
-  +breakpoint($medium)
-    right: vw-calc($size)
-
+/// Mixin for border in different resolutions.
+/// @param {number} $size - number in pixel.
+/// @param {string} $model - string to specify the style of the border.
+/// @param {string} $border-color - string (through variable defined in file 'variables-colors') to specify the color of the border.
 =border($size, $model, $border-color)
   border: vmin-calc($size) $model $border-color
   +breakpoint($medium)
     border: vw-calc($size) $model $border-color
 
+/// Mixin for border top in different resolutions.
+/// @param {number} $size - number in pixel.
+/// @param {string} $model - string to specify the style of the border.
+/// @param {string} $border-color - string (through variable defined in file 'variables-colors') to specify the color of the border.
 =border-top($size, $model, $border-color)
   border-top: vmin-calc($size) $model $border-color
   +breakpoint($medium)
     border-top: vw-calc($size) $model $border-color
 
+/// Mixin for border right in different resolutions.
+/// @param {number} $size - number in pixel.
+/// @param {string} $model - string to specify the style of the border.
+/// @param {string} $border-color - string (through variable defined in file 'variables-colors') to specify the color of the border.
 =border-right($size, $model, $border-color)
   border-right: vmin-calc($size) $model $border-color
   +breakpoint($medium)
     border-right: vw-calc($size) $model $border-color
 
+/// Mixin for border bottom in different resolutions.
+/// @param {number} $size - number in pixel.
+/// @param {string} $model - string to specify the style of the border.
+/// @param {string} $border-color - string (through variable defined in file 'variables-colors') to specify the color of the border.
 =border-bottom($size, $model, $border-color)
   border-bottom: vmin-calc($size) $model $border-color
   +breakpoint($medium)
     border-bottom: vw-calc($size) $model $border-color
 
+/// Mixin for border left in different resolutions.
+/// @param {number} $size - number in pixel.
+/// @param {string} $model - string to specify the style of the border.
+/// @param {string} $border-color - string (through variable defined in file 'variables-colors') to specify the color of the border.
 =border-left($size, $model, $border-color)
   border-left: vmin-calc($size) $model $border-color
   +breakpoint($medium)
     border-left: vw-calc($size) $model $border-color
 
+/// Mixin for top position in different resolutions.
+/// @param {number} $size - number in pixel.
+=top($size)
+  top: vmin-calc($size)
+  +breakpoint($medium)
+    top: vw-calc($size)
+
+/// Mixin for right position in different resolutions.
+/// @param {number} $size - number in pixel.
+=right($size)
+  right: vmin-calc($size)
+  +breakpoint($medium)
+    right: vw-calc($size)
+
+/// Mixin for bottom position in different resolutions.
+/// @param {number} $size - number in pixel.
 =bottom($size)
   bottom: vmin-calc($size)
   +breakpoint($medium)
     bottom: vw-calc($size)
 
+/// Mixin for left position in different resolutions.
+/// @param {number} $size - number in pixel.
 =left($size)
   left: vmin-calc($size)
   +breakpoint($medium)
     left: vw-calc($size)
 
+/// Mixin to give size to width in different resolutions.
+/// @param {number} $size - number in pixel.
 =width($size)
   width: vmin-calc($size)
   +breakpoint($medium)
     width: vw-calc($size)
 
+/// Mixin to give min. size to width in different resolutions.
+/// @param {number} $size - number in pixel.
 =min-width($size)
   min-width: vmin-calc($size)
   +breakpoint($medium)
     min-width: vw-calc($size)
 
+/// Mixin to give max. size to width in different resolutions.
+/// @param {number} $size - number in pixel.
 =max-width($size)
   max-width: vmin-calc($size)
   +breakpoint($medium)
     max-width: vw-calc($size)
 
+/// Mixin to give size to height in different resolutions.
+/// @param {number} $size - number in pixel.
 =height($size)
   height: vmin-calc($size)
   +breakpoint($medium)
     height: vw-calc($size)
 
+/// Mixin to give min. size to height in different resolutions.
+/// @param {number} $size - number in pixel.
 =min-height($size)
   min-height: vmin-calc($size)
   +breakpoint($medium)
     min-height: vw-calc($size)
 
+/// Mixin to give max. size to height in different resolutions.
+/// @param {number} $size - number in pixel.
 =max-height($size)
   max-height: vmin-calc($size)
   +breakpoint($medium)
     max-height: vw-calc($size)
 
+/// Mixin for margin top in different resolutions.
+/// @param {number} $size - number in pixel.
 =margin-top($size)
   margin-top: vmin-calc($size)
   +breakpoint($medium)
     margin-top: vw-calc($size)
 
+/// Mixin for margin right in different resolutions.
+/// @param {number} $size - number in pixel.
 =margin-right($size)
   margin-right: vmin-calc($size)
   +breakpoint($medium)
     margin-right: vw-calc($size)
 
+/// Mixin for margin bottom in different resolutions.
+/// @param {number} $size - number in pixel.
 =margin-bottom($size)
   margin-bottom: vmin-calc($size)
   +breakpoint($medium)
     margin-bottom: vw-calc($size)
 
+/// Mixin for margin left in different resolutions.
+/// @param {number} $size - number in pixel.
 =margin-left($size)
   margin-left: vmin-calc($size)
   +breakpoint($medium)
     margin-left: vw-calc($size)
 
+/// Mixin for all positions in different resolutions.
+/// @param {number} $size-top - number in pixel.
+/// @param {number} $size-right - number in pixel.
+/// @param {number} $size-bottom - number in pixel.
+/// @param {number} $size-left - number in pixel.
 =margin($size-top, $size-right, $size-bottom, $size-left)
   margin-top: vmin-calc($size-top)
   margin-right: vmin-calc($size-right)
   margin-bottom: vmin-calc($size-bottom)
   margin-left: vmin-calc($size-left)
-
   +breakpoint($medium)
     margin-top: vw-calc($size-top)
     margin-right: vw-calc($size-right)
     margin-bottom: vw-calc($size-bottom)
     margin-left: vw-calc($size-left)
 
-
+/// Mixin for padding top in different resolutions.
+/// @param {number} $size - number in pixel.
 =padding-top($size)
   padding-top: vmin-calc($size)
   +breakpoint($medium)
     padding-top: vw-calc($size)
 
+/// Mixin for padding right in different resolutions.
+/// @param {number} $size - number in pixel.
 =padding-right($size)
   padding-right: vmin-calc($size)
   +breakpoint($medium)
     padding-right: vw-calc($size)
 
+/// Mixin for padding bottom in different resolutions.
+/// @param {number} $size - number in pixel.
 =padding-bottom($size)
   padding-bottom: vmin-calc($size)
   +breakpoint($medium)
     padding-bottom: vw-calc($size)
 
+/// Mixin for padding left in different resolutions.
+/// @param {number} $size - number in pixel.
 =padding-left($size)
   padding-left: vmin-calc($size)
   +breakpoint($medium)
     padding-left: vw-calc($size)
 
+/// Mixin for all positions in different resolutions.
+/// @param {number} $size-top - number in pixel.
+/// @param {number} $size-right - number in pixel.
+/// @param {number} $size-bottom - number in pixel.
+/// @param {number} $size-left - number in pixel.
 =padding($size-top, $size-right, $size-bottom, $size-left)
   padding-top: vmin-calc($size-top)
   padding-right: vmin-calc($size-right)
   padding-bottom: vmin-calc($size-bottom)
   padding-left: vmin-calc($size-left)
-
   +breakpoint($medium)
     padding-top: vw-calc($size-top)
     padding-right: vw-calc($size-right)
     padding-bottom: vw-calc($size-bottom)
     padding-left: vw-calc($size-left)
 
-
+/// Mixins for button.
+/// @param {string} $bg - string for backgrpund color (through variable defined in file 'variables-colors').
+/// @param {string} $cl - string for color text (through variable defined in file 'variables-colors').
+/// @param {string} $br - string for color border (through variable defined in file 'variables-colors').
 =buttons($bg, $cl, $br)
   background: $bg
   display: block
@@ -169,12 +239,11 @@
   font-family: $font-title
   +font-size(16)
   text-decoration: none
-  text-transform: uppercase 
+  text-transform: uppercase
   text-align: center
   +padding(20, 0, 20, 0)
   &:hover
-    background: darken($bg , 8%)
+    background: darken($bg, 8%)
     transition: all 0.3s ease
   &:active
-    background: darken($bg , 25%)
-
+    background: darken($bg, 25%)
