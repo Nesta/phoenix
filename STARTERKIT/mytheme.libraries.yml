@@ -8,10 +8,6 @@ global-js:
   header: true
   js:
     js/mytheme.js: {}
-  dependencies:
-    - core/jquery
-    - core/modernizr
-    - core/drupal
 
 color.preview:
   version: VERSION
@@ -23,3 +19,46 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+
+# Examples.
+
+# Front Path.
+home:
+  js:
+    js/in-view-home.js: {}
+    js/custom-home.js: {}
+  css:
+    theme:
+      css/home.css: {}
+
+404:
+  js:
+    js/in-view-404.js: {}
+
+# General Path.
+# Automatically loaded.
+routeExample:
+  js:
+    js/vendors/jquery.cycle.all.js: {}
+    js/vendors/countUp.js: {}
+    js/vendors/jquery.selectBox.js: {}
+    js/vendors/slick.min.js: {}
+
+  css:
+    theme:
+      css/vendors/slick.css: {}
+      css/vendors/jquery.selectBox.css: {}
+
+
+# Dynamic Path.
+# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
+
+# Dynamic Path (Need attach)
+floating-menu:
+  js:
+    js/scroll.js: {}
+    js/project-floating-menu.js: {}
+
+custom-taxonomy:
+  js:
+    js/custom-taxonomy.js: {}

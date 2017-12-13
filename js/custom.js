@@ -60,7 +60,7 @@
       // Search Button
       $('.search-icons-button').on('click', function () {
           $(this).toggleClass('active');
-          $('#block-da-vinci-search').toggleClass('active');
+          $('.region-header .search-block-form').toggleClass('active');
       });
     }
   };
