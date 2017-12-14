@@ -217,8 +217,7 @@ function drush_da_vinci($name = NULL, $machine_name = NULL) {
 
   drush_op('da_vinci_file_replace', $sub_theme_path . '/color/color.inc', $info_strings_color, $info_regexs_color);
 
-  shell_exec("grep -lr -e 'da-vinci' " . $sub_theme_path . "/src/sass/* | xargs sed -i 's/da-vinci/" . $machine_name . "/g'");
-  shell_exec("grep -lr -e 'mytheme' " . $sub_theme_path . "* | xargs sed -i 's/mytheme/" . $machine_name . "/g'");
+  shell_exec("grep -lr -e 'mytheme' " . $sub_theme_path . "/* | xargs sed -i 's/mytheme/" . $machine_name . "/g'");
   if (drush_get_option('set-value-rem')) {
     shell_exec("grep -lr -e 'vw-calc' " . $sub_theme_path . "/src/sass/* | xargs sed -i 's/vw-calc/rem-calc/g'");
   }
@@ -226,7 +225,6 @@ function drush_da_vinci($name = NULL, $machine_name = NULL) {
   /*
    * Notify user of the newly created theme.
    */
-
   drush_print(dt('Starter kit for "!name" created in: !path', [
     '!name' => $name,
     '!path' => $sub_theme_path,
