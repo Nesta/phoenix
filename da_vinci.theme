@@ -25,6 +25,9 @@ function da_vinci_preprocess_html(&$variables) {
   if (theme_get_setting('grid') && theme_get_setting('border-region')) {  
     $variables['html_attributes']['class'] = 'grid border-region';
   }
+  if (theme_get_setting('responsive-project')) {
+    $variables['responsive'] = theme_get_setting('responsive-project');
+  }
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['attributes']['class'][] = 'layout-two-sidebars';
