@@ -30,4 +30,10 @@ function da_vinci_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description'   => t("Check this option to show Region Debug Border in page. Uncheck to hide. This will only be displayed if admin is logged."),
   ];
 
+  $form['da_vinci_settings']['responsive-project'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Check me if you want Responsive Project.'),
+      '#default_value' => theme_get_setting('responsive-project', 'da_vinci'),
+      '#description'   => t("Check me if you want Responsive Project."),
+  ];
 }
