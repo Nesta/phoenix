@@ -1,3 +1,11 @@
+////
+/// @group Comments
+/// @type color
+////
+
+/// @ignore Border color.
+$comment-border-color: $border
+
 .comment
   overflow: hidden
   +margin-top(16)
@@ -10,7 +18,7 @@
       +span(3 of 12 first)
   .content
     +padding-bottom(16)
-    +border-bottom(1, solid, $border)
+    +border-bottom(1, solid, $comment-border-color)
     +breakpoint($medium)
       +span(9 of 12 last)
     > h3

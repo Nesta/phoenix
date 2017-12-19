@@ -1,13 +1,27 @@
+////
+/// @group Tables
+/// @type color
+////
+
+/// @ignore Background color.
+$table-bg-color  : transparent
+
+/// @ignore Color.
+$table-color     : $dark-blue
+
+/// @ignore Font size.
+$table-size      : 16
+
 table
   border: none
   th
-    background-color: transparent
-    color: $dark-blue
+    background-color: $table-bg-color
+    color: $table-color
     font-weight: 700
     text-align: left
     vertical-align: top
     +padding(10, 10, 10, 10)
-    +font-size(16)
+    +font-size($table-size)
   td
     +padding(10, 10, 10, 10)
 

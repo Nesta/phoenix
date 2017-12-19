@@ -1,35 +1,51 @@
+////
+/// @group Buttons
+/// @type color
+////
+
+/// @ignore Background color.
+$btn-bg-color            : $secondary-color
+/// @ignore Background color hover.
+$btn-bg-color-hover      : $white
+
+/// @ignore Color.
+$btn-color               : $white
+/// @ignore Color hover.
+$btn-color-hover         : $secondary-color
+
+/// @ignore Font family.
+$btn-font                : $font-title
+/// @ignore Font size.
+$btn-size                : 10
+
+/// @ignore Border color.
+$btn-border-color        : transparent
+/// @ignore Border color hover.
+$btn-border-color-hover  : $secondary-color
+
 .button
   outline: none
   display: inline-block
   text-align: center
-  background-color: $secondary-color
-  color: $white
+  background-color: $btn-bg-color
+  color: $btn-color
   text-transform: uppercase
   transition: all .5s
-  font-family: $font-title
+  font-family: $btn-font
   font-weight: 400
   line-height: vmin-calc(40)
   border-radius: vmin-calc(3)
   +padding(0, 24, 0, 24)
-  +font-size(10)
-  +border(1, solid, transparent)
+  +font-size($btn-size)
+  +border(1, solid, $btn-border-color)
   &:hover
     cursor: pointer
     text-decoration: none
-    border-color: $secondary-color
-    background-color: $white
-    color: $secondary-color
+    border-color: $btn-border-color-hover
+    background-color: $btn-bg-color-hover
+    color: $btn-color-hover
   &:focus
     outline: none
-
-.image-button
-  background-color: transparent
-  +padding(3, 8, 3, 8)
-
-.form-submit
-  @extend .button
-  background-color: $red
-  +font-size(16)
 
 button
   &:focus

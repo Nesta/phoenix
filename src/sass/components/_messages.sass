@@ -1,17 +1,40 @@
+////
+/// @group Messages
+/// @type color
+////
+
+/// @ignore Background color.
+$messages-bg-color     : $white
+
+/// @ignore Status border color.
+$status-border-color   : $green
+/// @ignore Status color.
+$status-color          : $green
+
+/// @ignore Warning border color.
+$warning-border-color  : $yellow
+/// @ignore Warning color.
+$warning-color         : $yellow
+
+/// @ignore Error border color.
+$error-border-color    : $light-red
+/// @ignore Error color.
+$error-color           : $light-red
+
 .messages
-  background-color: $white
+  background-color: $messages-bg-color
   border-radius: 0
   border-width: vmin-calc(1) vmin-calc(1) vmin-calc(1) vmin-calc(5)
+  box-shadow: none
   +margin-top(16)
   +breakpoint($medium)
     border-width: vw-calc(1) vw-calc(1) vw-calc(1) vw-calc(5)
-  box-shadow: none
   &--status
-    border-color: $success
-    color: $success
+    border-color: $status-border-color
+    color: $status-color
   &--warning
-    border-color: $warning
-    color: $warning
+    border-color: $warning-border-color
+    color: $warning-color
   &--error
-    border-color: $error
-    color: $error
+    border-color: $error-border-color
+    color: $error-color
