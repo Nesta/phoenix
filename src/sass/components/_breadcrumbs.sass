@@ -1,5 +1,16 @@
+////
+/// @group Breadcrumb
+/// @type color
+////
+
+/// @ignore Breadcrumb color.
+$breadcrumb-color  : $darker-blue
+
+/// @ignore Breadcrumb size.
+$breadcrumb-size   : 10
+
 .breadcrumb
   a
-    +font-size(10)
-    color: $dark-blue
+    +font-size($breadcrumb-size)
+    color: $breadcrumb-color
     text-transform: uppercase

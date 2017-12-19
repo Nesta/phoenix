@@ -1,13 +1,44 @@
+////
+/// @group Tables
+/// @type color
+////
+
+/// @ignore Background color hover.
+$tabs-bg-color-hover            : transparent
+/// @ignore Color.
+$tabs-color                     : $color
+/// @ignore Font size.
+$tabs-size                      : 10
+
+/// @ignore Primary background color hover.
+$tabs-primary-bg-color-hover    : $color
+/// @ignore Primary color hover.
+$tabs-primary-color-hover       : $white
+
+/// @ignore Secondary background color hover.
+$tabs-secondary-bg-color-hover  : transparent
+/// @ignore Secondary color hover.
+$tabs-secondary-color-hover     : $secondary-color
+
+/// @ignore Vertical background color.
+$tabs-vertical-bg-color         : $main-color
+/// @ignore Vertical color.
+$tabs-vertical-color            : $white
+/// @ignore Vertical color selected.
+$tabs-vertical-color-selected   : $color
+
 .block-local-tasks-block
   width: 100%
+
 .tabs
   a
-    color: $color
+    color: $tabs-color
     text-transform: uppercase
-    +font-size(10)
+    +font-size($tabs-size)
     &:focus,
     &:hover
-      background-color: transparent
+      background-color: $tabs-bg-color-hover
+
   &.primary
     +border-bottom(1, solid, $color)
     > li
@@ -18,8 +49,9 @@
         transition: all 1s ease
         &:hover,
         &.is-active
-          background-color: $color
-          color: $white
+          background-color: $tabs-primary-bg-color-hover
+          color: $tabs-primary-color-hover
+
   &.secondary
     > li
       margin: 0
@@ -32,14 +64,14 @@
         +border-left(1, solid, $secondary-color)
         &:hover,
         &.is-active
-          background-color: transparent
-          color: $secondary-color
+          background-color: $tabs-secondary-bg-color-hover
+          color: $tabs-secondary-color-hover
 
 .vertical-tabs
   &__menu-item
-    background: $main-color
+    background: $tabs-vertical-bg-color
     a
-      color: $white
+      color: $tabs-vertical-color
     &.is-selected
       .vertical-tabs__menu-item-title
-        color: $color
+        color: $tabs-vertical-color-selected

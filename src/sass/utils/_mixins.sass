@@ -4,7 +4,6 @@
 /// @group mixins
 ////
 
-
 =position($position, $valor1)
   position: $position
   top: $valor1
@@ -247,3 +246,21 @@
     transition: all 0.3s ease
   &:active
     background: darken($bg, 25%)
+
+
+/// Gallery flex
+/// @param {number} $items - Numbers of items for row to show.
+/// Usage guide:
+/// - First add next properties to wrapper: display: flex, flex-flow: row wrap
+/// - Then, apply the mixin to each item.
+
+=gallery-flex($items)
+  width: (100% - (gutter() * ($items - 1))) / $items
+  @if $items == 1
+    margin-bottom: 1rem
+  @else
+    margin-bottom: gutter()
+  &:nth-child(#{$items}n)
+    margin-right: 0
+  &:not(:nth-child(#{$items}n))
+    margin-right: gutter()
