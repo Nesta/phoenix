@@ -15,15 +15,17 @@ body
     +margin-bottom(8)
 
 .toolbar-fixed.toolbar-horizontal
-  .layout-container > header
-    +breakpoint(0 $medium)
-      top: vmin-calc(60)
+  .layout-container
+    & > header
+      +breakpoint(0 $medium)
+        top: vmin-calc(60)
 
-.has-secondary-menu .layout-container
-  // Leave space for the fixed menu.
-  padding-top: vw-calc(140)
-  +breakpoint(0 $medium)
-    padding-top: vmin-calc(96)
+.has-secondary-menu
+  .layout-container
+    // Leave space for the fixed menu.
+    padding-top: vw-calc(140)
+    +breakpoint(0 $medium)
+      padding-top: vmin-calc(96)
 
 .layout-container
   // Leave space for the fixed menu.
@@ -31,6 +33,12 @@ body
   display: flex
   flex-direction: column
   margin: 0
+  +breakpoint(0 $medium)
+    padding-top: vmin-calc(60)
+
+  &.sliding-panel-visible
+    > header
+      background-color: $dark-blue
 
   > .region
     @extend .restricted-container
@@ -50,51 +58,43 @@ body
     .top-bar > *
       @extend .restricted-container
 
-  &.sliding-panel-visible
-    > header
-      background-color: $dark-blue
-
   // Main content.
   > main
     width: 100%
     .region
       +clearfix
-  +breakpoint(0 $medium)
-    padding-top: vmin-calc(60)
 
-// Dynamic main content.
-.layout
-  &-one-sidebar
-    &.layout-sidebar-first
-      .layout-content
-        +breakpoint($medium)
-          +span(9 of 12 last)
-      .layout-sidebar-first
-        +breakpoint($medium)
-          +span(3 of 12 first)
-  &-one-sidebar
-    &.layout-sidebar-second
-      .layout-content
-        +breakpoint($medium)
-          +span(9 of 12 first)
-      .layout-sidebar-second
-        +breakpoint($medium)
-          +span(3 of 12 last)
-  &-two-sidebars
-    .layout-sidebar-first
+    .layout-wrapper
+      @extend .restricted-container
+      display: flex
+      flex-direction: column
       +breakpoint($medium)
-        +span(3 of 12 first)
-    .layout-sidebar-second
-      +breakpoint($medium)
-        clear: both
-        float: none
-      +breakpoint($large)
-        +span(3 of 12 last)
-        clear: none
-    +breakpoint($medium)
-      +span(9 of 12 last)
-    +breakpoint($large)
-      +span(isolate 6 at 4 of 12)
+        flex-direction: row
+        flex-wrap: wrap
+
+      > *:not(:last-child)
+        +breakpoint(0 $medium)
+          +margin-bottom(16)
+
+      .layout-content
+        width: 100%
+        +breakpoint($medium)
+          flex-grow: 1
+          width: span(6)
+
+      aside
+        width: 100%
+        +breakpoint($medium)
+          width: span(3)
+
+        &.layout-sidebar-first
+          +breakpoint($medium)
+            order: -1
+            margin-right: gutter()
+
+        &.layout-sidebar-second
+          +breakpoint($medium)
+            margin-left: gutter()
 
 .ie
   .layout-container
