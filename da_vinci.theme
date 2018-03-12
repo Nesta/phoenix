@@ -22,32 +22,15 @@ function da_vinci_preprocess_html(&$variables) {
   if (theme_get_setting('border-region')) {
     $variables['html_attributes']['class'] = 'border-region no-grid';
   }
-  if (theme_get_setting('grid') && theme_get_setting('border-region')) {  
+  if (theme_get_setting('grid') && theme_get_setting('border-region')) {
     $variables['html_attributes']['class'] = 'grid border-region';
   }
   if (theme_get_setting('responsive-project')) {
     $variables['responsive'] = theme_get_setting('responsive-project');
   }
-  // Add information about the number of sidebars.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'layout-two-sidebars';
-  }
-  elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['attributes']['class'][] = 'layout-one-sidebar';
-    $variables['attributes']['class'][] = 'layout-sidebar-first';
-  }
-  elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'layout-one-sidebar';
-    $variables['attributes']['class'][] = 'layout-sidebar-second';
-  }
-  else {
-    $variables['attributes']['class'][] = 'layout-no-sidebars';
-  }
-
   if (!empty($variables['page']['featured_top'])) {
     $variables['attributes']['class'][] = 'has-featured-top';
   }
-
   $path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $path);
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
@@ -174,7 +157,7 @@ function da_vinci_theme_suggestions_file_link_alter(array &$suggestions, array $
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $type = $node->getType();
 
-    // Create the theme hook suggestion. 
+    // Create the theme hook suggestion.
     $suggestions[] = 'file_link__' . 'type_' . $type;
   }
 }

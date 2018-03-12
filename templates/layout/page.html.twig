@@ -89,21 +89,25 @@
   <main>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+    <div class="layout-wrapper">
 
-    {% if page.sidebar_first %}
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+
+      {% if page.sidebar_first %}
       <aside class="layout-sidebar-first">
         {{ page.sidebar_first }}
       </aside>
-    {% endif %}
+      {% endif %}
 
-    {% if page.sidebar_second %}
+      {% if page.sidebar_second %}
       <aside class="layout-sidebar-second">
         {{ page.sidebar_second }}
       </aside>
-    {% endif %}
+      {% endif %}
+      
+    </div>
   </main>
 
   {% if page.sliding_menu %}
