@@ -1,11 +1,11 @@
 /**
  * Created by rvergara on 6/02/17.
  */
-"use strict";
+'use strict';
 
 /****** DEPENDENCIES ********/
 
-var autoprefixer = require("autoprefixer"),
+var autoprefixer = require('autoprefixer'),
     browserSync = require('browser-sync').create(),
     converter = require('sass-convert'),
     color = require('colors'),
@@ -14,14 +14,14 @@ var autoprefixer = require("autoprefixer"),
     imagemin = require('gulp-imagemin'),
     jsHint = require('gulp-jshint'),
     jsHintStylish = require('jshint-stylish'),
-    postCss = require("gulp-postcss"),
+    postCss = require('gulp-postcss'),
     pngquant = require('imagemin-pngquant'),
     process = require('yargs').argv,
     sassDoc = require('sassdoc'),
-    sass = require("gulp-sass"),
-    sassGlob = require("gulp-sass-glob"),
+    sass = require('gulp-sass'),
+    sassGlob = require('gulp-sass-glob'),
     sassLint = require('gulp-sass-lint'),
-    sourceMaps = require("gulp-sourcemaps");
+    sourceMaps = require('gulp-sourcemaps');
 
 /********** VARIABLES *************/
 
@@ -99,7 +99,7 @@ gulp.task('default', function(){
 // Clean css
 gulp.task('clean:css', function () {
     return del([
-        distAssets.styles + '**/*'
+        distAssets.styles + '*.css'
     ]);
 });
 
@@ -251,7 +251,7 @@ gulp.task('jenkinsJSHintReport', function(){
         .pipe(jsHint())
         .pipe(jsHint.reporter('gulp-jshint-jenkins-reporter', {
             filename: 'reports/jshint-checkstyle.xml',
-            level: 'e', // ewi [e:error;w=warning;i:info] 
+            level: 'e', // ewi [e:error;w=warning;i:info]
             // sourceDir:  __dirname + '/', // full path to file
             rulesFile: '.jshintrc'
         }))
