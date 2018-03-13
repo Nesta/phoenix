@@ -248,13 +248,13 @@
     background: darken($bg, 25%)
 
 
-/// Gallery flex
+/// Flex gallery
 /// @param {number} $items - Numbers of items for row to show.
 /// Usage guide:
 /// - First add next properties to wrapper: display: flex, flex-flow: row wrap
 /// - Then, apply the mixin to each item.
 
-=gallery-flex($items)
+=flex-gallery($items)
   width: (100% - (gutter() * ($items - 1))) / $items
   @if $items == 1
     margin-bottom: 1rem
