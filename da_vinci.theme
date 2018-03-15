@@ -107,6 +107,13 @@ function da_vinci_preprocess_block(&$variables) {
   if ($variables['plugin_id'] == 'system_branding_block') {
     $variables['attributes']['class'][] = 'clearfix';
   }
+
+  // Add the block type class to the custom blocks.
+  if (isset($variables['content']['#block_content'])) {
+    $block_type = $variables['content']['#block_content']->bundle();
+    $variables['attributes']['class'][] = 'block-content-type-' . $block_type;
+  }
+
   $variables['drupalera'] = $GLOBALS['base_url'] . '/' . drupal_get_path('theme','da_vinci') . '/images/la_drupalera.png';
 }
 
