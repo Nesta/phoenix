@@ -4,7 +4,7 @@
   "description": "Da Vinci dependencies",
   "main": "index.js",
   "scripts": {
-    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete",
+    "postinstall": "./postinstall.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@ladrupalera",
@@ -33,6 +33,7 @@
     "normalize-libsass": "^1.0.3",
     "pngquant-bin": "3.1.1",
     "sassdoc": "^2.5.0",
+    "slick-carousel": "^1.8.1",
     "susy": "^2.2.5",
     "yargs": "10.0.3"
   }

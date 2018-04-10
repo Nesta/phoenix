@@ -1,12 +1,14 @@
 *,
-*::before,
-*::after
+*:before,
+*:after
   box-sizing: border-box
 
 // Libsass {Libraries}.
 @import '../../node_modules/susy/sass/susy'
 @import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
 @import '../../node_modules/normalize-libsass/normalize'
+//@import '../../node_modules/slick-carousel/slick/slick.scss'
+//@import '../../node_modules/slick-carousel/slick/slick-theme.scss'
 
 // Utils {Tools} & Base {Skinr & Grid Framework}.
 @import 'utils/variables-colors'
@@ -18,8 +20,12 @@
 @import 'utils/keyframes'
 @import 'utils/helpers'
 
-// Components {Drupal Elements}.
-@import 'components/**/*'
+// Components {External component}.
+//@import 'components/vendors/slick'
+
+// Components {Drupal elements}.
+@import 'components/*'
+
 
 // Layout Regions {Blocks, Forms, Nodes, Regions, Pages & Views}.
 @import 'layout/layout'
@@ -29,4 +35,3 @@
 @import 'layout/nodes/*'
 @import 'layout/pages/*'
 @import 'layout/views/*'
-
