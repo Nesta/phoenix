@@ -118,9 +118,7 @@ function da_vinci_preprocess_block(&$variables) {
   if (isset($variables['elements']['#configuration']['view_mode'])) {
     $block_view_mode = $variables['elements']['#configuration']['view_mode'];
     $variables['attributes']['class'][] = 'block--view-mode-' . $block_view_mode;
-  }
-
-  $variables['drupalera'] = $GLOBALS['base_url'] . '/' . drupal_get_path('theme','da_vinci') . '/images/la_drupalera.png';
+  }    
 }
 
 /**
